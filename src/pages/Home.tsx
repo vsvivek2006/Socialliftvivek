@@ -10,91 +10,127 @@ const Home = () => {
   const heroSlides = [
     {
       title: "Social Media Marketing",
-      subtitle: "Only ₹4,999/month",
-      originalPrice: "₹12,999",
-      description: "Professional Social Media Management - 15 Creative Posts + 2 Viral Videos. Boost Engagement, Increase Followers & Drive Sales on Instagram, Facebook, Twitter & WhatsApp.",
-      badge: "🔥 62% OFF Social Media Marketing",
+      subtitle: "Complete Management ₹8,000/month",
+      originalPrice: "₹15,000",
+      description: "Professional Social Media Management - Creative Posts + Viral Videos. Boost Engagement, Increase Followers & Drive Sales on Instagram, Facebook & WhatsApp.",
+      badge: "🔥 47% OFF Social Media Marketing",
       bgGradient: "from-blue-900 via-blue-800 to-purple-700",
       cta: "Start Social Media Marketing"
     },
     {
-      title: "SEO Services Agency",
-      subtitle: "₹7,999/month - Rank #1 on Google",
-      originalPrice: "₹14,999",
-      description: "Professional SEO Company offering Complete Search Engine Optimization. Keyword Research, On-Page SEO, Technical SEO & Local SEO to Dominate Google Search Results.",
-      badge: "📈 47% OFF SEO Services",
+      title: "Meta Ads Agency",
+      subtitle: "₹10,000/month - Maximum ROI",
+      originalPrice: "₹18,000",
+      description: "Professional Facebook & Instagram Ads Management. Targeted Advertising, Lead Generation & Sales Conversion for Your Business Growth.",
+      badge: "📈 44% OFF Meta Ads",
       bgGradient: "from-green-900 via-green-800 to-blue-700",
-      cta: "Get SEO Quote"
+      cta: "Get Ads Quote"
     },
     {
-      title: "Website Development",
-      subtitle: "Starting at ₹9,999",
-      originalPrice: "₹22,000",
-      description: "Professional Web Development creating Fast, Responsive & SEO-Friendly Websites. E-commerce Stores, WordPress Sites & Custom Web Applications for Business Growth.",
-      badge: "💫 55% OFF Website Development",
+      title: "Google Business Profile",
+      subtitle: "Complete Setup ₹6,000",
+      originalPrice: "₹12,000",
+      description: "Professional Google Business Profile Optimization for Local SEO. Get More Customers, Increase Visibility & Dominate Local Search Results.",
+      badge: "💫 50% OFF Google Business",
       bgGradient: "from-orange-900 via-orange-800 to-red-700",
-      cta: "Get Website Quote"
+      cta: "Get Google Business Setup"
     },
     {
-      title: "E-commerce Marketing",
-      subtitle: "Complete Package ₹5,999",
-      originalPrice: "₹12,999",
-      description: "Complete E-commerce Account Setup - We create and optimize your Amazon, Flipkart, Meesho accounts with professional product listing & sales optimization.",
-      badge: "🚀 54% OFF E-commerce Services",
+      title: "Lead Generation Service",
+      subtitle: "Professional Leads ₹6,000/month",
+      originalPrice: "₹12,000",
+      description: "Targeted Lead Generation Campaigns - Get Quality Leads for Your Business through Digital Marketing & Advertising Strategies.",
+      badge: "🚀 50% OFF Lead Generation",
       bgGradient: "from-purple-900 via-purple-800 to-purple-600",
-      cta: "Start E-commerce"
+      cta: "Generate More Leads"
     }
   ];
 
-  // Digital Marketing Services
+  // Digital Marketing Services with Updated Pricing
   const services = [
     {
       icon: "📱",
-      title: "Social Media Marketing",
-      description: "Complete Social Media Management - 15 Creative Posts + 2 Viral Videos/Reels with trending hashtags & content strategy",
-      price: "₹4,999/month",
-      originalPrice: "₹12,999",
-      platforms: ["Instagram Marketing", "Facebook Ads", "Twitter Marketing", "WhatsApp Business"],
+      title: "Social Media Management",
+      description: "Complete Social Media Management - Creative Posts + Viral Videos/Reels with trending hashtags & content strategy",
+      price: "₹8,000/month",
+      originalPrice: "₹15,000",
+      platforms: ["Instagram Marketing", "Facebook Management", "Content Creation", "Engagement Growth"],
       link: "/services",
       popular: true,
-      badge: "62% OFF",
-      keywords: ["social media marketing", "instagram management", "facebook ads"]
+      badge: "47% OFF",
+      keywords: ["social media marketing", "instagram management", "facebook management"]
     },
     {
-      icon: "🔍", 
-      title: "SEO Services Company",
-      description: "Professional Search Engine Optimization - Rank #1 on Google with comprehensive SEO strategy & monthly reporting",
-      price: "₹7,999/month",
-      originalPrice: "₹14,999",
-      platforms: ["Google Ranking", "Keyword Research", "On-Page SEO", "Local SEO"],
+      icon: "🎯", 
+      title: "Meta Ads Management",
+      description: "Professional Facebook & Instagram Ads - Targeted Advertising, Lead Generation & Sales Conversion Campaigns",
+      price: "₹10,000/month",
+      originalPrice: "₹18,000",
+      platforms: ["Facebook Ads", "Instagram Ads", "Audience Targeting", "Ad Optimization"],
+      link: "/services",
+      popular: true,
+      badge: "44% OFF",
+      keywords: ["meta ads", "facebook ads", "instagram ads"]
+    },
+    {
+      icon: "🔍",
+      title: "Google Business Profile",
+      description: "Complete Google Business Profile Setup & Optimization - Get More Local Customers & Increase Visibility",
+      price: "₹6,000",
+      originalPrice: "₹12,000",
+      platforms: ["Profile Setup", "Local SEO", "Review Management", "Google Maps Ranking"],
+      link: "/services",
+      popular: false,
+      badge: "50% OFF",
+      keywords: ["google business", "local seo", "google maps"]
+    },
+    {
+      icon: "📞",
+      title: "Lead Generation Service",
+      description: "Professional Lead Generation Campaigns - Get Quality Leads for Your Business through Digital Marketing",
+      price: "₹6,000/month",
+      originalPrice: "₹12,000",
+      platforms: ["Targeted Leads", "Quality Prospects", "Conversion Optimization", "Lead Nurturing"],
+      link: "/services",
+      popular: false,
+      badge: "50% OFF",
+      keywords: ["lead generation", "business leads", "customer acquisition"]
+    },
+    {
+      icon: "🎥",
+      title: "Video Shoot Service",
+      description: "Professional Video Production - High Quality Product Videos, Promotional Content & Social Media Videos",
+      price: "₹8,000",
+      originalPrice: "₹15,000",
+      platforms: ["Product Videos", "Promotional Content", "Social Media Videos", "Editing"],
       link: "/services",
       popular: false,
       badge: "47% OFF",
-      keywords: ["seo services", "google ranking", "search engine optimization"]
+      keywords: ["video shoot", "video production", "promotional videos"]
     },
     {
       icon: "🛒",
       title: "E-commerce Marketing",
-      description: "Complete E-commerce Solutions - Amazon, Flipkart, Meesho account setup with product listing & sales optimization",
-      price: "₹5,999",
-      originalPrice: "₹12,999",
+      description: "Complete E-commerce Solutions - Amazon, Flipkart, Meesho marketing with product listing optimization",
+      price: "₹8,000/month",
+      originalPrice: "₹15,000",
       platforms: ["Amazon Marketing", "Flipkart SEO", "Meesho Store", "Product Listing"],
       link: "/services",
       popular: false,
-      badge: "54% OFF",
+      badge: "47% OFF",
       keywords: ["e-commerce marketing", "amazon seller", "flipkart seo"]
     },
     {
-      icon: "💻",
-      title: "Website Development Agency",
-      description: "Professional Web Design & Development - Responsive, SEO-friendly websites that convert visitors into customers",
-      price: "₹9,999",
-      originalPrice: "₹22,000", 
-      platforms: ["Website Design", "Web Development", "Shopify Store", "WordPress"],
+      icon: "⚡",
+      title: "SEO Services",
+      description: "Professional Search Engine Optimization - Rank Higher on Google with comprehensive SEO strategy",
+      price: "₹10,000/month",
+      originalPrice: "₹18,000",
+      platforms: ["Google Ranking", "Keyword Research", "On-Page SEO", "Local SEO"],
       link: "/services",
       popular: true,
-      badge: "55% OFF",
-      keywords: ["website development", "web design", "responsive website"]
+      badge: "44% OFF",
+      keywords: ["seo services", "google ranking", "search engine optimization"]
     }
   ];
 
@@ -103,7 +139,7 @@ const Home = () => {
     {
       icon: "📝",
       title: "Social Media Setup",
-      price: "₹1,999",
+      price: "₹2,499",
       originalPrice: "₹4,999",
       description: "Professional Social Media Account Creation",
       keywords: ["social media setup", "profile creation"]
@@ -111,40 +147,40 @@ const Home = () => {
     {
       icon: "🗺️",
       title: "Google Business Profile",
-      price: "₹999", 
-      originalPrice: "₹2,999",
+      price: "₹1,999", 
+      originalPrice: "₹3,999",
       description: "Google My Business Optimization",
       keywords: ["google business", "local seo"]
     },
     {
       icon: "💬",
       title: "WhatsApp Business API",
-      price: "₹999",
-      originalPrice: "₹2,499",
+      price: "₹1,499",
+      originalPrice: "₹2,999",
       description: "Business WhatsApp Marketing Setup",
       keywords: ["whatsapp business", "chat marketing"]
     },
     {
       icon: "🎥",
       title: "YouTube Channel SEO",
-      price: "₹9,999",
-      originalPrice: "₹19,999",
+      price: "₹4,999",
+      originalPrice: "₹9,999",
       description: "YouTube SEO & Channel Optimization",
       keywords: ["youtube seo", "video marketing"]
     },
     {
       icon: "🎨",
       title: "Logo Design Service",
-      price: "₹799",
-      originalPrice: "₹2,999",
+      price: "₹1,299",
+      originalPrice: "₹2,599",
       description: "Professional Logo & Brand Identity",
       keywords: ["logo design", "brand identity"]
     },
     {
       icon: "📧",
       title: "Email Marketing",
-      price: "₹4,999", 
-      originalPrice: "₹9,999",
+      price: "₹3,999", 
+      originalPrice: "₹7,999",
       description: "Email Campaign Setup & Management",
       keywords: ["email marketing", "campaign management"]
     }
@@ -154,8 +190,8 @@ const Home = () => {
   const features = [
     {
       icon: "💰",
-      title: "Best Price Digital Marketing",
-      description: "Lowest prices with 50-70% discounts on all digital marketing services",
+      title: "Affordable Digital Marketing",
+      description: "Competitive prices with 40-50% discounts on all digital marketing services",
       keywords: ["affordable digital marketing", "best price"]
     },
     {
@@ -194,9 +230,9 @@ const Home = () => {
   const portfolioProjects = [
     {
       title: "Restaurant Digital Marketing",
-      category: "SEO + Social Media Marketing",
+      category: "Social Media + Google Business",
       result: "40% More Online Orders",
-      keywords: ["restaurant seo", "local business marketing"]
+      keywords: ["restaurant marketing", "local business marketing"]
     },
     {
       title: "Fashion Brand Social Media", 
@@ -205,16 +241,16 @@ const Home = () => {
       keywords: ["fashion marketing", "social media campaign"]
     },
     {
-      title: "Service Business SEO",
-      category: "Local SEO Optimization",
-      result: "Page 1 Google Rankings", 
-      keywords: ["local seo", "service business marketing"]
+      title: "Service Business Lead Gen",
+      category: "Meta Ads + Lead Generation",
+      result: "50+ Quality Leads/Month", 
+      keywords: ["lead generation", "service business marketing"]
     },
     {
       title: "E-commerce Store Marketing", 
-      category: "Amazon & Flipkart SEO",
+      category: "Meta Ads + Social Media",
       result: "200% Sales Increase",
-      keywords: ["e-commerce seo", "online sales"]
+      keywords: ["e-commerce marketing", "online sales"]
     }
   ];
 
@@ -223,68 +259,68 @@ const Home = () => {
     {
       name: "Rajesh Kumar",
       company: "Fashion Store Owner", 
-      text: "DiziGrow's digital marketing services increased my sales by 300% in just 3 months! Their social media marketing strategy is amazing.",
+      text: "Social Lift's social media management increased my sales by 300% in just 3 months! Their content strategy is amazing.",
       rating: 5,
-      service: "Social Media Marketing",
+      service: "Social Media Management",
       keywords: ["social media success", "sales growth"]
     },
     {
       name: "Priya Sharma",
       company: "Restaurant Business",
-      text: "Professional SEO services that got us on Page 1 of Google. Our online orders increased significantly. Great digital marketing agency!",
+      text: "Google Business Profile optimization brought us more local customers. Our online orders increased significantly. Great service!",
       rating: 5,
-      service: "SEO Services",
-      keywords: ["seo success", "google ranking"]
+      service: "Google Business Profile",
+      keywords: ["google business success", "local customers"]
     },
     {
       name: "Amit Patel", 
-      company: "E-commerce Seller",
-      text: "Amazon and Flipkart marketing done perfectly. Sales increased by 200% across all platforms. Best digital marketing company!",
+      company: "Service Business Owner",
+      text: "Meta Ads campaigns done perfectly. Got 50+ quality leads every month. Best digital marketing agency!",
       rating: 5,
-      service: "E-commerce Marketing",
-      keywords: ["e-commerce success", "multi-platform"]
+      service: "Meta Ads Management",
+      keywords: ["meta ads success", "lead generation"]
     }
   ];
 
   // Digital Marketing Pricing Plans
   const pricingPlans = [
     {
-      name: "Startup Marketing Package",
-      price: "₹29,999",
-      originalPrice: "₹67,497",
-      description: "Perfect for startups beginning their digital marketing journey",
-      features: ["Basic Social Media", "Website SEO", "Google Business Setup", "3 Months Support"],
+      name: "Starter Marketing Package",
+      price: "₹24,999",
+      originalPrice: "₹45,000",
+      description: "Perfect for small businesses beginning their digital marketing journey",
+      features: ["Basic Social Media", "Google Business Setup", "Monthly Reporting", "3 Months Support"],
       popular: false,
-      badge: "Save ₹37,498",
-      keywords: ["startup marketing", "basic package"]
+      badge: "Save ₹20,001",
+      keywords: ["starter marketing", "basic package"]
     },
     {
       name: "Growth Marketing Package",
-      price: "₹49,999",
-      originalPrice: "₹1,20,000",
+      price: "₹44,999",
+      originalPrice: "₹85,000",
       description: "Ideal for growing businesses ready to scale with digital marketing",
-      features: ["Complete Digital Marketing", "Advanced SEO", "Social Media Ads", "6 Months Support"],
+      features: ["Complete Digital Marketing", "Meta Ads Management", "Lead Generation", "6 Months Support"],
       popular: true,
-      badge: "Save ₹70,001",
+      badge: "Save ₹40,001",
       keywords: ["growth marketing", "complete package"]
     },
     {
-      name: "Enterprise Marketing Package",
-      price: "₹79,999",
-      originalPrice: "₹1,80,000",
+      name: "Pro Marketing Package",
+      price: "₹64,999",
+      originalPrice: "₹1,20,000",
       description: "Complete digital marketing transformation for established businesses",
-      features: ["Premium Digital Marketing", "Custom Strategy", "Multi-platform Ads", "12 Months Support"],
+      features: ["Premium Digital Marketing", "Custom Strategy", "Multi-platform Management", "12 Months Support"],
       popular: false,
-      badge: "Save ₹1,00,001",
-      keywords: ["enterprise marketing", "premium package"]
+      badge: "Save ₹55,001",
+      keywords: ["pro marketing", "premium package"]
     }
   ];
 
   // Digital Marketing Stats
   const stats = [
-    { number: "150+", label: "Happy Clients", icon: "😊", keywords: ["clients", "satisfied customers"] },
-    { number: "300+", label: "Marketing Campaigns", icon: "🚀", keywords: ["campaigns", "projects"] }, 
-    { number: "50-70%", label: "Cost Savings", icon: "💰", keywords: ["savings", "discounts"] },
+    { number: "100+", label: "Happy Clients", icon: "😊", keywords: ["clients", "satisfied customers"] },
+    { number: "200+", label: "Marketing Campaigns", icon: "🚀", keywords: ["campaigns", "projects"] }, 
+    { number: "40-50%", label: "Cost Savings", icon: "💰", keywords: ["savings", "discounts"] },
     { number: "24/7", label: "Marketing Support", icon: "📞", keywords: ["support", "availability"] }
   ];
 
@@ -324,15 +360,13 @@ const Home = () => {
   const platforms = [
     { name: "Instagram", icon: "📷", color: "bg-gradient-to-r from-pink-500 to-purple-600", keywords: ["instagram marketing"] },
     { name: "Facebook", icon: "👥", color: "bg-gradient-to-r from-blue-500 to-blue-700", keywords: ["facebook ads"] },
-    { name: "Twitter", icon: "🐦", color: "bg-gradient-to-r from-sky-400 to-sky-600", keywords: ["twitter marketing"] },
-    { name: "YouTube", icon: "🎥", color: "bg-gradient-to-r from-red-500 to-red-700", keywords: ["youtube marketing"] },
-    { name: "Google", icon: "🔍", color: "bg-gradient-to-r from-green-500 to-green-700", keywords: ["google ads", "seo"] },
-    { name: "Amazon", icon: "🛒", color: "bg-gradient-to-r from-orange-400 to-orange-600", keywords: ["amazon marketing"] },
     { name: "WhatsApp", icon: "💚", color: "bg-gradient-to-r from-green-400 to-green-600", keywords: ["whatsapp marketing"] },
-    { name: "LinkedIn", icon: "💼", color: "bg-gradient-to-r from-blue-600 to-blue-800", keywords: ["linkedin marketing"] }
+    { name: "Google", icon: "🔍", color: "bg-gradient-to-r from-green-500 to-green-700", keywords: ["google ads", "seo"] },
+    { name: "YouTube", icon: "🎥", color: "bg-gradient-to-r from-red-500 to-red-700", keywords: ["youtube marketing"] },
+    { name: "Amazon", icon: "🛒", color: "bg-gradient-to-r from-orange-400 to-orange-600", keywords: ["amazon marketing"] }
   ];
 
-  // New Sections Added
+  // Industries We Serve
   const industriesWeServe = [
     { name: "E-commerce", icon: "🛒", description: "Boost online sales with our e-commerce marketing strategies" },
     { name: "Restaurants", icon: "🍽️", description: "Increase reservations & online orders with local SEO" },
@@ -342,26 +376,29 @@ const Home = () => {
     { name: "Fashion", icon: "👗", description: "Fashion brand marketing & social media growth" }
   ];
 
+  // Marketing Tools
   const marketingTools = [
-    { name: "Google Analytics", icon: "📊", description: "Advanced analytics & performance tracking" },
-    { name: "SEO Tools", icon: "🔍", description: "Keyword research & ranking monitoring" },
+    { name: "Meta Business Suite", icon: "📊", description: "Facebook & Instagram management tools" },
+    { name: "Google Analytics", icon: "🔍", description: "Advanced analytics & performance tracking" },
     { name: "Social Media Scheduler", icon: "⏰", description: "Automated posting & content calendar" },
-    { name: "Email Marketing Software", icon: "📧", description: "Campaign management & automation" },
-    { name: "Ads Management", icon: "🎯", description: "Google & Facebook ads optimization" },
-    { name: "Competitor Analysis", icon: "🔎", description: "Market research & strategy development" }
+    { name: "Ads Manager", icon: "🎯", description: "Facebook & Instagram ads optimization" },
+    { name: "Canva Pro", icon: "🎨", description: "Professional design tools for creatives" },
+    { name: "Lead Management", icon: "📈", description: "Lead tracking & conversion tools" }
   ];
 
+  // Team Members
   const teamMembers = [
-    { name: "SEO Experts", role: "Google Certified Professionals", icon: "👨‍💼" },
     { name: "Social Media Managers", role: "Content Strategy Specialists", icon: "👩‍💻" },
-    { name: "Web Developers", role: "Full Stack Developers", icon: "👨‍💻" },
-    { name: "Graphic Designers", role: "Creative Design Team", icon: "🎨" }
+    { name: "Ads Specialists", role: "Meta & Google Certified", icon: "🎯" },
+    { name: "SEO Experts", role: "Google Ranking Professionals", icon: "👨‍💼" },
+    { name: "Content Creators", role: "Creative Design Team", icon: "🎨" }
   ];
 
+  // Awards & Recognition
   const awardsRecognition = [
-    { title: "Best Digital Marketing Agency 2024", icon: "🏆" },
-    { title: "Top SEO Service Provider", icon: "⭐" },
-    { title: "Excellence in Social Media Marketing", icon: "📱" },
+    { title: "Best Social Media Agency 2024", icon: "🏆" },
+    { title: "Top Meta Ads Partner", icon: "⭐" },
+    { title: "Excellence in Lead Generation", icon: "📱" },
     { title: "Best Customer Service Award", icon: "💫" }
   ];
 
@@ -380,20 +417,20 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       <Helmet>
-        <title>DiziGrow - Best Digital Marketing Agency | SEO, Social Media Marketing Services</title>
+        <title>Social Lift - Best Digital Marketing Agency | Social Media, Meta Ads, SEO Services</title>
         <meta 
           name="description" 
-          content="Best Digital Marketing Agency offering Professional SEO Services, Social Media Marketing, Website Development & E-commerce Solutions. Get 50-70% OFF. WhatsApp +91 9521281509"
+          content="Social Lift Digital Marketing Agency offering Professional Social Media Management, Meta Ads, SEO Services, Lead Generation & Google Business Profile Setup. Get 40-50% OFF. WhatsApp +91 7428606849"
         />
         <meta 
           name="keywords" 
-          content="digital marketing agency, seo services, social media marketing, website development, google ads, facebook ads, best digital marketing company, affordable digital marketing"
+          content="digital marketing agency, social media management, meta ads, seo services, lead generation, google business profile, affordable digital marketing, social lift"
         />
-        <link rel="canonical" href="https://dizigrow.com" />
-        <meta property="og:title" content="DiziGrow - Best Digital Marketing Agency | SEO & Social Media Marketing" />
-        <meta property="og:description" content="Professional Digital Marketing Agency offering SEO, Social Media Management, Website Development & E-commerce Solutions. 50-70% OFF." />
+        <link rel="canonical" href="https://sociallift.com" />
+        <meta property="og:title" content="Social Lift - Best Digital Marketing Agency | Social Media & Meta Ads" />
+        <meta property="og:description" content="Professional Digital Marketing Agency offering Social Media Management, Meta Ads, SEO, Lead Generation & Google Business Setup. 40-50% OFF." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dizigrow.com" />
+        <meta property="og:url" content="https://sociallift.com" />
       </Helmet>
 
       {/* === HERO SECTION === */}
@@ -443,13 +480,13 @@ const Home = () => {
                     <span>💰 {slide.cta}</span>
                   </Link>
                   <a
-                    href="https://wa.me/919521281509?text=Hello%20DiziGrow%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20digital%20marketing%20services"
+                    href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20digital%20marketing%20services"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-bold transition-all duration-300 hover:scale-105 flex items-center space-x-2 shadow-2xl shadow-green-500/30"
                   >
                     <span className="text-xl">💚</span>
-                    <span>WhatsApp for 70% OFF</span>
+                    <span>WhatsApp for 50% OFF</span>
                   </a>
                 </div>
               </div>
@@ -495,10 +532,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">Our Digital Marketing Services</h2>
-            <p className="text-base md:text-xl text-gray-600">Professional Digital Marketing Agency Services with 50-70% Discounts</p>
+            <p className="text-base md:text-xl text-gray-600">Professional Digital Marketing Agency Services with 40-50% Discounts</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <div 
                 key={index} 
@@ -535,7 +572,7 @@ const Home = () => {
                       View Details
                     </Link>
                     <a
-                      href={`https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20${encodeURIComponent(service.title)}`}
+                      href={`https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I%20want%20${encodeURIComponent(service.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-3 md:py-3 md:px-4 rounded-lg font-semibold transition-all duration-300 block text-center text-xs md:text-sm flex items-center justify-center space-x-2"
@@ -577,7 +614,7 @@ const Home = () => {
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">Why Choose Our Digital Marketing Agency?</h2>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">Why Choose Social Lift Digital Marketing?</h2>
             <p className="text-base md:text-xl text-gray-600">We provide the best value for your marketing investment</p>
           </div>
           
@@ -688,7 +725,7 @@ const Home = () => {
             <p className="text-base md:text-xl text-gray-600">We manage your presence across all major digital platforms</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
                 <div className={`${platform.color} text-white p-3 md:p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}>
@@ -778,7 +815,7 @@ const Home = () => {
                   <Link to="/pricing" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 md:py-3 px-4 rounded-lg font-semibold transition-all duration-300 block text-center text-sm md:text-base">
                     Choose Plan
                   </Link>
-                  <a href={`https://wa.me/919521281509?text=Hello%20DiziGrow,%20I'm%20interested%20in%20${encodeURIComponent(plan.name)}`} target="_blank" rel="noopener noreferrer" className="w-full bg-green-500 hover:bg-green-600 text-white py-2 md:py-3 px-4 rounded-lg font-semibold transition-all duration-300 block text-center text-sm md:text-base flex items-center justify-center space-x-2">
+                  <a href={`https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I'm%20interested%20in%20${encodeURIComponent(plan.name)}`} target="_blank" rel="noopener noreferrer" className="w-full bg-green-500 hover:bg-green-600 text-white py-2 md:py-3 px-4 rounded-lg font-semibold transition-all duration-300 block text-center text-sm md:text-base flex items-center justify-center space-x-2">
                     <span>💚</span>
                     <span>WhatsApp Now</span>
                   </a>
@@ -821,16 +858,16 @@ const Home = () => {
       <section className="py-12 md:py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Ready to Grow Your Business?</h2>
-          <p className="text-base md:text-xl mb-6 md:mb-8 text-purple-100">Get professional digital marketing services at <span className="text-yellow-400 font-semibold">50-70% OFF</span>. Limited time offer!</p>
+          <p className="text-base md:text-xl mb-6 md:mb-8 text-purple-100">Get professional digital marketing services at <span className="text-yellow-400 font-semibold">40-50% OFF</span>. Limited time offer!</p>
           
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a
-              href="https://wa.me/919521281509?text=Hello%20DiziGrow%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
+              href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-500 hover:bg-yellow-600 text-purple-900 px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-bold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
             >
-              <span>💚 WhatsApp for 70% OFF</span>
+              <span>💚 WhatsApp for 50% OFF</span>
             </a>
             <Link
               to="/pricing"
@@ -843,12 +880,15 @@ const Home = () => {
           <p className="text-purple-200 mt-4 md:mt-6 text-xs md:text-sm">
             ✅ Free Consultation ✅ 24/7 Support ✅ Money-Back Guarantee
           </p>
+          <p className="text-purple-200 mt-2 text-xs md:text-sm">
+            📞 Call Us: +91 7428606849 | 📧 Email: Sociallift91@Gmail.com
+          </p>
         </div>
       </section>
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919521281509?text=Hello%20DiziGrow%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
+        href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-3 md:p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 animate-bounce-slow"

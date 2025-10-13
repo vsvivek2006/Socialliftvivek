@@ -12,13 +12,13 @@ const Privacy: React.FC = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-green-600 via-green-500 to-green-400 text-white py-16">
+      <section className="bg-gradient-to-br from-purple-600 via-purple-500 to-purple-400 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-3">Privacy Policy & Services</h1>
-          <p className="text-green-100 text-lg md:text-xl">
-            How DiziGrow collects, uses, protects, and shares your information.
+          <p className="text-purple-100 text-lg md:text-xl">
+            How Social Lift collects, uses, protects, and shares your information.
           </p>
-          <p className="text-sm text-green-200 mt-2">Last updated: {lastUpdated}</p>
+          <p className="text-sm text-purple-200 mt-2">Last updated: {lastUpdated}</p>
           
           {/* Tab Navigation */}
           <div className="flex justify-center mt-8 space-x-4">
@@ -26,8 +26,8 @@ const Privacy: React.FC = () => {
               onClick={() => setActiveTab("privacy")}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === "privacy" 
-                ? "bg-white text-green-600 shadow-lg" 
-                : "bg-green-700 text-white hover:bg-green-600"
+                ? "bg-white text-purple-600 shadow-lg" 
+                : "bg-purple-700 text-white hover:bg-purple-600"
               }`}
             >
               Privacy Policy
@@ -36,8 +36,8 @@ const Privacy: React.FC = () => {
               onClick={() => setActiveTab("services")}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === "services" 
-                ? "bg-white text-green-600 shadow-lg" 
-                : "bg-green-700 text-white hover:bg-green-600"
+                ? "bg-white text-purple-600 shadow-lg" 
+                : "bg-purple-700 text-white hover:bg-purple-600"
               }`}
             >
               Our Services
@@ -46,8 +46,8 @@ const Privacy: React.FC = () => {
               onClick={() => setActiveTab("packages")}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === "packages" 
-                ? "bg-white text-green-600 shadow-lg" 
-                : "bg-green-700 text-white hover:bg-green-600"
+                ? "bg-white text-purple-600 shadow-lg" 
+                : "bg-purple-700 text-white hover:bg-purple-600"
               }`}
             >
               Package Deals
@@ -63,12 +63,12 @@ const Privacy: React.FC = () => {
             {/* Intro */}
             <div>
               <p>
-                This Privacy Policy explains how <strong>DiziGrow</strong> (“we”, “us”, “our”) collects,
+                This Privacy Policy explains how <strong>Social Lift Digital Marketing Agency</strong> ("we", "us", "our") collects,
                 uses, discloses, and safeguards personal information when you visit our website, engage
                 with our digital marketing campaigns, or use our services. By using our website/services,
                 you agree to this Policy. If you do not agree, please discontinue use.
               </p>
-              <div className="mt-4 bg-green-50 border border-green-100 rounded-xl p-4 text-sm text-green-900">
+              <div className="mt-4 bg-purple-50 border border-purple-100 rounded-xl p-4 text-sm text-purple-900">
                 <strong>Regulatory note:</strong> We strive to comply with applicable laws, including
                 India's Digital Personal Data Protection (DPDP) Act and, where relevant, GDPR. References
                 below to "lawful basis" and "data principal rights" reflect these standards.
@@ -219,11 +219,11 @@ const Privacy: React.FC = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-3">12) How to Contact / Exercise Rights</h2>
               <p>
-                Email <a className="text-green-700 underline" href="mailto:info@dizigrow.com">info@dizigrow.com</a> or call{" "}
-                <a className="text-green-700 underline" href="tel:+919521281509">+91 9521281509</a>. We aim to respond within 7 business days.
+                Email <a className="text-purple-700 underline" href="mailto:Sociallift91@Gmail.com">Sociallift91@Gmail.com</a> or call{" "}
+                <a className="text-purple-700 underline" href="tel:+917428606849">+91 7428606849</a>. We aim to respond within 7 business days.
               </p>
               <p className="text-sm text-gray-600 mt-2">
-                Address: DiziGrow, Jaipur, Rajasthan, India
+                Address: Social Lift Digital Marketing Agency, Professional Services Across India
               </p>
             </div>
 
@@ -280,13 +280,13 @@ const Privacy: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Social Media Management */}
-              <div className="bg-white border border-green-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-green-100 text-green-800 rounded-lg p-4 mb-4">
+              <div className="bg-white border border-purple-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-purple-100 text-purple-800 rounded-lg p-4 mb-4">
                   <h3 className="text-xl font-bold">Social Media Management</h3>
                   <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹4,999/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹18,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">72% OFF</span>
+                    <span className="text-2xl font-bold">₹8,000/-</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">₹15,000/-</span>
+                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">47% OFF</span>
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -301,98 +301,96 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
 
-              {/* Paid Promotion */}
+              {/* Meta Ads Management */}
               <div className="bg-white border border-blue-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="bg-blue-100 text-blue-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Paid Promotion</h3>
-                  <div className="mt-2">
-                    <span className="text-lg font-semibold">20% of Promotional Amount</span>
-                  </div>
-                </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ META Advertising</li>
-                  <li>✓ GOOGLE Ads Campaign</li>
-                  <li>✓ Targeted Audience Reach</li>
-                  <li>✓ Performance Analytics</li>
-                </ul>
-              </div>
-
-              {/* Social Account Creation */}
-              <div className="bg-white border border-purple-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-purple-100 text-purple-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Social Account Creation</h3>
+                  <h3 className="text-xl font-bold">Meta Ads Management</h3>
                   <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹1,999/-</span>
+                    <span className="text-2xl font-bold">₹10,000/-</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">₹18,000/-</span>
+                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">44% OFF</span>
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ META Business Account</li>
-                  <li>✓ Instagram Professional</li>
-                  <li>✓ Twitter (X) Business</li>
+                  <li>✓ Facebook & Instagram Ads</li>
+                  <li>✓ Targeted Audience Campaigns</li>
+                  <li>✓ Ad Creative Creation</li>
+                  <li>✓ Performance Analytics & Optimization</li>
                 </ul>
-                <div className="mt-4 space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Google Business Page</span>
-                    <span className="font-bold">₹999/-</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Business WhatsApp</span>
-                    <span className="font-bold">₹999/-</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">YouTube Channel</span>
-                    <span className="font-bold">₹999/-</span>
-                  </div>
-                </div>
               </div>
 
-              {/* E-commerce Management */}
+              {/* SEO Services */}
+              <div className="bg-white border border-green-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-green-100 text-green-800 rounded-lg p-4 mb-4">
+                  <h3 className="text-xl font-bold">SEO Services</h3>
+                  <div className="flex items-baseline mt-2">
+                    <span className="text-2xl font-bold">₹10,000/-</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">₹18,000/-</span>
+                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">44% OFF</span>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>✓ Comprehensive Keyword Research</li>
+                  <li>✓ On-Page SEO Optimization</li>
+                  <li>✓ Technical SEO Audit</li>
+                  <li>✓ Monthly Ranking Reports</li>
+                </ul>
+              </div>
+
+              {/* Website Development */}
               <div className="bg-white border border-orange-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="bg-orange-100 text-orange-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">E-commerce Management</h3>
+                  <h3 className="text-xl font-bold">Website Development</h3>
                   <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹5,999/-</span>
+                    <span className="text-2xl font-bold">₹15,000/-</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">₹30,000/-</span>
+                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">50% OFF</span>
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Amazon Account Setup</li>
-                  <li>✓ Flipkart Seller Account</li>
-                  <li>✓ Meesho Store Setup</li>
-                  <li>✓ Product Listing Services Available</li>
+                  <li>✓ 5 Page Responsive Website</li>
+                  <li>✓ Mobile-Friendly Design</li>
+                  <li>✓ Contact Form Integration</li>
+                  <li>✓ Basic SEO Setup</li>
+                  <li>✓ 1 Year Hosting Included</li>
                 </ul>
-                <p className="text-xs text-orange-700 mt-3">* Photo-shoot services also available</p>
               </div>
 
-              {/* Marketing Services */}
+              {/* Google Business Profile */}
               <div className="bg-white border border-red-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="bg-red-100 text-red-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Marketing Services</h3>
-                </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ SEO Optimization</li>
-                  <li>✓ Online Presence Creation</li>
-                  <li>✓ Logo Creation</li>
-                  <li>✓ Influencer Marketing</li>
-                  <li>✓ META & Google AD Campaigning</li>
-                  <li>✓ Flyer & Video Creation</li>
-                  <li>✓ E-Mail Marketing</li>
-                  <li>✓ Bulk Message Service</li>
-                </ul>
-              </div>
-
-              {/* IT Services */}
-              <div className="bg-white border border-indigo-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-indigo-100 text-indigo-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">IT Services</h3>
+                  <h3 className="text-xl font-bold">Google Business Profile</h3>
                   <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹17,999/-</span>
+                    <span className="text-2xl font-bold">₹6,000/-</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">₹12,000/-</span>
+                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">50% OFF</span>
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Static Website Creation</li>
-                  <li>✓ Theme Page Creation</li>
-                  <li>✓ Dynamic App & Website</li>
-                  <li>✓ Shopify Website Creation</li>
+                  <li>✓ Complete Profile Setup</li>
+                  <li>✓ Category & Description Optimization</li>
+                  <li>✓ Professional Photos Upload</li>
+                  <li>✓ Review Management Setup</li>
+                  <li>✓ Local SEO Optimization</li>
+                </ul>
+              </div>
+
+              {/* Lead Generation */}
+              <div className="bg-white border border-indigo-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-indigo-100 text-indigo-800 rounded-lg p-4 mb-4">
+                  <h3 className="text-xl font-bold">Lead Generation</h3>
+                  <div className="flex items-baseline mt-2">
+                    <span className="text-2xl font-bold">₹6,000/-</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">₹12,000/-</span>
+                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">50% OFF</span>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>✓ Targeted Lead Generation</li>
+                  <li>✓ Multi-channel Campaign Setup</li>
+                  <li>✓ Lead Qualification System</li>
+                  <li>✓ Performance Tracking</li>
+                  <li>✓ Monthly Lead Reports</li>
                 </ul>
               </div>
             </div>
@@ -409,39 +407,42 @@ const Privacy: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Starter Package */}
-              <div className="bg-white rounded-xl shadow-lg border-2 border-green-300 transform hover:scale-105 transition-transform">
-                <div className="bg-green-500 text-white rounded-t-xl p-6 text-center">
+              <div className="bg-white rounded-xl shadow-lg border-2 border-purple-300 transform hover:scale-105 transition-transform">
+                <div className="bg-purple-500 text-white rounded-t-xl p-6 text-center">
                   <h3 className="text-2xl font-bold">Starter Package</h3>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold">₹8,497</span>
-                    <span className="block text-green-100 text-sm">SAVE ₹3,500</span>
+                    <span className="text-4xl font-bold">₹15,497</span>
+                    <span className="block text-purple-100 text-sm">SAVE ₹7,500</span>
                   </div>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm text-gray-700">
                     <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                      Social Media Management - ₹4,999
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                      Social Media Management - ₹8,000
                     </li>
                     <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                      Social Account Creation - ₹1,999
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                      Social Account Creation - ₹2,499
                     </li>
                     <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                      Google Business Page - ₹999
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                      Google Business Profile - ₹6,000
                     </li>
                     <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                      Business WhatsApp - ₹999
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                      Business WhatsApp Setup - ₹1,499
                     </li>
                   </ul>
-                  <div className="mt-6 p-3 bg-green-50 rounded-lg">
-                    <p className="text-green-800 font-semibold text-center">Individual: ₹11,997</p>
+                  <div className="mt-6 p-3 bg-purple-50 rounded-lg">
+                    <p className="text-purple-800 font-semibold text-center">Individual: ₹22,997</p>
                   </div>
-                  <button className="w-full mt-4 bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                  <a 
+                    href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20the%20Starter%20Package"
+                    className="w-full mt-4 bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors block text-center"
+                  >
                     Get Started
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -453,39 +454,42 @@ const Privacy: React.FC = () => {
                 <div className="bg-blue-500 text-white rounded-t-xl p-6 text-center">
                   <h3 className="text-2xl font-bold">Business Package</h3>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold">₹16,497</span>
-                    <span className="block text-blue-100 text-sm">SAVE ₹7,500</span>
+                    <span className="text-4xl font-bold">₹29,497</span>
+                    <span className="block text-blue-100 text-sm">SAVE ₹15,500</span>
                   </div>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm text-gray-700">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Social Media Management - ₹4,999
+                      Social Media Management - ₹8,000
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      All Social Account Creation - ₹1,999
+                      Meta Ads Management - ₹10,000
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      E-commerce Management - ₹5,999
+                      Website Development - ₹15,000
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Static Website Creation - ₹17,999
+                      Google Business Profile - ₹6,000
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Google Business + WhatsApp - ₹1,998
+                      All Account Creations Included
                     </li>
                   </ul>
                   <div className="mt-6 p-3 bg-blue-50 rounded-lg">
-                    <p className="text-blue-800 font-semibold text-center">Individual: ₹23,997</p>
+                    <p className="text-blue-800 font-semibold text-center">Individual: ₹44,997</p>
                   </div>
-                  <button className="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                  <a 
+                    href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20the%20Business%20Package"
+                    className="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors block text-center"
+                  >
                     Get Started
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -494,43 +498,46 @@ const Privacy: React.FC = () => {
                 <div className="bg-purple-500 text-white rounded-t-xl p-6 text-center">
                   <h3 className="text-2xl font-bold">Enterprise Package</h3>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold">₹25,497</span>
-                    <span className="block text-purple-100 text-sm">SAVE ₹12,500</span>
+                    <span className="text-4xl font-bold">₹44,997</span>
+                    <span className="block text-purple-100 text-sm">SAVE ₹25,000</span>
                   </div>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm text-gray-700">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Complete Social Media Suite - ₹6,998
+                      Complete Digital Marketing Suite
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      E-commerce Multi-platform - ₹5,999
+                      3 Months Social Media Management
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Dynamic Website/App - ₹17,999
+                      3 Months Meta Ads Management
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Complete Marketing Services
+                      Professional Website Development
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Paid Promotion Management
+                      Lead Generation Setup
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      All Account Creations Included
+                      All Platform Account Creations
                     </li>
                   </ul>
                   <div className="mt-6 p-3 bg-purple-50 rounded-lg">
-                    <p className="text-purple-800 font-semibold text-center">Individual: ₹37,997</p>
+                    <p className="text-purple-800 font-semibold text-center">Individual: ₹69,997</p>
                   </div>
-                  <button className="w-full mt-4 bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors">
+                  <a 
+                    href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20the%20Enterprise%20Package"
+                    className="w-full mt-4 bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors block text-center"
+                  >
                     Get Started
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -544,9 +551,12 @@ const Privacy: React.FC = () => {
                 <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm">Flexible Pricing</span>
                 <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm">Personalized Solutions</span>
               </div>
-              <button className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+              <a 
+                href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I%20want%20a%20custom%20package%20quote"
+                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-block"
+              >
                 Contact for Custom Quote
-              </button>
+              </a>
             </div>
 
             {/* WhatsApp Contact */}
@@ -562,7 +572,7 @@ const Privacy: React.FC = () => {
                   </div>
                 </div>
                 <a 
-                  href="https://wa.me/919521281509?text=Hi%20DiziGrow,%20I'm%20interested%20in%20your%20services"
+                  href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20your%20services"
                   className="inline-block mt-4 bg-white text-[#25D366] px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
                 >
                   Message Us on WhatsApp

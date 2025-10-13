@@ -15,7 +15,8 @@ const Pricing = () => {
   const [paymentAmount, setPaymentAmount] = useState(0);
   const [originalAmount, setOriginalAmount] = useState(0);
 
-const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
+  const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
+  
   // Payment Handler
   const handlePayment = async (amount: number, serviceName: string) => {
     try {
@@ -25,11 +26,11 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
         key: RAZORPAY_KEY_ID,
         amount: amountInPaise,
         currency: 'INR',
-        name: 'DiziGrow Digital Marketing',
+        name: 'Social Lift Digital Marketing',
         description: `${serviceName} - Advance Payment`,
         handler: function(response: any) {
           alert(`Payment Successful! Payment ID: ${response.razorpay_payment_id}`);
-          window.location.href = `https://wa.me/919521281509?text=Payment Successful for ${serviceName}. Payment ID: ${response.razorpay_payment_id}`;
+          window.location.href = `https://wa.me/917428606849?text=Payment Successful for ${serviceName}. Payment ID: ${response.razorpay_payment_id}`;
         },
         prefill: {
           name: 'Customer Name',
@@ -64,9 +65,9 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
   const monthlyServices = [
     { 
       name: 'Social Media Management', 
-      price: '₹4,999/month', 
-      originalPrice: '₹18,000',
-      currentPrice: 4999,
+      price: '₹8,000/month', 
+      originalPrice: '₹15,000',
+      currentPrice: 8000,
       duration: 'Minimum 3 months commitment',
       description: 'Complete social media management across all platforms',
       popular: true,
@@ -84,9 +85,9 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
     },
     { 
       name: 'SEO Service', 
-      price: '₹7,999/month', 
-      originalPrice: '₹14,999',
-      currentPrice: 7999,
+      price: '₹10,000/month', 
+      originalPrice: '₹18,000',
+      currentPrice: 10000,
       duration: 'Minimum 3 months commitment',
       description: 'Complete SEO optimization for better Google rankings',
       popular: false,
@@ -105,24 +106,23 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
       badge: 'BEST FOR GROWTH'
     },
     { 
-  name: 'Google Ads Management', 
-  price: '₹3,999/month', 
-  originalPrice: '₹14,999',
-  currentPrice: 3999,   // 
-  duration: 'Minimum 3 months commitment',
-  description: 'Professional Google Ads campaign management',
-  popular: false,
-  features: [
-    'Campaign Strategy & Setup',
-    'Keyword Research & Analysis',
-    'Ad Copy Creation & Optimization',
-    'Landing Page Quality Score Optimization',
-    'Daily Budget & Bid Management',
-    'A/B Testing of Ads & Landing Pages',
-    'Conversion Tracking Setup',
-    'Monthly Performance Reports',
-    'ROI Optimization',
-    '24/7 Campaign Monitoring'
+      name: 'Meta Ads Management', 
+      price: '₹10,000/month', 
+      originalPrice: '₹18,000',
+      currentPrice: 10000,
+      duration: 'Minimum 3 months commitment',
+      description: 'Professional Meta Ads campaign management',
+      popular: false,
+      features: [
+        'Campaign Strategy & Setup',
+        'Audience Research & Targeting',
+        'Ad Creative Creation & Optimization',
+        'Daily Budget & Bid Management',
+        'A/B Testing of Ads & Landing Pages',
+        'Conversion Tracking Setup',
+        'Monthly Performance Reports',
+        'ROI Optimization',
+        '24/7 Campaign Monitoring'
       ],
       badge: 'HIGH ROI'
     }
@@ -132,9 +132,9 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
   const digitalMarketingServices = [
     { 
       name: 'Social Media Account Creation', 
-      price: '₹1,999', 
+      price: '₹2,499', 
       originalPrice: '₹4,999',
-      currentPrice: 1999,
+      currentPrice: 2499,
       description: 'Professional social media account setup',
       features: [
         'META Business Account Setup',
@@ -146,10 +146,10 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
       ]
     },
     { 
-      name: 'Google Business Page', 
-      price: '₹999', 
-      originalPrice: '₹2,999',
-      currentPrice: 999,
+      name: 'Google Business Profile', 
+      price: '₹6,000', 
+      originalPrice: '₹12,000',
+      currentPrice: 6000,
       description: 'Google My Business listing setup & optimization',
       features: [
         'Google Business Profile Creation',
@@ -161,10 +161,10 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
       ]
     },
     { 
-      name: 'Business WhatsApp', 
-      price: '₹999', 
-      originalPrice: '₹2,499',
-      currentPrice: 999,
+      name: 'Business WhatsApp Setup', 
+      price: '₹1,499', 
+      originalPrice: '₹2,999',
+      currentPrice: 1499,
       description: 'Business WhatsApp API setup with catalog',
       features: [
         'Business WhatsApp API Setup',
@@ -176,51 +176,48 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
       ]
     },
     { 
-
-  name: 'YouTube Channel Launch & SEO',
-  price: '₹3,999',
-  originalPrice: '₹9,999',
-  currentPrice: 3999,
-  description: 'Professional YouTube Channel Launch & Optimization',
-  features: [
-    'Complete Channel Creation & Setup',
-    'Custom Branding (Logo & Banner)',
-    'Video SEO & Metadata Optimization',
-    'Optimized Channel Bio & Keywords',
-    'Playlist / Section Arrangement',
-    'Monetization Ready Guidance'
-  ]
-
-
-    },
-    { 
-      name: 'E-commerce Marketing', 
-      price: '₹5,999', 
-      originalPrice: '₹12,999',
-      currentPrice: 5999,
-      description: 'Complete E-commerce Solutions',
+      name: 'YouTube Channel SEO', 
+      price: '₹4,999', 
+      originalPrice: '₹9,999',
+      currentPrice: 4999,
+      description: 'Professional YouTube Channel Optimization',
       features: [
-        'Amazon Seller Account Setup',
-        'Flipkart Seller Account Setup',
-        'Meesho Store Setup',
-        'Product Listing & Optimization',
-        'Sales Strategy & Optimization',
-        'Multi-platform Management'
+        'Complete Channel SEO Optimization',
+        'Custom Branding (Logo & Banner)',
+        'Video SEO & Metadata Optimization',
+        'Optimized Channel Bio & Keywords',
+        'Playlist / Section Arrangement',
+        'Monetization Ready Guidance'
       ]
     },
     { 
-      name: 'Meta & Google Ads Setup', 
-      price: '₹3,999', 
-      originalPrice: '₹7,999',
-      currentPrice: 3999,
-      description: 'Complete advertising account setup',
+      name: 'Lead Generation Service', 
+      price: '₹6,000/month', 
+      originalPrice: '₹12,000',
+      currentPrice: 6000,
+      description: 'Professional lead generation campaigns',
       features: [
-        'Meta Business Manager Setup',
-        'Google Ads Account Creation',
-        'Pixel Installation & Tracking',
-        'Conversion API Setup',
-        'Audience Research & Creation',
-        'Initial Campaign Structure'
+        'Targeted Lead Generation Strategy',
+        'Multi-channel Campaign Setup',
+        'Lead Qualification System',
+        'CRM Integration',
+        'Performance Tracking & Analytics',
+        'Monthly Lead Reports'
+      ]
+    },
+    { 
+      name: 'Video Shoot Service', 
+      price: '₹8,000', 
+      originalPrice: '₹15,000',
+      currentPrice: 8000,
+      description: 'Professional video production service',
+      features: [
+        'Professional Video Shooting',
+        'Creative Script Writing',
+        'Video Editing & Post-production',
+        'Color Correction & Grading',
+        'Sound Design & Music',
+        'Multiple Format Delivery'
       ]
     }
   ];
@@ -228,38 +225,39 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
   // IT & Website Services
   const itServices = [
     { 
-      name: 'Website Development', 
-      price: '₹9,999', 
-      originalPrice: '₹22,000',
-      currentPrice: 9999,
-      description: 'Professional Website Development',
+      name: 'Website Development (5 Pages)', 
+      price: '₹15,000', 
+      originalPrice: '₹30,000',
+      currentPrice: 15000,
+      description: 'Professional 5-page responsive website',
       popular: true,
       features: [
-        'WordPress or Shopify Platform',
-        '5 Page Responsive Website',
+        '5 Page Fully Responsive Website',
         'Mobile-Friendly Design',
         'Contact Form Integration',
         'Basic SEO Setup',
         '1 Year Hosting Included',
-        'SSL Certificate',
+        'SSL Certificate Security',
+        'Social Media Integration',
         '6 Months Technical Support'
       ]
     },
     { 
-      name: 'Shopify Website', 
-      price: '₹24,999', 
-      originalPrice: '₹49,999',
-      currentPrice: 24999,
-      description: 'Complete e-commerce website on Shopify',
+      name: 'Dynamic Website & App', 
+      price: '₹25,000', 
+      originalPrice: '₹50,000',
+      currentPrice: 25000,
+      description: 'Custom dynamic web applications',
       popular: false,
       features: [
-        'Custom Shopify Theme',
-        'Product Listing (Up to 50 products)',
-        'Inventory Management',
-        'Order Processing System',
-        'Mobile App Ready',
-        'SEO Optimized',
-        '1 Year Technical Support'
+        'Custom Web Application Development',
+        'Admin Dashboard & Control Panel',
+        'User Management System',
+        'Database Integration & Management',
+        'API Development & Integration',
+        'Advanced Security Features',
+        'Performance Optimization',
+        '1 Year Support & Maintenance'
       ]
     }
   ];
@@ -268,26 +266,26 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
   const marketingServices = [
     { 
       name: 'Logo Design Service', 
-      price: '₹799', 
-      originalPrice: '₹2,999',
-      currentPrice: 799,
+      price: '₹1,299', 
+      originalPrice: '₹2,599',
+      currentPrice: 1299,
       description: 'Professional logo design with multiple concepts',
       icon: <TrendingUp className="h-6 w-6" />
     },
     { 
       name: 'Email Marketing', 
-      price: '₹4,999', 
-      originalPrice: '₹9,999',
-      currentPrice: 4999,
+      price: '₹3,999/month', 
+      originalPrice: '₹7,999',
+      currentPrice: 3999,
       description: 'Email campaign setup & management',
       icon: <Mail className="h-6 w-6" />
     },
     { 
-      name: 'Flyer & Video Creation', 
+      name: 'Video Creation & Editing', 
       price: '₹1,999', 
       originalPrice: '₹3,999',
       currentPrice: 1999,
-      description: 'Professional flyer design & video editing',
+      description: 'Professional video editing service',
       icon: <Video className="h-6 w-6" />
     }
   ];
@@ -295,109 +293,109 @@ const RAZORPAY_KEY_ID = 'rzp_live_ROjWHHKbSiP7Al';
   // Combo Packages - High Value Bundles
   const comboPackages = [
     {
-      name: 'Website + SEO Combo',
-      price: '₹29,999',
-      originalPrice: '₹67,497',
-      currentPrice: 29999,
+      name: 'Website + Social Media Combo',
+      price: '₹44,999',
+      originalPrice: '₹90,000',
+      currentPrice: 44999,
       popular: true,
       type: 'one-time + 3 months',
-      description: 'Complete website with 3 months SEO service - Perfect for business growth',
+      description: 'Complete website with 3 months social media management',
       features: [
         'Professional Website (5 pages)',
-        '3 Months SEO Service Included',
-        'Google Business Page Setup',
+        '3 Months Social Media Management',
+        'Google Business Profile Setup',
         'Social Media Account Creation',
         'Mobile Responsive Design',
-        'Basic On-Page SEO',
-        'Monthly SEO Reports',
+        '45 Creative Posts Included',
+        '6 Professional Videos/Reels',
         '12 Months Technical Support',
         'Website Hosting & SSL',
         'Performance Analytics'
       ],
-      savings: '₹37,498',
-      whatsappText: 'Hello DiziGrow, I want the Website + SEO Combo Package for my business'
+      savings: '₹45,001',
+      whatsappText: 'Hello Social Lift, I want the Website + Social Media Combo Package for my business'
     },
     {
-      name: 'Social Media Pro Package',
-      price: '₹12,999',
-      originalPrice: '₹24,997',
-      currentPrice: 12999,
+      name: 'Complete Digital Marketing Package',
+      price: '₹64,999',
+      originalPrice: '₹1,20,000',
+      currentPrice: 64999,
       popular: false,
       type: '3 months service',
-      description: 'Complete social media management for 3 months with account setup',
+      description: 'Complete digital marketing solution for 3 months',
       features: [
         '3 Months Social Media Management',
-        'Social Media Account Creation (All Platforms)',
-        '45 Creative Design Posts',
-        '6 Professional Videos/Reels',
-        'Google Business Page Setup',
-        'Content Strategy & Calendar',
+        '3 Months SEO Service',
+        '3 Months Meta Ads Management',
+        'Google Business Profile Setup',
+        'Website Development (5 pages)',
+        'Lead Generation Setup',
         'Performance Analytics Dashboard',
-        'Hashtag Research & Optimization',
-        'Competitor Analysis',
-        'Monthly Strategy Reports'
+        'Monthly Strategy Reports',
+        '24/7 Support',
+        'Dedicated Account Manager'
       ],
-      savings: '₹11,998',
-      whatsappText: 'Hello DiziGrow, I want the Social Media Pro Package for my business'
+      savings: '₹55,001',
+      whatsappText: 'Hello Social Lift, I want the Complete Digital Marketing Package for my business'
     }
   ];
 
-// Add-ons & Extra Services
-const addOns = [
-  { 
-    name: 'Extra Social Media Post', 
-    price: '₹100/post', 
-    currentPrice: 100,
-    description: 'Additional creative posts for social media',
-    category: 'social'
-  },
-  { 
-    name: 'Extra Video/Reel Creation', 
-    price: '₹200/video', 
-    currentPrice: 200,
-    description: 'Additional video content (Max 2 minutes)',
-    category: 'content'
-  },
-  { 
-    name: 'Product Listing', 
-    price: '₹50/product', 
-    currentPrice: 50,
-    description: 'Additional product listings for e-commerce',
-    category: 'ecommerce'
-  },
-  { 
-    name: 'Free Consultation', 
-    price: '₹999', 
-    currentPrice: 10,
-    description: '30-min Professional Digital Marketing Consultation',
-    category: 'consultation',
-  }
-];
+  // Add-ons & Extra Services
+  const addOns = [
+    { 
+      name: 'Extra Social Media Post', 
+      price: '₹100/post', 
+      currentPrice: 100,
+      description: 'Additional creative posts for social media',
+      category: 'social'
+    },
+    { 
+      name: 'Extra Video/Reel Creation', 
+      price: '₹200/video', 
+      currentPrice: 200,
+      description: 'Additional video content (Max 2 minutes)',
+      category: 'content'
+    },
+    { 
+      name: 'Product Listing', 
+      price: '₹50/product', 
+      currentPrice: 50,
+      description: 'Additional product listings for e-commerce',
+      category: 'ecommerce'
+    },
+    { 
+      name: 'Free Consultation', 
+      price: '₹999', 
+      currentPrice: 10,
+      description: '30-min Professional Digital Marketing Consultation',
+      category: 'consultation',
+    }
+  ];
 
-const calculateDiscount = (currentPrice: number, originalPrice: number) => {
-  return Math.round((1 - currentPrice / originalPrice) * 100);
-};
+  const calculateDiscount = (currentPrice: number, originalPrice: number) => {
+    return Math.round((1 - currentPrice / originalPrice) * 100);
+  };
 
-// Add this function for consultation scheduling
-const scheduleConsultation = () => {
-  const consultationMessage = `🎯 I want to schedule a Free Digital Marketing Consultation!\n\nPlease share available time slots for a 30-minute video call.`;
-  const encodedMessage = encodeURIComponent(consultationMessage);
-  window.open(`https://wa.me/919521281509?text=${encodedMessage}`, '_blank');
-};
+  // Add this function for consultation scheduling
+  const scheduleConsultation = () => {
+    const consultationMessage = `🎯 I want to schedule a Free Digital Marketing Consultation!\n\nPlease share available time slots for a 30-minute video call.`;
+    const encodedMessage = encodeURIComponent(consultationMessage);
+    window.open(`https://wa.me/917428606849?text=${encodedMessage}`, '_blank');
+  };
 
   return (
     <div>
       <Helmet>
-        <title>Digital Marketing Pricing | Social Media ₹4,999, SEO ₹7,999, Website ₹9,999 - DiziGrow</title>
+        <title>Digital Marketing Pricing | Social Media ₹8,000, SEO ₹10,000, Website ₹15,000 - Social Lift</title>
         <meta
           name="description"
-          content="Affordable digital marketing packages: Social Media Management ₹4,999/month, SEO ₹7,999/month, Website Development ₹9,999. 70% OFF + 5% Extra on Advance Payment."
+          content="Affordable digital marketing packages: Social Media Management ₹8,000/month, SEO ₹10,000/month, Website Development ₹15,000. 40-50% OFF + 5% Extra on Advance Payment."
         />
         <meta 
           name="keywords" 
-          content="digital marketing pricing, social media management cost, SEO services price, website development cost, e-commerce setup, Google Ads management, affordable digital marketing India"
+          content="digital marketing pricing, social media management cost, SEO services price, website development cost, e-commerce setup, Meta Ads management, affordable digital marketing India"
         />
-        <link rel="canonical" href="https://dizigrow.com/pricing" />
+        <link rel="canonical" href="https://sociallift.com/pricing" />
       </Helmet>
 
       {/* Hero Section */}
@@ -408,12 +406,12 @@ const scheduleConsultation = () => {
               Digital Marketing <span className="text-yellow-400">Pricing</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-purple-100">
-              Professional Digital Marketing Services at 70% OFF + 5% Extra on Advance Payment
+              Professional Digital Marketing Services at 40-50% OFF + 5% Extra on Advance Payment
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 text-purple-100">
               <div className="flex items-center space-x-2">
                 <Check className="h-5 w-5 text-green-400" />
-                <span>70% Discount on All Services</span>
+                <span>40-50% Discount on All Services</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Check className="h-5 w-5 text-green-400" />
@@ -495,7 +493,7 @@ const scheduleConsultation = () => {
                       💳 Pay Advance - Save 5%
                     </button>
                     <a
-                      href={`https://wa.me/919521281509?text=Hello DiziGrow, I want to get ${service.name} monthly service`}
+                      href={`https://wa.me/917428606849?text=Hello Social Lift, I want to get ${service.name} monthly service`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg font-medium transition-colors block text-center"
@@ -557,7 +555,7 @@ const scheduleConsultation = () => {
                     💳 Pay Advance - Save 5%
                   </button>
                   <a
-                    href={`https://wa.me/919521281509?text=Hello DiziGrow, I want to get ${service.name} service`}
+                    href={`https://wa.me/917428606849?text=Hello Social Lift, I want to get ${service.name} service`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center"
@@ -626,7 +624,7 @@ const scheduleConsultation = () => {
                     💳 Pay Advance - Save 5%
                   </button>
                   <a
-                    href={`https://wa.me/919521281509?text=Hello DiziGrow, I want to get ${service.name} service`}
+                    href={`https://wa.me/917428606849?text=Hello Social Lift, I want to get ${service.name} service`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg font-medium transition-colors block text-center"
@@ -679,7 +677,7 @@ const scheduleConsultation = () => {
                     💳 Pay Advance
                   </button>
                   <a
-                    href={`https://wa.me/919521281509?text=Hello DiziGrow, I want to get ${service.name} service`}
+                    href={`https://wa.me/917428606849?text=Hello Social Lift, I want to get ${service.name} service`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center"
@@ -765,7 +763,7 @@ const scheduleConsultation = () => {
                       💳 Pay Advance - Save 5%
                     </button>
                     <a
-                      href={`https://wa.me/919521281509?text=${encodeURIComponent(pkg.whatsappText)}`}
+                      href={`https://wa.me/917428606849?text=${encodeURIComponent(pkg.whatsappText)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg font-medium transition-colors block text-center"
@@ -780,87 +778,88 @@ const scheduleConsultation = () => {
         </div>
       </section>
 
-     {/* Add-ons Section */}
-<section className="py-16 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Add-on Services
-      </h2>
-      <p className="text-xl text-gray-600">
-        Enhance Your Package with These Additional Services
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {addOns.map((addon, index) => (
-        <div key={index} className={`bg-gray-50 p-6 rounded-xl border-2 ${
-          addon.name === 'Free Consultation' ? 'border-green-300 bg-green-50' : 'border-gray-200'
-        } hover:border-purple-300 transition-colors`}>
-          {addon.name === 'Free Consultation' && (
-            <div className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3">
-              🎯 FREE CONSULTATION
-            </div>
-          )}
-          
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">{addon.name}</h3>
-          <p className="text-gray-600 text-sm mb-4">{addon.description}</p>
-          
-          {addon.features && (
-            <ul className="space-y-2 mb-4">
-              {addon.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-700">
-                  <Check className="h-3 w-3 text-green-500 flex-shrink-0" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-          
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-lg font-bold text-purple-600">{addon.price}</span>
-            {addon.name !== 'Free Consultation' && (
-              <a
-                href={`https://wa.me/919521281509?text=Hello DiziGrow, I want to add ${addon.name} to my package`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded font-medium text-sm transition-colors"
-              >
-                Add Service
-              </a>
-            )}
+      {/* Add-ons Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Add-on Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Enhance Your Package with These Additional Services
+            </p>
           </div>
 
-          <div className="space-y-2">
-            {addon.name === 'Free Consultation' ? (
-              <>
-                <button
-                  onClick={() => openPaymentModal(addon.name, addon.currentPrice, 999)}
-                  className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center text-sm"
-                >
-                  💳 Pay ₹10 & Schedule
-                </button>
-                <button
-                  onClick={scheduleConsultation}
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center text-sm"
-                >
-                  📅 Schedule Free Call
-                </button>
-              </>
-            ) : (
-              <button
-                onClick={() => openPaymentModal(addon.name, addon.currentPrice, addon.currentPrice * 2)}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center text-sm"
-              >
-                💳 Pay Now
-              </button>
-            )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {addOns.map((addon, index) => (
+              <div key={index} className={`bg-gray-50 p-6 rounded-xl border-2 ${
+                addon.name === 'Free Consultation' ? 'border-green-300 bg-green-50' : 'border-gray-200'
+              } hover:border-purple-300 transition-colors`}>
+                {addon.name === 'Free Consultation' && (
+                  <div className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3">
+                    🎯 FREE CONSULTATION
+                  </div>
+                )}
+                
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{addon.name}</h3>
+                <p className="text-gray-600 text-sm mb-4">{addon.description}</p>
+                
+                {addon.features && (
+                  <ul className="space-y-2 mb-4">
+                    {addon.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-700">
+                        <Check className="h-3 w-3 text-green-500 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-lg font-bold text-purple-600">{addon.price}</span>
+                  {addon.name !== 'Free Consultation' && (
+                    <a
+                      href={`https://wa.me/917428606849?text=Hello Social Lift, I want to add ${addon.name} to my package`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded font-medium text-sm transition-colors"
+                    >
+                      Add Service
+                    </a>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  {addon.name === 'Free Consultation' ? (
+                    <>
+                      <button
+                        onClick={() => openPaymentModal(addon.name, addon.currentPrice, 999)}
+                        className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center text-sm"
+                      >
+                        💳 Pay ₹10 & Schedule
+                      </button>
+                      <button
+                        onClick={scheduleConsultation}
+                        className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center text-sm"
+                      >
+                        📅 Schedule Free Call
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      onClick={() => openPaymentModal(addon.name, addon.currentPrice, addon.currentPrice * 2)}
+                      className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors block text-center text-sm"
+                    >
+                      💳 Pay Now
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -868,22 +867,22 @@ const scheduleConsultation = () => {
             Ready to Grow Your Business?
           </h2>
           <p className="text-xl mb-8 text-purple-100">
-            Get Professional Digital Marketing Services at 70% OFF + 5% Extra on Advance Payment!
+            Get Professional Digital Marketing Services at 40-50% OFF + 5% Extra on Advance Payment!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919521281509?text=Hello DiziGrow, I want to discuss digital marketing services for my business"
+              href="https://wa.me/917428606849?text=Hello Social Lift, I want to discuss digital marketing services for my business"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-500 hover:bg-yellow-600 text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
             >
-              <span>💬 WhatsApp for 70% OFF</span>
+              <span>💬 WhatsApp for 50% OFF</span>
             </a>
             <a
-              href="tel:+919521281509"
+              href="tel:+917428606849"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
             >
-              <span>📞 Call: +91 9521281509</span>
+              <span>📞 Call: +91 7428606849</span>
             </a>
           </div>
           <p className="text-purple-200 mt-4">

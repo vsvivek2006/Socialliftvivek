@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -21,7 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = `Hello DiziGrow! 
+    const whatsappMessage = `Hello Social Lift! 
 
 *New Contact Form Submission*
 
@@ -33,44 +32,41 @@ const Contact = () => {
 
 I would like to discuss my project with you.`;
 
-    const whatsappUrl = `https://wa.me/919521281509?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/917428606849?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const services = [
-    'Logo Design',
-    'Website Development',
-    'E-commerce Store',
-    'Digital Marketing',
-    'SEO Services',
     'Social Media Management',
-    'Google Ads',
-    'Meta Ads',
+    'Meta Ads Management',
+    'SEO Services',
+    'Website Development',
+    'Google Business Profile',
+    'Lead Generation',
+    'Video Shoot Service',
+    'Logo Design',
+    'Email Marketing',
     'Custom Package',
     'Other'
   ];
-
-
-
-
 
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6" />,
       title: 'Phone',
-      content: '+91 9521281509',
-      link: 'tel:+919521281509'
+      content: '+91 7428606849',
+      link: 'tel:+917428606849'
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      content: 'info@dizigrow.com',
-      link: 'mailto:info@dizigrow.com'
+      content: 'Sociallift91@Gmail.com',
+      link: 'mailto:Sociallift91@Gmail.com'
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Address',
-      content: 'Jaipur, Rajasthan',
+      content: 'Professional Digital Marketing Services Across India',
       link: '#'
     },
     {
@@ -85,51 +81,51 @@ I would like to discuss my project with you.`;
     <div>
       {/* ✅ SEO Component */}
       <Helmet>
-        <title>Contact DiziGrow | Digital Marketing, SEO & Web Development Jaipur</title>
+        <title>Contact Social Lift | Digital Marketing, Social Media & SEO Services</title>
         <meta
           name="description"
-          content="Contact DiziGrow, a leading digital marketing company in Jaipur. Reach us for SEO, web development, performance marketing, social media & graphics design services."
+          content="Contact Social Lift Digital Marketing Agency. Reach us for Social Media Management, Meta Ads, SEO, Website Development & Lead Generation services."
         />
         <meta
           name="keywords"
-          content="Contact DiziGrow, digital marketing Jaipur, SEO company Jaipur, web development Jaipur, social media marketing Jaipur, graphics design Jaipur, performance marketing India"
+          content="Contact Social Lift, digital marketing agency, social media management, meta ads, SEO services, website development, lead generation, video shoot service"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://dizigrow.com/contact" />
+        <link rel="canonical" href="https://sociallift.com/contact" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Contact DiziGrow – SEO & Digital Marketing Company Jaipur" />
-        <meta property="og:description" content="Get in touch with DiziGrow – Jaipur’s top digital marketing agency for SEO, web development, social media, and branding services." />
+        <meta property="og:title" content="Contact Social Lift – Digital Marketing Agency" />
+        <meta property="og:description" content="Get in touch with Social Lift – Professional digital marketing agency for Social Media Management, Meta Ads, SEO, and Website Development services." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dizigrow.com/contact" />
-        <meta property="og:image" content="https://dizigrow.com/og-image.jpg" />
+        <meta property="og:url" content="https://sociallift.com/contact" />
+        <meta property="og:image" content="https://sociallift.com/og-image.jpg" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact DiziGrow | Digital Marketing & SEO Jaipur" />
-        <meta name="twitter:description" content="Reach DiziGrow for top-notch digital marketing, web development, SEO, and social media management services in Jaipur, India." />
-        <meta name="twitter:image" content="https://dizigrow.com/og-image.jpg" />
+        <meta name="twitter:title" content="Contact Social Lift | Digital Marketing Agency" />
+        <meta name="twitter:description" content="Reach Social Lift for professional digital marketing, social media management, Meta ads, SEO, and website development services across India." />
+        <meta name="twitter:image" content="https://sociallift.com/og-image.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "DiziGrow",
-            "url": "https://dizigrow.com",
-            "logo": "https://dizigrow.com/logo.png",
+            "name": "Social Lift Digital Marketing Agency",
+            "url": "https://sociallift.com",
+            "logo": "https://sociallift.com/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+91 9521281509",
+              "telephone": "+91 7428606849",
               "contactType": "customer support",
-              "email": "info@dizigrow.com",
+              "email": "Sociallift91@Gmail.com",
               "areaServed": "IN",
               "availableLanguage": "English"
             },
             "sameAs": [
-              "https://www.facebook.com/profile.php?id=61581763886467",
-              "https://www.instagram.com/dizi_grow/",
-              "https://www.linkedin.com/company/109423940/"
+              "https://www.facebook.com/sociallift/",
+              "https://www.instagram.com/sociallift/",
+              "https://www.linkedin.com/company/sociallift/"
             ]
           })}
         </script>
@@ -143,11 +139,11 @@ I would like to discuss my project with you.`;
               Get In <span className="text-yellow-400">Touch</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-purple-100">
-              Ready to grow your business? Let's discuss your project and create something amazing together.
+              Ready to grow your business? Let's discuss your project and create amazing digital marketing results together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://wa.me/919521281509?text=Hello DiziGrow, I want to discuss my project"
+                href="https://wa.me/917428606849?text=Hello Social Lift, I want to discuss my project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center space-x-2"
@@ -257,7 +253,7 @@ I would like to discuss my project with you.`;
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Tell us about your project, goals, and how we can help..."
+                    placeholder="Tell us about your business, goals, and how we can help with digital marketing..."
                   />
                 </div>
 
@@ -281,7 +277,7 @@ I would like to discuss my project with you.`;
                 Contact Information
               </h2>
               <p className="text-gray-600 mb-8">
-                Reach out to us through any of these channels. We're always here to help you grow your business!
+                Reach out to us through any of these channels. We're always here to help you grow your business with professional digital marketing!
               </p>
 
               <div className="space-y-6 mb-8">
@@ -312,7 +308,7 @@ I would like to discuss my project with you.`;
                 <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://wa.me/919521281509"
+                    href="https://wa.me/917428606849"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-lg transition-colors"
@@ -320,19 +316,25 @@ I would like to discuss my project with you.`;
                     <MessageCircle className="h-6 w-6" />
                   </a>
                   <a
-                    href="https://www.instagram.com/dizi_grow/"
+                    href="https://www.instagram.com/sociallift/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-lg transition-colors"
                   >
                     <Instagram className="h-6 w-6" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/109423940/"
+                    href="https://www.linkedin.com/company/sociallift/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a
-                    href="https://www.facebook.com/profile.php?id=61581763886467"
+                    href="https://www.facebook.com/sociallift/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg transition-colors"
                   >
                     <Facebook className="h-6 w-6" />
@@ -354,6 +356,20 @@ I would like to discuss my project with you.`;
                   📞 Phone calls: Available 24/7 for urgent queries
                 </p>
               </div>
+
+              {/* Free Consultation Offer */}
+              <div className="mt-6 bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200">
+                <h3 className="font-semibold text-yellow-800 mb-2 flex items-center">
+                  💼 Free Consultation Offer
+                </h3>
+                <p className="text-yellow-700 text-sm">
+                  🎯 Get a FREE 30-minute digital marketing consultation
+                  <br />
+                  📊 Comprehensive business analysis
+                  <br />
+                  🚀 Custom growth strategy recommendations
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -367,26 +383,30 @@ I would like to discuss my project with you.`;
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
-              Quick answers to common questions about our services
+              Quick answers to common questions about our digital marketing services
             </p>
           </div>
 
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">How quickly can you start my project?</h3>
-              <p className="text-gray-600">We can typically start your project within 24-48 hours of confirmation and initial payment. For urgent projects, we offer same-day start options.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">How quickly can you start my digital marketing campaign?</h3>
+              <p className="text-gray-600">We can typically start your campaign within 24-48 hours of confirmation. For social media management, we can begin content creation immediately.</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Do you offer unlimited revisions?</h3>
-              <p className="text-gray-600">Yes! We provide unlimited revisions until you're 100% satisfied with the final result. Your satisfaction is our top priority.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Do you offer unlimited revisions for social media content?</h3>
+              <p className="text-gray-600">Yes! We provide unlimited revisions until you're 100% satisfied with the content. Your brand satisfaction is our top priority.</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
-              <p className="text-gray-600">We accept bank transfers, UPI, credit/debit cards, and digital wallets. Payment terms are flexible based on project scope.</p>
+              <p className="text-gray-600">We accept bank transfers, UPI, credit/debit cards, and digital wallets. We also offer flexible payment plans for long-term projects.</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Do you provide ongoing support after project completion?</h3>
-              <p className="text-gray-600">Absolutely! We provide free support for 30 days after project delivery, and ongoing support packages are available for long-term partnerships.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Do you provide performance reports for marketing campaigns?</h3>
+              <p className="text-gray-600">Absolutely! We provide detailed monthly performance reports with analytics, insights, and recommendations for all our digital marketing services.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Can I see examples of your previous work?</h3>
+              <p className="text-gray-600">Yes, we'll be happy to share our portfolio and case studies showing successful campaigns we've managed for other businesses.</p>
             </div>
           </div>
         </div>
@@ -396,14 +416,14 @@ I would like to discuss my project with you.`;
       <section className="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Project?
+            Ready to Grow Your Business?
           </h2>
           <p className="text-xl mb-8 text-purple-100">
-            Don't wait! The sooner we start, the sooner you'll see results. Get in touch today!
+            Don't wait! The sooner we start, the sooner you'll see digital marketing results. Get in touch today for a FREE consultation!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919521281509?text=Hello DiziGrow, I'm ready to start my project!"
+              href="https://wa.me/917428606849?text=Hello Social Lift, I'm ready to start my digital marketing project!"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-500 hover:bg-yellow-600 text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
@@ -411,7 +431,17 @@ I would like to discuss my project with you.`;
               <MessageCircle className="h-5 w-5" />
               <span>Start Your Project Now</span>
             </a>
+            <a
+              href="tel:+917428606849"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
+            >
+              <Phone className="h-5 w-5" />
+              <span>Call Now: +91 7428606849</span>
+            </a>
           </div>
+          <p className="text-purple-200 mt-4 text-sm">
+            🎯 Free Consultation • 📊 Custom Strategy • 🚀 Quick Results
+          </p>
         </div>
       </section>
     </div>

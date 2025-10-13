@@ -30,7 +30,7 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
-  // ✅ SERVICES ARRAY WITH DETAILED DESCRIPTIONS (NO PRICING)
+  // ✅ SERVICES ARRAY WITH DETAILED DESCRIPTIONS (WITH PRICING)
   const serviceCategories = [
     {
       title: 'Digital Marketing Services',
@@ -41,6 +41,8 @@ const Services = () => {
           icon: <Facebook className="h-8 w-8" />,
           name: 'Social Media Management',
           description: 'Complete social media management across all platforms with creative posts and viral videos',
+          price: '₹8,000/month',
+          originalPrice: '₹15,000',
           features: [
             '15 Creative Design Posts Monthly',
             '2 Professional Videos/Reels',
@@ -62,6 +64,8 @@ const Services = () => {
           icon: <Search className="h-8 w-8" />,
           name: 'SEO Services',
           description: 'Complete SEO optimization to rank #1 on Google with comprehensive monthly strategy',
+          price: '₹10,000/month',
+          originalPrice: '₹18,000',
           features: [
             'Comprehensive Keyword Research (10+ keywords)',
             'On-Page SEO Optimization',
@@ -83,6 +87,8 @@ const Services = () => {
           icon: <MousePointer className="h-8 w-8" />,
           name: 'Google Ads Management',
           description: 'Professional Google Ads campaigns for maximum ROI and conversions',
+          price: '₹12,000/month',
+          originalPrice: '₹20,000',
           features: [
             'Campaign Strategy & Complete Setup',
             'Keyword Research & Analysis',
@@ -111,6 +117,8 @@ const Services = () => {
           icon: <Instagram className="h-8 w-8" />,
           name: 'Social Account Creation Package',
           description: 'Complete social media profile setup across all major platforms',
+          price: '₹4,999',
+          originalPrice: '₹9,999',
           features: [
             'Meta Business Account Setup',
             'Instagram Professional Account',
@@ -132,6 +140,8 @@ const Services = () => {
           icon: <MapPin className="h-8 w-8" />,
           name: 'Google Business Profile',
           description: 'Get found on Google Maps and local searches with optimized business listing',
+          price: '₹6,000',
+          originalPrice: '₹12,000',
           features: [
             'Google Business Profile Creation',
             'Category & Description Optimization',
@@ -153,6 +163,8 @@ const Services = () => {
           icon: <MessageCircle className="h-8 w-8" />,
           name: 'Business WhatsApp Setup',
           description: 'Professional Business WhatsApp with product catalog and automated responses',
+          price: '₹2,999',
+          originalPrice: '₹5,999',
           features: [
             'Business WhatsApp API Setup',
             'Complete Business Profile Creation',
@@ -174,6 +186,8 @@ const Services = () => {
           icon: <Youtube className="h-8 w-8" />,
           name: 'YouTube Channel Creation',
           description: 'Professional YouTube channel setup with branding and optimization',
+          price: '₹9,999',
+          originalPrice: '₹19,999',
           features: [
             'Complete Channel Branding & Artwork',
             'Strategic Channel Description & SEO',
@@ -194,55 +208,6 @@ const Services = () => {
       ]
     },
     {
-      title: 'E-Commerce Solutions',
-      icon: <ShoppingCart className="h-12 w-12" />,
-      description: 'Complete e-commerce store setup and management across multiple platforms',
-      services: [
-        {
-          icon: <ShoppingCart className="h-8 w-8" />,
-          name: 'E-commerce Platform Setup',
-          description: 'Multi-platform e-commerce store creation with product listing',
-          features: [
-            'Amazon Seller Account Setup',
-            'Flipkart Seller Account Setup',
-            'Meesho Store Creation & Optimization',
-            'Product Category Optimization',
-            'Complete Store Branding & Design',
-            'Basic Product Listing Setup',
-            'Inventory Management System Setup',
-            'Sales Analytics Configuration'
-          ],
-          benefits: [
-            'Sell on multiple platforms',
-            'Reach millions of customers',
-            'Managed inventory',
-            'Sales tracking'
-          ]
-        },
-        {
-          icon: <Zap className="h-8 w-8" />,
-          name: 'Product Listing Service',
-          description: 'Professional product listing and optimization for e-commerce platforms',
-          features: [
-            'Professional Product Photography Guidance',
-            'Compelling Product Description Writing',
-            'SEO Optimized Listings for Better Visibility',
-            'Strategic Category Optimization',
-            'Competitive Pricing Strategy',
-            'Efficient Inventory Management Setup',
-            'Sales Analytics & Performance Tracking',
-            'Regular Listing Optimization'
-          ],
-          benefits: [
-            'Higher product visibility',
-            'Better conversion rates',
-            'Professional product presentation',
-            'Increased sales'
-          ]
-        }
-      ]
-    },
-    {
       title: 'Website & IT Services',
       icon: <Code className="h-12 w-12" />,
       description: 'Professional website development and IT solutions for your business growth',
@@ -250,7 +215,9 @@ const Services = () => {
         {
           icon: <Monitor className="h-8 w-8" />,
           name: 'Static Website Development',
-          description: 'Professional responsive website with modern design and SEO optimization',
+          description: 'Professional 5-page responsive website with modern design and SEO optimization',
+          price: '₹15,000',
+          originalPrice: '₹30,000',
           features: [
             '5 Page Fully Responsive Website',
             'Mobile-Friendly Design',
@@ -272,6 +239,8 @@ const Services = () => {
           icon: <Settings className="h-8 w-8" />,
           name: 'Dynamic Website & App',
           description: 'Custom dynamic web applications with admin panel and advanced features',
+          price: '₹25,000',
+          originalPrice: '₹50,000',
           features: [
             'Custom Web Application Development',
             'Admin Dashboard & Control Panel',
@@ -293,6 +262,8 @@ const Services = () => {
           icon: <ShoppingCart className="h-8 w-8" />,
           name: 'Shopify Store Development',
           description: 'Complete e-commerce website on Shopify with payment integration',
+          price: '₹20,000',
+          originalPrice: '₹40,000',
           features: [
             'Custom Shopify Theme Development',
             'Product Listing (Up to 50 products)',
@@ -313,6 +284,59 @@ const Services = () => {
       ]
     },
     {
+      title: 'E-Commerce Solutions',
+      icon: <ShoppingCart className="h-12 w-12" />,
+      description: 'Complete e-commerce store setup and management across multiple platforms',
+      services: [
+        {
+          icon: <ShoppingCart className="h-8 w-8" />,
+          name: 'E-commerce Platform Setup',
+          description: 'Multi-platform e-commerce store creation with product listing',
+          price: '₹8,000',
+          originalPrice: '₹15,000',
+          features: [
+            'Amazon Seller Account Setup',
+            'Flipkart Seller Account Setup',
+            'Meesho Store Creation & Optimization',
+            'Product Category Optimization',
+            'Complete Store Branding & Design',
+            'Basic Product Listing Setup',
+            'Inventory Management System Setup',
+            'Sales Analytics Configuration'
+          ],
+          benefits: [
+            'Sell on multiple platforms',
+            'Reach millions of customers',
+            'Managed inventory',
+            'Sales tracking'
+          ]
+        },
+        {
+          icon: <Zap className="h-8 w-8" />,
+          name: 'Product Listing Service',
+          description: 'Professional product listing and optimization for e-commerce platforms',
+          price: '₹5,000',
+          originalPrice: '₹10,000',
+          features: [
+            'Professional Product Photography Guidance',
+            'Compelling Product Description Writing',
+            'SEO Optimized Listings for Better Visibility',
+            'Strategic Category Optimization',
+            'Competitive Pricing Strategy',
+            'Efficient Inventory Management Setup',
+            'Sales Analytics & Performance Tracking',
+            'Regular Listing Optimization'
+          ],
+          benefits: [
+            'Higher product visibility',
+            'Better conversion rates',
+            'Professional product presentation',
+            'Increased sales'
+          ]
+        }
+      ]
+    },
+    {
       title: 'Additional Marketing Services',
       icon: <Zap className="h-12 w-12" />,
       description: 'Specialized marketing services to enhance your digital presence',
@@ -321,6 +345,8 @@ const Services = () => {
           icon: <Brush className="h-8 w-8" />,
           name: 'Logo Design & Branding',
           description: 'Professional logo design with complete brand identity kit',
+          price: '₹4,999',
+          originalPrice: '₹9,999',
           features: [
             '3 Initial Logo Concepts',
             'Unlimited Revisions Until Satisfaction',
@@ -342,6 +368,8 @@ const Services = () => {
           icon: <Users className="h-8 w-8" />,
           name: 'Influencer Marketing',
           description: 'Connect with relevant influencers to boost your brand awareness',
+          price: '₹15,000/month',
+          originalPrice: '₹25,000',
           features: [
             'Influencer Research & Selection',
             'Campaign Strategy Development',
@@ -363,6 +391,8 @@ const Services = () => {
           icon: <Video className="h-8 w-8" />,
           name: 'Video Creation & Editing',
           description: 'Professional video content creation for social media and marketing',
+          price: '₹8,000',
+          originalPrice: '₹15,000',
           features: [
             'Creative Script Writing',
             'Professional Video Editing',
@@ -384,6 +414,8 @@ const Services = () => {
           icon: <Mail className="h-8 w-8" />,
           name: 'Email Marketing',
           description: 'Professional email marketing campaigns for customer engagement',
+          price: '₹6,000/month',
+          originalPrice: '₹12,000',
           features: [
             'Custom Email Template Design',
             'List Segmentation & Management',
@@ -405,22 +437,22 @@ const Services = () => {
     }
   ];
 
-  const whatsappUrl = 'https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20discuss';
+  const whatsappUrl = 'https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I%20want%20to%20discuss';
 
   return (
     <div>
       {/* ✅ SEO OPTIMIZED META TAGS */}
       <Helmet>
-        <title>Digital Marketing Services | Social Media, SEO, Website Development - DiziGrow</title>
+        <title>Digital Marketing Services | Social Media, SEO, Website Development - Social Lift</title>
         <meta
           name="description"
-          content="Professional digital marketing services: Social Media Management, SEO, Website Development, E-commerce Solutions. Grow your business with DiziGrow's expert services."
+          content="Professional digital marketing services: Social Media Management ₹8,000/mo, SEO ₹10,000/mo, Website Development ₹15,000, E-commerce Solutions. Grow your business with Social Lift's expert services."
         />
         <meta
           name="keywords"
-          content="digital marketing services, social media management, SEO services, website development, e-commerce solutions, Google Ads management, branding services, DiziGrow services"
+          content="digital marketing services, social media management, SEO services, website development, e-commerce solutions, Google Ads management, branding services, Social Lift services"
         />
-        <link rel="canonical" href="https://dizigrow.com/services" />
+        <link rel="canonical" href="https://sociallift.com/services" />
       </Helmet>
 
       {/* Hero Section */}
@@ -478,6 +510,22 @@ const Services = () => {
                   <p className="text-gray-600 mb-6 text-lg">
                     {service.description}
                   </p>
+
+                  {/* Pricing Section */}
+                  <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200">
+                    <div className="flex items-baseline justify-between mb-2">
+                      <div>
+                        <span className="text-2xl font-bold text-purple-600">{service.price}</span>
+                        <span className="text-lg text-gray-500 line-through ml-2">{service.originalPrice}</span>
+                      </div>
+                      <span className="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
+                        {Math.round((1 - parseInt(service.price.replace(/[^0-9]/g, '')) / parseInt(service.originalPrice.replace(/[^0-9]/g, ''))) * 100)}% OFF
+                      </span>
+                    </div>
+                    <p className="text-green-600 text-sm font-semibold">
+                      ✅ Best Price Guaranteed
+                    </p>
+                  </div>
                   
                   {/* Features Section */}
                   <div className="mb-6">
@@ -512,21 +560,21 @@ const Services = () => {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      to="/pricing"
-                      className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-center"
-                    >
-                      <span>View Pricing</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
                     <a
                       href={`${whatsappUrl}%20${encodeURIComponent(service.name)}%20service`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-center"
                     >
-                      <span>💬 Free Consultation</span>
+                      <span>💬 Get Quote</span>
                     </a>
+                    <Link
+                      to="/contact"
+                      className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-center"
+                    >
+                      <span>Free Consultation</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </div>
                 </div>
               ))}

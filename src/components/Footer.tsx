@@ -17,23 +17,22 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand + Blurb */}
+          {/* Brand + Contact Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               {/* Logo Image */}
               <div className="flex-shrink-0">
                 <img 
                   src="/logo.png" 
-                  alt="DiziGrow Logo" 
+                  alt="Social Lift Digital Marketing Agency Logo" 
                   className="h-12 w-12 object-contain"
                   onError={(e) => {
-                    // Fallback if logo doesn't load
                     e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
               
-              {/* Brand Name with Haboro Serif Font */}
+              {/* Brand Name */}
               <div className="flex flex-col">
                 <span 
                   className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-yellow-400 bg-clip-text text-transparent"
@@ -43,45 +42,45 @@ const Footer: React.FC = () => {
                     letterSpacing: '-0.025em'
                   }}
                 >
-                  DiziGrow
+                  Social Lift
                 </span>
                 <span 
                   className="text-sm text-gray-400 -mt-1"
                   style={{ fontFamily: '"Haboro Serif", serif' }}
                 >
-                  Digital Growth Partners
+                  Digital Marketing Agency
                 </span>
               </div>
             </div>
 
             <p className="text-gray-300 mb-6 max-w-md text-lg leading-relaxed">
-              Creative Digital Solutions That Deliver Growth 🚀
+              Professional Digital Marketing Solutions That Deliver Growth 🚀
               <br />
-              We provide branding, digital marketing, and web development solutions that help you succeed online.
+              We provide social media marketing, Meta ads, SEO, and lead generation services that help your business succeed online.
             </p>
 
             <div className="space-y-3" aria-label="Contact information">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-purple-400 flex-shrink-0" aria-hidden="true" />
                 <a 
-                  href="tel:+919521281509" 
+                  href="tel:+917428606849" 
                   className="hover:text-purple-300 transition-colors duration-200 text-lg"
                 >
-                  +91 9521281509
+                  +91 74286 06849
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-purple-400 flex-shrink-0" aria-hidden="true" />
                 <a 
-                  href="mailto:info@dizigrow.com" 
+                  href="mailto:Sociallift91@Gmail.com" 
                   className="hover:text-purple-300 transition-colors duration-200 text-lg"
                 >
-                  info@dizigrow.com
+                  Sociallift91@Gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-purple-400 flex-shrink-0" aria-hidden="true" />
-                <span className="text-lg">Jaipur, Rajasthan</span>
+                <span className="text-lg">Professional Digital Marketing Services Across India</span>
               </div>
             </div>
           </div>
@@ -99,12 +98,8 @@ const Footer: React.FC = () => {
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
                 { name: "Services", path: "/services" },
-                { name: "Growth Services", path: "/growth-services" }, // ✅ YEH ADD KIYA
-                { name: "Portfolio", path: "/portfolio" },
                 { name: "Pricing", path: "/pricing" },
-                { name: "Contact", path: "/contact" },
-                { name: "Offer", path: "/offer" },
-                { name: "FAQ", path: "/faq" }
+                { name: "Contact", path: "/contact" }
               ].map((item) => (
                 <li key={item.name}>
                   <Link 
@@ -153,25 +148,25 @@ const Footer: React.FC = () => {
               {[
                 { 
                   icon: MessageCircle, 
-                  href: "https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20grow%20my%20business%20online.", 
+                  href: "https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20grow%20my%20business%20online.", 
                   color: "text-green-400 hover:text-green-300",
                   label: "WhatsApp"
                 },
                 { 
                   icon: Instagram, 
-                  href: "https://www.instagram.com/dizi_grow/", 
+                  href: "https://www.instagram.com/sociallift/", 
                   color: "text-gray-300 hover:text-pink-400",
                   label: "Instagram"
                 },
                 { 
                   icon: Linkedin, 
-                  href: "https://www.linkedin.com/company/109423940/", 
+                  href: "https://www.linkedin.com/company/sociallift/", 
                   color: "text-gray-300 hover:text-blue-400",
                   label: "LinkedIn"
                 },
                 { 
                   icon: Facebook, 
-                  href: "https://www.facebook.com/profile.php?id=61581763886467#", 
+                  href: "https://www.facebook.com/sociallift/", 
                   color: "text-gray-300 hover:text-blue-500",
                   label: "Facebook"
                 }
@@ -192,13 +187,13 @@ const Footer: React.FC = () => {
             {/* WhatsApp CTA Button */}
             <div className="mt-6">
               <a
-                href="https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20grow%20my%20business%20online."
+                href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2 w-full text-center"
               >
                 <MessageCircle className="h-5 w-5" />
-                Start Conversation
+                Get 50% OFF Now
               </a>
             </div>
           </div>
@@ -206,24 +201,25 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-<p
-  className="text-gray-300 text-lg mb-2"
-  style={{ fontFamily: '"Haboro Serif", serif' }}
->
-  © {year} DiziGrow. All rights reserved.
-</p>
-<p className="text-gray-400 text-md">
-  Made with ❤️ in India | Empowering Businesses Digitally <br />
-  <span className="text-gray-400">
-    Website designed & maintained by <strong>Vivek Singh</strong>
-  </span>
-</p>
+          <p
+            className="text-gray-300 text-lg mb-2"
+            style={{ fontFamily: '"Haboro Serif", serif' }}
+          >
+            © {year} Social Lift Digital Marketing Agency. All rights reserved.
+          </p>
+          <p className="text-gray-400 text-md">
+            Made with ❤️ in India | Empowering Businesses with Digital Marketing
+          </p>
+          <p className="text-gray-400 text-sm mt-2">
+            Professional Digital Marketing Services | Social Media Management | Meta Ads | SEO
+          </p>
           
           {/* Trust Badges */}
           <div className="flex justify-center items-center gap-6 mt-4 pt-4 border-t border-gray-800">
-            <div className="text-gray-400 text-sm">🚀 Premium Digital Solutions</div>
-            <div className="text-gray-400 text-sm">⭐ 5-Star Rated Service</div>
-            <div className="text-gray-400 text-sm">⚡ Fast & Reliable</div>
+            <div className="text-gray-400 text-sm">🚀 Social Media Marketing</div>
+            <div className="text-gray-400 text-sm">🎯 Meta Ads Management</div>
+            <div className="text-gray-400 text-sm">⚡ SEO Services</div>
+            <div className="text-gray-400 text-sm">📈 Lead Generation</div>
           </div>
         </div>
       </div>

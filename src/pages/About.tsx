@@ -12,9 +12,9 @@ const About: React.FC = () => {
   // Team members with images
   const teamMembers = [
     {
-      name: "Harshit Chaudhary",
+      name: "Saksham Malhotra",
       role: "CEO & Founder",
-      description: "Digital marketing expert with 3+ years experience in SEO, web development & performance marketing. Founded DiziGrow to make digital growth accessible for all businesses.",
+      description: "Digital marketing expert with 3+ years experience in SEO, social media marketing & performance marketing. Founded Social Lift to make professional digital marketing accessible for all businesses.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
       color: "from-purple-600 to-purple-800"
     },
@@ -43,8 +43,8 @@ const About: React.FC = () => {
 
   // Company stats
   const stats = [
-    { number: "150+", label: "Happy Clients", icon: "😊", delay: "0s" },
-    { number: "300+", label: "Projects Delivered", icon: "🚀", delay: "0.1s" },
+    { number: "100+", label: "Happy Clients", icon: "😊", delay: "0s" },
+    { number: "200+", label: "Projects Delivered", icon: "🚀", delay: "0.1s" },
     { number: "3+", label: "Years Experience", icon: "⏳", delay: "0.2s" },
     { number: "24/7", label: "Support Available", icon: "📞", delay: "0.3s" },
   ];
@@ -72,55 +72,47 @@ const About: React.FC = () => {
     {
       icon: "⭐",
       title: "Excellence First",
-      description: "Committed to delivering high-quality web development, branding & marketing solutions that exceed expectations.",
+      description: "Committed to delivering high-quality social media management, Meta ads & marketing solutions that exceed expectations.",
       delay: "0.3s"
     },
   ];
 
-  // Services with updated pricing and advance payment options
+  // Services with updated pricing for Social Lift
   const services = [
     {
-      icon: "🔍",
-      title: "SEO Services",
-      description: "Get Page 1 Google rankings with our comprehensive SEO strategies and monthly optimization",
-      price: "₹7,999/month",
-      originalPrice: "₹14,999",
-      advancePrice: "₹7,599",
-      advanceOriginalPrice: "₹7,999",
-      features: ["Keyword Research", "On-Page SEO", "Technical SEO", "Monthly Reports", "Rank Tracking", "Content Optimization"],
+      icon: "📱",
+      title: "Social Media Management",
+      description: "Complete social media management with creative posts and viral videos monthly",
+      price: "₹8,000/month",
+      originalPrice: "₹15,000",
+      features: ["Content Creation", "Platform Management", "Performance Analytics", "Strategy Planning", "Hashtag Research", "Engagement Management"],
       delay: "0s"
     },
     {
-      icon: "📱",
-      title: "Social Media Marketing",
-      description: "Complete social media management with 15 creative posts + 2 viral videos monthly",
-      price: "₹4,999/month",
-      originalPrice: "₹12,999",
-      advancePrice: "₹4,749",
-      advanceOriginalPrice: "₹4,999",
-      features: ["Content Creation", "Platform Management", "Performance Analytics", "Strategy Planning", "Hashtag Research", "Engagement Management"],
+      icon: "🎯",
+      title: "Meta Ads Management",
+      description: "Professional Facebook & Instagram ads management for maximum ROI",
+      price: "₹10,000/month",
+      originalPrice: "₹18,000",
+      features: ["Ad Creation", "Audience Targeting", "Budget Optimization", "Performance Tracking", "A/B Testing", "ROI Analysis"],
       delay: "0.1s"
     },
     {
-      icon: "💻",
-      title: "Website Development",
-      description: "Professional responsive websites that convert visitors to customers with modern design",
-      price: "₹9,999",
-      originalPrice: "₹22,000",
-      advancePrice: "₹9,499",
-      advanceOriginalPrice: "₹9,999",
-      features: ["WordPress/Shopify", "SEO Optimized", "Fast Loading", "Mobile Friendly", "Contact Forms", "1 Year Hosting"],
+      icon: "🔍",
+      title: "Google Business Profile",
+      description: "Complete Google Business Profile setup and optimization for local SEO",
+      price: "₹6,000",
+      originalPrice: "₹12,000",
+      features: ["Profile Setup", "Local SEO", "Review Management", "Google Maps Ranking", "Photo Optimization", "Post Management"],
       delay: "0.2s"
     },
     {
-      icon: "🛒",
-      title: "E-commerce Marketing",
-      description: "Complete Amazon, Flipkart, Meesho store setup & management with product listing",
-      price: "₹5,999",
-      originalPrice: "₹12,999",
-      advancePrice: "₹5,699",
-      advanceOriginalPrice: "₹5,999",
-      features: ["Store Setup", "Product Listing", "Multi-platform", "Sales Optimization", "Inventory Management", "Order Processing"],
+      icon: "📞",
+      title: "Lead Generation",
+      description: "Professional lead generation campaigns to get quality business leads",
+      price: "₹6,000/month",
+      originalPrice: "₹12,000",
+      features: ["Targeted Campaigns", "Lead Qualification", "CRM Setup", "Follow-up System", "Conversion Tracking", "Performance Reports"],
       delay: "0.3s"
     }
   ];
@@ -159,32 +151,32 @@ const About: React.FC = () => {
 
   // Achievements
   const achievements = [
-    { number: "50+", label: "SEO Clients on Page 1", icon: "🏆", delay: "0s" },
-    { number: "100+", label: "Websites Developed", icon: "💻", delay: "0.1s" },
-    { number: "200+", label: "Social Media Campaigns", icon: "📱", delay: "0.2s" },
-    { number: "₹2Cr+", label: "Revenue Generated for Clients", icon: "💰", delay: "0.3s" }
+    { number: "50+", label: "Social Media Clients", icon: "🏆", delay: "0s" },
+    { number: "100+", label: "Marketing Campaigns", icon: "💻", delay: "0.1s" },
+    { number: "200+", label: "Meta Ads Campaigns", icon: "📱", delay: "0.2s" },
+    { number: "₹1Cr+", label: "Revenue Generated for Clients", icon: "💰", delay: "0.3s" }
   ];
 
   // Testimonials
   const testimonials = [
     {
-      text: "DiziGrow's SEO services got us on Page 1 of Google in just 3 months! Our organic traffic increased by 300% and leads have been pouring in consistently.",
+      text: "Social Lift's social media management increased our engagement by 300% in just 3 months! Our sales have never been better.",
       author: "Rajesh Kumar",
       company: "Fashion Store Owner",
       rating: 5,
       delay: "0s"
     },
     {
-      text: "Professional website development at affordable prices. They delivered exactly what we needed for our restaurant business and our online orders increased by 40%.",
+      text: "Professional Meta ads management that actually delivers results. Our lead generation increased by 200% with their campaigns.",
       author: "Priya Sharma", 
-      company: "Restaurant Business",
+      company: "Service Business",
       rating: 5,
       delay: "0.1s"
     },
     {
-      text: "Social media management transformed our online presence. Engagement and sales have never been better! The team is responsive and results-driven.",
+      text: "Google Business Profile optimization brought us more local customers. The team is responsive and results-driven.",
       author: "Amit Patel",
-      company: "E-commerce Seller",
+      company: "Restaurant Owner",
       rating: 5,
       delay: "0.2s"
     }
@@ -195,7 +187,7 @@ const About: React.FC = () => {
     {
       icon: "💰",
       title: "Affordable Pricing",
-      description: "Get professional digital marketing services starting from just ₹4,999/month with no hidden costs.",
+      description: "Get professional digital marketing services starting from just ₹6,000 with no hidden costs.",
       delay: "0s"
     },
     {
@@ -225,101 +217,46 @@ const About: React.FC = () => {
     {
       icon: "🏆",
       title: "Proven Results",
-      description: "150+ satisfied clients and 300+ successful projects delivered across industries.",
+      description: "100+ satisfied clients and 200+ successful campaigns delivered across industries.",
       delay: "0.5s"
     }
   ];
 
-// Payment handler function
-const handlePayment = async (service: any, isAdvancePayment: boolean = false) => {
-  // Amount calculation
-  const amount = isAdvancePayment
-    ? parseInt(service.advancePrice?.replace(/[^0-9]/g, ''))
-    : parseInt(service.price?.replace(/[^0-9]/g, ''));
-
-  // Use service.name instead of service.title
-  const description = isAdvancePayment
-    ? `${service.name} - Advance Payment (5% OFF)`
-    : service.name;
-
-  try {
-    // ✅ Razorpay Key from env (Vite)
-    const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY_ID || "rzp_test_YOUR_KEY_ID";
-
-    // ✅ Razorpay options
-    const options = {
-      key: RAZORPAY_KEY_ID,
-      amount: amount * 100, // Amount in paise
-      currency: "INR",
-      name: "DiziGrow",
-      description: description,
-      image: "https://dizigrow.com/logo.png",
-      handler: function (response: any) {
-        alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
-        // Redirect to success page
-        window.location.href = `/payment-success?payment_id=${response.razorpay_payment_id}&service=${encodeURIComponent(service.name)}`;
-      },
-      prefill: {
-        name: "Customer Name",
-        email: "customer@example.com",
-        contact: "+919876543210"
-      },
-      notes: {
-        service: service.name,
-        type: isAdvancePayment ? "advance" : "regular"
-      },
-      theme: {
-        color: "#8B5CF6"
-      }
-    };
-
-    // ✅ Open Razorpay checkout
-    const razorpay = new (window as any).Razorpay(options);
-    razorpay.open();
-  } catch (error) {
-    console.error("Payment error:", error);
-    alert("Payment failed. Please try again or contact us on WhatsApp.");
-  }
-};
-
-
   // WhatsApp redirect for consultation
   const handleWhatsAppRedirect = (service: any) => {
-    const message = `Hello DiziGrow! I'm interested in ${service.title} service. Please provide more details.`;
-    window.open(`https://wa.me/919521281509?text=${encodeURIComponent(message)}`, '_blank');
+    const message = `Hello Social Lift! I'm interested in ${service.title} service. Please provide more details.`;
+    window.open(`https://wa.me/917428606849?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>About DiziGrow | Leading SEO & Web Development Agency in Jaipur</title>
+        <title>About Social Lift | Leading Digital Marketing Agency</title>
         <meta
           name="description"
-          content="Meet DiziGrow: Jaipur's trusted digital marketing partner. With 150+ clients and 300+ projects, we drive growth with expert SEO (from ₹8,999/mo), web development (₹17,999), and branding. 3+ years of proven experience."
+          content="Meet Social Lift: Trusted digital marketing partner. With 100+ clients and 200+ campaigns, we drive growth with expert Social Media Management (from ₹8,000/mo), Meta Ads (₹10,000/mo), and Lead Generation. 3+ years of proven experience."
         />
         <meta
           name="keywords"
-          content="about DiziGrow, digital marketing agency Jaipur, SEO company Jaipur, web development Jaipur, social media marketing, e-commerce website, affordable SEO services, branding agency"
+          content="about Social Lift, digital marketing agency, social media management, meta ads agency, SEO company, lead generation services, affordable digital marketing"
         />
-        <link rel="canonical" href="https://dizigrow.com/about" />
+        <link rel="canonical" href="https://sociallift.com/about" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "DiziGrow",
-            "url": "https://dizigrow.com",
-            "logo": "https://dizigrow.com/logo.png",
-            "description": "A leading digital marketing agency in Jaipur specializing in SEO, Website Development, and Social Media Marketing.",
+            "name": "Social Lift Digital Marketing Agency",
+            "url": "https://sociallift.com",
+            "logo": "https://sociallift.com/logo.png",
+            "description": "A leading digital marketing agency specializing in Social Media Management, Meta Ads, and Lead Generation.",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Jaipur",
-              "addressRegion": "Rajasthan",
               "addressCountry": "IN"
             },
             "areaServed": "India",
             "founder": {
               "@type": "Person",
-              "name": "Harshit Chaudhary"
+              "name": "Saksham Malhotra"
             },
             "employee": teamMembers.map(member => ({
               "@type": "Person",
@@ -327,9 +264,9 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
               "jobTitle": member.role
             })),
             "sameAs": [
-              "https://www.linkedin.com/company/109423940",
-              "https://www.instagram.com/dizi_grow/",
-              "https://www.facebook.com/profile.php?id=61581763886467#"
+              "https://www.instagram.com/sociallift/",
+              "https://www.facebook.com/sociallift/",
+              "https://www.linkedin.com/company/sociallift/"
             ]
           })}
         </script>
@@ -345,18 +282,18 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center bg-yellow-500 text-purple-900 px-6 py-3 rounded-full text-lg font-bold mb-8 animate-bounce">
-            🚀 Jaipur's #1 Digital Marketing Agency
+            🚀 Professional Digital Marketing Agency
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-            About <span className="text-yellow-400">DiziGrow</span>
+            About <span className="text-yellow-400">Social Lift</span>
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-purple-100 leading-relaxed animate-fade-in-up delay-300">
-            We are a <strong className="text-yellow-400">full-service digital marketing agency</strong> in Jaipur, 
-            helping <strong>150+ businesses</strong> grow through professional 
-            <strong> SEO, web development, social media marketing</strong> and 
-            <strong> branding services</strong> at affordable prices.
+            We are a <strong className="text-yellow-400">full-service digital marketing agency</strong>, 
+            helping <strong>100+ businesses</strong> grow through professional 
+            <strong> Social Media Management, Meta Ads, Lead Generation</strong> and 
+            <strong> Google Business Profile</strong> services at affordable prices.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-500">
@@ -367,7 +304,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
               <span>Explore Our Services</span>
             </Link>
             <a
-              href="https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20services"
+              href="https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20services"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:scale-105 flex items-center space-x-2 shadow-2xl shadow-green-500/25"
@@ -402,21 +339,21 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Founded in the heart of Jaipur, <strong className="text-purple-600">DiziGrow</strong> emerged from a simple 
+                  Founded by <strong className="text-purple-600">Saksham Malhotra</strong>, <strong>Social Lift</strong> emerged from a simple 
                   yet powerful vision: to make <em className="text-purple-600">professional digital marketing accessible</em> to 
                   every business, regardless of size or budget.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our journey began when our founder, <strong>Harshit Chaudhary</strong>, recognized that many businesses 
+                  Our journey began when our founder recognized that many businesses 
                   were struggling with expensive digital agencies that promised the world but delivered very little. 
                   We set out to change that by offering <strong>transparent, results-driven services</strong> at prices 
                   that actually make sense.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Today, we're proud to have served <strong className="text-purple-600">150+ businesses</strong> across 
-                  India, delivering <strong className="text-purple-600">300+ successful projects</strong> that have 
-                  generated <strong>over ₹2 Crore in revenue</strong> for our clients. From local restaurants to 
-                  e-commerce giants, we've helped businesses of all sizes achieve their digital dreams.
+                  Today, we're proud to have served <strong className="text-purple-600">100+ businesses</strong> across 
+                  India, delivering <strong className="text-purple-600">200+ successful campaigns</strong> that have 
+                  generated <strong>over ₹1 Crore in revenue</strong> for our clients. From local restaurants to 
+                  service businesses, we've helped businesses of all sizes achieve their digital dreams.
                 </p>
               </div>
               
@@ -428,7 +365,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
                   View Our Work
                 </Link>
                 <a
-                  href="https://wa.me/919521281509"
+                  href="https://wa.me/917428606849"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center"
@@ -471,7 +408,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
               <p className="text-gray-600 leading-relaxed text-lg">
                 To empower businesses of all sizes with <strong className="text-purple-600">affordable, results-driven digital marketing solutions</strong>. 
                 We believe every business deserves access to professional 
-                <strong> SEO, web development, and marketing services</strong> that deliver 
+                <strong> Social Media Management, Meta Ads, and Lead Generation services</strong> that deliver 
                 measurable ROI and sustainable growth.
               </p>
             </div>
@@ -480,8 +417,8 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
               <div className="text-5xl mb-6">🎯</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                To become India's most trusted <strong className="text-purple-600">digital growth partner</strong>, 
-                recognized for delivering exceptional <strong>web development, branding & marketing services</strong> 
+                To become India's most trusted <strong className="text-purple-600">digital marketing partner</strong>, 
+                recognized for delivering exceptional <strong>social media, advertising & lead generation services</strong> 
                 that help businesses thrive in the digital age. We aim to be the first choice for 
                 businesses seeking reliable digital transformation.
               </p>
@@ -518,7 +455,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose DiziGrow?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Social Lift?</h2>
             <p className="text-xl text-gray-600">Discover what sets us apart from other digital marketing agencies</p>
           </div>
           
@@ -571,32 +508,6 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
                     <div className="text-purple-600 font-bold text-lg">{service.price}</div>
                     <div className="text-gray-500 text-sm line-through">{service.originalPrice}</div>
                   </div>
-                  
-                  {/* Pay in Advance Option */}
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                    <div className="text-center mb-2">
-                      <div className="text-green-700 font-bold text-sm">Pay in Advance</div>
-                      <div className="text-green-600 font-bold">{service.advancePrice}</div>
-                      <div className="text-green-500 text-xs line-through">{service.advanceOriginalPrice}</div>
-                      <div className="text-green-600 text-xs font-semibold">Save 5%</div>
-                    </div>
-                    <button
-                      onClick={() => handlePayment(service, true)}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-1"
-                    >
-                      <span>💳</span>
-                      <span>Pay Advance & Save 5%</span>
-                    </button>
-                  </div>
-
-                  {/* Regular Payment Option */}
-                  <button
-                    onClick={() => handlePayment(service, false)}
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-1"
-                  >
-                    <span>💰</span>
-                    <span>Pay Regular Price</span>
-                  </button>
 
                   {/* WhatsApp Consultation */}
                   <button
@@ -604,8 +515,17 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
                     className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-1"
                   >
                     <span>💚</span>
-                    <span>WhatsApp for Details</span>
+                    <span>Get Quote on WhatsApp</span>
                   </button>
+
+                  {/* Contact Button */}
+                  <Link
+                    to="/contact"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-1"
+                  >
+                    <span>📞</span>
+                    <span>Free Consultation</span>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -623,38 +543,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
       </section>
 
       {/* === OUR TEAM === */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Team</h2>
-            <p className="text-xl text-gray-600">The passionate professionals dedicated to your digital success</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden group animate-fade-in-up"
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-purple-600 font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    
       {/* === OUR PROCESS === */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -740,7 +629,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Digital Journey?</h2>
           <p className="text-xl mb-8 text-purple-100">
-            Join <strong className="text-yellow-400">150+ successful businesses</strong> that trust DiziGrow for their 
+            Join <strong className="text-yellow-400">100+ successful businesses</strong> that trust Social Lift for their 
             digital marketing needs. Let's create something amazing together!
           </p>
           
@@ -752,7 +641,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
               <span>Start Your Project</span>
             </Link>
             <a
-              href="https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20discuss%20a%20project"
+              href="https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I%20want%20to%20discuss%20a%20project"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2 shadow-2xl"
@@ -770,7 +659,7 @@ const handlePayment = async (service: any, isAdvancePayment: boolean = false) =>
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20visited%20your%20about%20page%20and%20want%20to%20know%20more"
+        href="https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I%20visited%20your%20about%20page%20and%20want%20to%20know%20more"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 animate-bounce-slow"

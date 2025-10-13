@@ -7,10 +7,8 @@ const primaryNav: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
   { name: "Pricing", href: "/pricing" },
   { name: "Contact", href: "/contact" },
-  { name: "FAQ", href: "/faq" },
 ];
 
 const legalNav: NavItem[] = [
@@ -55,22 +53,21 @@ const Header: React.FC = () => {
             <Link 
               to="/" 
               className="flex items-center space-x-3 hover:scale-105 transition-transform duration-200" 
-              aria-label="DiziGrow Home"
+              aria-label="Social Lift Digital Marketing Agency Home"
             >
               {/* Logo Image */}
               <div className="flex-shrink-0">
                 <img 
                   src="/logo.png" 
-                  alt="DiziGrow Logo" 
+                  alt="Social Lift Digital Marketing Agency Logo" 
                   className="h-10 w-10 object-contain"
                   onError={(e) => {
-                    // Fallback if logo doesn't load
                     e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
               
-              {/* Brand Name with Haboro Serif Font */}
+              {/* Brand Name */}
               <div className="flex flex-col">
                 <span 
                   className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent"
@@ -80,10 +77,10 @@ const Header: React.FC = () => {
                     letterSpacing: '-0.025em'
                   }}
                 >
-                  DiziGrow
+                  Social Lift
                 </span>
                 <span className="text-xs text-gray-500 -mt-1" style={{ fontFamily: '"Haboro Serif", serif' }}>
-                  Digital Growth Partners
+                  Digital Marketing Agency
                 </span>
               </div>
             </Link>
@@ -150,20 +147,20 @@ const Header: React.FC = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-3">
             <a
-              href="https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20grow%20my%20business%20online."
+              href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center gap-2 group"
             >
               <MessageCircle className="h-4 w-4" />
-              <span>WhatsApp Us</span>
+              <span>Get 50% OFF</span>
             </a>
             <NavLink
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center gap-2 group"
             >
               <Phone className="h-4 w-4" />
-              <span>Get Free Quote</span>
+              <span>Free Consultation</span>
             </NavLink>
           </div>
 
@@ -227,14 +224,14 @@ const Header: React.FC = () => {
               {/* Mobile CTAs */}
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
                 <a
-                  href="https://wa.me/919521281509?text=Hello%20DiziGrow,%20I%20want%20to%20grow%20my%20business%20online."
+                  href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 text-center flex items-center justify-center gap-2"
                   onClick={() => setIsOpen(false)}
                 >
                   <MessageCircle className="h-4 w-4" />
-                  WhatsApp Us
+                  Get 50% OFF
                 </a>
                 <NavLink
                   to="/contact"
@@ -242,7 +239,7 @@ const Header: React.FC = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="h-4 w-4" />
-                  Get Free Quote
+                  Free Consultation
                 </NavLink>
               </div>
             </div>
