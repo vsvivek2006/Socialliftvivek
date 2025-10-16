@@ -810,7 +810,7 @@ const Offer: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 md:py-12">
+      {/* <footer className="bg-gray-900 text-white py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div>
@@ -863,7 +863,7 @@ const Offer: React.FC = () => {
             </p>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
       {/* Payment Modal */}
       {isPaymentOpen && (

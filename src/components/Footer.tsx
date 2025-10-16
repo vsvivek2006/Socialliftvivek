@@ -8,13 +8,14 @@ import {
   Instagram,
   Linkedin,
   Facebook,
+  Heart,
 } from "lucide-react";
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand + Contact Info */}
@@ -35,7 +36,7 @@ const Footer: React.FC = () => {
               {/* Brand Name */}
               <div className="flex flex-col">
                 <span 
-                  className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-yellow-400 bg-clip-text text-transparent"
+                  className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent"
                   style={{ 
                     fontFamily: '"Haboro Serif", serif',
                     fontWeight: 700,
@@ -45,7 +46,7 @@ const Footer: React.FC = () => {
                   Social Lift
                 </span>
                 <span 
-                  className="text-sm text-gray-400 -mt-1"
+                  className="text-sm text-pink-200 -mt-1"
                   style={{ fontFamily: '"Haboro Serif", serif' }}
                 >
                   Digital Marketing Agency
@@ -53,7 +54,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-gray-300 mb-6 max-w-md text-lg leading-relaxed">
+            <p className="text-pink-100 mb-6 max-w-md text-lg leading-relaxed">
               Professional Digital Marketing Solutions That Deliver Growth 🚀
               <br />
               We provide social media marketing, Meta ads, SEO, and lead generation services that help your business succeed online.
@@ -61,26 +62,26 @@ const Footer: React.FC = () => {
 
             <div className="space-y-3" aria-label="Contact information">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-purple-400 flex-shrink-0" aria-hidden="true" />
+                <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" aria-hidden="true" />
                 <a 
                   href="tel:+917428606849" 
-                  className="hover:text-purple-300 transition-colors duration-200 text-lg"
+                  className="hover:text-blue-300 transition-colors duration-200 text-lg text-pink-100 hover:text-white"
                 >
                   +91 74286 06849
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-purple-400 flex-shrink-0" aria-hidden="true" />
+                <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" aria-hidden="true" />
                 <a 
                   href="mailto:Sociallift91@Gmail.com" 
-                  className="hover:text-purple-300 transition-colors duration-200 text-lg"
+                  className="hover:text-blue-300 transition-colors duration-200 text-lg text-pink-100 hover:text-white"
                 >
                   Sociallift91@Gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-purple-400 flex-shrink-0" aria-hidden="true" />
-                <span className="text-lg">Professional Digital Marketing Services Across India</span>
+                <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0" aria-hidden="true" />
+                <span className="text-lg text-pink-100">Professional Digital Marketing Services Across India</span>
               </div>
             </div>
           </div>
@@ -88,7 +89,7 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <div>
             <h3 
-              className="text-lg font-semibold mb-4 text-yellow-400"
+              className="text-lg font-semibold mb-4 text-blue-300"
               style={{ fontFamily: '"Haboro Serif", serif' }}
             >
               Quick Links
@@ -104,7 +105,7 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-lg block py-1"
+                    className="text-pink-200 hover:text-blue-300 transition-colors duration-200 text-lg block py-1 hover:translate-x-1 transform"
                   >
                     {item.name}
                   </Link>
@@ -116,7 +117,7 @@ const Footer: React.FC = () => {
           {/* Legal + Social */}
           <div>
             <h3 
-              className="text-lg font-semibold mb-4 text-yellow-400"
+              className="text-lg font-semibold mb-4 text-blue-300"
               style={{ fontFamily: '"Haboro Serif", serif' }}
             >
               Legal
@@ -130,7 +131,7 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-lg block py-1"
+                    className="text-pink-200 hover:text-blue-300 transition-colors duration-200 text-lg block py-1 hover:translate-x-1 transform"
                   >
                     {item.name}
                   </Link>
@@ -139,7 +140,7 @@ const Footer: React.FC = () => {
             </ul>
 
             <h3 
-              className="text-lg font-semibold mb-4 text-yellow-400"
+              className="text-lg font-semibold mb-4 text-blue-300"
               style={{ fontFamily: '"Haboro Serif", serif' }}
             >
               Follow Us
@@ -149,25 +150,25 @@ const Footer: React.FC = () => {
                 { 
                   icon: MessageCircle, 
                   href: "https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20grow%20my%20business%20online.", 
-                  color: "text-green-400 hover:text-green-300",
+                  color: "bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600",
                   label: "WhatsApp"
                 },
                 { 
                   icon: Instagram, 
                   href: "https://www.instagram.com/sociallift/", 
-                  color: "text-gray-300 hover:text-pink-400",
+                  color: "bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600",
                   label: "Instagram"
                 },
                 { 
                   icon: Linkedin, 
                   href: "https://www.linkedin.com/company/sociallift/", 
-                  color: "text-gray-300 hover:text-blue-400",
+                  color: "bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600",
                   label: "LinkedIn"
                 },
                 { 
                   icon: Facebook, 
                   href: "https://www.facebook.com/sociallift/", 
-                  color: "text-gray-300 hover:text-blue-500",
+                  color: "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800",
                   label: "Facebook"
                 }
               ].map((social) => (
@@ -176,10 +177,10 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${social.color} transition-colors duration-200 hover:scale-110 transform`}
+                  className={`${social.color} text-white p-2 rounded-lg transition-all duration-200 hover:scale-110 transform hover:shadow-lg`}
                   aria-label={social.label}
                 >
-                  <social.icon className="h-7 w-7" aria-hidden="true" />
+                  <social.icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
             </div>
@@ -190,7 +191,7 @@ const Footer: React.FC = () => {
                 href="https://wa.me/917428606849?text=Hello%20Social%20Lift%20Digital%20Marketing%20Agency,%20I%20want%20to%20discuss%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2 w-full text-center"
+                className="bg-gradient-to-r from-pink-500 to-blue-500 hover:from-pink-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 w-full text-center shadow-lg"
               >
                 <MessageCircle className="h-5 w-5" />
                 Get 50% OFF Now
@@ -200,26 +201,29 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p
-            className="text-gray-300 text-lg mb-2"
-            style={{ fontFamily: '"Haboro Serif", serif' }}
-          >
-            © {year} Social Lift Digital Marketing Agency. All rights reserved.
-          </p>
-          <p className="text-gray-400 text-md">
+        <div className="border-t border-pink-800 mt-8 pt-8 text-center">
+          <div className="flex items-center justify-center mb-2">
+            <Heart className="h-4 w-4 text-pink-400 mr-2" />
+            <p
+              className="text-pink-200 text-lg"
+              style={{ fontFamily: '"Haboro Serif", serif' }}
+            >
+              © {year} Social Lift Digital Marketing Agency. All rights reserved.
+            </p>
+          </div>
+          <p className="text-pink-300 text-md">
             Made with ❤️ in India | Empowering Businesses with Digital Marketing
           </p>
-          <p className="text-gray-400 text-sm mt-2">
+          <p className="text-pink-400 text-sm mt-2">
             Professional Digital Marketing Services | Social Media Management | Meta Ads | SEO
           </p>
           
           {/* Trust Badges */}
-          <div className="flex justify-center items-center gap-6 mt-4 pt-4 border-t border-gray-800">
-            <div className="text-gray-400 text-sm">🚀 Social Media Marketing</div>
-            <div className="text-gray-400 text-sm">🎯 Meta Ads Management</div>
-            <div className="text-gray-400 text-sm">⚡ SEO Services</div>
-            <div className="text-gray-400 text-sm">📈 Lead Generation</div>
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-4 pt-4 border-t border-pink-800">
+            <div className="text-pink-300 text-sm bg-pink-900/50 px-3 py-1 rounded-full">🚀 Social Media Marketing</div>
+            <div className="text-blue-300 text-sm bg-blue-900/50 px-3 py-1 rounded-full">🎯 Meta Ads Management</div>
+            <div className="text-pink-300 text-sm bg-pink-900/50 px-3 py-1 rounded-full">⚡ SEO Services</div>
+            <div className="text-blue-300 text-sm bg-blue-900/50 px-3 py-1 rounded-full">📈 Lead Generation</div>
           </div>
         </div>
       </div>

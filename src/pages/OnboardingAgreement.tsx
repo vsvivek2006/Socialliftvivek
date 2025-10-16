@@ -10,15 +10,15 @@ const OnboardingAgreement: React.FC = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-600 text-white py-16">
+      <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-3">
             Onboarding Agreement
           </h1>
-          <p className="text-purple-100 text-lg md:text-xl">
+          <p className="text-pink-100 text-lg md:text-xl">
             A clear process to kickstart your Digital Marketing, Social Media Management & Web Development engagement.
           </p>
-          <p className="text-sm text-purple-200 mt-4">Last updated: {lastUpdated}</p>
+          <p className="text-sm text-pink-200 mt-4">Last updated: {lastUpdated}</p>
         </div>
       </section>
 
@@ -26,14 +26,14 @@ const OnboardingAgreement: React.FC = () => {
       <section className="py-12 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 space-y-6">
           <p>
-            This Onboarding Agreement ("Agreement") outlines how Social Lift Digital Marketing Agency ("we", "us", "our") will
+            This Onboarding Agreement ("Agreement") outlines how our Digital Marketing Agency ("we", "us", "our") will
             initiate and deliver services to the Client ("you", "your"). It defines scope, access,
             approvals, timelines, deliverables, and responsibilities so your project can launch smoothly
             and achieve measurable outcomes.
           </p>
 
-          <div className="bg-purple-50 border border-purple-100 rounded-xl p-4">
-            <p className="text-sm text-purple-900">
+          <div className="bg-pink-50 border border-pink-100 rounded-xl p-4">
+            <p className="text-sm text-pink-900">
               <strong>Note:</strong> This Agreement is an operational guide for onboarding. It is used
               together with any Proposal/Quotation/SOW and our Terms of Service. If there's a conflict,
               the Proposal/SOW prevails for scope & pricing; Terms of Service prevail for legal terms.
@@ -256,11 +256,11 @@ const OnboardingAgreement: React.FC = () => {
           <div className="border rounded-xl p-5 bg-gray-50">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Questions?</h3>
             <p className="text-gray-700">
-              Email <a className="text-purple-700 underline" href="mailto:Sociallift91@Gmail.com">Sociallift91@Gmail.com</a> or call{" "}
-              <a className="text-purple-700 underline" href="tel:+917428606849">+91 7428606849</a>. We're happy to clarify any part of this Agreement.
+              Email <a className="text-pink-700 underline" href="mailto:contact@digitalagency.com">contact@digitalagency.com</a> or call{" "}
+              <a className="text-pink-700 underline" href="tel:+919521281509">+91 9521281509</a>. We're happy to clarify any part of this Agreement.
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              WhatsApp: <a className="text-purple-700 underline" href="https://wa.me/917428606849">+91 7428606849</a>
+              WhatsApp: <a className="text-pink-700 underline" href="https://wa.me/919521281509">+91 9521281509</a>
             </p>
           </div>
 

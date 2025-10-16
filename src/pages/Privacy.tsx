@@ -12,51 +12,51 @@ const Privacy: React.FC = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-600 via-purple-500 to-purple-400 text-white py-16">
+      <section className="bg-gradient-to-br from-pink-500 via-purple-500 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">Privacy Policy & Services</h1>
-          <p className="text-purple-100 text-lg md:text-xl">
-            How Social Lift collects, uses, protects, and shares your information.
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">Privacy Policy & Terms</h1>
+          <p className="text-pink-100 text-lg md:text-xl">
+            How Social Lift protects your information and our service policies.
           </p>
-          <p className="text-sm text-purple-200 mt-2">Last updated: {lastUpdated}</p>
+          <p className="text-sm text-blue-200 mt-2">Last updated: {lastUpdated}</p>
           
           {/* Tab Navigation */}
-          <div className="flex justify-center mt-8 space-x-4">
+          <div className="flex flex-wrap justify-center mt-8 gap-4">
             <button
               onClick={() => setActiveTab("privacy")}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === "privacy" 
-                ? "bg-white text-purple-600 shadow-lg" 
-                : "bg-purple-700 text-white hover:bg-purple-600"
+                ? "bg-white text-pink-600 shadow-lg" 
+                : "bg-pink-700 text-white hover:bg-pink-600"
               }`}
             >
               Privacy Policy
             </button>
             <button
-              onClick={() => setActiveTab("services")}
+              onClick={() => setActiveTab("refund")}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                activeTab === "services" 
-                ? "bg-white text-purple-600 shadow-lg" 
-                : "bg-purple-700 text-white hover:bg-purple-600"
+                activeTab === "refund" 
+                ? "bg-white text-blue-600 shadow-lg" 
+                : "bg-blue-700 text-white hover:bg-blue-600"
               }`}
             >
-              Our Services
+              Refund Policy
             </button>
             <button
-              onClick={() => setActiveTab("packages")}
+              onClick={() => setActiveTab("cancellation")}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                activeTab === "packages" 
+                activeTab === "cancellation" 
                 ? "bg-white text-purple-600 shadow-lg" 
                 : "bg-purple-700 text-white hover:bg-purple-600"
               }`}
             >
-              Package Deals
+              Cancellation Policy
             </button>
           </div>
         </div>
       </section>
 
-      {/* Content */}
+      {/* Privacy Policy Content */}
       {activeTab === "privacy" && (
         <section className="py-14 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 space-y-10">
@@ -68,7 +68,7 @@ const Privacy: React.FC = () => {
                 with our digital marketing campaigns, or use our services. By using our website/services,
                 you agree to this Policy. If you do not agree, please discontinue use.
               </p>
-              <div className="mt-4 bg-purple-50 border border-purple-100 rounded-xl p-4 text-sm text-purple-900">
+              <div className="mt-4 bg-pink-50 border border-pink-100 rounded-xl p-4 text-sm text-pink-900">
                 <strong>Regulatory note:</strong> We strive to comply with applicable laws, including
                 India's Digital Personal Data Protection (DPDP) Act and, where relevant, GDPR. References
                 below to "lawful basis" and "data principal rights" reflect these standards.
@@ -219,8 +219,8 @@ const Privacy: React.FC = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-3">12) How to Contact / Exercise Rights</h2>
               <p>
-                Email <a className="text-purple-700 underline" href="mailto:Sociallift91@Gmail.com">Sociallift91@Gmail.com</a> or call{" "}
-                <a className="text-purple-700 underline" href="tel:+917428606849">+91 7428606849</a>. We aim to respond within 7 business days.
+                Email <a className="text-pink-700 underline" href="mailto:Sociallift91@Gmail.com">Sociallift91@Gmail.com</a> or call{" "}
+                <a className="text-pink-700 underline" href="tel:+917428606849">+91 7428606849</a>. We aim to respond within 7 business days.
               </p>
               <p className="text-sm text-gray-600 mt-2">
                 Address: Social Lift Digital Marketing Agency, Professional Services Across India
@@ -255,7 +255,7 @@ const Privacy: React.FC = () => {
             </div>
 
             {/* Summary card */}
-            <div className="border rounded-xl p-5 bg-gray-50">
+            <div className="border rounded-xl p-5 bg-pink-50 border-pink-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Quick Summary</h3>
               <ul className="list-disc pl-6 space-y-1 text-sm">
                 <li>We collect contact, usage/analytics, and project data to deliver & improve services.</li>
@@ -272,310 +272,343 @@ const Privacy: React.FC = () => {
         </section>
       )}
 
-      {/* Services Tab */}
-      {activeTab === "services" && (
+      {/* Refund Policy Content */}
+      {activeTab === "refund" && (
         <section className="py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Digital Marketing Services</h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Social Media Management */}
-              <div className="bg-white border border-purple-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-purple-100 text-purple-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Social Media Management</h3>
-                  <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹8,000/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹15,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">47% OFF</span>
-                  </div>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 space-y-10">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Refund Policy</h2>
+              <p className="text-lg text-gray-600">Our transparent refund policy for digital marketing services</p>
+            </div>
+
+            {/* General Refund Policy */}
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-blue-900 mb-3">General Refund Policy</h3>
+              <p className="text-blue-800">
+                At Social Lift Digital Marketing Agency, we strive to deliver exceptional results. However, 
+                we understand that circumstances may require refund considerations under specific conditions.
+              </p>
+            </div>
+
+            {/* Eligible for Refund */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">When Refunds Are Considered</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-800 mb-2">✅ Service Not Initiated</h4>
+                  <p className="text-green-700">
+                    Full refund if payment is made but services haven't started and no resources have been allocated.
+                  </p>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ 15 Creative Design Posts</li>
-                  <li>✓ 2 Videos/Reels Upload</li>
-                  <li>✓ Trending Hashtags & Keywords</li>
-                  <li>✓ Platform Coverage: Instagram, Meta, Twitter(X), WhatsApp</li>
-                </ul>
-                <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <p className="text-sm font-semibold text-yellow-800">Add-On Services:</p>
-                  <p className="text-xs text-yellow-700">Extra Post: ₹100/- | Extra Video: ₹200/- (Max 2 min)</p>
+                
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-800 mb-2">✅ Technical Failure</h4>
+                  <p className="text-green-700">
+                    Partial or full refund if we're unable to deliver due to technical limitations on our end.
+                  </p>
+                </div>
+                
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-800 mb-2">✅ Service Cancellation Before Delivery</h4>
+                  <p className="text-green-700">
+                    Pro-rated refund based on work completed if cancellation occurs before project completion.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              {/* Meta Ads Management */}
-              <div className="bg-white border border-blue-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-blue-100 text-blue-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Meta Ads Management</h3>
-                  <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹10,000/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹18,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">44% OFF</span>
-                  </div>
+            {/* Not Eligible for Refund */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">When Refunds Are Not Provided</h3>
+              <div className="space-y-4">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-800 mb-2">❌ Services Already Rendered</h4>
+                  <p className="text-red-700">
+                    No refund for work already completed, including strategy sessions, content creation, 
+                    or campaign setup.
+                  </p>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Facebook & Instagram Ads</li>
-                  <li>✓ Targeted Audience Campaigns</li>
-                  <li>✓ Ad Creative Creation</li>
-                  <li>✓ Performance Analytics & Optimization</li>
-                </ul>
+                
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-800 mb-2">❌ Change of Mind</h4>
+                  <p className="text-red-700">
+                    Refunds aren't provided simply because you changed your mind after services have commenced.
+                  </p>
+                </div>
+                
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-800 mb-2">❌ Third-Party Costs</h4>
+                  <p className="text-red-700">
+                    Costs incurred for third-party services (ads spend, software subscriptions, stock assets) 
+                    are non-refundable.
+                  </p>
+                </div>
+                
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-800 mb-2">❌ Results-Based Expectations</h4>
+                  <p className="text-red-700">
+                    Digital marketing results vary. Refunds aren't guaranteed based on specific ROI or 
+                    performance metrics.
+                  </p>
+                </div>
               </div>
+            </div>
 
-              {/* SEO Services */}
-              <div className="bg-white border border-green-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-green-100 text-green-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">SEO Services</h3>
-                  <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹10,000/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹18,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">44% OFF</span>
+            {/* Refund Process */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Refund Process</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">1</div>
+                  <div>
+                    <p className="font-semibold">Submit Refund Request</p>
+                    <p className="text-gray-600">Email Sociallift91@Gmail.com with your request and reason</p>
                   </div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Comprehensive Keyword Research</li>
-                  <li>✓ On-Page SEO Optimization</li>
-                  <li>✓ Technical SEO Audit</li>
-                  <li>✓ Monthly Ranking Reports</li>
-                </ul>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">2</div>
+                  <div>
+                    <p className="font-semibold">Review Period</p>
+                    <p className="text-gray-600">We'll review your request within 3-5 business days</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">3</div>
+                  <div>
+                    <p className="font-semibold">Decision & Processing</p>
+                    <p className="text-gray-600">If approved, refund processed within 7-10 business days</p>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              {/* Website Development */}
-              <div className="bg-white border border-orange-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-orange-100 text-orange-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Website Development</h3>
-                  <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹15,000/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹30,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">50% OFF</span>
-                  </div>
+            {/* Service-Specific Policies */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Service-Specific Refund Policies</h3>
+              <div className="space-y-4">
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">Monthly Services (Social Media, SEO, Ads)</h4>
+                  <p className="text-gray-700">
+                    Pro-rated refund for unused portion of the month if cancelled before the 15th. 
+                    No refund for partial months after the 15th.
+                  </p>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ 5 Page Responsive Website</li>
-                  <li>✓ Mobile-Friendly Design</li>
-                  <li>✓ Contact Form Integration</li>
-                  <li>✓ Basic SEO Setup</li>
-                  <li>✓ 1 Year Hosting Included</li>
-                </ul>
+                
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">One-Time Services (Website, Setup)</h4>
+                  <p className="text-gray-700">
+                    50% refund if cancelled before work begins. 25% refund if cancelled during development. 
+                    No refund after project completion.
+                  </p>
+                </div>
+                
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">Package Deals</h4>
+                  <p className="text-gray-700">
+                    Refund calculated based on individual service rates minus work completed. 
+                    Package discounts are forfeited in refund calculations.
+                  </p>
+                </div>
               </div>
+            </div>
 
-              {/* Google Business Profile */}
-              <div className="bg-white border border-red-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-red-100 text-red-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Google Business Profile</h3>
-                  <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹6,000/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹12,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">50% OFF</span>
-                  </div>
-                </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Complete Profile Setup</li>
-                  <li>✓ Category & Description Optimization</li>
-                  <li>✓ Professional Photos Upload</li>
-                  <li>✓ Review Management Setup</li>
-                  <li>✓ Local SEO Optimization</li>
-                </ul>
-              </div>
-
-              {/* Lead Generation */}
-              <div className="bg-white border border-indigo-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-indigo-100 text-indigo-800 rounded-lg p-4 mb-4">
-                  <h3 className="text-xl font-bold">Lead Generation</h3>
-                  <div className="flex items-baseline mt-2">
-                    <span className="text-2xl font-bold">₹6,000/-</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">₹12,000/-</span>
-                    <span className="text-sm bg-red-500 text-white px-2 py-1 rounded ml-2">50% OFF</span>
-                  </div>
-                </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Targeted Lead Generation</li>
-                  <li>✓ Multi-channel Campaign Setup</li>
-                  <li>✓ Lead Qualification System</li>
-                  <li>✓ Performance Tracking</li>
-                  <li>✓ Monthly Lead Reports</li>
-                </ul>
+            {/* Contact Information */}
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Need Help with Refund?</h3>
+              <p className="text-gray-700 mb-4">
+                Contact us for any refund-related queries or disputes
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="mailto:Sociallift91@Gmail.com" 
+                  className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+                >
+                  Email Us
+                </a>
+                <a 
+                  href="https://wa.me/917428606849" 
+                  className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                >
+                  WhatsApp
+                </a>
               </div>
             </div>
           </div>
         </section>
       )}
 
-      {/* Packages Tab */}
-      {activeTab === "packages" && (
-        <section className="py-14 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Exclusive Package Deals</h2>
-            <p className="text-center text-gray-600 mb-12">Save big with our carefully curated packages</p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Starter Package */}
-              <div className="bg-white rounded-xl shadow-lg border-2 border-purple-300 transform hover:scale-105 transition-transform">
-                <div className="bg-purple-500 text-white rounded-t-xl p-6 text-center">
-                  <h3 className="text-2xl font-bold">Starter Package</h3>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">₹15,497</span>
-                    <span className="block text-purple-100 text-sm">SAVE ₹7,500</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <ul className="space-y-3 text-sm text-gray-700">
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Social Media Management - ₹8,000
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Social Account Creation - ₹2,499
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Google Business Profile - ₹6,000
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Business WhatsApp Setup - ₹1,499
-                    </li>
-                  </ul>
-                  <div className="mt-6 p-3 bg-purple-50 rounded-lg">
-                    <p className="text-purple-800 font-semibold text-center">Individual: ₹22,997</p>
-                  </div>
-                  <a 
-                    href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20the%20Starter%20Package"
-                    className="w-full mt-4 bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors block text-center"
-                  >
-                    Get Started
-                  </a>
-                </div>
-              </div>
+      {/* Cancellation Policy Content */}
+      {activeTab === "cancellation" && (
+        <section className="py-14 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 space-y-10">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Cancellation Policy</h2>
+              <p className="text-lg text-gray-600">Our transparent service cancellation and modification policies</p>
+            </div>
 
-              {/* Business Package */}
-              <div className="bg-white rounded-xl shadow-lg border-2 border-blue-400 transform hover:scale-105 transition-transform relative">
-                <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-xl">
-                  MOST POPULAR
-                </div>
-                <div className="bg-blue-500 text-white rounded-t-xl p-6 text-center">
-                  <h3 className="text-2xl font-bold">Business Package</h3>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">₹29,497</span>
-                    <span className="block text-blue-100 text-sm">SAVE ₹15,500</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <ul className="space-y-3 text-sm text-gray-700">
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Social Media Management - ₹8,000
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Meta Ads Management - ₹10,000
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Website Development - ₹15,000
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Google Business Profile - ₹6,000
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      All Account Creations Included
-                    </li>
-                  </ul>
-                  <div className="mt-6 p-3 bg-blue-50 rounded-lg">
-                    <p className="text-blue-800 font-semibold text-center">Individual: ₹44,997</p>
-                  </div>
-                  <a 
-                    href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20the%20Business%20Package"
-                    className="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors block text-center"
-                  >
-                    Get Started
-                  </a>
-                </div>
-              </div>
+            {/* General Cancellation Policy */}
+            <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-purple-900 mb-3">General Cancellation Policy</h3>
+              <p className="text-purple-800">
+                We understand that business needs change. Our cancellation policy is designed to be fair 
+                to both parties while ensuring proper resource allocation and project planning.
+              </p>
+            </div>
 
-              {/* Enterprise Package */}
-              <div className="bg-white rounded-xl shadow-lg border-2 border-purple-500 transform hover:scale-105 transition-transform">
-                <div className="bg-purple-500 text-white rounded-t-xl p-6 text-center">
-                  <h3 className="text-2xl font-bold">Enterprise Package</h3>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">₹44,997</span>
-                    <span className="block text-purple-100 text-sm">SAVE ₹25,000</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <ul className="space-y-3 text-sm text-gray-700">
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Complete Digital Marketing Suite
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      3 Months Social Media Management
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      3 Months Meta Ads Management
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Professional Website Development
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      Lead Generation Setup
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      All Platform Account Creations
-                    </li>
+            {/* Service Cancellation */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Service Cancellation</h3>
+              <div className="space-y-4">
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">Monthly Retainer Services</h4>
+                  <ul className="list-disc pl-6 space-y-1 text-gray-700">
+                    <li>30-day written notice required for cancellation</li>
+                    <li>Services continue until the end of the current billing cycle</li>
+                    <li>No pro-rated refunds for partial months</li>
+                    <li>Minimum 3-month commitment applies to all monthly services</li>
                   </ul>
-                  <div className="mt-6 p-3 bg-purple-50 rounded-lg">
-                    <p className="text-purple-800 font-semibold text-center">Individual: ₹69,997</p>
-                  </div>
-                  <a 
-                    href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20the%20Enterprise%20Package"
-                    className="w-full mt-4 bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors block text-center"
-                  >
-                    Get Started
-                  </a>
+                </div>
+                
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">Project-Based Services</h4>
+                  <ul className="list-disc pl-6 space-y-1 text-gray-700">
+                    <li>Cancellation allowed during first 25% of project timeline</li>
+                    <li>Client responsible for costs incurred up to cancellation point</li>
+                    <li>All project materials and work completed remain our property</li>
+                    <li>50% cancellation fee if cancelled after project kickoff</li>
+                  </ul>
+                </div>
+                
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">One-Time Setup Services</h4>
+                  <ul className="list-disc pl-6 space-y-1 text-gray-700">
+                    <li>Cancellation possible before service initiation</li>
+                    <li>25% administrative fee for cancellations after payment</li>
+                    <li>No cancellation after service delivery has begun</li>
+                    <li>Setup fees are generally non-refundable once work commences</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* Custom Package */}
-            <div className="mt-12 bg-white rounded-xl shadow-lg border-2 border-orange-400 p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Package</h3>
-              <p className="text-gray-600 mb-6">Can't find what you're looking for? Build your own package!</p>
-              <div className="flex flex-wrap justify-center gap-4 mb-6">
-                <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm">Mix & Match Services</span>
-                <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm">Flexible Pricing</span>
-                <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm">Personalized Solutions</span>
+            {/* Modification Policy */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Service Modification</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-800 mb-2">Service Upgrades</h4>
+                  <p className="text-green-700">
+                    You can upgrade your service package at any time. The new rate applies from the 
+                    next billing cycle or immediately for one-time services.
+                  </p>
+                </div>
+                
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-yellow-800 mb-2">Service Downgrades</h4>
+                  <p className="text-yellow-700">
+                    Service downgrades require 30-day notice and may be subject to re-evaluation 
+                    of current project scope and deliverables.
+                  </p>
+                </div>
+                
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-800 mb-2">Scope Changes</h4>
+                  <p className="text-blue-700">
+                    Significant changes to project scope may require contract amendment and 
+                    potential price adjustment. Minor adjustments are accommodated when possible.
+                  </p>
+                </div>
               </div>
-              <a 
-                href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I%20want%20a%20custom%20package%20quote"
-                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-block"
-              >
-                Contact for Custom Quote
-              </a>
             </div>
 
-            {/* WhatsApp Contact */}
-            <div className="mt-12 text-center">
-              <div className="bg-[#25D366] text-white rounded-xl p-6 inline-block">
-                <div className="flex items-center justify-center space-x-3">
-                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.18-1.24-6.169-3.495-8.418"/>
-                  </svg>
+            {/* Cancellation Process */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Cancellation Process</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">1</div>
                   <div>
-                    <p className="font-semibold text-lg">Get Instant Quote on WhatsApp</p>
-                    <p className="text-green-100">Quick response within 15 minutes</p>
+                    <p className="font-semibold">Written Notice</p>
+                    <p className="text-gray-600">Send cancellation request via email to Sociallift91@Gmail.com</p>
                   </div>
                 </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">2</div>
+                  <div>
+                    <p className="font-semibold">Acknowledgement</p>
+                    <p className="text-gray-600">We'll acknowledge receipt within 24 business hours</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">3</div>
+                  <div>
+                    <p className="font-semibold">Final Settlement</p>
+                    <p className="text-gray-600">Any final invoices or refunds processed within 10 business days</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">4</div>
+                  <div>
+                    <p className="font-semibold">Service Termination</p>
+                    <p className="text-gray-600">Services officially terminate at the end of current billing cycle</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Important Notes */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Important Notes</h3>
+              <div className="space-y-3">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-800 mb-2">Immediate Termination</h4>
+                  <p className="text-red-700">
+                    We reserve the right to immediately terminate services for:
+                    Non-payment, abusive behavior, illegal activities, or violation of terms of service.
+                  </p>
+                </div>
+                
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-yellow-800 mb-2">Data Retention</h4>
+                  <p className="text-yellow-700">
+                    Upon cancellation, we retain project data for 90 days. Client is responsible for 
+                    backing up any needed materials before cancellation date.
+                  </p>
+                </div>
+                
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-800 mb-2">Reactivation</h4>
+                  <p className="text-blue-700">
+                    Reactivation of cancelled services may require new onboarding and current pricing. 
+                    Previous promotional rates may not apply.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact for Cancellation */}
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Need to Cancel or Modify Services?</h3>
+              <p className="text-gray-700 mb-4">
+                Contact us for cancellation requests or service modifications
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://wa.me/917428606849?text=Hi%20Social%20Lift,%20I'm%20interested%20in%20your%20services"
-                  className="inline-block mt-4 bg-white text-[#25D366] px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                  href="mailto:Sociallift91@Gmail.com" 
+                  className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors"
                 >
-                  Message Us on WhatsApp
+                  Email Cancellation Request
+                </a>
+                <a 
+                  href="https://wa.me/917428606849" 
+                  className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                >
+                  Discuss on WhatsApp
                 </a>
               </div>
             </div>

@@ -26,7 +26,8 @@ import {
   Users,
   Zap,
   ArrowRight,
-  Star
+  Star,
+  Heart
 } from 'lucide-react';
 
 const Services = () => {
@@ -58,7 +59,8 @@ const Services = () => {
             'Drive website traffic',
             'Generate quality leads',
             'Build community engagement'
-          ]
+          ],
+          color: 'pink'
         },
         {
           icon: <Search className="h-8 w-8" />,
@@ -81,7 +83,8 @@ const Services = () => {
             'Increased organic traffic',
             'Better conversion rates',
             'Long-term business growth'
-          ]
+          ],
+          color: 'blue'
         },
         {
           icon: <MousePointer className="h-8 w-8" />,
@@ -104,7 +107,8 @@ const Services = () => {
             'Targeted audience reach',
             'Measurable ROI',
             'Quick lead generation'
-          ]
+          ],
+          color: 'purple'
         }
       ]
     },
@@ -134,7 +138,8 @@ const Services = () => {
             'Increased credibility',
             'Better audience reach',
             'Optimized for engagement'
-          ]
+          ],
+          color: 'pink'
         },
         {
           icon: <MapPin className="h-8 w-8" />,
@@ -157,7 +162,8 @@ const Services = () => {
             'Increase walk-in customers',
             'Build trust with reviews',
             'Free business listing'
-          ]
+          ],
+          color: 'blue'
         },
         {
           icon: <MessageCircle className="h-8 w-8" />,
@@ -180,7 +186,8 @@ const Services = () => {
             'Product showcase capability',
             'Automated responses',
             'Enhanced customer service'
-          ]
+          ],
+          color: 'green'
         },
         {
           icon: <Youtube className="h-8 w-8" />,
@@ -203,7 +210,8 @@ const Services = () => {
             'Monetization opportunities',
             'Brand authority building',
             'Engaging content delivery'
-          ]
+          ],
+          color: 'red'
         }
       ]
     },
@@ -233,7 +241,8 @@ const Services = () => {
             'Mobile responsive design',
             'SEO ready',
             'Ongoing support'
-          ]
+          ],
+          color: 'blue'
         },
         {
           icon: <Settings className="h-8 w-8" />,
@@ -256,7 +265,8 @@ const Services = () => {
             'Admin control',
             'Scalable solution',
             'Professional management'
-          ]
+          ],
+          color: 'purple'
         },
         {
           icon: <ShoppingCart className="h-8 w-8" />,
@@ -279,7 +289,8 @@ const Services = () => {
             'Secure payments',
             'Mobile friendly',
             'Professional store'
-          ]
+          ],
+          color: 'green'
         }
       ]
     },
@@ -309,7 +320,8 @@ const Services = () => {
             'Reach millions of customers',
             'Managed inventory',
             'Sales tracking'
-          ]
+          ],
+          color: 'pink'
         },
         {
           icon: <Zap className="h-8 w-8" />,
@@ -332,7 +344,8 @@ const Services = () => {
             'Better conversion rates',
             'Professional product presentation',
             'Increased sales'
-          ]
+          ],
+          color: 'blue'
         }
       ]
     },
@@ -362,7 +375,8 @@ const Services = () => {
             'Memorable logo design',
             'Consistent branding',
             'Multiple concepts'
-          ]
+          ],
+          color: 'pink'
         },
         {
           icon: <Users className="h-8 w-8" />,
@@ -385,7 +399,8 @@ const Services = () => {
             'Targeted audience reach',
             'Authentic promotions',
             'Measurable results'
-          ]
+          ],
+          color: 'purple'
         },
         {
           icon: <Video className="h-8 w-8" />,
@@ -408,7 +423,8 @@ const Services = () => {
             'Professional quality',
             'Social media ready',
             'Increased engagement'
-          ]
+          ],
+          color: 'blue'
         },
         {
           icon: <Mail className="h-8 w-8" />,
@@ -431,11 +447,58 @@ const Services = () => {
             'High ROI',
             'Automated campaigns',
             'Measurable results'
-          ]
+          ],
+          color: 'green'
         }
       ]
     }
   ];
+
+  const getColorClasses = (color) => {
+    const colors = {
+      pink: {
+        gradient: 'from-pink-500 to-rose-500',
+        light: 'bg-pink-50 border-pink-200',
+        medium: 'bg-pink-500',
+        dark: 'bg-pink-600',
+        text: 'text-pink-600',
+        border: 'border-pink-300'
+      },
+      blue: {
+        gradient: 'from-blue-500 to-cyan-500',
+        light: 'bg-blue-50 border-blue-200',
+        medium: 'bg-blue-500',
+        dark: 'bg-blue-600',
+        text: 'text-blue-600',
+        border: 'border-blue-300'
+      },
+      purple: {
+        gradient: 'from-purple-500 to-indigo-500',
+        light: 'bg-purple-50 border-purple-200',
+        medium: 'bg-purple-500',
+        dark: 'bg-purple-600',
+        text: 'text-purple-600',
+        border: 'border-purple-300'
+      },
+      green: {
+        gradient: 'from-green-500 to-emerald-500',
+        light: 'bg-green-50 border-green-200',
+        medium: 'bg-green-500',
+        dark: 'bg-green-600',
+        text: 'text-green-600',
+        border: 'border-green-300'
+      },
+      red: {
+        gradient: 'from-red-500 to-orange-500',
+        light: 'bg-red-50 border-red-200',
+        medium: 'bg-red-500',
+        dark: 'bg-red-600',
+        text: 'text-red-600',
+        border: 'border-red-300'
+      }
+    };
+    return colors[color] || colors.pink;
+  };
 
   const whatsappUrl = 'https://wa.me/917428606849?text=Hello%20Social%20Lift,%20I%20want%20to%20discuss';
 
@@ -456,23 +519,26 @@ const Services = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-600 text-white py-20">
+      <section className="bg-gradient-to-br from-pink-500 via-purple-500 to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <Heart className="h-12 w-12 text-pink-200 animate-pulse" />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="text-yellow-400">Digital Services</span>
+              Our <span className="text-pink-200">Digital Services</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-purple-100">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100">
               Complete digital solutions to accelerate your business growth and online presence
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
+              <span className="bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
                 <Star className="h-4 w-4 mr-1" /> 50+ Services
               </span>
               <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
                 <Star className="h-4 w-4 mr-1" /> Expert Team
               </span>
-              <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
+              <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
                 <Star className="h-4 w-4 mr-1" /> Guaranteed Results
               </span>
             </div>
@@ -482,10 +548,10 @@ const Services = () => {
 
       {/* Services Categories */}
       {serviceCategories.map((category, categoryIndex) => (
-        <section key={categoryIndex} className={categoryIndex % 2 === 0 ? 'py-16 bg-white' : 'py-16 bg-gray-50'}>
+        <section key={categoryIndex} className={categoryIndex % 2 === 0 ? 'py-16 bg-white' : 'py-16 bg-gradient-to-br from-pink-50 to-blue-50'}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <div className="text-purple-600 mb-4 flex justify-center">
+              <div className="text-pink-500 mb-4 flex justify-center">
                 {category.icon}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -497,105 +563,108 @@ const Services = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {category.services.map((service, serviceIndex) => (
-                <div key={serviceIndex} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                  <div className="text-purple-600 mb-4">
-                    {service.icon}
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                    {service.name}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 text-lg">
-                    {service.description}
-                  </p>
-
-                  {/* Pricing Section */}
-                  <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200">
-                    <div className="flex items-baseline justify-between mb-2">
-                      <div>
-                        <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                        <span className="text-lg text-gray-500 line-through ml-2">{service.originalPrice}</span>
-                      </div>
-                      <span className="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
-                        {Math.round((1 - parseInt(service.price.replace(/[^0-9]/g, '')) / parseInt(service.originalPrice.replace(/[^0-9]/g, ''))) * 100)}% OFF
-                      </span>
+              {category.services.map((service, serviceIndex) => {
+                const color = getColorClasses(service.color);
+                return (
+                  <div key={serviceIndex} className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border-2 ${color.border} hover:scale-105 transform duration-300`}>
+                    <div className={`${color.text} mb-4`}>
+                      {service.icon}
                     </div>
-                    <p className="text-green-600 text-sm font-semibold">
-                      ✅ Best Price Guaranteed
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      {service.name}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 text-lg">
+                      {service.description}
                     </p>
-                  </div>
-                  
-                  {/* Features Section */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3 text-lg flex items-center">
-                      <Zap className="h-5 w-5 text-yellow-500 mr-2" />
-                      What's Included:
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-gray-700 flex items-start">
-                          <span className="text-green-500 mr-3 mt-1 flex-shrink-0">✓</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  {/* Benefits Section */}
-                  <div className="mb-8">
-                    <h4 className="font-semibold text-gray-900 mb-3 text-lg flex items-center">
-                      <TrendingUp className="h-5 w-5 text-blue-500 mr-2" />
-                      Key Benefits:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">
-                          {benefit}
+                    {/* Pricing Section */}
+                    <div className={`mb-6 p-4 ${color.light} rounded-lg border-2 ${color.border}`}>
+                      <div className="flex items-baseline justify-between mb-2">
+                        <div>
+                          <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                          <span className="text-lg text-gray-500 line-through ml-2">{service.originalPrice}</span>
+                        </div>
+                        <span className="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-2 py-1 rounded text-sm font-bold">
+                          {Math.round((1 - parseInt(service.price.replace(/[^0-9]/g, '')) / parseInt(service.originalPrice.replace(/[^0-9]/g, ''))) * 100)}% OFF
                         </span>
-                      ))}
+                      </div>
+                      <p className="text-green-600 text-sm font-semibold">
+                        ✅ Best Price Guaranteed
+                      </p>
+                    </div>
+                    
+                    {/* Features Section */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3 text-lg flex items-center">
+                        <Zap className="h-5 w-5 text-yellow-500 mr-2" />
+                        What's Included:
+                      </h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="text-gray-700 flex items-start">
+                            <span className="text-green-500 mr-3 mt-1 flex-shrink-0">✓</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Benefits Section */}
+                    <div className="mb-8">
+                      <h4 className="font-semibold text-gray-900 mb-3 text-lg flex items-center">
+                        <TrendingUp className="h-5 w-5 text-blue-500 mr-2" />
+                        Key Benefits:
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <span key={benefitIndex} className={`${color.light} ${color.text} px-3 py-1 rounded-full text-sm border ${color.border}`}>
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a
+                        href={`${whatsappUrl}%20${encodeURIComponent(service.name)}%20service`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-3 px-6 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2 text-center shadow-lg"
+                      >
+                        <span>💬 Get Quote</span>
+                      </a>
+                      <Link
+                        to="/contact"
+                        className="flex-1 bg-gradient-to-r from-pink-500 to-blue-500 hover:from-pink-600 hover:to-blue-600 text-white py-3 px-6 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2 text-center shadow-lg"
+                      >
+                        <span>Free Consultation</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
                     </div>
                   </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a
-                      href={`${whatsappUrl}%20${encodeURIComponent(service.name)}%20service`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-center"
-                    >
-                      <span>💬 Get Quote</span>
-                    </a>
-                    <Link
-                      to="/contact"
-                      className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-center"
-                    >
-                      <span>Free Consultation</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
       ))}
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8 text-purple-100">
+          <p className="text-xl mb-8 text-pink-100">
             Choose from our wide range of professional services and start your digital journey today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/pricing"
-              className="bg-yellow-500 hover:bg-yellow-600 text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
+              className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
             >
               <span>View All Pricing</span>
               <ArrowRight className="h-5 w-5" />
@@ -604,7 +673,7 @@ const Services = () => {
               href={`${whatsappUrl}%20the%20right%20service%20for%20my%20business`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
             >
               <span>💬 Get Free Consultation</span>
             </a>

@@ -91,14 +91,14 @@ const GrowthServices: React.FC = () => {
 
   // ✅ Environment variables
   const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY_ID;
-  const WHATSAPP_NUMBER = "9341436937";
+  const WHATSAPP_NUMBER = "9521281509";
 
-  // Instagram Services (Prices doubled as requested)
+  // Instagram Services
   const instagramServices: Service[] = [
     {
       id: "ig-views",
       name: "Instagram Reels Views",
-      price: 10, // Doubled from 0.25
+      price: 10,
       min: 100,
       max: 1000000,
       description: "High-quality Instagram Reel views with fast delivery",
@@ -109,7 +109,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-likes",
       name: "Instagram Likes",
-      price: 200, // Doubled from 55.86
+      price: 200,
       min: 100,
       max: 50000,
       description: "Premium Instagram likes from real accounts",
@@ -120,7 +120,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-post-views",
       name: "Instagram Post Views",
-      price: 10, // Doubled from 2.96
+      price: 10,
       min: 100,
       max: 100000,
       description: "Boost your post visibility with genuine views",
@@ -131,7 +131,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-followers",
       name: "Instagram Followers",
-      price: 879.06, // Doubled from 439.53
+      price: 879.06,
       min: 100,
       max: 10000,
       description: "Grow your Instagram with real followers",
@@ -142,7 +142,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-likes-indian",
       name: "Instagram Likes ~ Indian",
-      price: 500, // Doubled from 207.07
+      price: 500,
       min: 100,
       max: 50000,
       description: "Indian targeted likes for better engagement",
@@ -153,7 +153,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-story-views",
       name: "Instagram Story Views",
-      price: 50, // Doubled from 13.36
+      price: 50,
       min: 100,
       max: 100000,
       description: "Increase your story reach with genuine views",
@@ -164,7 +164,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-shares",
       name: "Instagram Shares",
-      price: 10, // Doubled from 2.97
+      price: 10,
       min: 100,
       max: 50000,
       description: "Boost your content sharing",
@@ -175,7 +175,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-reach",
       name: "Instagram Reach + Impression",
-      price: 30, // Doubled from 6.65
+      price: 30,
       min: 100,
       max: 100000,
       description: "Increase your post reach and impressions",
@@ -186,7 +186,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-comments",
       name: "Instagram Comments",
-      price: 300, // Doubled from 121.06
+      price: 300,
       min: 10,
       max: 1000,
       description: "Genuine comments on your posts",
@@ -197,7 +197,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-reel-promotion",
       name: "Instagram Reel Promotion",
-      price: 2601.00, // Doubled from 1300.50
+      price: 2601.00,
       min: 100,
       max: 10000,
       description: "Professional reel promotion service",
@@ -208,7 +208,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-channel-members",
       name: "Instagram Channel Members",
-      price: 199.18, // Doubled from 99.59
+      price: 199.18,
       min: 100,
       max: 5000,
       description: "Increase your channel membership",
@@ -219,7 +219,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "ig-live-stream",
       name: "Instagram Live Stream",
-      price: 266.56, // Doubled from 133.28
+      price: 266.56,
       min: 100,
       max: 10000,
       description: "Boost your live stream viewers",
@@ -229,12 +229,12 @@ const GrowthServices: React.FC = () => {
     }
   ];
 
-  // Facebook Services (Prices doubled)
+  // Facebook Services
   const facebookServices: Service[] = [
     {
       id: "fb-followers",
       name: "Facebook All Type Followers",
-      price: 300, // Doubled from 106.04
+      price: 300,
       min: 100,
       max: 10000,
       description: "Genuine Facebook followers for all page types",
@@ -245,7 +245,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "fb-likes",
       name: "Facebook Likes",
-      price: 100, // Doubled from 35.04
+      price: 100,
       min: 100,
       max: 50000,
       description: "Increase your Facebook page likes",
@@ -256,7 +256,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "fb-post-reaction",
       name: "Facebook Post Reaction",
-      price: 150, // Doubled from 42.61
+      price: 150,
       min: 100,
       max: 50000,
       description: "Get genuine reactions on your Facebook posts",
@@ -267,7 +267,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "fb-story-reaction",
       name: "Facebook Story Reaction",
-      price: 200, // Doubled from 67.47
+      price: 200,
       min: 100,
       max: 100000,
       description: "Boost your Facebook story engagement",
@@ -278,7 +278,7 @@ const GrowthServices: React.FC = () => {
     {
       id: "fb-page-likes",
       name: "Facebook Page Likes & Followers",
-      price: 300, // Doubled from 63.92
+      price: 300,
       min: 100,
       max: 10000,
       description: "Grow your Facebook page audience",
@@ -288,12 +288,12 @@ const GrowthServices: React.FC = () => {
     }
   ];
 
-  // LinkedIn Services (Prices doubled)
+  // LinkedIn Services
   const linkedinServices: Service[] = [
     {
       id: "li-followers",
       name: "LinkedIn Company Page Followers",
-      price: 5224.18, // Doubled from 2612.09
+      price: 5224.18,
       min: 100,
       max: 5000,
       description: "Professional LinkedIn company page followers",
@@ -303,12 +303,12 @@ const GrowthServices: React.FC = () => {
     }
   ];
 
-  // Website Traffic Services (Prices doubled)
+  // Website Traffic Services
   const websiteServices: Service[] = [
     {
       id: "web-traffic",
       name: "Website Organic Traffic",
-      price: 60, // Doubled from 20.24
+      price: 60,
       min: 100,
       max: 100000,
       description: "Organic website traffic from real sources",
@@ -451,7 +451,7 @@ const GrowthServices: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const whatsappMessage = `🎯 Growth Services Inquiry - DiziGrow 🎯\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
+    const whatsappMessage = `🎯 Growth Services Inquiry 🎯\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
     window.open(`https://wa.me/91${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
@@ -463,7 +463,7 @@ const GrowthServices: React.FC = () => {
   const handleSuccessSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const whatsappMessage = `✅ Growth Services Payment Success - DiziGrow 🎯\n\nPayment Details:\nName: ${successFormData.name}\nEmail: ${successFormData.email}\nUTR Number: ${successFormData.utr}\nService: ${successFormData.service}\nQuantity: ${successFormData.quantity}\nAmount Paid: ₹${successFormData.amount}\nLink: ${successFormData.link}\n\nPlease verify my payment and start the service!`;
+    const whatsappMessage = `✅ Growth Services Payment Success 🎯\n\nPayment Details:\nName: ${successFormData.name}\nEmail: ${successFormData.email}\nUTR Number: ${successFormData.utr}\nService: ${successFormData.service}\nQuantity: ${successFormData.quantity}\nAmount Paid: ₹${successFormData.amount}\nLink: ${successFormData.link}\n\nPlease verify my payment and start the service!`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
     window.open(`https://wa.me/91${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
@@ -515,7 +515,7 @@ const GrowthServices: React.FC = () => {
         key: RAZORPAY_KEY_ID,
         amount: paymentAmount * 100,
         currency: 'INR',
-        name: 'DiziGrow - Growth Services',
+        name: 'Growth Services',
         description: `${selectedService?.name} - Quantity: ${quantity}`,
         image: '/logo.png',
         handler: function (response: any) {
@@ -546,7 +546,7 @@ const GrowthServices: React.FC = () => {
           type: 'Growth Service'
         },
         theme: {
-          color: '#F59E0B'
+          color: '#EC4899'
         }
       };
 
@@ -565,7 +565,7 @@ const GrowthServices: React.FC = () => {
       {[...Array(10)].map((_, i) => (
         <div
           key={i}
-          className="absolute animate-ping text-yellow-300"
+          className="absolute animate-ping text-pink-300"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -594,17 +594,16 @@ const GrowthServices: React.FC = () => {
 
   const categories = [
     { id: "instagram", name: "Instagram", icon: <Instagram className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-purple-500" },
-    { id: "facebook", name: "Facebook", icon: <Facebook className="h-5 w-5" />, color: "bg-gradient-to-r from-blue-500 to-blue-700" },
-    { id: "linkedin", name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, color: "bg-gradient-to-r from-blue-600 to-blue-800" },
-    { id: "website", name: "Website Traffic", icon: <WebsiteIcon className="h-5 w-5" />, color: "bg-gradient-to-r from-green-500 to-green-700" }
+    { id: "facebook", name: "Facebook", icon: <Facebook className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-blue-500" },
+    { id: "linkedin", name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-blue-600" },
+    { id: "website", name: "Website Traffic", icon: <WebsiteIcon className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-green-500" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50" style={{ fontFamily: "'Haboro Serif', serif" }}>
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-purple-50 to-blue-50">
       <Helmet>
-        <title>Growth Services - Instagram, Facebook, LinkedIn Services | DiziGrow</title>
+        <title>Growth Services - Instagram, Facebook, LinkedIn Services</title>
         <meta name="description" content="Premium growth services: Instagram followers, likes, views | Facebook services | LinkedIn followers | Website traffic. Boost your social media growth!" />
-        <link href="https://fonts.googleapis.com/css2?family=Haboro+Serif:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </Helmet>
 
       {/* Developer Reset Button (Hidden in production) */}
@@ -619,7 +618,7 @@ const GrowthServices: React.FC = () => {
 
       {/* Flash Sale Banner */}
       {isFlashSale && !offerExpired && (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 text-center animate-pulse">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 text-center animate-pulse">
           <div className="flex items-center justify-center gap-3 text-sm md:text-base">
             <Zap className="h-4 w-4 md:h-5 md:w-5 animate-bounce" />
             <span className="font-bold">FLASH SALE: 20% OFF - Ends in {flashSaleTime}s!</span>
@@ -630,7 +629,7 @@ const GrowthServices: React.FC = () => {
 
       {/* Floating Timer */}
       <div className="fixed top-4 right-4 z-40">
-        <div className={`bg-gradient-to-r ${offerExpired ? 'from-gray-500 to-gray-700' : isSpecialPrice ? 'from-green-500 to-emerald-500' : 'from-red-500 to-orange-500'} text-white px-4 py-2 rounded-full shadow-2xl animate-pulse border-2 border-yellow-300`}>
+        <div className={`bg-gradient-to-r ${offerExpired ? 'from-gray-500 to-gray-700' : isSpecialPrice ? 'from-pink-500 to-purple-500' : 'from-red-500 to-pink-500'} text-white px-4 py-2 rounded-full shadow-2xl animate-pulse border-2 border-pink-300`}>
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4 animate-spin" />
             <div className="text-center">
@@ -646,17 +645,17 @@ const GrowthServices: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 text-white pt-16 pb-12 md:py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white pt-16 pb-12 md:py-20 overflow-hidden">
         <SparklesEffect />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           {!offerExpired && (
-            <div className={`mb-4 md:mb-6 p-3 md:p-4 rounded-2xl ${isSpecialPrice ? 'bg-green-500/20 border border-green-300' : 'bg-red-500/20 border border-red-300'} backdrop-blur-sm`}>
+            <div className={`mb-4 md:mb-6 p-3 md:p-4 rounded-2xl ${isSpecialPrice ? 'bg-pink-500/20 border border-pink-300' : 'bg-red-500/20 border border-red-300'} backdrop-blur-sm`}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-4">
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 md:h-6 md:w-6 animate-pulse" />
                   <span className="text-sm md:text-lg font-bold">{isSpecialPrice ? '⏰ SPECIAL OFFER ENDS IN:' : '❌ OFFER EXPIRED'}</span>
                 </div>
-                <div className={`text-xl md:text-2xl font-bold ${isSpecialPrice ? 'text-yellow-300' : 'text-red-300'} font-mono`}>
+                <div className={`text-xl md:text-2xl font-bold ${isSpecialPrice ? 'text-pink-300' : 'text-red-300'} font-mono`}>
                   {formatTime(timeLeft)}
                 </div>
               </div>
@@ -664,7 +663,7 @@ const GrowthServices: React.FC = () => {
           )}
 
           {isFlashSale && !offerExpired && (
-            <div className="bg-purple-500 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold inline-block mb-4 md:mb-6 animate-pulse border-2 border-yellow-300">
+            <div className="bg-purple-500 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold inline-block mb-4 md:mb-6 animate-pulse border-2 border-pink-300">
               ⚡ FLASH SALE: 20% OFF - {flashSaleTime}s LEFT!
             </div>
           )}
@@ -672,18 +671,18 @@ const GrowthServices: React.FC = () => {
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             {offerExpired ? (
               <>
-                Premium <span className="text-yellow-300">Growth</span><br />
-                <span className="text-blue-300">Services</span>
+                Premium <span className="text-white">Growth</span><br />
+                <span className="text-pink-300">Services</span>
               </>
             ) : (
               <>
-                Premium <span className="text-yellow-300">Growth</span><br />
-                <span className="text-blue-300">Services</span>
+                Premium <span className="text-white">Growth</span><br />
+                <span className="text-pink-300">Services</span>
               </>
             )}
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-purple-100 max-w-4xl mx-auto font-medium">
+          <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-pink-100 max-w-4xl mx-auto font-medium">
             {offerExpired ? (
               "Get the best growth services for Instagram, Facebook, LinkedIn and more!"
             ) : (
@@ -692,7 +691,7 @@ const GrowthServices: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <button onClick={scrollToServices} className="bg-yellow-400 hover:bg-yellow-500 text-purple-900 px-6 md:px-8 py-3 md:py-4 rounded-xl text-base md:text-lg font-bold transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2 shadow-lg justify-center">
+            <button onClick={scrollToServices} className="bg-white hover:bg-gray-100 text-pink-600 px-6 md:px-8 py-3 md:py-4 rounded-xl text-base md:text-lg font-bold transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2 shadow-lg justify-center">
               <Rocket className="h-4 w-4 md:h-5 md:w-5" />
               View Growth Services
             </button>
@@ -709,7 +708,7 @@ const GrowthServices: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="text-blue-500">Growth Services</span>
+              Our <span className="text-pink-500">Growth Services</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
               Boost your social media presence with our premium growth services
@@ -737,7 +736,7 @@ const GrowthServices: React.FC = () => {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {categoryServices[activeCategory as keyof typeof categoryServices]?.map((service) => (
-              <div key={service.id} className="bg-gradient-to-br from-white to-gray-50 border-2 border-blue-200 rounded-2xl p-6 relative overflow-hidden transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl">
+              <div key={service.id} className="bg-gradient-to-br from-white to-gray-50 border-2 border-pink-200 rounded-2xl p-6 relative overflow-hidden transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl">
                 {!offerExpired && isFlashSale && (
                   <div className="absolute -top-2 -right-2 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold rotate-12 shadow-lg z-10 animate-pulse">
                     ⚡ 20% OFF
@@ -746,7 +745,7 @@ const GrowthServices: React.FC = () => {
                 
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
+                    <div className="p-2 bg-pink-100 rounded-lg text-pink-600">
                       {service.icon}
                     </div>
                     <div>
@@ -781,10 +780,10 @@ const GrowthServices: React.FC = () => {
                     onClick={() => openPaymentModal(service)} 
                     className={`w-full py-3 rounded-xl font-bold transition-all hover:scale-105 text-center ${
                       offerExpired 
-                        ? 'bg-blue-500 hover:bg-blue-600 text-white' 
+                        ? 'bg-pink-500 hover:bg-pink-600 text-white' 
                         : isFlashSale
                           ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
-                          : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white'
+                          : 'bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white'
                     }`}
                   >
                     {offerExpired 
@@ -808,7 +807,7 @@ const GrowthServices: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-blue-500 to-purple-500 text-white text-center">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-pink-500 to-purple-500 text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             Ready to Boost Your Social Media Growth?
@@ -840,7 +839,7 @@ const GrowthServices: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div>
-              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-blue-400">DiziGrow Growth Services</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-pink-400">Growth Services</h3>
               <p className="text-gray-400 text-sm md:text-base">
                 Your trusted partner for social media growth and online success.
               </p>
@@ -855,7 +854,7 @@ const GrowthServices: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@dizigrow.com</span>
+                  <span>contact@digitalagency.com</span>
                 </div>
               </div>
             </div>
@@ -881,7 +880,7 @@ const GrowthServices: React.FC = () => {
           
           <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
             <p className="text-gray-400 text-sm md:text-base">
-              © 2024 DiziGrow Growth Services. All rights reserved.
+              © 2024 Growth Services. All rights reserved.
             </p>
           </div>
         </div>
@@ -890,14 +889,14 @@ const GrowthServices: React.FC = () => {
       {/* Payment Modal */}
       {isPaymentOpen && selectedService && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-purple-300">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-pink-300">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 flex items-center gap-2">
-                  <CreditCard className="h-5 w-5 md:h-6 md:w-6 text-purple-500" />
+                  <CreditCard className="h-5 w-5 md:h-6 md:w-6 text-pink-500" />
                   Order {selectedService.name}
                 </h3>
-                <p className="text-purple-600 font-semibold text-sm mt-1">{selectedService.description}</p>
+                <p className="text-pink-600 font-semibold text-sm mt-1">{selectedService.description}</p>
               </div>
               <button onClick={() => setIsPaymentOpen(false)} className="text-gray-500 hover:text-gray-700 p-1 hover:bg-gray-100 rounded-full">
                 <X className="h-5 w-5 md:h-6 md:w-6" />
@@ -939,11 +938,11 @@ const GrowthServices: React.FC = () => {
 
               {/* Price Display */}
               <div className={`p-4 rounded-xl border-2 ${
-                isFlashSale && !offerExpired ? 'bg-purple-50 border-purple-200' : 'bg-green-50 border-green-200'
+                isFlashSale && !offerExpired ? 'bg-purple-50 border-purple-200' : 'bg-pink-50 border-pink-200'
               }`}>
                 <div className="text-center">
                   <div className={`text-2xl md:text-3xl font-bold mb-2 ${
-                    isFlashSale && !offerExpired ? 'text-purple-600' : 'text-green-600'
+                    isFlashSale && !offerExpired ? 'text-purple-600' : 'text-pink-600'
                   }`}>
                     ₹{paymentAmount.toLocaleString()}
                   </div>
@@ -966,7 +965,7 @@ const GrowthServices: React.FC = () => {
                 className={`w-full py-3 md:py-4 rounded-xl font-bold transition-all hover:scale-105 flex items-center justify-center gap-2 md:gap-3 text-base md:text-lg shadow-lg ${
                   isFlashSale && !offerExpired
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
-                    : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white'
+                    : 'bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white'
                 }`}
               >
                 <CreditCard className="h-4 w-4 md:h-5 md:w-5" />
@@ -1103,13 +1102,13 @@ const GrowthServices: React.FC = () => {
       {/* Contact Form Modal */}
       {isFormOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-purple-300">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-pink-300">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900">
                   Get Free Growth Consultation
                 </h3>
-                <p className="text-purple-600 font-semibold text-sm mt-1">We'll help you choose the right growth service</p>
+                <p className="text-pink-600 font-semibold text-sm mt-1">We'll help you choose the right growth service</p>
               </div>
               <button onClick={() => setIsFormOpen(false)} className="text-gray-500 hover:text-gray-700 p-1 hover:bg-gray-100 rounded-full">
                 <X className="h-5 w-5 md:h-6 md:w-6" />
@@ -1125,7 +1124,7 @@ const GrowthServices: React.FC = () => {
                   required 
                   value={formData.name} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
                   placeholder="Enter your full name" 
                 />
               </div>
@@ -1137,7 +1136,7 @@ const GrowthServices: React.FC = () => {
                   required 
                   value={formData.email} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
                   placeholder="Enter your email" 
                 />
               </div>
@@ -1149,7 +1148,7 @@ const GrowthServices: React.FC = () => {
                   required 
                   value={formData.phone} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
                   placeholder="Enter your WhatsApp number" 
                 />
               </div>
@@ -1159,7 +1158,7 @@ const GrowthServices: React.FC = () => {
                   name="service" 
                   value={formData.service} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 >
                   <option value="">Select a growth service</option>
                   {allServices.map(service => (
@@ -1176,13 +1175,13 @@ const GrowthServices: React.FC = () => {
                   rows={3} 
                   value={formData.message} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
                   placeholder="Tell us about your growth requirements..." 
                 />
               </div>
               <button 
                 type="submit" 
-                className="w-full py-3 md:py-4 rounded-xl font-bold transition-all hover:scale-105 flex items-center justify-center gap-2 md:gap-3 text-base md:text-lg shadow-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-2 border-purple-300"
+                className="w-full py-3 md:py-4 rounded-xl font-bold transition-all hover:scale-105 flex items-center justify-center gap-2 md:gap-3 text-base md:text-lg shadow-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-2 border-pink-300"
               >
                 <Send className="h-4 w-4 md:h-5 md:w-5" />
                 Send Growth Inquiry
