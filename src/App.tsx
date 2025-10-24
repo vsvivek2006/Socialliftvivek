@@ -15,8 +15,16 @@ import OnboardingAgreement from './pages/OnboardingAgreement';
 import Privacy from './pages/Privacy';
 import FAQ from './FAQ';
 import NotFound from './pages/NotFound';
+import FreeWebsiteAudit from './pages/FreeWebsiteAudit';  
 import Offer from './pages/Offer';
 import GrowthServices from './pages/GrowthServices';
+import BookCall from './pages/BookCall';
+import OurImpact from './pages/OurImpact';
+import Packages from './pages/Packages';
+import Blog from './pages/Blog';
+
+
+
 function App() {
   return (
     <Router>
@@ -51,10 +59,15 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/book-call" element={<BookCall />} />
+            <Route path="/free-audit" element={<FreeWebsiteAudit />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/impact" element={<OurImpact />} />
             <Route path="/growth-services" element={<GrowthServices />} />
-            
-            <Route path="/Offer" element={<Offer />} />
-            
+
+            <Route path="/offer" element={<Offer />} />
+
             {/* ✅ PAYMENT SUCCESS PAGE */}
             <Route path="/payment/success" element={
               <div className="min-h-screen flex items-center justify-center bg-green-50 py-12">
