@@ -1,139 +1,165 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { ArrowRight, Play, Star, TrendingUp, Users, Target, Award } from 'lucide-react';
+import { ArrowRight, Play, Star, TrendingUp, Users, Target, Award, Globe, Shield, Zap, Clock } from 'lucide-react';
 
 const OurImpact: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Projects', count: 28 },
-    { id: 'ecommerce', name: 'E-commerce', count: 8 },
-    { id: 'restaurant', name: 'Restaurant', count: 6 },
-    { id: 'education', name: 'Education', count: 5 },
-    { id: 'healthcare', name: 'Healthcare', count: 4 },
-    { id: 'realestate', name: 'Real Estate', count: 3 },
-    { id: 'fashion', name: 'Fashion', count: 2 }
+    { id: 'all', name: 'All Services', count: 32 },
+    { id: 'digital', name: 'Digital Marketing', count: 12 },
+    { id: 'branding', name: 'Branding', count: 8 },
+    { id: 'ecommerce', name: 'E-commerce', count: 6 },
+    { id: 'webdev', name: 'Web Development', count: 4 },
+    { id: 'automation', name: 'Business Automation', count: 2 }
   ];
 
   const successStories = [
     {
       id: 1,
-      title: "Fashion E-commerce Store",
-      category: 'ecommerce',
-      industry: "Fashion Retail",
-      duration: "6 Months",
+      title: "Manufacturing Company Digital Transformation",
+      category: 'digital',
+      industry: "Manufacturing",
+      duration: "8 Months",
       results: {
-        revenue: "+175%",
-        traffic: "+220%",
-        conversion: "+45%",
-        roi: "+24.4%"
+        leads: "+320%",
+        revenue: "+185%",
+        efficiency: "+40%",
+        roi: "+28.5%"
       },
-      challenge: "Low online visibility and poor social media engagement affecting sales",
-      solution: "Complete social media marketing strategy with influencer collaborations",
-      image: "🛍️",
+      challenge: "Traditional manufacturing company struggling with digital presence and lead generation",
+      solution: "Complete digital marketing strategy + sales automation + CRM integration",
+      image: "🏭",
       video: "#",
       featured: true
     },
     {
       id: 2,
-      title: "Fine Dining Restaurant Chain",
-      category: 'restaurant',
-      industry: "Food & Beverage",
-      duration: "4 Months",
+      title: "Healthcare Brand Identity & Marketing",
+      category: 'branding',
+      industry: "Healthcare",
+      duration: "6 Months",
       results: {
-        revenue: "+140%",
-        orders: "+85%",
-        engagement: "+300%",
-        followers: "+250%"
+        brandrecall: "+200%",
+        leads: "+150%",
+        trustscore: "+85%",
+        engagement: "+180%"
       },
-      challenge: "Low online orders and poor local search visibility",
-      solution: "Google Business Profile optimization + social media content strategy",
-      image: "🍽️",
+      challenge: "New healthcare startup needed strong brand identity and market positioning",
+      solution: "Strategic branding + digital marketing + content strategy",
+      image: "⚕️",
       video: "#",
       featured: true
     },
     {
       id: 3,
-      title: "Educational Institute",
-      category: 'education',
-      industry: "Education",
-      duration: "8 Months",
+      title: "B2B SaaS Platform Growth",
+      category: 'digital',
+      industry: "Technology",
+      duration: "12 Months",
       results: {
-        leads: "+150%",
-        enrollment: "+65%",
-        engagement: "+180%",
-        roi: "+17.6%"
+        mrr: "+220%",
+        users: "+300%",
+        retention: "+45%",
+        roi: "+32.4%"
       },
-      challenge: "Low student enrollment and poor digital presence",
-      solution: "Targeted Facebook ads + content marketing strategy",
-      image: "🎓",
+      challenge: "SaaS platform struggling with user acquisition and retention",
+      solution: "Growth hacking strategy + content marketing + customer success program",
+      image: "🚀",
       video: "#"
     },
     {
       id: 4,
-      title: "Healthcare Clinic",
-      category: 'healthcare',
-      industry: "Healthcare",
+      title: "Retail Chain E-commerce Setup",
+      category: 'ecommerce',
+      industry: "Retail",
       duration: "5 Months",
       results: {
-        patients: "+90%",
-        visibility: "+200%",
-        reviews: "+150%",
-        bookings: "+120%"
+        sales: "+250%",
+        traffic: "+180%",
+        conversion: "+35%",
+        orders: "+140%"
       },
-      challenge: "Limited online presence and patient acquisition",
-      solution: "Local SEO + Google Business Profile + reputation management",
-      image: "🏥",
+      challenge: "Brick-and-mortar retail chain needing online presence and sales",
+      solution: "E-commerce platform development + digital marketing + inventory management",
+      image: "🛒",
       video: "#"
     },
     {
       id: 5,
-      title: "Real Estate Agency",
-      category: 'realestate',
-      industry: "Real Estate",
-      duration: "7 Months",
+      title: "Corporate Website & Lead Generation",
+      category: 'webdev',
+      industry: "Corporate",
+      duration: "4 Months",
       results: {
-        leads: "+110%",
-        visibility: "+180%",
-        engagement: "+160%",
-        conversions: "+35%"
+        leads: "+190%",
+        performance: "+300%",
+        engagement: "+120%",
+        conversions: "+28%"
       },
-      challenge: "Poor property listing visibility and lead generation",
-      solution: "Facebook ads + Instagram marketing + virtual tours",
-      image: "🏠",
+      challenge: "Outdated website with poor performance and zero lead generation",
+      solution: "Modern website development + SEO optimization + lead capture system",
+      image: "💼",
       video: "#"
     },
     {
       id: 6,
-      title: "Beauty & Cosmetics Brand",
-      category: 'fashion',
-      industry: "Beauty",
+      title: "Business Process Automation",
+      category: 'automation',
+      industry: "Services",
       duration: "3 Months",
       results: {
-        sales: "+200%",
-        followers: "+400%",
-        engagement: "+350%",
-        reach: "+280%"
+        efficiency: "+60%",
+        costsaving: "-35%",
+        productivity: "+45%",
+        accuracy: "+90%"
       },
-      challenge: "New brand with zero social media presence",
-      solution: "Complete brand launch strategy + influencer marketing",
-      image: "💄",
+      challenge: "Manual processes causing inefficiency and high operational costs",
+      solution: "Custom automation solutions + workflow optimization + integration",
+      image: "⚙️",
       video: "#"
     }
   ];
 
   const stats = [
-    { number: "12,000+", label: "Clients Served", icon: <Users className="h-8 w-8" /> },
-    { number: "₹4.2Cr+", label: "Revenue Generated", icon: <TrendingUp className="h-8 w-8" /> },
-    { number: "98%", label: "Client Satisfaction", icon: <Star className="h-8 w-8" /> },
-    { number: "300+", label: "Projects Completed", icon: <Target className="h-8 w-8" /> }
+    { number: "500+", label: "Businesses Transformed", icon: <Users className="h-8 w-8" /> },
+    { number: "₹25Cr+", label: "Client Revenue Generated", icon: <TrendingUp className="h-8 w-8" /> },
+    { number: "96%", label: "Client Retention Rate", icon: <Shield className="h-8 w-8" /> },
+    { number: "150+", label: "Industries Served", icon: <Globe className="h-8 w-8" /> }
   ];
 
   const awards = [
-    { title: "Best Social Media Agency 2024", icon: "🏆", year: "2024" },
-    { title: "Top Meta Ads Partner", icon: "⭐", year: "2024" },
-    { title: "Excellence in Digital Marketing", icon: "🎯", year: "2023" },
-    { title: "Fastest Growing Agency", icon: "🚀", year: "2023" }
+    { title: "Best Business Solutions Provider", icon: "🏆", year: "2024" },
+    { title: "Digital Transformation Excellence", icon: "⭐", year: "2024" },
+    { title: "Top Growth Partner Award", icon: "🎯", year: "2023" },
+    { title: "Innovation in Business Automation", icon: "⚡", year: "2023" }
+  ];
+
+  const services = [
+    {
+      title: "Digital Marketing",
+      description: "End-to-end digital marketing solutions for business growth",
+      icon: <Zap className="h-6 w-6" />,
+      features: ["SEO", "Social Media", "PPC", "Content Marketing"]
+    },
+    {
+      title: "Brand Strategy",
+      description: "Building powerful brands that resonate with audiences",
+      icon: <Target className="h-6 w-6" />,
+      features: ["Brand Identity", "Positioning", "Voice & Tone", "Visual Design"]
+    },
+    {
+      title: "Business Automation",
+      description: "Streamline operations with smart automation solutions",
+      icon: <Clock className="h-6 w-6" />,
+      features: ["Workflow Automation", "CRM Setup", "Integration", "Analytics"]
+    },
+    {
+      title: "Web Solutions",
+      description: "High-performance websites and web applications",
+      icon: <Globe className="h-6 w-6" />,
+      features: ["Web Development", "E-commerce", "Progressive Web Apps", "Maintenance"]
+    }
   ];
 
   const filteredStories = successStories.filter(story => 
@@ -141,32 +167,46 @@ const OurImpact: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Helmet>
-        <title>Our Impact - Success Stories & Results | Social Lift</title>
+        <title>Our Impact - Business Transformation Stories | Grworth Services</title>
         <meta 
           name="description" 
-          content="See how Social Lift transformed businesses with digital marketing. Real results, case studies, and success stories from our clients." 
+          content="See how Grworth Services transforms businesses with digital solutions, automation, and growth strategies. Real results and success stories." 
+        />
+        <meta 
+          name="keywords" 
+          content="business transformation, digital marketing, business automation, branding, web development, growth strategy" 
         />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Impact</h1>
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Real results, real businesses, real growth. See how we've helped clients achieve remarkable success.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Transforming Businesses, Driving Growth</h1>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            At Grworth Services, we don't just deliver services - we deliver results that transform businesses and drive sustainable growth.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-white/20 px-4 py-2 rounded-full">Digital Marketing</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full">Business Automation</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full">Brand Strategy</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full">Web Solutions</span>
+          </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
+            <p className="text-xl text-gray-600">Measurable results that speak louder than words</p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
@@ -177,8 +217,41 @@ const OurImpact: React.FC = () => {
         </div>
       </section>
 
+      {/* Our Services */}
+      <section className="bg-gradient-to-b from-white to-blue-50 py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Comprehensive Solutions</h2>
+            <p className="text-xl text-gray-600">End-to-end business solutions for sustainable growth</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {service.features.map((feature, idx) => (
+                    <span key={idx} className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Categories Filter */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <p className="text-xl text-gray-600 mb-8">Real businesses, real transformations</p>
+        </div>
+        
         <div className="flex flex-wrap gap-4 justify-center mb-12">
           {categories.map((category) => (
             <button
@@ -186,14 +259,14 @@ const OurImpact: React.FC = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
                 activeCategory === category.id
-                  ? 'bg-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 border border-gray-200'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
               }`}
             >
               {category.name}
               <span className={`ml-2 px-2 py-1 rounded-full text-xs ${
                 activeCategory === category.id
-                  ? 'bg-purple-500 text-white'
+                  ? 'bg-blue-500 text-white'
                   : 'bg-gray-100 text-gray-600'
               }`}>
                 {category.count}
@@ -208,7 +281,7 @@ const OurImpact: React.FC = () => {
             <div 
               key={story.id}
               className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                story.featured ? 'ring-2 ring-purple-500' : ''
+                story.featured ? 'ring-2 ring-blue-500' : ''
               }`}
             >
               <div className="p-8">
@@ -216,8 +289,8 @@ const OurImpact: React.FC = () => {
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-4xl">{story.image}</div>
                   {story.featured && (
-                    <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
-                      Featured
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured Transformation
                     </div>
                   )}
                 </div>
@@ -225,7 +298,7 @@ const OurImpact: React.FC = () => {
                 {/* Content */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                    <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded">
+                    <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded">
                       {story.industry}
                     </span>
                     <span>•</span>
@@ -235,12 +308,16 @@ const OurImpact: React.FC = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{story.title}</h3>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                      <span className="text-red-500">Challenge:</span>
+                    </h4>
                     <p className="text-gray-600 text-sm">{story.challenge}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                      <span className="text-green-500">Our Solution:</span>
+                    </h4>
                     <p className="text-gray-600 text-sm">{story.solution}</p>
                   </div>
                 </div>
@@ -248,8 +325,8 @@ const OurImpact: React.FC = () => {
                 {/* Results */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   {Object.entries(story.results).map(([key, value]) => (
-                    <div key={key} className="text-center p-3 bg-gray-50 rounded-lg">
-                      <div className="text-lg font-bold text-purple-600">{value}</div>
+                    <div key={key} className="text-center p-3 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg">
+                      <div className="text-lg font-bold text-blue-600">{value}</div>
                       <div className="text-xs text-gray-600 capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>
@@ -258,9 +335,9 @@ const OurImpact: React.FC = () => {
                 </div>
 
                 {/* Video Button */}
-                <button className="w-full bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 py-3 px-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center gap-2">
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 hover:scale-[1.02] flex items-center justify-center gap-2">
                   <Play className="h-4 w-4" />
-                  Watch Case Study
+                  View Detailed Case Study
                 </button>
               </div>
             </div>
@@ -276,20 +353,20 @@ const OurImpact: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {awards.map((award, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl">
+              <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl hover:shadow-md transition-shadow duration-300">
                 <div className="text-4xl mb-4">{award.icon}</div>
                 <h3 className="font-semibold text-gray-900 mb-2">{award.title}</h3>
-                <div className="text-purple-600 font-medium">{award.year}</div>
+                <div className="text-blue-600 font-medium">{award.year}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Client Testimonials */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl shadow-lg p-12 text-white mb-12">
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-lg p-12 text-white mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
-            <p className="text-purple-100 text-xl">Don't just take our word for it</p>
+            <h2 className="text-3xl font-bold mb-4">What Business Leaders Say</h2>
+            <p className="text-blue-100 text-xl">Success stories from our valued partners</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -299,10 +376,10 @@ const OurImpact: React.FC = () => {
                   <Star key={i} className="h-5 w-5 text-yellow-300 fill-current" />
                 ))}
               </div>
-              <p className="text-purple-100 mb-4">
-                "Social Lift transformed our restaurant's online presence. Our orders increased by 140% in just 4 months!"
+              <p className="text-blue-100 mb-4">
+                "Grworth transformed our manufacturing business from traditional to digital-first. 185% revenue growth in 8 months!"
               </p>
-              <div className="font-semibold">- Restaurant Owner</div>
+              <div className="font-semibold">- Manufacturing Company CEO</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -311,10 +388,10 @@ const OurImpact: React.FC = () => {
                   <Star key={i} className="h-5 w-5 text-yellow-300 fill-current" />
                 ))}
               </div>
-              <p className="text-purple-100 mb-4">
-                "The growth in our e-commerce sales has been phenomenal. 175% revenue growth in 6 months!"
+              <p className="text-blue-100 mb-4">
+                "The business automation solutions saved us 35% in operational costs and improved efficiency by 60%."
               </p>
-              <div className="font-semibold">- Fashion Store Owner</div>
+              <div className="font-semibold">- Service Industry Director</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -323,33 +400,75 @@ const OurImpact: React.FC = () => {
                   <Star key={i} className="h-5 w-5 text-yellow-300 fill-current" />
                 ))}
               </div>
-              <p className="text-purple-100 mb-4">
-                "From zero to hero! Our beauty brand gained 400% more followers and 200% sales growth."
+              <p className="text-blue-100 mb-4">
+                "Our brand identity and digital strategy by Grworth made us industry leaders within a year."
               </p>
-              <div className="font-semibold">- Cosmetics Brand CEO</div>
+              <div className="font-semibold">- Healthcare Startup Founder</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Process Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Proven Process</h2>
+            <p className="text-xl text-gray-600">A systematic approach to business transformation</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Discovery & Analysis</h3>
+              <p className="text-gray-600 text-sm">Deep dive into your business challenges and opportunities</p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Strategy & Planning</h3>
+              <p className="text-gray-600 text-sm">Customized roadmap for transformation and growth</p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Implementation</h3>
+              <p className="text-gray-600 text-sm">Execution with precision and expertise</p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                4
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Optimization & Growth</h3>
+              <p className="text-gray-600 text-sm">Continuous improvement and scaling success</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Create Your Success Story?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's work together to achieve remarkable results for your business.
+            Let's create your success story. Partner with Grworth Services for sustainable growth and business excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/book-call"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2"
+              href="/consultation"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2"
             >
-              Start Your Journey
+              Book Free Consultation
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
-              href="/case-studies"
-              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+              href="/services"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
-              View All Case Studies
+              Explore Our Services
             </a>
           </div>
         </div>
