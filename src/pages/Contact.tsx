@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Instagram, Linkedin, Facebook, Building } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
 const Contact = () => {
@@ -20,7 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = `Hello! 
+    const whatsappMessage = `Hello Growth Service Team!
 
 *New Contact Form Submission*
 
@@ -30,23 +30,23 @@ const Contact = () => {
 *Service Interested:* ${formData.service}
 *Message:* ${formData.message}
 
-I would like to discuss my project with you.`;
+I would like to discuss my project with you. Please provide more details.`;
 
-    const whatsappUrl = `https://wa.me/919521281509?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/97797073824881?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const services = [
-    'Social Media Management',
-    'Meta Ads Management',
-    'SEO Services',
     'Website Development',
+    'SEO Services',
+    'Social Media Management',
     'Google Business Profile',
+    'Meta Ads Management',
     'Lead Generation',
-    'Video Shoot Service',
-    'Logo Design',
-    'Email Marketing',
-    'Custom Package',
+    'App Development',
+    'Brand Strategy',
+    'Digital Marketing',
+    'Custom Project',
     'Other'
   ];
 
@@ -54,25 +54,31 @@ I would like to discuss my project with you.`;
     {
       icon: <Phone className="h-6 w-6" />,
       title: 'Phone',
-      content: '+91 95212 81509',
-      link: 'tel:+919521281509'
+      content: '+91 93414 36937',
+      link: 'tel:+919341436937'
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      content: 'contact@digitalagency.com',
-      link: 'mailto:contact@digitalagency.com'
+      content: 'info@growthservice.in',
+      link: 'mailto:info@growthservice.in'
     },
     {
-      icon: <MapPin className="h-6 w-6" />,
-      title: 'Address',
-      content: 'Professional Digital Marketing Services Across India',
+      icon: <MessageCircle className="h-6 w-6" />,
+      title: 'WhatsApp',
+      content: '+977 97073824881',
+      link: 'https://wa.me/97797073824881'
+    },
+    {
+      icon: <Building className="h-6 w-6" />,
+      title: 'Office Address',
+      content: 'Radhika Sadan, Pushpa Garden, Kailash Nagar, Vrindavan, Uttar Pradesh 281121',
       link: '#'
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: 'Working Hours',
-      content: '24/7 Available',
+      content: '24/7 Support Available',
       link: '#'
     }
   ];
@@ -81,32 +87,39 @@ I would like to discuss my project with you.`;
     <div>
       {/* ✅ SEO Component */}
       <Helmet>
-        <title>Contact Us | Digital Marketing Agency</title>
+        <title>Contact Us | Growth Service - Web Development & Digital Marketing</title>
         <meta
           name="description"
-          content="Contact our Digital Marketing Agency. Reach us for Social Media Management, Meta Ads, SEO, Website Development & Lead Generation services."
+          content="Contact Growth Service for professional web development, SEO, and digital marketing services. Get in touch for custom solutions tailored to your business needs."
         />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-br from-purple-900 via-pink-800 to-blue-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
-              Get In <span className="text-white">Touch</span>
+              Let's Build Something Amazing
             </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-pink-100">
-              Ready to grow your business? Let's discuss your project and create amazing digital marketing results together.
+            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-purple-100">
+              Ready to grow your business with professional web development and digital marketing? Let's discuss your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://wa.me/919521281509"
+                href="https://wa.me/97797073824881"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center space-x-2"
               >
                 <MessageCircle className="h-5 w-5" />
-                <span>Quick WhatsApp Chat</span>
+                <span>Chat on WhatsApp</span>
+              </a>
+              <a
+                href="tel:+919341436937"
+                className="bg-white hover:bg-gray-100 text-purple-700 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center space-x-2"
+              >
+                <Phone className="h-5 w-5" />
+                <span>Call Now</span>
               </a>
             </div>
           </div>
@@ -120,10 +133,10 @@ I would like to discuss my project with you.`;
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Send Us a Message
+                Send Your Project Details
               </h2>
               <p className="text-gray-600 mb-6">
-                Fill out the form below and we'll get back to you within 24 hours. Or message us directly on WhatsApp for instant response!
+                Share your project requirements and we'll get back to you with a customized solution. For instant response, message us directly on WhatsApp.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -138,7 +151,7 @@ I would like to discuss my project with you.`;
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
@@ -155,14 +168,14 @@ I would like to discuss my project with you.`;
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone *
+                      Phone / WhatsApp *
                     </label>
                     <input
                       type="tel"
@@ -171,8 +184,8 @@ I would like to discuss my project with you.`;
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                      placeholder="+91 XXXXX XXXXX"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="+91 98765 43210"
                     />
                   </div>
                 </div>
@@ -187,7 +200,7 @@ I would like to discuss my project with you.`;
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
@@ -200,7 +213,7 @@ I would like to discuss my project with you.`;
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message *
+                    Project Requirements *
                   </label>
                   <textarea
                     id="message"
@@ -209,21 +222,21 @@ I would like to discuss my project with you.`;
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                    placeholder="Tell us about your business, goals, and how we can help with digital marketing..."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Tell us about your project, timeline, budget, and specific requirements..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
                 >
                   <Send className="h-5 w-5" />
-                  <span>Send Message via WhatsApp</span>
+                  <span>Send via WhatsApp</span>
                 </button>
 
                 <p className="text-sm text-gray-500 text-center">
-                  By clicking "Send Message", your message will be sent via WhatsApp for instant response.
+                  Your message will be sent via WhatsApp for instant response. We'll get back to you within 1 hour.
                 </p>
               </form>
             </div>
@@ -231,16 +244,16 @@ I would like to discuss my project with you.`;
             {/* Contact Information */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Contact Information
+                Get In Touch
               </h2>
               <p className="text-gray-600 mb-6">
-                Reach out to us through any of these channels. We're always here to help you grow your business with professional digital marketing!
+                Connect with us through any of these channels. We're here to help you build amazing digital solutions for your business.
               </p>
 
               <div className="space-y-4 mb-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="bg-pink-100 text-pink-600 p-2 rounded-lg">
+                    <div className="bg-purple-100 text-purple-600 p-2 rounded-lg">
                       {info.icon}
                     </div>
                     <div>
@@ -248,7 +261,9 @@ I would like to discuss my project with you.`;
                       {info.link !== '#' ? (
                         <a
                           href={info.link}
-                          className="text-gray-600 hover:text-pink-600 transition-colors text-sm"
+                          target={info.link.startsWith('http') ? '_blank' : '_self'}
+                          rel={info.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                          className="text-gray-600 hover:text-purple-600 transition-colors text-sm"
                         >
                           {info.content}
                         </a>
@@ -261,71 +276,89 @@ I would like to discuss my project with you.`;
               </div>
 
               {/* Social Media Links */}
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-3">Follow Us</h3>
+              <div className="mb-6">
+                <h3 className="font-semibold text-gray-900 mb-3">Follow Our Work</h3>
                 <div className="flex space-x-3">
                   <a
-                    href="https://wa.me/919521281509"
+                    href="https://wa.me/97797073824881"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 hover:bg-green-600 text-white p-2 rounded-lg transition-colors"
+                    title="WhatsApp"
                   >
                     <MessageCircle className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/growth_servces"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-pink-500 hover:bg-pink-600 text-white p-2 rounded-lg transition-colors"
+                    title="Instagram"
                   >
                     <Instagram className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/company/growthservice"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
+                    title="LinkedIn"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/growthservices"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg transition-colors"
+                    title="Facebook"
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
                 </div>
               </div>
 
-              {/* Quick Response Promise */}
-              <div className="mt-6 bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl border border-green-200">
+              {/* Response Time */}
+              <div className="mb-6 bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-xl border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-2 flex items-center text-sm">
                   <MessageCircle className="h-4 w-4 mr-2" />
-                  Quick Response Guarantee
+                  Quick Response Time
                 </h3>
-                <p className="text-green-700 text-xs">
-                  ⚡ WhatsApp: Instant response
-                  <br />
-                  📧 Email: Within 2-4 hours
-                  <br />
-                  📞 Phone: 24/7 for urgent queries
-                </p>
+                <ul className="text-green-700 text-xs space-y-1">
+                  <li className="flex items-center">
+                    <span className="mr-2">⚡</span>
+                    WhatsApp: Instant response
+                  </li>
+                  <li className="flex items-center">
+                    <span className="mr-2">📧</span>
+                    Email: Within 2-4 hours
+                  </li>
+                  <li className="flex items-center">
+                    <span className="mr-2">📞</span>
+                    Phone: 24/7 for urgent queries
+                  </li>
+                </ul>
               </div>
 
-              {/* Free Consultation Offer */}
-              <div className="mt-4 bg-gradient-to-r from-pink-50 to-purple-50 p-4 rounded-xl border border-pink-200">
-                <h3 className="font-semibold text-pink-800 mb-2 flex items-center text-sm">
-                  💼 Free Consultation
+              {/* Free Consultation */}
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-xl border border-purple-200">
+                <h3 className="font-semibold text-purple-800 mb-2 flex items-center text-sm">
+                  🚀 Free Strategy Call
                 </h3>
-                <p className="text-pink-700 text-xs">
-                  🎯 30-minute digital marketing consultation
-                  <br />
-                  📊 Business analysis
-                  <br />
-                  🚀 Custom growth strategy
-                </p>
+                <ul className="text-purple-700 text-xs space-y-1">
+                  <li className="flex items-center">
+                    <span className="mr-2">💡</span>
+                    30-minute project discussion
+                  </li>
+                  <li className="flex items-center">
+                    <span className="mr-2">🎯</span>
+                    Technical consultation
+                  </li>
+                  <li className="flex items-center">
+                    <span className="mr-2">📊</span>
+                    Custom solution proposal
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -340,60 +373,60 @@ I would like to discuss my project with you.`;
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600">
-              Quick answers to common questions about our digital marketing services
+              Common questions about our web development and digital marketing services
             </p>
           </div>
 
           <div className="space-y-4">
             <div className="bg-white p-4 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm">How quickly can you start my digital marketing campaign?</h3>
-              <p className="text-gray-600 text-sm">We can typically start your campaign within 24-48 hours of confirmation. For social media management, we can begin content creation immediately.</p>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm">What technologies do you use for web development?</h3>
+              <p className="text-gray-600 text-sm">We specialize in modern web technologies including React, TypeScript, Node.js, MongoDB, and Next.js for building fast, scalable applications.</p>
             </div>
             <div className="bg-white p-4 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm">Do you offer unlimited revisions for social media content?</h3>
-              <p className="text-gray-600 text-sm">Yes! We provide unlimited revisions until you're 100% satisfied with the content. Your brand satisfaction is our top priority.</p>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm">How long does website development take?</h3>
+              <p className="text-gray-600 text-sm">Typical website projects take 7-10 days for basic sites and 2-3 weeks for complex applications. We provide exact timelines after project analysis.</p>
             </div>
             <div className="bg-white p-4 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm">What payment methods do you accept?</h3>
-              <p className="text-gray-600 text-sm">We accept bank transfers, UPI, credit/debit cards, and digital wallets. We also offer flexible payment plans for long-term projects.</p>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm">Do you provide post-development support?</h3>
+              <p className="text-gray-600 text-sm">Yes, we offer 1 month of free support after project completion. Extended support and maintenance plans are available.</p>
             </div>
             <div className="bg-white p-4 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm">Do you provide performance reports for marketing campaigns?</h3>
-              <p className="text-gray-600 text-sm">Absolutely! We provide detailed monthly performance reports with analytics, insights, and recommendations for all our digital marketing services.</p>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm">What's your process for starting a new project?</h3>
+              <p className="text-gray-600 text-sm">We start with a free consultation, followed by requirement analysis, proposal, development, testing, and deployment with regular updates.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+      <section className="py-12 bg-gradient-to-r from-purple-900 to-pink-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            Ready to Grow Your Business?
+            Ready to Start Your Project?
           </h2>
-          <p className="text-lg mb-6 text-pink-100">
-            Don't wait! The sooner we start, the sooner you'll see digital marketing results. Get in touch today for a FREE consultation!
+          <p className="text-lg mb-6 text-purple-100">
+            Let's discuss your requirements and build something amazing together. Contact us today for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="https://wa.me/919521281509"
+              href="https://wa.me/97797073824881"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-gray-100 text-pink-600 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
+              className="bg-white hover:bg-gray-100 text-purple-700 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
             >
               <MessageCircle className="h-5 w-5" />
-              <span>Start Your Project Now</span>
+              <span>Chat on WhatsApp</span>
             </a>
             <a
-              href="tel:+919521281509"
+              href="tel:+919341436937"
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2"
             >
               <Phone className="h-5 w-5" />
-              <span>Call Now</span>
+              <span>Call +91 93414 36937</span>
             </a>
           </div>
-          <p className="text-pink-200 mt-3 text-sm">
-            🎯 Free Consultation • 📊 Custom Strategy • 🚀 Quick Results
+          <p className="text-purple-200 mt-3 text-sm">
+            💻 Web Development • 🔍 SEO • 📱 Digital Marketing • 🚀 Growth Solutions
           </p>
         </div>
       </section>
