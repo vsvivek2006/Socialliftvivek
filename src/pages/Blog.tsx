@@ -1,115 +1,171 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Calendar, User, Clock, ArrowRight, Search, Tag } from 'lucide-react';
+import { Calendar, User, Clock, ArrowRight, Search, Tag, Code, Globe, TrendingUp, Smartphone, Mail, DollarSign } from 'lucide-react';
 
 const Blog: React.FC = () => {
-  // Sample blog posts data
+  // Sample blog posts data - Updated for Growth Service
   const blogPosts = [
     {
       id: 1,
-      title: "10 Digital Marketing Trends That Will Dominate 2024",
-      excerpt: "Discover the latest digital marketing trends that will shape the industry and help your business stay ahead of the competition.",
-      category: "Digital Marketing",
-      readTime: "5 min read",
-      date: "2024-01-15",
-      author: "Social Lift Team",
-      image: "📈"
+      title: "Website Development Cost in 2024: Complete Guide",
+      excerpt: "How much does a professional website cost? We break down pricing for React, Node.js, and custom development projects.",
+      category: "Web Development",
+      readTime: "6 min read",
+      date: "2024-01-20",
+      author: "Growth Service Team",
+      image: "💻",
+      highlight: true
     },
     {
       id: 2,
-      title: "How to Improve Your SEO Ranking in 30 Days",
-      excerpt: "Proven strategies and techniques to boost your website's search engine ranking quickly and effectively.",
+      title: "SEO Pricing Guide: What You Get for ₹7,779/month",
+      excerpt: "Complete breakdown of our SEO services including 4 monthly reports, 4 blogs, and 5-10 keyword optimization.",
       category: "SEO",
       readTime: "7 min read",
-      date: "2024-01-12",
+      date: "2024-01-18",
       author: "SEO Experts",
       image: "🔍"
     },
     {
       id: 3,
-      title: "Social Media Marketing: Complete Guide for 2024",
-      excerpt: "Learn how to create effective social media campaigns that drive engagement and conversions for your business.",
+      title: "Social Media Management on a Budget: ₹4,449/month",
+      excerpt: "Learn how small businesses can afford professional social media management with content calendars and strategy.",
       category: "Social Media",
-      readTime: "6 min read",
-      date: "2024-01-10",
+      readTime: "5 min read",
+      date: "2024-01-16",
       author: "Social Media Team",
       image: "📱"
     },
     {
       id: 4,
-      title: "Why Content Marketing is Essential for Business Growth",
-      excerpt: "Understand the power of content marketing and how it can transform your business growth strategy.",
-      category: "Content Marketing",
-      readTime: "4 min read",
-      date: "2024-01-08",
-      author: "Content Team",
-      image: "✍️"
+      title: "Why Choose React + TypeScript for Your Website?",
+      excerpt: "Benefits of modern web development with React, TypeScript, Node.js, and MongoDB over traditional WordPress sites.",
+      category: "Technology",
+      readTime: "8 min read",
+      date: "2024-01-14",
+      author: "Tech Team",
+      image: "⚛️"
     },
     {
       id: 5,
-      title: "PPC Advertising: Maximize Your ROI with These Tips",
-      excerpt: "Expert tips to optimize your PPC campaigns and get the maximum return on your advertising investment.",
-      category: "PPC",
-      readTime: "8 min read",
-      date: "2024-01-05",
-      author: "PPC Specialists",
-      image: "🎯"
+      title: "Google My Business Setup Guide for ₹2,499",
+      excerpt: "Step-by-step guide to setting up and optimizing your GMB profile for maximum local visibility.",
+      category: "Local SEO",
+      readTime: "4 min read",
+      date: "2024-01-12",
+      author: "Local SEO Team",
+      image: "🏢"
     },
     {
       id: 6,
-      title: "The Power of Local SEO for Small Businesses",
-      excerpt: "Learn how local SEO can help small businesses attract more customers and increase visibility in their area.",
-      category: "Local SEO",
-      readTime: "5 min read",
-      date: "2024-01-03",
-      author: "Local SEO Team",
-      image: "🏪"
+      title: "Tour & Travel Website Development in 10 Days",
+      excerpt: "Case study: How we built a complete travel booking website for ₹14,999 with React and Node.js.",
+      category: "Case Study",
+      readTime: "9 min read",
+      date: "2024-01-10",
+      author: "Development Team",
+      image: "✈️"
+    },
+    {
+      id: 7,
+      title: "Meta Ads Management: Is ₹9,999/month Worth It?",
+      excerpt: "Analyzing ROI from professional Facebook and Instagram ads management for small businesses.",
+      category: "Paid Ads",
+      readTime: "6 min read",
+      date: "2024-01-08",
+      author: "Ads Team",
+      image: "🎯"
+    },
+    {
+      id: 8,
+      title: "Guest House Website with Payment Gateway: ₹12,999",
+      excerpt: "Complete solution for hotel and guest house websites including booking system and online payments.",
+      category: "Web Development",
+      readTime: "7 min read",
+      date: "2024-01-06",
+      author: "Development Team",
+      image: "🏨"
     }
   ];
 
   const categories = [
     "All Posts",
-    "Digital Marketing",
+    "Web Development",
     "SEO",
     "Social Media",
-    "Content Marketing",
-    "PPC",
+    "Technology",
     "Local SEO",
-    "Email Marketing"
+    "Case Study",
+    "Paid Ads",
+    "Business Growth",
+    "Digital Marketing"
   ];
 
   const popularPosts = [
     {
-      title: "Instagram Algorithm Changes 2024",
-      views: "2.5K"
+      title: "Website in 7 Days: Our Process",
+      views: "3.2K"
     },
     {
-      title: "Google Core Update Analysis",
-      views: "3.1K"
+      title: "SEO vs Social Media: Which First?",
+      views: "2.8K"
     },
     {
-      title: "Facebook Ads Best Practices",
-      views: "1.8K"
+      title: "React vs WordPress 2024",
+      views: "4.1K"
+    }
+  ];
+
+  const serviceHighlights = [
+    {
+      icon: "💻",
+      title: "Website Development",
+      price: "₹9,999",
+      description: "React + TypeScript websites"
+    },
+    {
+      icon: "🔍",
+      title: "SEO Package",
+      price: "₹7,779/month",
+      description: "4 reports + 4 blogs monthly"
+    },
+    {
+      icon: "📱",
+      title: "Social Media",
+      price: "₹4,449/month",
+      description: "Complete management"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Helmet>
-        <title>Blog - Digital Marketing Insights & Tips | Social Lift</title>
+        <title>Blog - Web Development & Digital Marketing Insights | Growth Service</title>
         <meta 
           name="description" 
-          content="Stay updated with the latest digital marketing trends, SEO tips, social media strategies, and growth insights from Social Lift experts." 
+          content="Expert insights on web development, SEO, social media, and digital marketing strategies. Learn about React, TypeScript, Node.js development and growth strategies." 
         />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-r from-purple-900 to-pink-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Blog</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Growth Insights</h1>
           <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Latest insights, tips, and strategies from our digital marketing experts
+            Expert articles on web development, SEO, and digital marketing strategies for business growth
           </p>
+          
+          {/* Service Highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+            {serviceHighlights.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-2xl mb-2">{service.icon}</div>
+                <div className="font-bold text-lg">{service.title}</div>
+                <div className="text-yellow-300 font-bold">{service.price}</div>
+                <div className="text-purple-200 text-sm">{service.description}</div>
+              </div>
+            ))}
+          </div>
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">
@@ -117,7 +173,7 @@ const Blog: React.FC = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <input
                 type="text"
-                placeholder="Search articles, topics, and guides..."
+                placeholder="Search web development, SEO, or digital marketing topics..."
                 className="w-full pl-12 pr-4 py-4 rounded-2xl border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-purple-300"
               />
             </div>
@@ -150,7 +206,9 @@ const Blog: React.FC = () => {
               {blogPosts.map((post) => (
                 <article 
                   key={post.id}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group ${
+                    post.highlight ? 'md:col-span-2 border-2 border-purple-500' : ''
+                  }`}
                 >
                   <div className="p-6">
                     {/* Category Tag */}
@@ -194,13 +252,44 @@ const Blog: React.FC = () => {
                     </div>
 
                     {/* Read More Button */}
-                    <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group-hover:scale-105">
-                      Read More
+                    <a
+                      href={`/blog/${post.id}`}
+                      className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group-hover:scale-105"
+                    >
+                      Read Full Article
                       <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                    </button>
+                    </a>
                   </div>
                 </article>
               ))}
+            </div>
+
+            {/* Pricing Callout */}
+            <div className="mt-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 text-white text-center">
+              <h3 className="text-2xl font-bold mb-3">Transparent Pricing</h3>
+              <p className="mb-4">All our services come with clear, upfront pricing. No hidden fees!</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-white/20 p-3 rounded-lg">
+                  <div className="font-bold">Website Dev</div>
+                  <div className="text-xl font-bold">₹9,999</div>
+                  <div className="text-sm">Starting</div>
+                </div>
+                <div className="bg-white/20 p-3 rounded-lg">
+                  <div className="font-bold">SEO</div>
+                  <div className="text-xl font-bold">₹7,779</div>
+                  <div className="text-sm">/month</div>
+                </div>
+                <div className="bg-white/20 p-3 rounded-lg">
+                  <div className="font-bold">Social Media</div>
+                  <div className="text-xl font-bold">₹4,449</div>
+                  <div className="text-sm">/month</div>
+                </div>
+                <div className="bg-white/20 p-3 rounded-lg">
+                  <div className="font-bold">GMB Setup</div>
+                  <div className="text-xl font-bold">₹2,499</div>
+                  <div className="text-sm">One-time</div>
+                </div>
+              </div>
             </div>
 
             {/* Load More Button */}
@@ -215,51 +304,82 @@ const Blog: React.FC = () => {
           <div className="lg:col-span-1">
             {/* About Blog */}
             <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">About Our Blog</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">About Growth Service Blog</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Welcome to the Social Lift blog! We share expert insights, latest trends, 
-                and practical tips to help you succeed in digital marketing.
+                Welcome to the Growth Service blog! We share practical insights on web development, 
+                SEO, and digital marketing to help your business grow affordably.
               </p>
               <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
                 <p className="text-purple-700 text-sm font-medium">
-                  💡 New articles every week!
+                  💡 Special: Get website in 7-10 days for ₹9,999
                 </p>
               </div>
             </div>
 
             {/* Popular Posts */}
             <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Popular Posts</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Most Popular</h3>
               <div className="space-y-4">
                 {popularPosts.map((post, index) => (
-                  <div key={index} className="flex items-start space-x-3 group cursor-pointer">
+                  <a 
+                    key={index}
+                    href="#"
+                    className="flex items-start space-x-3 group cursor-pointer hover:bg-purple-50 p-2 rounded-lg transition-colors"
+                  >
                     <div className="flex-shrink-0 w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                     <div>
                       <h4 className="text-sm font-medium text-gray-900 group-hover:text-purple-600 transition-colors">
                         {post.title}
                       </h4>
-                      <p className="text-xs text-gray-500">{post.views} views</p>
+                      <p className="text-xs text-gray-500">{post.views} reads</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Technology Stack */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Our Tech Stack</h3>
+              <div className="space-y-3">
+                {[
+                  { icon: "⚛️", name: "React", desc: "Frontend" },
+                  { icon: "📘", name: "TypeScript", desc: "Type Safety" },
+                  { icon: "🟢", name: "Node.js", desc: "Backend" },
+                  { icon: "🍃", name: "MongoDB", desc: "Database" }
+                ].map((tech, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-lg">
+                    <div className="text-xl">{tech.icon}</div>
+                    <div>
+                      <div className="font-medium text-sm">{tech.name}</div>
+                      <div className="text-xs text-gray-500">{tech.desc}</div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Newsletter Subscription */}
+            {/* Quick Contact */}
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-lg p-6 text-white">
-              <h3 className="text-lg font-bold mb-3">Stay Updated</h3>
+              <h3 className="text-lg font-bold mb-3">Need a Website?</h3>
               <p className="text-purple-100 text-sm mb-4">
-                Get the latest digital marketing tips delivered to your inbox.
+                Get a professional website in 7-10 days starting from ₹9,999
               </p>
               <div className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-purple-300"
-                />
-                <button className="w-full bg-white text-purple-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
-                  Subscribe Now
-                </button>
+                <a 
+                  href="https://wa.me/97797073824881"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:scale-105 transition-all duration-200 text-center"
+                >
+                  💬 WhatsApp Now
+                </a>
+                <a 
+                  href="tel:+919341436937"
+                  className="block w-full bg-white text-purple-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center"
+                >
+                  📞 Call: +91 93414 36937
+                </a>
               </div>
             </div>
           </div>
@@ -270,23 +390,44 @@ const Blog: React.FC = () => {
       <section className="bg-gray-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Grow Your Business?
+            Ready for Digital Growth?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our digital marketing strategies can help you achieve your goals.
+            Get website development, SEO, and digital marketing services at unbeatable prices.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div className="bg-white/10 p-4 rounded-xl">
+              <div className="text-2xl mb-2">⚡</div>
+              <div className="font-bold">Website in 7-10 Days</div>
+              <div className="text-sm text-gray-300">React + TypeScript</div>
+            </div>
+            <div className="bg-white/10 p-4 rounded-xl">
+              <div className="text-2xl mb-2">💰</div>
+              <div className="font-bold">Starting ₹2,499</div>
+              <div className="text-sm text-gray-300">Transparent Pricing</div>
+            </div>
+            <div className="bg-white/10 p-4 rounded-xl">
+              <div className="text-2xl mb-2">🏆</div>
+              <div className="font-bold">100+ Projects</div>
+              <div className="text-sm text-gray-300">Proven Results</div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/book-call"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
+              href="https://wa.me/97797073824881?text=Hello%20Growth%20Service,%20I%20want%20to%20discuss%20a%20website%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
             >
-              Book Free Consultation
+              💬 Get Free Consultation
             </a>
             <a
-              href="/contact"
+              href="tel:+919341436937"
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-200"
             >
-              Contact Us
+              📞 Call Now
             </a>
           </div>
         </div>
