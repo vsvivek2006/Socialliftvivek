@@ -1,246 +1,651 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Check, Star, ArrowRight, Zap, Crown, Users, Globe, Briefcase, Target, Settings, Headphones, BarChart, Clock, Shield } from 'lucide-react';
+import { Check, Star, ArrowRight, Zap, Crown, Globe, Code, Smartphone, Search, MapPin, MessageSquare, TrendingUp, Shield, Clock, Users, DollarSign, Target, Award, Headphones } from 'lucide-react';
 
 const Packages: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
-  const [selectedPackage, setSelectedPackage] = useState<number>(2);
+  const [activeTab, setActiveTab] = useState<'web' | 'seo' | 'smm' | 'gmb' | 'business'>('web');
 
-  const packages = [
+  const webDevelopmentPackages = [
     {
       id: 1,
-      name: "Business Starter",
-      description: "Perfect for startups and small businesses beginning digital transformation",
-      price: {
-        monthly: 25000,
-        yearly: 240000
-      },
-      popular: false,
-      icon: <Zap className="h-8 w-8" />,
+      name: "Basic Website",
+      originalPrice: 29999,
+      offerPrice: 9999,
+      description: "Professional responsive website for startups",
+      deliveryTime: "7-10 days",
+      icon: <Globe className="h-8 w-8" />,
       features: [
-        "Digital Presence Audit",
-        "Social Media Management (2 platforms)",
-        "20 Creative Posts per month",
-        "Basic Content Strategy",
-        "Monthly Performance Analytics",
-        "Email Campaign Setup",
-        "Google Business Profile Setup",
-        "Quarterly Strategy Review"
+        "1 Home Page Design",
+        "About Us Page",
+        "Services Page",
+        "Contact Us Form",
+        "WhatsApp Integration",
+        "Mobile Responsive Design",
+        "SEO Friendly Structure",
+        "Basic Speed Optimization"
       ],
-      recommendedFor: ["Startups", "Small Retail", "Local Services"],
-      cta: "Start Business Starter",
-      color: "from-blue-500 to-cyan-500"
+      technologies: ["HTML5", "CSS3", "JavaScript", "React.js"],
+      cta: "Order Now",
+      color: "from-blue-500 to-cyan-500",
+      tag: "HOT DEAL"
     },
     {
       id: 2,
-      name: "Growth Accelerator",
-      description: "Comprehensive solutions for growing businesses wanting faster results",
-      price: {
-        monthly: 45000,
-        yearly: 432000
-      },
-      popular: true,
-      icon: <Target className="h-8 w-8" />,
+      name: "Tour & Travel Website",
+      originalPrice: 24999,
+      offerPrice: 14999,
+      description: "Complete travel booking platform",
+      deliveryTime: "10-15 days",
+      icon: <MapPin className="h-8 w-8" />,
       features: [
-        "Complete Digital Audit & Strategy",
-        "Social Media Management (4 platforms)",
-        "40 Creative Posts per month",
-        "Advanced Content Marketing",
-        "Weekly Performance Reports",
-        "Google & Meta Ads (₹10k ad spend)",
-        "Basic SEO Optimization",
-        "CRM Setup & Integration",
-        "Monthly Strategy Workshops",
-        "Competitor Analysis",
-        "Lead Generation Funnels",
-        "Brand Voice Development"
+        "Dynamic Home Page",
+        "Upcoming Tours Section",
+        "Tour Packages Pages",
+        "About Company Page",
+        "Contact Us with Map",
+        "Booking Inquiry Form",
+        "Gallery Section",
+        "Testimonials Section"
       ],
-      recommendedFor: ["Growing Businesses", "E-commerce", "Service Providers"],
-      cta: "Start Growth Accelerator",
-      color: "from-purple-600 to-indigo-600"
+      technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
+      cta: "Get Quote",
+      color: "from-green-500 to-teal-500",
+      tag: "POPULAR"
     },
     {
       id: 3,
-      name: "Enterprise Pro",
-      description: "End-to-end business transformation for established companies",
-      price: {
-        monthly: 75000,
-        yearly: 720000
-      },
-      popular: false,
-      icon: <Crown className="h-8 w-8" />,
+      name: "Guest House Website",
+      originalPrice: 19999,
+      offerPrice: 12999,
+      description: "Hotel/Guest house with payment integration",
+      deliveryTime: "12-18 days",
+      icon: <Smartphone className="h-8 w-8" />,
       features: [
-        "Digital Transformation Roadmap",
-        "Omni-channel Social Management",
-        "80+ Creative Posts per month",
-        "Strategic Content Marketing",
-        "Daily Performance Dashboard",
-        "Multi-platform Ad Campaigns (₹25k ad spend)",
-        "Advanced SEO & Technical Audit",
-        "Custom CRM Development",
-        "Weekly Executive Meetings",
-        "Market Intelligence Reports",
-        "Automated Workflow Systems",
-        "Brand Strategy & Positioning",
-        "Dedicated Account Manager",
-        "24/7 Priority Support",
-        "Custom Analytics Dashboard",
-        "Team Training & Workshops"
+        "Homepage with Hero Slider",
+        "Room Listings Page",
+        "Booking System",
+        "Payment Gateway Integration",
+        "Admin Dashboard",
+        "Customer Reviews",
+        "Amenities Section",
+        "Location & Directions"
       ],
-      recommendedFor: ["Enterprises", "Manufacturing", "Corporate Businesses"],
-      cta: "Schedule Enterprise Demo",
-      color: "from-orange-500 to-red-500"
+      technologies: ["MERN Stack", "Razorpay/Stripe", "JWT Auth"],
+      cta: "Start Project",
+      color: "from-purple-500 to-pink-500",
+      tag: "FEATURED"
     }
   ];
 
-  const addons = [
-    {
-      name: "Business Process Automation",
-      price: 20000,
-      description: "Custom workflow automation solutions",
-      icon: <Settings className="h-5 w-5" />
-    },
-    {
-      name: "Custom Web Development",
-      price: 30000,
-      description: "Professional website or web application",
-      icon: <Globe className="h-5 w-5" />
-    },
-    {
-      name: "Advanced Analytics Setup",
-      price: 15000,
-      description: "Custom BI dashboard and reporting",
-      icon: <BarChart className="h-5 w-5" />
-    },
-    {
-      name: "Team Training Program",
-      price: 25000,
-      description: "Digital skills training for your team",
-      icon: <Users className="h-5 w-5" />
-    }
-  ];
+  const seoPackage = {
+    name: "Professional SEO Package",
+    originalPrice: 24999,
+    offerPrice: 7779,
+    description: "Complete SEO optimization for better rankings",
+    duration: "3-6 months",
+    icon: <Search className="h-8 w-8" />,
+    features: [
+      "Monthly 4 Performance Reports",
+      "4 Blog Posts (500+ words)",
+      "5-10 Keyword Optimization",
+      "On-Page SEO Optimization",
+      "Off-Page SEO Activities",
+      "Technical SEO Audit",
+      "Competitor Analysis",
+      "Traffic Growth Strategy"
+    ],
+    deliverables: [
+      "Keyword Research Report",
+      "SEO Audit Report",
+      "Monthly Ranking Report",
+      "Backlink Profile Analysis",
+      "Content Strategy Document"
+    ],
+    cta: "Start SEO Campaign",
+    color: "from-orange-500 to-red-500"
+  };
 
-  const enterpriseSolutions = [
+  const gmbPackage = {
+    name: "Google My Business Optimization",
+    originalPrice: 12499,
+    offerPrice: 2499,
+    description: "Complete local business presence setup",
+    duration: "Ongoing",
+    icon: <Target className="h-8 w-8" />,
+    features: [
+      "GMB Profile Complete Setup",
+      "Weekly 4-5 Posts",
+      "Review Management System",
+      "Local SEO Optimization",
+      "Photo & Video Posts",
+      "Performance Tracking",
+      "Q&A Management",
+      "Insights & Analytics"
+    ],
+    benefits: [
+      "Increase Local Visibility",
+      "Generate More Calls",
+      "Improve Customer Trust",
+      "Boost Website Traffic",
+      "Competitive Edge"
+    ],
+    cta: "Optimize GMB",
+    color: "from-blue-600 to-indigo-600"
+  };
+
+  const smmPackage = {
+    name: "Social Media Marketing",
+    originalPrice: 24999,
+    offerPrice: 4449,
+    description: "Complete social media management",
+    duration: "Monthly",
+    icon: <MessageSquare className="h-8 w-8" />,
+    features: [
+      "Content Calendar Planning",
+      "Daily Post Creation & Scheduling",
+      "Community Management",
+      "Brand Storytelling",
+      "Visual Content Creation",
+      "Audience Engagement",
+      "Hashtag Strategy",
+      "Performance Analytics"
+    ],
+    platforms: ["Facebook", "Instagram", "LinkedIn", "Twitter"],
+    cta: "Start SMM",
+    color: "from-pink-500 to-rose-500"
+  };
+
+  const metaAdsPackage = {
+    name: "Meta Ads Management",
+    originalPrice: 19999,
+    offerPrice: 9999,
+    description: "Professional Facebook & Instagram advertising",
+    duration: "Monthly",
+    icon: <TrendingUp className="h-8 w-8" />,
+    features: [
+      "Ad Account Setup & Optimization",
+      "Audience Targeting Strategy",
+      "Ad Creative Development",
+      "A/B Testing Setup",
+      "Conversion Tracking",
+      "ROI Optimization",
+      "Monthly Performance Report",
+      "Ad Budget Management"
+    ],
+    adTypes: ["Lead Generation", "Website Traffic", "Sales Conversions", "Brand Awareness"],
+    cta: "Launch Ads",
+    color: "from-blue-500 to-purple-600"
+  };
+
+  const businessSetupPackage = {
+    name: "Complete Business Setup",
+    originalPrice: 39999,
+    offerPrice: 24999,
+    description: "End-to-end business digital presence",
+    duration: "45-60 days",
+    icon: <Award className="h-8 w-8" />,
+    features: [
+      "Professional Business Website",
+      "Complete Social Media Setup",
+      "Market Entry Strategy Guidance",
+      "Assigned Industry Expert",
+      "Brand Identity Development",
+      "Lead Generation System",
+      "CRM Setup Consultation",
+      "3 Months Support"
+    ],
+    inclusions: [
+      "Website Development",
+      "Social Media Profiles",
+      "Content Strategy",
+      "Marketing Plan",
+      "Ongoing Support"
+    ],
+    cta: "Setup Business",
+    color: "from-green-600 to-emerald-600"
+  };
+
+  const allServices = [
     {
-      title: "Digital Transformation",
-      description: "Complete business digitization strategy",
-      startingAt: "₹1,50,000"
+      id: 'web',
+      name: 'Website Development',
+      icon: <Code className="h-5 w-5" />,
+      count: 3
     },
     {
-      title: "Brand Strategy & Identity",
-      description: "Comprehensive brand development",
-      startingAt: "₹75,000"
+      id: 'seo',
+      name: 'SEO Services',
+      icon: <Search className="h-5 w-5" />,
+      count: 1
     },
     {
-      title: "Business Intelligence",
-      description: "Advanced analytics and reporting",
-      startingAt: "₹50,000"
+      id: 'gmb',
+      name: 'GMB Optimization',
+      icon: <MapPin className="h-5 w-5" />,
+      count: 1
     },
     {
-      title: "CRM Implementation",
-      description: "Custom CRM setup and integration",
-      startingAt: "₹60,000"
+      id: 'smm',
+      name: 'Social Media Marketing',
+      icon: <MessageSquare className="h-5 w-5" />,
+      count: 1
+    },
+    {
+      id: 'business',
+      name: 'Business Setup',
+      icon: <Users className="h-5 w-5" />,
+      count: 1
     }
   ];
 
   const benefits = [
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Guanteed Results",
-      description: "Performance-based approach with measurable outcomes"
+      icon: <Clock className="h-6 w-6" />,
+      title: "Fast Delivery",
+      description: "7-15 days average turnaround time"
     },
     {
-      icon: <Clock className="h-6 w-6" />,
-      title: "Time Efficiency",
-      description: "Save 40+ hours monthly on marketing operations"
+      icon: <Shield className="h-6 w-6" />,
+      title: "100% Custom Code",
+      description: "No WordPress, pure HTML/CSS/React"
     },
     {
       icon: <Headphones className="h-6 w-6" />,
-      title: "Dedicated Support",
-      description: "Direct access to your account team"
+      title: "Free Support",
+      description: "30 days free support included"
     },
     {
-      icon: <Briefcase className="h-6 w-6" />,
-      title: "Business Focus",
-      description: "Focus on core business while we handle digital"
+      icon: <DollarSign className="h-6 w-6" />,
+      title: "No Hidden Cost",
+      description: "Transparent pricing, all-inclusive"
     }
   ];
 
-  const savings = {
-    monthly: 0,
-    yearly: 180000
-  };
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'web':
+        return (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {webDevelopmentPackages.map((pkg) => (
+              <div key={pkg.id} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                {pkg.tag && (
+                  <div className="absolute -top-3 right-6">
+                    <div className={`bg-gradient-to-r ${pkg.color} text-white px-4 py-1 rounded-full font-bold text-xs shadow-lg`}>
+                      {pkg.tag}
+                    </div>
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="text-center mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${pkg.color} rounded-2xl flex items-center justify-center text-white mx-auto mb-4`}>
+                      {pkg.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                    <p className="text-gray-600 text-sm">{pkg.description}</p>
+                  </div>
 
-  const calculateSavings = (pkg: typeof packages[0]) => {
-    return pkg.price.monthly * 12 - pkg.price.yearly;
+                  <div className="mb-6 text-center">
+                    <div className="flex items-baseline justify-center gap-2 mb-2">
+                      <span className="text-4xl font-bold text-gray-900">₹{pkg.offerPrice.toLocaleString()}</span>
+                      <span className="text-gray-500 line-through">₹{pkg.originalPrice.toLocaleString()}</span>
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      <Clock className="h-4 w-4 inline mr-1" />
+                      Delivery: {pkg.deliveryTime}
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm">
+                          <Check className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {pkg.technologies.map((tech, idx) => (
+                        <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button className={`w-full bg-gradient-to-r ${pkg.color} hover:shadow-lg text-white py-3 rounded-lg font-semibold transition-all duration-200`}>
+                    {pkg.cta}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+
+      case 'seo':
+        return (
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-20 h-20 bg-gradient-to-r ${seoPackage.color} rounded-2xl flex items-center justify-center text-white`}>
+                    {seoPackage.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900">{seoPackage.name}</h3>
+                    <div className="flex items-baseline gap-3 mt-2">
+                      <span className="text-4xl font-bold text-gray-900">₹{seoPackage.offerPrice.toLocaleString()}</span>
+                      <span className="text-gray-500 line-through text-xl">₹{seoPackage.originalPrice.toLocaleString()}</span>
+                      <span className="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-bold">
+                        Save {Math.round((1 - seoPackage.offerPrice/seoPackage.originalPrice) * 100)}%
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <h4 className="font-semibold text-gray-900 mb-3 text-lg">Package Includes:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {seoPackage.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2 p-3 bg-gray-50 rounded-lg">
+                        <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-4 text-lg">Deliverables:</h4>
+                  <ul className="space-y-3">
+                    {seoPackage.deliverables.map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold">
+                          {idx + 1}
+                        </div>
+                        <span className="text-gray-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Duration: {seoPackage.duration}</h4>
+                  <p className="text-gray-600 text-sm mb-4">Optimal results visible within 3-6 months</p>
+                  <button className={`w-full bg-gradient-to-r ${seoPackage.color} hover:shadow-lg text-white py-3 rounded-lg font-semibold text-lg transition-all duration-200`}>
+                    {seoPackage.cta}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'gmb':
+        return (
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className={`w-20 h-20 bg-gradient-to-r ${gmbPackage.color} rounded-2xl flex items-center justify-center text-white`}>
+                      {gmbPackage.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-gray-900">{gmbPackage.name}</h3>
+                      <div className="flex items-baseline gap-3 mt-2">
+                        <span className="text-4xl font-bold text-gray-900">₹{gmbPackage.offerPrice.toLocaleString()}/month</span>
+                        <span className="text-gray-500 line-through text-xl">₹{gmbPackage.originalPrice.toLocaleString()}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    {gmbPackage.features.map((feature, idx) => (
+                      <div key={idx} className="bg-gray-50 p-4 rounded-lg">
+                        <Check className="h-5 w-5 text-green-500 mb-2" />
+                        <p className="text-sm font-medium text-gray-700">{feature}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-4 text-lg">Key Benefits:</h4>
+                  <ul className="space-y-3">
+                    {gmbPackage.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                          ✓
+                        </div>
+                        <span className="text-gray-700 font-medium">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className={`w-full bg-gradient-to-r ${gmbPackage.color} hover:shadow-lg text-white py-4 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-3`}>
+                  {gmbPackage.cta}
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'smm':
+        return (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <div className="mb-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${smmPackage.color} rounded-2xl flex items-center justify-center text-white`}>
+                    {smmPackage.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{smmPackage.name}</h3>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-gray-900">₹{smmPackage.offerPrice.toLocaleString()}/month</span>
+                      <span className="text-gray-500 line-through">₹{smmPackage.originalPrice.toLocaleString()}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Platforms Covered:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {smmPackage.platforms.map((platform, idx) => (
+                      <span key={idx} className="bg-pink-50 text-pink-700 px-4 py-2 rounded-full font-medium">
+                        {platform}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  {smmPackage.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button className={`w-full bg-gradient-to-r ${smmPackage.color} hover:shadow-lg text-white py-3 rounded-lg font-semibold text-lg transition-all duration-200`}>
+                {smmPackage.cta}
+              </button>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <div className="mb-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${metaAdsPackage.color} rounded-2xl flex items-center justify-center text-white`}>
+                    {metaAdsPackage.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{metaAdsPackage.name}</h3>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-gray-900">₹{metaAdsPackage.offerPrice.toLocaleString()}/month</span>
+                      <span className="text-gray-500 line-through">₹{metaAdsPackage.originalPrice.toLocaleString()}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Ad Types:</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    {metaAdsPackage.adTypes.map((type, idx) => (
+                      <div key={idx} className="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg text-center font-medium">
+                        {type}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  {metaAdsPackage.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button className={`w-full bg-gradient-to-r ${metaAdsPackage.color} hover:shadow-lg text-white py-3 rounded-lg font-semibold text-lg transition-all duration-200`}>
+                {metaAdsPackage.cta}
+              </button>
+            </div>
+          </div>
+        );
+
+      case 'business':
+        return (
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="mb-10">
+              <div className="flex items-center gap-6 mb-8">
+                <div className={`w-24 h-24 bg-gradient-to-r ${businessSetupPackage.color} rounded-2xl flex items-center justify-center text-white`}>
+                  {businessSetupPackage.icon}
+                </div>
+                <div>
+                  <h3 className="text-4xl font-bold text-gray-900">{businessSetupPackage.name}</h3>
+                  <div className="flex items-baseline gap-4 mt-3">
+                    <span className="text-5xl font-bold text-gray-900">₹{businessSetupPackage.offerPrice.toLocaleString()}</span>
+                    <span className="text-gray-500 line-through text-2xl">₹{businessSetupPackage.originalPrice.toLocaleString()}</span>
+                    <span className="bg-green-100 text-green-600 px-4 py-2 rounded-full font-bold">
+                      Complete Business Solution
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-4 text-xl">Package Features:</h4>
+                  <div className="space-y-4">
+                    {businessSetupPackage.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3 p-4 bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl">
+                        <div className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                          {idx + 1}
+                        </div>
+                        <div>
+                          <p className="font-medium text-gray-900">{feature}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-4 text-lg">What's Included:</h4>
+                    <ul className="space-y-3">
+                      {businessSetupPackage.inclusions.map((item, idx) => (
+                        <li key={idx} className="flex items-center gap-3">
+                          <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                          <span className="text-gray-700 font-medium">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Delivery Time: {businessSetupPackage.duration}</h4>
+                    <p className="text-gray-600 text-sm mb-4">Complete B2B setup with ongoing guidance</p>
+                    <button className={`w-full bg-gradient-to-r ${businessSetupPackage.color} hover:shadow-xl text-white py-4 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-3`}>
+                      <Users className="h-5 w-5" />
+                      {businessSetupPackage.cta}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Helmet>
-        <title>Business Solutions Packages | Grworth Services</title>
+        <title>Digital Solutions Packages - Affordable Pricing | Grworth Services</title>
         <meta 
           name="description" 
-          content="Comprehensive business solutions packages for digital transformation, marketing automation, and growth. Starting at ₹25,000/month." 
+          content="Professional website development from ₹9999, SEO services from ₹7779, SMM packages from ₹4449. Complete digital solutions for your business growth." 
         />
         <meta 
           name="keywords" 
-          content="business solutions packages, digital transformation, marketing automation, business growth, corporate packages" 
+          content="website development packages, SEO services India, social media marketing, Google My Business optimization, business setup packages" 
         />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Strategic Business Solutions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Professional Digital Solutions</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Transform your business with our comprehensive digital solutions packages designed for growth and efficiency
+            Affordable packages for website development, SEO, social media marketing, and business setup
           </p>
           
-          {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-2xl p-2 mb-8">
-            <button
-              onClick={() => setBillingCycle('monthly')}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
-                billingCycle === 'monthly'
-                  ? 'bg-white text-blue-600 shadow-lg'
-                  : 'text-blue-100 hover:text-white'
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBillingCycle('yearly')}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
-                billingCycle === 'yearly'
-                  ? 'bg-white text-blue-600 shadow-lg'
-                  : 'text-blue-100 hover:text-white'
-              }`}
-            >
-              Yearly (Save 20%)
-            </button>
+          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-2xl p-1 mb-8">
+            {allServices.map((service) => (
+              <button
+                key={service.id}
+                onClick={() => setActiveTab(service.id as any)}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center gap-2 ${
+                  activeTab === service.id
+                    ? 'bg-white text-blue-600 shadow-lg'
+                    : 'text-blue-100 hover:text-white'
+                }`}
+              >
+                {service.icon}
+                {service.name}
+                <span className="bg-white/20 px-2 py-1 rounded text-xs">
+                  {service.count}
+                </span>
+              </button>
+            ))}
           </div>
-
-          {billingCycle === 'yearly' && (
-            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-4 inline-flex items-center gap-3 shadow-lg">
-              <Star className="h-6 w-6 text-yellow-300 fill-current" />
-              <div>
-                <p className="text-white font-bold text-lg">
-                  Save up to ₹{savings.yearly.toLocaleString()} annually!
-                </p>
-                <p className="text-green-100 text-sm">
-                  Plus get 2 months free with annual commitment
-                </p>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-4">
@@ -255,271 +660,122 @@ const Packages: React.FC = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Packages Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {packages.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`relative bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer ${
-                selectedPackage === pkg.id ? 'ring-4 ring-blue-500 ring-opacity-50 transform scale-102' : ''
-              } ${pkg.popular ? 'ring-2 ring-purple-500' : ''}`}
-              onClick={() => setSelectedPackage(pkg.id)}
+        {/* Services Navigation */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {allServices.map((service) => (
+            <button
+              key={service.id}
+              onClick={() => setActiveTab(service.id as any)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 flex items-center gap-2 ${
+                activeTab === service.id
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
+              }`}
             >
-              {pkg.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
-                    <Star className="h-4 w-4 fill-current" />
-                    MOST POPULAR CHOICE
-                  </div>
-                </div>
-              )}
-
-              <div className="p-8">
-                {/* Package Header */}
-                <div className="text-center mb-6">
-                  <div className={`w-20 h-20 bg-gradient-to-r ${pkg.color} rounded-2xl flex items-center justify-center text-white mx-auto mb-4 shadow-lg`}>
-                    {pkg.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 text-sm">{pkg.description}</p>
-                </div>
-
-                {/* Recommended For */}
-                <div className="mb-6">
-                  <p className="text-sm font-semibold text-gray-500 mb-2">RECOMMENDED FOR</p>
-                  <div className="flex flex-wrap gap-2">
-                    {pkg.recommendedFor.map((item, idx) => (
-                      <span key={idx} className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Price */}
-                <div className="text-center mb-6 bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-4">
-                  <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-gray-900">
-                      ₹{pkg.price[billingCycle].toLocaleString()}
-                    </span>
-                    <span className="text-gray-500 text-lg">
-                      /{billingCycle === 'monthly' ? 'month' : 'year'}
-                    </span>
-                  </div>
-                  {billingCycle === 'yearly' && (
-                    <div className="mt-2">
-                      <p className="text-green-600 font-bold">
-                        Save ₹{calculateSavings(pkg).toLocaleString()}
-                      </p>
-                      <p className="text-gray-500 text-sm">
-                        Equivalent to ₹{(pkg.price.yearly / 12).toLocaleString()}/month
-                      </p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Features */}
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${pkg.color} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        <Check className="h-3 w-3 text-white" />
-                      </div>
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA Button */}
-                <button className={`w-full bg-gradient-to-r ${pkg.color} hover:shadow-xl text-white py-4 px-6 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-102 flex items-center justify-center gap-3 shadow-lg`}>
-                  {pkg.cta}
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
+              {service.icon}
+              {service.name}
+            </button>
           ))}
         </div>
 
-        {/* Addons Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Premium Add-ons</h2>
-            <p className="text-xl text-gray-600">Enhance your package with these specialized services</p>
-          </div>
+        {/* Main Content */}
+        <div className="mb-16">
+          {renderContent()}
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {addons.map((addon, index) => (
-              <div key={index} className="border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl rounded-2xl p-6 transition-all duration-300 hover:transform hover:translate-y-[-4px]">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-4">
-                  {addon.icon}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{addon.name}</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-3">
-                  ₹{addon.price.toLocaleString()}
-                </div>
-                <p className="text-gray-600 text-sm mb-6 h-12">{addon.description}</p>
-                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200">
-                  Add Service
-                </button>
-              </div>
-            ))}
+        {/* Special Offers Banner */}
+        <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl shadow-2xl p-8 text-white mb-12">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">Limited Time Offer! 🎁</h3>
+              <p className="text-red-100">Get 30% OFF on all annual packages</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">30% OFF</div>
+              <div className="text-sm">Valid till December 31</div>
+            </div>
+            <button className="bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105">
+              Grab Offer Now
+            </button>
           </div>
         </div>
 
-        {/* Enterprise Solutions */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-xl p-12 text-white mb-16">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Custom Enterprise Solutions</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Need something more comprehensive? We build custom solutions for large-scale business transformation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {enterpriseSolutions.map((solution, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
-                <p className="text-blue-100 text-sm mb-4">{solution.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold">Starting at</span>
-                  <span className="text-3xl font-bold">{solution.startingAt}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <a
-              href="/enterprise-contact"
-              className="inline-flex items-center gap-3 bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              <Briefcase className="h-5 w-5" />
-              Request Enterprise Proposal
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
-        </div>
-
-        {/* Comparison Table */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Package Comparison</h2>
+        {/* Comparison Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Why Choose Grworth Services?</h2>
           
-          <div className="overflow-x-auto rounded-xl border border-gray-200">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-gradient-to-r from-blue-50 to-indigo-50">
-                  <th className="text-left p-6 font-bold text-gray-900 text-lg">Features & Services</th>
-                  {packages.map((pkg) => (
-                    <th key={pkg.id} className="text-center p-6 font-bold text-gray-900 text-lg">
-                      {pkg.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-semibold text-gray-700">Strategy & Planning</td>
-                  <td className="text-center p-4">Basic</td>
-                  <td className="text-center p-4">Advanced</td>
-                  <td className="text-center p-4">Comprehensive</td>
-                </tr>
-                <tr className="border-b border-gray-100 bg-gray-50">
-                  <td className="p-4 font-semibold text-gray-700">Monthly Content Output</td>
-                  <td className="text-center p-4">20 Posts</td>
-                  <td className="text-center p-4">40 Posts</td>
-                  <td className="text-center p-4">80+ Posts</td>
-                </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-semibold text-gray-700">Ad Management Budget</td>
-                  <td className="text-center p-4">-</td>
-                  <td className="text-center p-4">₹10,000</td>
-                  <td className="text-center p-4">₹25,000</td>
-                </tr>
-                <tr className="border-b border-gray-100 bg-gray-50">
-                  <td className="p-4 font-semibold text-gray-700">Analytics & Reporting</td>
-                  <td className="text-center p-4">Monthly</td>
-                  <td className="text-center p-4">Weekly</td>
-                  <td className="text-center p-4">Real-time Dashboard</td>
-                </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-semibold text-gray-700">Strategy Meetings</td>
-                  <td className="text-center p-4">Quarterly</td>
-                  <td className="text-center p-4">Monthly</td>
-                  <td className="text-center p-4">Weekly</td>
-                </tr>
-                <tr className="border-b border-gray-100 bg-gray-50">
-                  <td className="p-4 font-semibold text-gray-700">Dedicated Account Manager</td>
-                  <td className="text-center p-4">-</td>
-                  <td className="text-center p-4">-</td>
-                  <td className="text-center p-4">
-                    <Check className="h-5 w-5 text-green-500 inline" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-semibold text-gray-700">CRM Integration</td>
-                  <td className="text-center p-4">Basic</td>
-                  <td className="text-center p-4">Standard</td>
-                  <td className="text-center p-4">Custom</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-4 font-semibold text-gray-700">Support Level</td>
-                  <td className="text-center p-4">Email</td>
-                  <td className="text-center p-4">Priority Email & Chat</td>
-                  <td className="text-center p-4">24/7 Priority Support</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">
+                <Code className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Custom Development</h3>
+              <p className="text-gray-600">No WordPress templates. We write clean, scalable code from scratch using React, Node.js, and MongoDB.</p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">
+                <Zap className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+              <p className="text-gray-600">Basic websites in 7-10 days, complex projects in 15-20 days. We respect deadlines and deliver quality.</p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">
+                <Shield className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">After-Sales Support</h3>
+              <p className="text-gray-600">30 days free support on all projects. Ongoing maintenance packages available at affordable rates.</p>
+            </div>
           </div>
         </div>
 
         {/* Final CTA */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-2xl p-12 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full translate-y-32 -translate-x-32"></div>
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-2xl p-12 text-white text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Contact us today for a free consultation and project estimate
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="https://wa.me/9779707382481"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105 flex items-center justify-center gap-3"
+            >
+              <span className="text-2xl">💬</span>
+              WhatsApp Now
+            </a>
             
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Transform Your Business Today</h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Join 500+ businesses that have accelerated growth with our strategic solutions.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a
-                  href="/book-strategy-call"
-                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center gap-3 min-w-[250px]"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  Book Strategy Call
-                </a>
-                
-                <a
-                  href="mailto:solutions@grworth.com"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-3 min-w-[250px]"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  Email Our Team
-                </a>
-              </div>
-              
-              <div className="mt-10 flex flex-wrap justify-center gap-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold">98%</div>
-                  <div className="text-blue-200">Client Satisfaction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold">500+</div>
-                  <div className="text-blue-200">Businesses Transformed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold">₹25Cr+</div>
-                  <div className="text-blue-200">Revenue Generated</div>
-                </div>
-              </div>
+            <a
+              href="tel:+9779707382481"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-3"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call: +9779707382481
+            </a>
+          </div>
+          
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold">500+</div>
+              <div className="text-blue-200">Projects Completed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold">98%</div>
+              <div className="text-blue-200">Client Satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold">24/7</div>
+              <div className="text-blue-200">Support Available</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold">7-10</div>
+              <div className="text-blue-200">Days Avg. Delivery</div>
             </div>
           </div>
         </div>
