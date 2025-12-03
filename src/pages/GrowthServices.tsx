@@ -1,4 +1,3 @@
-// src/pages/GrowthServices.tsx
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { 
@@ -31,7 +30,18 @@ import {
   Instagram,
   Facebook,
   Linkedin,
-  Globe as WebsiteIcon
+  Globe as WebsiteIcon,
+  Link as LinkIcon,
+  FileText,
+  TrendingUp,
+  BarChart,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Calendar,
+  AlertCircle,
+  ShieldCheck,
+  Zap as Lightning
 } from "lucide-react";
 
 // Razorpay types
@@ -44,13 +54,14 @@ declare global {
 interface Service {
   id: string;
   name: string;
-  price: number; // Price per 1000
+  price: number;
   min: number;
   max: number;
   description: string;
   features: string[];
   icon: JSX.Element;
   category: string;
+  deliveryTime: string;
 }
 
 const GrowthServices: React.FC = () => {
@@ -58,14 +69,14 @@ const GrowthServices: React.FC = () => {
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
   const [isSuccessFormOpen, setIsSuccessFormOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [quantity, setQuantity] = useState(1000);
-  const [timeLeft, setTimeLeft] = useState(180);
-  const [flashSaleTime, setFlashSaleTime] = useState(30);
+  const [quantity, setQuantity] = useState(100);
+  const [timeLeft, setTimeLeft] = useState(300);
+  const [flashSaleTime, setFlashSaleTime] = useState(45);
   const [isSpecialPrice, setIsSpecialPrice] = useState(true);
   const [isFlashSale, setIsFlashSale] = useState(true);
   const [hasFlashSaleOccurred, setHasFlashSaleOccurred] = useState(false);
   const [offerExpired, setOfferExpired] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("instagram");
+  const [activeCategory, setActiveCategory] = useState("backlinks");
   
   const [formData, setFormData] = useState({
     name: "",
@@ -91,247 +102,202 @@ const GrowthServices: React.FC = () => {
 
   // ✅ Environment variables
   const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY_ID;
-  const WHATSAPP_NUMBER = "9521281509";
+  const WHATSAPP_NUMBER = "9341436937";
 
-  // Instagram Services
-  const instagramServices: Service[] = [
+  // Backlink Services
+  const backlinkServices: Service[] = [
     {
-      id: "ig-views",
-      name: "Instagram Reels Views",
-      price: 10,
-      min: 100,
-      max: 1000000,
-      description: "High-quality Instagram Reel views with fast delivery",
-      features: ["Super Fast Speed", "Lifetime Non Drop", "Instant Start"],
-      icon: <Eye className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-likes",
-      name: "Instagram Likes",
-      price: 200,
-      min: 100,
-      max: 50000,
-      description: "Premium Instagram likes from real accounts",
-      features: ["Real Accounts", "Fast Delivery", "Non Drop"],
-      icon: <ThumbsUp className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-post-views",
-      name: "Instagram Post Views",
-      price: 10,
-      min: 100,
-      max: 100000,
-      description: "Boost your post visibility with genuine views",
-      features: ["Genuine Views", "Quick Start", "24/7 Support"],
-      icon: <Eye className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-followers",
-      name: "Instagram Followers",
-      price: 879.06,
+      id: "basic-backlinks",
+      name: "Basic Backlinks Package",
+      price: 3, // Per backlink
       min: 100,
       max: 10000,
-      description: "Grow your Instagram with real followers",
-      features: ["Real Followers", "Gradual Growth", "Safe & Secure"],
-      icon: <Users className="h-6 w-6" />,
-      category: "instagram"
+      description: "High-quality basic backlinks for improved SEO",
+      features: [
+        "High DA/PA Sites (20-40)",
+        "Dofollow Links",
+        "Natural Anchor Text",
+        "Manual Submission",
+        "Indexing Report"
+      ],
+      icon: <LinkIcon className="h-6 w-6" />,
+      category: "backlinks",
+      deliveryTime: "3-7 days"
     },
     {
-      id: "ig-likes-indian",
-      name: "Instagram Likes ~ Indian",
-      price: 500,
-      min: 100,
-      max: 50000,
-      description: "Indian targeted likes for better engagement",
-      features: ["Indian Accounts", "Targeted Engagement", "High Quality"],
-      icon: <ThumbsUp className="h-6 w-6" />,
-      category: "instagram"
+      id: "hot-deal-backlinks",
+      name: "HOT DEAL: 300 Backlinks",
+      price: 699, // Package price for 300 backlinks
+      min: 1,
+      max: 1,
+      description: "Premium backlinks package for instant SEO boost",
+      features: [
+        "300 High-Quality Backlinks",
+        "DA 30-50 Sites",
+        "Mix of Dofollow & Nofollow",
+        "Anchor Text Diversity",
+        "Weekly Indexing Report",
+        "Free SEO Audit"
+      ],
+      icon: <Zap className="h-6 w-6" />,
+      category: "backlinks",
+      deliveryTime: "5-10 days"
     },
     {
-      id: "ig-story-views",
-      name: "Instagram Story Views",
-      price: 50,
-      min: 100,
-      max: 100000,
-      description: "Increase your story reach with genuine views",
-      features: ["Real Views", "Quick Delivery", "Non Drop"],
-      icon: <Eye className="h-6 w-6" />,
-      category: "instagram"
+      id: "moj-da-backlinks",
+      name: "MOJ DA 30+ Backlinks",
+      price: 1299,
+      min: 1,
+      max: 1,
+      description: "High authority backlinks from DA 30+ sites",
+      features: [
+        "DA 30+ Quality Sites",
+        "High Authority Links",
+        "Contextual Placement",
+        "Permanent Backlinks",
+        "Traffic Referral",
+        "Priority Support"
+      ],
+      icon: <TrendingUp className="h-6 w-6" />,
+      category: "backlinks",
+      deliveryTime: "7-14 days"
     },
     {
-      id: "ig-shares",
-      name: "Instagram Shares",
-      price: 10,
-      min: 100,
-      max: 50000,
-      description: "Boost your content sharing",
-      features: ["Organic Shares", "Real Accounts", "Safe Service"],
-      icon: <Send className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-reach",
-      name: "Instagram Reach + Impression",
-      price: 30,
-      min: 100,
-      max: 100000,
-      description: "Increase your post reach and impressions",
-      features: ["Increased Reach", "Better Engagement", "Real Results"],
-      icon: <Target className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-comments",
-      name: "Instagram Comments",
-      price: 300,
-      min: 10,
-      max: 1000,
-      description: "Genuine comments on your posts",
-      features: ["Custom Comments", "Real Accounts", "Quality Engagement"],
-      icon: <MessageCircle className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-reel-promotion",
-      name: "Instagram Reel Promotion",
-      price: 2601.00,
-      min: 100,
-      max: 10000,
-      description: "Professional reel promotion service",
-      features: ["Professional Promotion", "Better Visibility", "Guaranteed Results"],
-      icon: <Rocket className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-channel-members",
-      name: "Instagram Channel Members",
-      price: 199.18,
-      min: 100,
-      max: 5000,
-      description: "Increase your channel membership",
-      features: ["Real Members", "Active Community", "Sustainable Growth"],
-      icon: <Users className="h-6 w-6" />,
-      category: "instagram"
-    },
-    {
-      id: "ig-live-stream",
-      name: "Instagram Live Stream",
-      price: 266.56,
-      min: 100,
-      max: 10000,
-      description: "Boost your live stream viewers",
-      features: ["Live Viewers", "Real Engagement", "Instant Start"],
-      icon: <Eye className="h-6 w-6" />,
-      category: "instagram"
+      id: "premium-backlinks",
+      name: "Premium DA 50+ Backlinks",
+      price: 1999,
+      min: 1,
+      max: 1,
+      description: "Ultra premium backlinks from high authority sites",
+      features: [
+        "DA 50+ Premium Sites",
+        "Editorial Context Links",
+        "Guaranteed Indexing",
+        "Competitor Analysis",
+        "Monthly Performance Report",
+        "Dedicated Account Manager"
+      ],
+      icon: <Award className="h-6 w-6" />,
+      category: "backlinks",
+      deliveryTime: "10-15 days"
     }
   ];
 
-  // Facebook Services
-  const facebookServices: Service[] = [
+  // GMB Services
+  const gmbServices: Service[] = [
     {
-      id: "fb-followers",
-      name: "Facebook All Type Followers",
-      price: 300,
-      min: 100,
-      max: 10000,
-      description: "Genuine Facebook followers for all page types",
-      features: ["Real Followers", "All Page Types", "Safe Delivery"],
-      icon: <Users className="h-6 w-6" />,
-      category: "facebook"
+      id: "gmb-reviews",
+      name: "Google My Business Reviews",
+      price: 200, // Per review
+      min: 5,
+      max: 100,
+      description: "Authentic Google reviews for your business",
+      features: [
+        "Real User Reviews",
+        "Verified Google Accounts",
+        "Natural Review Text",
+        "Review Images",
+        "Rating Management",
+        "Response Management"
+      ],
+      icon: <Star className="h-6 w-6" />,
+      category: "gmb",
+      deliveryTime: "2-5 days"
     },
     {
-      id: "fb-likes",
-      name: "Facebook Likes",
-      price: 100,
-      min: 100,
-      max: 50000,
-      description: "Increase your Facebook page likes",
-      features: ["Real Likes", "Fast Delivery", "Non Drop"],
-      icon: <ThumbsUp className="h-6 w-6" />,
-      category: "facebook"
-    },
-    {
-      id: "fb-post-reaction",
-      name: "Facebook Post Reaction",
-      price: 150,
-      min: 100,
-      max: 50000,
-      description: "Get genuine reactions on your Facebook posts",
-      features: ["Various Reactions", "Real Accounts", "Quick Start"],
-      icon: <Heart className="h-6 w-6" />,
-      category: "facebook"
-    },
-    {
-      id: "fb-story-reaction",
-      name: "Facebook Story Reaction",
-      price: 200,
-      min: 100,
-      max: 100000,
-      description: "Boost your Facebook story engagement",
-      features: ["Story Reactions", "Real Engagement", "Instant Delivery"],
-      icon: <Heart className="h-6 w-6" />,
-      category: "facebook"
-    },
-    {
-      id: "fb-page-likes",
-      name: "Facebook Page Likes & Followers",
-      price: 300,
-      min: 100,
-      max: 10000,
-      description: "Grow your Facebook page audience",
-      features: ["Page Likes", "Followers Growth", "Organic Growth"],
-      icon: <Users className="h-6 w-6" />,
-      category: "facebook"
-    }
-  ];
-
-  // LinkedIn Services
-  const linkedinServices: Service[] = [
-    {
-      id: "li-followers",
-      name: "LinkedIn Company Page Followers",
-      price: 5224.18,
-      min: 100,
-      max: 5000,
-      description: "Professional LinkedIn company page followers",
-      features: ["Professional Accounts", "Company Page", "Worldwide"],
-      icon: <Users className="h-6 w-6" />,
-      category: "linkedin"
-    }
-  ];
-
-  // Website Traffic Services
-  const websiteServices: Service[] = [
-    {
-      id: "web-traffic",
-      name: "Website Organic Traffic",
-      price: 60,
-      min: 100,
-      max: 100000,
-      description: "Organic website traffic from real sources",
-      features: ["Organic Traffic", "Real Visitors", "Safe Referral"],
+      id: "gmb-optimization",
+      name: "GMB Complete Optimization",
+      price: 2499,
+      min: 1,
+      max: 1,
+      description: "Full GMB profile optimization and setup",
+      features: [
+        "Profile Creation & Verification",
+        "Complete Business Info",
+        "Photos & Videos Upload",
+        "Posts & Updates Setup",
+        "Category Optimization",
+        "Local SEO Keywords"
+      ],
       icon: <Globe className="h-6 w-6" />,
-      category: "website"
+      category: "gmb",
+      deliveryTime: "3-5 days"
+    },
+    {
+      id: "gmb-posts",
+      name: "Monthly GMB Posts Service",
+      price: 999,
+      min: 1,
+      max: 12,
+      description: "Regular Google posts to keep your business active",
+      features: [
+        "8 Posts Per Month",
+        "Professional Content",
+        "Call-to-Action Buttons",
+        "Image Optimization",
+        "Event Announcements",
+        "Offer Posts"
+      ],
+      icon: <FileText className="h-6 w-6" />,
+      category: "gmb",
+      deliveryTime: "Monthly"
+    }
+  ];
+
+  // SEO Services
+  const seoServices: Service[] = [
+    {
+      id: "seo-audit",
+      name: "Comprehensive SEO Audit",
+      price: 499,
+      min: 1,
+      max: 1,
+      description: "Detailed website SEO audit with action plan",
+      features: [
+        "Technical SEO Analysis",
+        "On-Page Optimization",
+        "Competitor Analysis",
+        "Keyword Research",
+        "Backlink Profile Check",
+        "Actionable Report"
+      ],
+      icon: <Search className="h-6 w-6" />,
+      category: "seo",
+      deliveryTime: "2-3 days"
+    },
+    {
+      id: "local-seo",
+      name: "Local SEO Package",
+      price: 2999,
+      min: 1,
+      max: 1,
+      description: "Complete local SEO for brick-and-mortar businesses",
+      features: [
+        "Local Citation Building",
+        "Google Maps Optimization",
+        "NAP Consistency Check",
+        "Local Directory Submission",
+        "Review Management",
+        "Local Schema Markup"
+      ],
+      icon: <MapPin className="h-6 w-6" />,
+      category: "seo",
+      deliveryTime: "15-30 days"
     }
   ];
 
   // All services combined
   const allServices = [
-    ...instagramServices,
-    ...facebookServices,
-    ...linkedinServices,
-    ...websiteServices
+    ...backlinkServices,
+    ...gmbServices,
+    ...seoServices
   ];
 
   // Category-wise services
   const categoryServices = {
-    instagram: instagramServices,
-    facebook: facebookServices,
-    linkedin: linkedinServices,
-    website: websiteServices
+    backlinks: backlinkServices,
+    gmb: gmbServices,
+    seo: seoServices
   };
 
   // Initialize timers from localStorage
@@ -360,7 +326,7 @@ const GrowthServices: React.FC = () => {
     }
   }, []);
 
-  // Main Timer Effect - 3 minutes
+  // Main Timer Effect - 5 minutes
   useEffect(() => {
     if (timeLeft <= 0) {
       setOfferExpired(true);
@@ -388,7 +354,7 @@ const GrowthServices: React.FC = () => {
     return () => clearInterval(timerId);
   }, [timeLeft]);
 
-  // Flash Sale Timer - 30 seconds with 20% discount
+  // Flash Sale Timer - 45 seconds with 25% discount
   useEffect(() => {
     if (flashSaleTime <= 0 || hasFlashSaleOccurred) {
       setIsFlashSale(false);
@@ -419,12 +385,21 @@ const GrowthServices: React.FC = () => {
   };
 
   const calculatePrice = (service: Service, qty: number) => {
-    const pricePerUnit = service.price / 1000;
-    let total = pricePerUnit * qty;
+    let total = 0;
+    
+    if (service.category === "backlinks") {
+      if (service.id === "basic-backlinks") {
+        total = service.price * qty;
+      } else {
+        total = service.price * qty; // Package price
+      }
+    } else {
+      total = service.price * qty;
+    }
     
     // Apply flash sale discount
     if (isFlashSale && !offerExpired) {
-      total = total * 0.8; // 20% off
+      total = total * 0.75; // 25% off
     }
     
     return Math.round(total);
@@ -451,7 +426,7 @@ const GrowthServices: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const whatsappMessage = `🎯 Growth Services Inquiry 🎯\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
+    const whatsappMessage = `🎯 SEO & GMB Services Inquiry 🎯\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
     window.open(`https://wa.me/91${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
@@ -463,7 +438,7 @@ const GrowthServices: React.FC = () => {
   const handleSuccessSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const whatsappMessage = `✅ Growth Services Payment Success 🎯\n\nPayment Details:\nName: ${successFormData.name}\nEmail: ${successFormData.email}\nUTR Number: ${successFormData.utr}\nService: ${successFormData.service}\nQuantity: ${successFormData.quantity}\nAmount Paid: ₹${successFormData.amount}\nLink: ${successFormData.link}\n\nPlease verify my payment and start the service!`;
+    const whatsappMessage = `✅ SEO & GMB Services Payment Success 🎯\n\nPayment Details:\nName: ${successFormData.name}\nEmail: ${successFormData.email}\nUTR Number: ${successFormData.utr}\nService: ${successFormData.service}\nQuantity: ${successFormData.quantity}\nAmount Paid: ₹${successFormData.amount}\nLink: ${successFormData.link}\n\nPlease verify my payment and start the service!`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
     window.open(`https://wa.me/91${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
@@ -483,7 +458,7 @@ const GrowthServices: React.FC = () => {
     setQuantity(service.min);
     const calculatedAmount = calculatePrice(service, service.min);
     setPaymentAmount(calculatedAmount);
-    setOriginalAmount(Math.round((service.price / 1000) * service.min));
+    setOriginalAmount(service.price * service.min);
     setPaymentService(service.name);
     setIsPaymentOpen(true);
   };
@@ -494,7 +469,7 @@ const GrowthServices: React.FC = () => {
       setQuantity(clampedQuantity);
       const calculatedAmount = calculatePrice(selectedService, clampedQuantity);
       setPaymentAmount(calculatedAmount);
-      setOriginalAmount(Math.round((selectedService.price / 1000) * clampedQuantity));
+      setOriginalAmount(selectedService.price * clampedQuantity);
     }
   };
 
@@ -515,7 +490,7 @@ const GrowthServices: React.FC = () => {
         key: RAZORPAY_KEY_ID,
         amount: paymentAmount * 100,
         currency: 'INR',
-        name: 'Growth Services',
+        name: 'SEO & GMB Services',
         description: `${selectedService?.name} - Quantity: ${quantity}`,
         image: '/logo.png',
         handler: function (response: any) {
@@ -543,10 +518,10 @@ const GrowthServices: React.FC = () => {
         notes: {
           service: paymentService,
           quantity: quantity.toString(),
-          type: 'Growth Service'
+          type: 'SEO & GMB Service'
         },
         theme: {
-          color: '#EC4899'
+          color: '#10B981'
         }
       };
 
@@ -565,7 +540,7 @@ const GrowthServices: React.FC = () => {
       {[...Array(10)].map((_, i) => (
         <div
           key={i}
-          className="absolute animate-ping text-pink-300"
+          className="absolute animate-ping text-green-300"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -583,8 +558,8 @@ const GrowthServices: React.FC = () => {
     localStorage.removeItem('specialOfferTime');
     localStorage.removeItem('flashSaleOccurred');
     localStorage.removeItem('offerExpired');
-    setTimeLeft(180);
-    setFlashSaleTime(30);
+    setTimeLeft(300);
+    setFlashSaleTime(45);
     setIsSpecialPrice(true);
     setIsFlashSale(true);
     setHasFlashSaleOccurred(false);
@@ -593,17 +568,34 @@ const GrowthServices: React.FC = () => {
   };
 
   const categories = [
-    { id: "instagram", name: "Instagram", icon: <Instagram className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-purple-500" },
-    { id: "facebook", name: "Facebook", icon: <Facebook className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-blue-500" },
-    { id: "linkedin", name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-blue-600" },
-    { id: "website", name: "Website Traffic", icon: <WebsiteIcon className="h-5 w-5" />, color: "bg-gradient-to-r from-pink-500 to-green-500" }
+    { 
+      id: "backlinks", 
+      name: "Backlinks", 
+      icon: <LinkIcon className="h-5 w-5" />, 
+      color: "bg-gradient-to-r from-blue-500 to-cyan-500",
+      description: "Quality backlinks for better rankings"
+    },
+    { 
+      id: "gmb", 
+      name: "Google My Business", 
+      icon: <Globe className="h-5 w-5" />, 
+      color: "bg-gradient-to-r from-green-500 to-emerald-500",
+      description: "GMB reviews and optimization"
+    },
+    { 
+      id: "seo", 
+      name: "SEO Services", 
+      icon: <Search className="h-5 w-5" />, 
+      color: "bg-gradient-to-r from-purple-500 to-pink-500",
+      description: "Complete SEO solutions"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-purple-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-cyan-50 to-emerald-50">
       <Helmet>
-        <title>Growth Services - Instagram, Facebook, LinkedIn Services</title>
-        <meta name="description" content="Premium growth services: Instagram followers, likes, views | Facebook services | LinkedIn followers | Website traffic. Boost your social media growth!" />
+        <title>SEO & GMB Growth Services - Backlinks, Google Reviews, SEO Solutions</title>
+        <meta name="description" content="Premium SEO growth services: Backlinks from ₹3, Google My Business reviews, Complete SEO solutions. Improve your website ranking and online presence!" />
       </Helmet>
 
       {/* Developer Reset Button (Hidden in production) */}
@@ -618,18 +610,18 @@ const GrowthServices: React.FC = () => {
 
       {/* Flash Sale Banner */}
       {isFlashSale && !offerExpired && (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 text-center animate-pulse">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-emerald-500 to-green-500 text-white py-3 text-center animate-pulse">
           <div className="flex items-center justify-center gap-3 text-sm md:text-base">
-            <Zap className="h-4 w-4 md:h-5 md:w-5 animate-bounce" />
-            <span className="font-bold">FLASH SALE: 20% OFF - Ends in {flashSaleTime}s!</span>
-            <Zap className="h-4 w-4 md:h-5 md:w-5 animate-bounce" />
+            <Lightning className="h-4 w-4 md:h-5 md:w-5 animate-bounce" />
+            <span className="font-bold">FLASH SALE: 25% OFF - Ends in {flashSaleTime}s!</span>
+            <Lightning className="h-4 w-4 md:h-5 md:w-5 animate-bounce" />
           </div>
         </div>
       )}
 
       {/* Floating Timer */}
       <div className="fixed top-4 right-4 z-40">
-        <div className={`bg-gradient-to-r ${offerExpired ? 'from-gray-500 to-gray-700' : isSpecialPrice ? 'from-pink-500 to-purple-500' : 'from-red-500 to-pink-500'} text-white px-4 py-2 rounded-full shadow-2xl animate-pulse border-2 border-pink-300`}>
+        <div className={`bg-gradient-to-r ${offerExpired ? 'from-gray-500 to-gray-700' : isSpecialPrice ? 'from-emerald-500 to-green-500' : 'from-red-500 to-pink-500'} text-white px-4 py-2 rounded-full shadow-2xl animate-pulse border-2 border-green-300`}>
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4 animate-spin" />
             <div className="text-center">
@@ -645,17 +637,17 @@ const GrowthServices: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white pt-16 pb-12 md:py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 text-white pt-16 pb-12 md:py-20 overflow-hidden">
         <SparklesEffect />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           {!offerExpired && (
-            <div className={`mb-4 md:mb-6 p-3 md:p-4 rounded-2xl ${isSpecialPrice ? 'bg-pink-500/20 border border-pink-300' : 'bg-red-500/20 border border-red-300'} backdrop-blur-sm`}>
+            <div className={`mb-4 md:mb-6 p-3 md:p-4 rounded-2xl ${isSpecialPrice ? 'bg-emerald-500/20 border border-emerald-300' : 'bg-red-500/20 border border-red-300'} backdrop-blur-sm`}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-4">
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 md:h-6 md:w-6 animate-pulse" />
                   <span className="text-sm md:text-lg font-bold">{isSpecialPrice ? '⏰ SPECIAL OFFER ENDS IN:' : '❌ OFFER EXPIRED'}</span>
                 </div>
-                <div className={`text-xl md:text-2xl font-bold ${isSpecialPrice ? 'text-pink-300' : 'text-red-300'} font-mono`}>
+                <div className={`text-xl md:text-2xl font-bold ${isSpecialPrice ? 'text-emerald-300' : 'text-red-300'} font-mono`}>
                   {formatTime(timeLeft)}
                 </div>
               </div>
@@ -663,42 +655,62 @@ const GrowthServices: React.FC = () => {
           )}
 
           {isFlashSale && !offerExpired && (
-            <div className="bg-purple-500 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold inline-block mb-4 md:mb-6 animate-pulse border-2 border-pink-300">
-              ⚡ FLASH SALE: 20% OFF - {flashSaleTime}s LEFT!
+            <div className="bg-green-500 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold inline-block mb-4 md:mb-6 animate-pulse border-2 border-emerald-300">
+              ⚡ FLASH SALE: 25% OFF - {flashSaleTime}s LEFT!
             </div>
           )}
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             {offerExpired ? (
               <>
-                Premium <span className="text-white">Growth</span><br />
-                <span className="text-pink-300">Services</span>
+                Premium <span className="text-white">SEO & GMB</span><br />
+                <span className="text-emerald-300">Growth Services</span>
               </>
             ) : (
               <>
-                Premium <span className="text-white">Growth</span><br />
-                <span className="text-pink-300">Services</span>
+                Premium <span className="text-white">SEO & GMB</span><br />
+                <span className="text-emerald-300">Growth Services</span>
               </>
             )}
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-pink-100 max-w-4xl mx-auto font-medium">
+          <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-blue-100 max-w-4xl mx-auto font-medium">
             {offerExpired ? (
-              "Get the best growth services for Instagram, Facebook, LinkedIn and more!"
+              "Get the best SEO backlinks, Google My Business reviews, and complete SEO solutions!"
             ) : (
-              "Boost your social media presence with our premium growth services at unbeatable prices!"
+              "Boost your website ranking and online presence with our premium SEO & GMB services at unbeatable prices!"
             )}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <button onClick={scrollToServices} className="bg-white hover:bg-gray-100 text-pink-600 px-6 md:px-8 py-3 md:py-4 rounded-xl text-base md:text-lg font-bold transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2 shadow-lg justify-center">
+            <button onClick={scrollToServices} className="bg-white hover:bg-gray-100 text-emerald-600 px-6 md:px-8 py-3 md:py-4 rounded-xl text-base md:text-lg font-bold transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2 shadow-lg justify-center">
               <Rocket className="h-4 w-4 md:h-5 md:w-5" />
-              View Growth Services
+              View SEO Services
             </button>
             <button onClick={() => setIsFormOpen(true)} className="bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl text-base md:text-lg font-bold transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2 shadow-lg justify-center">
               <MessageCircle className="h-4 w-4 md:h-5 md:w-5" />
-              Get Free Consultation
+              Get Free SEO Audit
             </button>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 md:mt-12 max-w-3xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">₹3</div>
+              <div className="text-xs md:text-sm text-blue-100">Per Backlink</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">₹200</div>
+              <div className="text-xs md:text-sm text-blue-100">Per GMB Review</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">3-7</div>
+              <div className="text-xs md:text-sm text-blue-100">Days Delivery</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">100%</div>
+              <div className="text-xs md:text-sm text-blue-100">Guaranteed</div>
+            </div>
           </div>
         </div>
       </section>
@@ -708,10 +720,10 @@ const GrowthServices: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="text-pink-500">Growth Services</span>
+              Our <span className="text-emerald-500">SEO & GMB Services</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
-              Boost your social media presence with our premium growth services
+              Professional services to improve your search rankings and online presence
             </p>
           </div>
 
@@ -721,14 +733,17 @@ const GrowthServices: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-xl font-semibold transition-all ${
+                className={`flex flex-col items-center px-4 md:px-6 py-3 md:py-4 rounded-xl font-semibold transition-all ${
                   activeCategory === category.id
                     ? `${category.color} text-white shadow-lg transform scale-105`
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                {category.icon}
+                <div className="mb-1">
+                  {category.icon}
+                </div>
                 <span>{category.name}</span>
+                <span className="text-xs opacity-80 mt-1">{category.description}</span>
               </button>
             ))}
           </div>
@@ -736,16 +751,16 @@ const GrowthServices: React.FC = () => {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {categoryServices[activeCategory as keyof typeof categoryServices]?.map((service) => (
-              <div key={service.id} className="bg-gradient-to-br from-white to-gray-50 border-2 border-pink-200 rounded-2xl p-6 relative overflow-hidden transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl">
+              <div key={service.id} className="bg-gradient-to-br from-white to-gray-50 border-2 border-emerald-200 rounded-2xl p-6 relative overflow-hidden transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl">
                 {!offerExpired && isFlashSale && (
-                  <div className="absolute -top-2 -right-2 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold rotate-12 shadow-lg z-10 animate-pulse">
-                    ⚡ 20% OFF
+                  <div className="absolute -top-2 -right-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold rotate-12 shadow-lg z-10 animate-pulse">
+                    ⚡ 25% OFF
                   </div>
                 )}
                 
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-pink-100 rounded-lg text-pink-600">
+                    <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600">
                       {service.icon}
                     </div>
                     <div>
@@ -756,14 +771,24 @@ const GrowthServices: React.FC = () => {
                 </div>
 
                 <div className="mb-4">
-                  <div className="text-2xl font-bold text-gray-900 mb-2">
-                    ₹{service.price.toFixed(2)} / 1000
-                  </div>
-                  {!offerExpired && isFlashSale && (
-                    <div className="text-green-600 font-semibold text-sm">
-                      Flash Sale: ₹{(service.price * 0.8).toFixed(2)} / 1000
+                  {service.id === "basic-backlinks" ? (
+                    <div className="text-2xl font-bold text-gray-900 mb-2">
+                      ₹{service.price} / backlink
+                    </div>
+                  ) : (
+                    <div className="text-2xl font-bold text-gray-900 mb-2">
+                      ₹{service.price}
                     </div>
                   )}
+                  {!offerExpired && isFlashSale && (
+                    <div className="text-green-600 font-semibold text-sm">
+                      Flash Sale: ₹{Math.round(service.price * 0.75)}
+                    </div>
+                  )}
+                  <div className="text-xs text-gray-500 flex items-center gap-1">
+                    <Calendar className="h-3 w-3" />
+                    Delivery: {service.deliveryTime}
+                  </div>
                 </div>
 
                 <ul className="space-y-2 mb-4 text-sm text-gray-700">
@@ -780,16 +805,16 @@ const GrowthServices: React.FC = () => {
                     onClick={() => openPaymentModal(service)} 
                     className={`w-full py-3 rounded-xl font-bold transition-all hover:scale-105 text-center ${
                       offerExpired 
-                        ? 'bg-pink-500 hover:bg-pink-600 text-white' 
+                        ? 'bg-emerald-500 hover:bg-emerald-600 text-white' 
                         : isFlashSale
-                          ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
-                          : 'bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white'
+                          ? 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white'
+                          : 'bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white'
                     }`}
                   >
                     {offerExpired 
                       ? 'Order Now' 
                       : isFlashSale 
-                        ? '⚡ Grab 20% OFF Now!' 
+                        ? '⚡ Grab 25% OFF Now!' 
                         : 'Order Now'
                     }
                   </button>
@@ -797,9 +822,61 @@ const GrowthServices: React.FC = () => {
                     onClick={() => openQuickForm(service.name)} 
                     className="w-full py-2 rounded-xl font-bold transition-all hover:scale-105 text-center bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-sm"
                   >
-                    💬 Get More Info
+                    💬 Get Detailed Info
                   </button>
                 </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Package Comparison */}
+          <div className="mt-16 bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-2xl p-6 md:p-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
+              Backlinks Package Comparison
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              {[
+                { name: "Basic Package", price: "₹3 per link", links: "100+", features: ["DA 20-40", "Manual Submission", "Indexing Report"] },
+                { name: "Hot Deal", price: "₹699", links: "300 Backlinks", features: ["DA 30-50", "Anchor Diversity", "Free SEO Audit"] },
+                { name: "MOJ DA 30+", price: "₹1299", links: "DA 30+ Links", features: ["High Authority", "Contextual", "Priority Support"] },
+                { name: "Premium Package", price: "₹1999", links: "DA 50+ Links", features: ["Editorial Links", "Guaranteed Indexing", "Dedicated Manager"] }
+              ].map((pkg, index) => (
+                <div key={index} className="bg-white rounded-xl p-4 text-center border-2 border-emerald-100 hover:border-emerald-300 transition-colors">
+                  <h4 className="font-bold text-lg text-gray-900 mb-2">{pkg.name}</h4>
+                  <div className="text-2xl font-bold text-emerald-600 mb-2">{pkg.price}</div>
+                  <div className="text-sm text-gray-600 mb-3">{pkg.links}</div>
+                  <ul className="space-y-1 text-sm text-gray-700">
+                    {pkg.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-1 justify-center">
+                        <Check className="h-3 w-3 text-green-500" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Why Choose Our SEO Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: "⚡", title: "Fast Delivery", desc: "Backlinks in 3-7 days, GMB services in 2-5 days" },
+              { icon: "🛡️", title: "Quality Guaranteed", desc: "High DA sites, real GMB reviews, permanent links" },
+              { icon: "📈", title: "Ranking Improvement", desc: "Proven results in search engine rankings" },
+              { icon: "💬", title: "24/7 Support", desc: "Dedicated support via WhatsApp & email" }
+            ].map((benefit, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg">
+                <div className="text-3xl mb-3">{benefit.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -807,13 +884,13 @@ const GrowthServices: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-pink-500 to-purple-500 text-white text-center">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-500 to-green-500 text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Boost Your Social Media Growth?
+            Ready to Boost Your SEO Rankings?
           </h2>
           <p className="text-lg md:text-xl mb-6">
-            Contact us now and get the best growth services!
+            Contact us now and get the best SEO & GMB services!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <button 
@@ -839,9 +916,9 @@ const GrowthServices: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div>
-              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-pink-400">Growth Services</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-emerald-400">SEO & GMB Services</h3>
               <p className="text-gray-400 text-sm md:text-base">
-                Your trusted partner for social media growth and online success.
+                Your trusted partner for SEO growth and online presence success.
               </p>
             </div>
             
@@ -854,7 +931,7 @@ const GrowthServices: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>contact@digitalagency.com</span>
+                  <span>info@growthservice.in</span>
                 </div>
               </div>
             </div>
@@ -880,7 +957,7 @@ const GrowthServices: React.FC = () => {
           
           <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
             <p className="text-gray-400 text-sm md:text-base">
-              © 2024 Growth Services. All rights reserved.
+              © 2024 SEO & GMB Growth Services. All rights reserved.
             </p>
           </div>
         </div>
@@ -889,14 +966,14 @@ const GrowthServices: React.FC = () => {
       {/* Payment Modal */}
       {isPaymentOpen && selectedService && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-pink-300">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-emerald-300">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 flex items-center gap-2">
-                  <CreditCard className="h-5 w-5 md:h-6 md:w-6 text-pink-500" />
+                  <CreditCard className="h-5 w-5 md:h-6 md:w-6 text-emerald-500" />
                   Order {selectedService.name}
                 </h3>
-                <p className="text-pink-600 font-semibold text-sm mt-1">{selectedService.description}</p>
+                <p className="text-emerald-600 font-semibold text-sm mt-1">{selectedService.description}</p>
               </div>
               <button onClick={() => setIsPaymentOpen(false)} className="text-gray-500 hover:text-gray-700 p-1 hover:bg-gray-100 rounded-full">
                 <X className="h-5 w-5 md:h-6 md:w-6" />
@@ -909,7 +986,7 @@ const GrowthServices: React.FC = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
                 <div className="flex items-center gap-3">
                   <button 
-                    onClick={() => handleQuantityChange(quantity - 100)}
+                    onClick={() => handleQuantityChange(quantity - (selectedService.id === "basic-backlinks" ? 10 : 1))}
                     disabled={quantity <= selectedService.min}
                     className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center disabled:opacity-50"
                   >
@@ -924,7 +1001,7 @@ const GrowthServices: React.FC = () => {
                     className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-center"
                   />
                   <button 
-                    onClick={() => handleQuantityChange(quantity + 100)}
+                    onClick={() => handleQuantityChange(quantity + (selectedService.id === "basic-backlinks" ? 10 : 1))}
                     disabled={quantity >= selectedService.max}
                     className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center disabled:opacity-50"
                   >
@@ -938,16 +1015,16 @@ const GrowthServices: React.FC = () => {
 
               {/* Price Display */}
               <div className={`p-4 rounded-xl border-2 ${
-                isFlashSale && !offerExpired ? 'bg-purple-50 border-purple-200' : 'bg-pink-50 border-pink-200'
+                isFlashSale && !offerExpired ? 'bg-green-50 border-green-200' : 'bg-emerald-50 border-emerald-200'
               }`}>
                 <div className="text-center">
                   <div className={`text-2xl md:text-3xl font-bold mb-2 ${
-                    isFlashSale && !offerExpired ? 'text-purple-600' : 'text-pink-600'
+                    isFlashSale && !offerExpired ? 'text-green-600' : 'text-emerald-600'
                   }`}>
                     ₹{paymentAmount.toLocaleString()}
                   </div>
                   <div className="font-semibold text-sm md:text-base">
-                    {isFlashSale && !offerExpired ? 'Flash Sale 20% OFF!' : 'Total Amount'}
+                    {isFlashSale && !offerExpired ? 'Flash Sale 25% OFF!' : 'Total Amount'}
                   </div>
                   {isFlashSale && !offerExpired && (
                     <div className="text-gray-500 text-sm line-through mt-1">
@@ -955,7 +1032,14 @@ const GrowthServices: React.FC = () => {
                     </div>
                   )}
                   <div className="text-gray-600 text-sm mt-1">
-                    {quantity.toLocaleString()} {selectedService.name}
+                    {selectedService.id === "basic-backlinks" 
+                      ? `${quantity.toLocaleString()} Backlinks`
+                      : `${quantity} Package${quantity > 1 ? 's' : ''}`
+                    }
+                  </div>
+                  <div className="text-xs text-gray-500 mt-2 flex items-center justify-center gap-1">
+                    <Calendar className="h-3 w-3" />
+                    Delivery: {selectedService.deliveryTime}
                   </div>
                 </div>
               </div>
@@ -964,8 +1048,8 @@ const GrowthServices: React.FC = () => {
                 onClick={initiateRazorpayPayment}
                 className={`w-full py-3 md:py-4 rounded-xl font-bold transition-all hover:scale-105 flex items-center justify-center gap-2 md:gap-3 text-base md:text-lg shadow-lg ${
                   isFlashSale && !offerExpired
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
-                    : 'bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white'
+                    : 'bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white'
                 }`}
               >
                 <CreditCard className="h-4 w-4 md:h-5 md:w-5" />
@@ -1038,7 +1122,7 @@ const GrowthServices: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Profile/Link *</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Website/Profile Link *</label>
                 <input 
                   type="text" 
                   name="link" 
@@ -1046,7 +1130,7 @@ const GrowthServices: React.FC = () => {
                   value={successFormData.link} 
                   onChange={handleSuccessFormChange} 
                   className="w-full px-4 py-3 border border-green-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent" 
-                  placeholder="Enter your Instagram/Facebook profile link" 
+                  placeholder="Enter your website or GMB profile link" 
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -1102,13 +1186,13 @@ const GrowthServices: React.FC = () => {
       {/* Contact Form Modal */}
       {isFormOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-pink-300">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border-2 border-emerald-300">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-                  Get Free Growth Consultation
+                  Get Free SEO Consultation
                 </h3>
-                <p className="text-pink-600 font-semibold text-sm mt-1">We'll help you choose the right growth service</p>
+                <p className="text-emerald-600 font-semibold text-sm mt-1">We'll help you choose the right SEO service</p>
               </div>
               <button onClick={() => setIsFormOpen(false)} className="text-gray-500 hover:text-gray-700 p-1 hover:bg-gray-100 rounded-full">
                 <X className="h-5 w-5 md:h-6 md:w-6" />
@@ -1124,7 +1208,7 @@ const GrowthServices: React.FC = () => {
                   required 
                   value={formData.name} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-emerald-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent" 
                   placeholder="Enter your full name" 
                 />
               </div>
@@ -1136,7 +1220,7 @@ const GrowthServices: React.FC = () => {
                   required 
                   value={formData.email} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-emerald-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent" 
                   placeholder="Enter your email" 
                 />
               </div>
@@ -1148,7 +1232,7 @@ const GrowthServices: React.FC = () => {
                   required 
                   value={formData.phone} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
+                  className="w-full px-4 py-3 border border-emerald-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent" 
                   placeholder="Enter your WhatsApp number" 
                 />
               </div>
@@ -1158,12 +1242,13 @@ const GrowthServices: React.FC = () => {
                   name="service" 
                   value={formData.service} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-emerald-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 >
-                  <option value="">Select a growth service</option>
+                  <option value="">Select a SEO service</option>
                   {allServices.map(service => (
                     <option key={service.id} value={service.name}>
-                      {service.name} - ₹{service.price}/1000
+                      {service.name} - ₹{service.price}
+                      {service.id === "basic-backlinks" ? "/backlink" : ""}
                     </option>
                   ))}
                 </select>
@@ -1175,16 +1260,16 @@ const GrowthServices: React.FC = () => {
                   rows={3} 
                   value={formData.message} 
                   onChange={handleInputChange} 
-                  className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent" 
-                  placeholder="Tell us about your growth requirements..." 
+                  className="w-full px-4 py-3 border border-emerald-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent" 
+                  placeholder="Tell us about your SEO requirements..." 
                 />
               </div>
               <button 
                 type="submit" 
-                className="w-full py-3 md:py-4 rounded-xl font-bold transition-all hover:scale-105 flex items-center justify-center gap-2 md:gap-3 text-base md:text-lg shadow-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-2 border-pink-300"
+                className="w-full py-3 md:py-4 rounded-xl font-bold transition-all hover:scale-105 flex items-center justify-center gap-2 md:gap-3 text-base md:text-lg shadow-lg bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white border-2 border-emerald-300"
               >
                 <Send className="h-4 w-4 md:h-5 md:w-5" />
-                Send Growth Inquiry
+                Send SEO Inquiry
               </button>
             </form>
           </div>
