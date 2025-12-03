@@ -40,7 +40,7 @@ const About: React.FC = () => {
     {
       icon: "⭐",
       title: "Excellence First",
-      description: "Committed to delivering high-quality social media management, Meta ads & marketing solutions that exceed expectations.",
+      description: "Committed to delivering high-quality web development, SEO & marketing solutions that exceed expectations.",
       delay: "0.3s"
     },
   ];
@@ -48,40 +48,144 @@ const About: React.FC = () => {
   // Services with updated pricing
   const services = [
     {
+      icon: "💻",
+      title: "Website Development",
+      description: "Professional website development with HTML, CSS, React, TypeScript, Node.js, MongoDB",
+      price: "₹9,999",
+      originalPrice: "₹29,999",
+      features: [
+        "Home Page",
+        "About Page", 
+        "Services Page",
+        "Contact Form",
+        "WhatsApp Integration",
+        "Mobile Responsive"
+      ],
+      details: "Time: 7-10 days (depending on requirements)",
+      delay: "0s"
+    },
+    {
+      icon: "🔍",
+      title: "SEO Package",
+      description: "Complete SEO package with on-page, off-page & technical optimization",
+      price: "₹7,779/month",
+      originalPrice: "₹24,999/month",
+      features: [
+        "4 Reports Monthly",
+        "4 Blogs Monthly",
+        "5-10 Keywords Work",
+        "On-Page Optimization",
+        "Off-Page Optimization",
+        "Competitor Analysis"
+      ],
+      details: "Time Period: 3-6 months for results",
+      delay: "0.1s"
+    },
+    {
+      icon: "🏢",
+      title: "Google My Business",
+      description: "Complete GMB setup and optimization for local SEO dominance",
+      price: "₹2,499",
+      originalPrice: "₹12,499",
+      features: [
+        "Profile Setup",
+        "Weekly Posts",
+        "Review Management",
+        "Local SEO",
+        "Photo/Video Posts",
+        "Performance Tracking"
+      ],
+      details: "One-time setup with monthly management available",
+      delay: "0.2s"
+    },
+    {
       icon: "📱",
       title: "Social Media Management",
-      description: "Complete social media management with creative posts and viral videos monthly",
-      price: "₹8,000/month",
-      originalPrice: "₹15,000",
-      features: ["Content Creation", "Platform Management", "Performance Analytics", "Strategy Planning", "Hashtag Research", "Engagement Management"],
-      delay: "0s"
+      description: "Complete social media management with content calendar & strategy",
+      price: "₹4,449/month",
+      originalPrice: "₹24,999/month",
+      features: [
+        "Content Calendar",
+        "Social Media Strategy",
+        "Platform Management",
+        "Engagement Management",
+        "Performance Analytics",
+        "Monthly Reports"
+      ],
+      details: "Includes 5 platforms: FB, IG, LinkedIn, Twitter, Pinterest",
+      delay: "0.3s"
     },
     {
       icon: "🎯",
       title: "Meta Ads Management",
-      description: "Professional Facebook & Instagram ads management for maximum ROI",
-      price: "₹10,000/month",
-      originalPrice: "₹18,000",
-      features: ["Ad Creation", "Audience Targeting", "Budget Optimization", "Performance Tracking", "A/B Testing", "ROI Analysis"],
-      delay: "0.1s"
+      description: "Professional Facebook & Instagram ads management",
+      price: "₹9,999/month",
+      originalPrice: "₹24,999/month",
+      features: [
+        "Ad Account Setup",
+        "Campaign Strategy",
+        "Audience Targeting",
+        "Ad Creative Design",
+        "Performance Tracking",
+        "ROI Optimization",
+        "A/B Testing"
+      ],
+      details: "Minimum 3 campaigns included",
+      delay: "0.4s"
     },
     {
-      icon: "🔍",
-      title: "Google Business Profile",
-      description: "Complete Google Business Profile setup and optimization for local SEO",
-      price: "₹6,000",
-      originalPrice: "₹12,000",
-      features: ["Profile Setup", "Local SEO", "Review Management", "Google Maps Ranking", "Photo Optimization", "Post Management"],
-      delay: "0.2s"
+      icon: "✈️",
+      title: "Tour & Travel Website",
+      description: "Custom travel website with booking functionality",
+      price: "₹14,999",
+      originalPrice: "₹35,000",
+      features: [
+        "Home Page Design",
+        "Upcoming Tours Section",
+        "About Page",
+        "Contact Page",
+        "Booking System",
+        "Gallery Section",
+        "Admin Panel"
+      ],
+      details: "Tech Stack: React, TypeScript, Node.js, MongoDB",
+      delay: "0.5s"
     },
     {
-      icon: "📞",
-      title: "Lead Generation",
-      description: "Professional lead generation campaigns to get quality business leads",
-      price: "₹6,000/month",
-      originalPrice: "₹12,000",
-      features: ["Targeted Campaigns", "Lead Qualification", "CRM Setup", "Follow-up System", "Conversion Tracking", "Performance Reports"],
-      delay: "0.3s"
+      icon: "🏨",
+      title: "Guest House Website",
+      description: "Hotel/guest house website with payment gateway",
+      price: "₹12,999",
+      originalPrice: "₹28,000",
+      features: [
+        "Room Booking System",
+        "Online Payment Gateway",
+        "Room Gallery",
+        "Amenities Section",
+        "Contact & Location",
+        "Reviews Section",
+        "Admin Dashboard"
+      ],
+      details: "Integrated with Razorpay/Stripe",
+      delay: "0.6s"
+    },
+    {
+      icon: "🏢",
+      title: "B2B Business Setup",
+      description: "Complete business setup package for B2B companies",
+      price: "₹24,999",
+      originalPrice: "₹50,000",
+      features: [
+        "Professional Website",
+        "Social Media Setup",
+        "Market Guidance",
+        "Field Area Assignment",
+        "Lead Generation Strategy",
+        "Branding Package",
+        "3 Months Support"
+      ],
+      details: "Includes 1 website + complete digital presence",
+      delay: "0.7s"
     }
   ];
 
@@ -89,62 +193,62 @@ const About: React.FC = () => {
   const process = [
     {
       step: "01",
-      title: "Discovery & Strategy",
-      description: "We analyze your business, competitors & goals to create a customized digital marketing strategy tailored to your needs.",
+      title: "Requirement Analysis",
+      description: "We analyze your business needs, goals & target audience to create customized solutions.",
       icon: "🔍",
       delay: "0s"
     },
     {
       step: "02",
       title: "Planning & Proposal",
-      description: "Detailed project plan with timeline, deliverables & pricing tailored to your budget and business objectives.",
+      description: "Detailed project plan with timeline, deliverables & pricing tailored to your budget.",
       icon: "📋",
       delay: "0.2s"
     },
     {
       step: "03",
-      title: "Execution & Implementation",
-      description: "Our expert team implements the strategy with regular updates & transparent communication throughout the process.",
+      title: "Development & Design",
+      description: "Our expert team develops your project with modern technologies and best practices.",
       icon: "⚡",
       delay: "0.4s"
     },
     {
       step: "04",
-      title: "Results & Optimization",
-      description: "Continuous monitoring, performance analysis & optimization for maximum ROI and business growth.",
-      icon: "📈",
+      title: "Testing & Deployment",
+      description: "Thorough testing and smooth deployment with ongoing support and maintenance.",
+      icon: "🚀",
       delay: "0.6s"
     }
   ];
 
   // Achievements
   const achievements = [
-    { number: "50+", label: "Social Media Clients", icon: "🏆", delay: "0s" },
-    { number: "100+", label: "Marketing Campaigns", icon: "💻", delay: "0.1s" },
-    { number: "200+", label: "Meta Ads Campaigns", icon: "📱", delay: "0.2s" },
-    { number: "₹1Cr+", label: "Revenue Generated for Clients", icon: "💰", delay: "0.3s" }
+    { number: "50+", label: "Websites Developed", icon: "💻", delay: "0s" },
+    { number: "100+", label: "SEO Clients", icon: "🔍", delay: "0.1s" },
+    { number: "200+", label: "Social Media Campaigns", icon: "📱", delay: "0.2s" },
+    { number: "₹2Cr+", label: "Revenue Generated for Clients", icon: "💰", delay: "0.3s" }
   ];
 
   // Testimonials
   const testimonials = [
     {
-      text: "Their social media management increased our engagement by 300% in just 3 months! Our sales have never been better.",
+      text: "Their website development team delivered our travel website in just 10 days! The quality is exceptional and the price was unbeatable.",
       author: "Rajesh Kumar",
-      company: "Fashion Store Owner",
+      company: "Travel Agency Owner",
       rating: 5,
       delay: "0s"
     },
     {
-      text: "Professional Meta ads management that actually delivers results. Our lead generation increased by 200% with their campaigns.",
+      text: "SEO package at ₹7,779 brought us 300% more organic traffic in 4 months. Best investment we made for our business!",
       author: "Priya Sharma", 
-      company: "Service Business",
+      company: "E-commerce Store",
       rating: 5,
       delay: "0.1s"
     },
     {
-      text: "Google Business Profile optimization brought us more local customers. The team is responsive and results-driven.",
+      text: "Guest house website with payment gateway was set up perfectly. Our bookings increased by 150% within first month.",
       author: "Amit Patel",
-      company: "Restaurant Owner",
+      company: "Hotel Owner",
       rating: 5,
       delay: "0.2s"
     }
@@ -154,76 +258,85 @@ const About: React.FC = () => {
   const whyChooseUs = [
     {
       icon: "💰",
-      title: "Affordable Pricing",
-      description: "Get professional digital marketing services starting from just ₹6,000 with no hidden costs.",
+      title: "Unbeatable Pricing",
+      description: "Professional services starting from just ₹2,499 with transparent pricing & no hidden costs.",
       delay: "0s"
     },
     {
       icon: "⚡",
-      title: "Quick Results",
-      description: "We focus on delivering measurable results within the first 30-60 days of our partnership.",
+      title: "Fast Delivery",
+      description: "Website development in 7-10 days. Quick turnaround without compromising quality.",
       delay: "0.1s"
     },
     {
-      icon: "🎯",
-      title: "Expert Team",
-      description: "Work with certified digital marketing professionals with proven track records.",
+      icon: "👨‍💻",
+      title: "Expert Developers",
+      description: "Team of certified developers skilled in React, TypeScript, Node.js & modern technologies.",
       delay: "0.2s"
     },
     {
       icon: "📊",
-      title: "Transparent Reporting",
-      description: "Regular performance reports and analytics to track your ROI and campaign success.",
+      title: "Proven Results",
+      description: "100+ successful projects delivered with measurable ROI and client satisfaction.",
       delay: "0.3s"
     },
     {
       icon: "🔄",
-      title: "Flexible Packages",
-      description: "Customizable service packages that grow with your business needs and budget.",
+      title: "Custom Solutions",
+      description: "Tailored packages that fit your specific business needs and budget requirements.",
       delay: "0.4s"
     },
     {
       icon: "🏆",
-      title: "Proven Results",
-      description: "100+ satisfied clients and 200+ successful campaigns delivered across industries.",
+      title: "Full Stack Services",
+      description: "From website development to SEO, social media & ads - we handle everything.",
       delay: "0.5s"
     }
   ];
 
+  // Technology Stack
+  const techStack = [
+    { icon: "⚛️", name: "React", description: "Frontend development" },
+    { icon: "📘", name: "TypeScript", description: "Type-safe JavaScript" },
+    { icon: "🟢", name: "Node.js", description: "Backend runtime" },
+    { icon: "🍃", name: "MongoDB", description: "Database management" },
+    { icon: "🎨", name: "Tailwind CSS", description: "Modern styling" },
+    { icon: "🚀", name: "Next.js", description: "React framework" },
+  ];
+
   // WhatsApp redirect for consultation
   const handleWhatsAppRedirect = (service: any) => {
-    const message = `Hello! I'm interested in ${service.title} service. Please provide more details.`;
-    window.open(`https://wa.me/919521281509?text=${encodeURIComponent(message)}`, '_blank');
+    const message = `Hello! I'm interested in ${service.title} service (${service.price}). Please provide more details.`;
+    window.open(`https://wa.me/97797073824881?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>About Us | Digital Marketing Agency</title>
+        <title>About Us | Growth Service - Web Development & Digital Marketing</title>
         <meta
           name="description"
-          content="Meet our Digital Marketing Agency: Trusted partner with 100+ clients and 200+ campaigns. We drive growth with expert Social Media Management, Meta Ads, and Lead Generation."
+          content="Growth Service: Professional web development & digital marketing agency. Website development from ₹9,999, SEO from ₹7,779, Social Media from ₹4,449. 100+ clients served."
         />
       </Helmet>
 
-      {/* === SIMPLIFIED HERO SECTION === */}
-      <section className="relative bg-gradient-to-br from-pink-600 via-purple-600 to-blue-600 text-white py-16 md:py-20 overflow-hidden">
+      {/* === HERO SECTION === */}
+      <section className="relative bg-gradient-to-br from-purple-900 via-pink-800 to-blue-900 text-white py-16 md:py-20 overflow-hidden">
         {/* Background Vectors */}
         <div className="absolute inset-0 opacity-10">
-          {/* Abstract Shapes */}
           <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-2xl"></div>
           <div className="absolute top-20 right-20 w-24 h-24 bg-white rotate-45 blur-2xl"></div>
           <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-white rounded-lg blur-2xl"></div>
-          <div className="absolute bottom-10 right-1/3 w-20 h-20 bg-white rotate-12 blur-2xl"></div>
         </div>
         
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            About Our Digital Marketing Agency
+            Professional Web Development & Digital Marketing Agency
           </h1>
 
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-pink-100 leading-relaxed">
-            We help businesses grow with professional digital marketing services including social media management, Meta ads, and lead generation solutions.
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-purple-100 leading-relaxed">
+            We build stunning websites with React, TypeScript, Node.js & MongoDB. 
+            Complete digital solutions starting from just ₹2,499.
           </p>
 
           {/* Stats Preview */}
@@ -243,6 +356,29 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* === TECHNOLOGY STACK === */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Our Technology Stack</h2>
+            <p className="text-gray-600 text-sm">Modern technologies we work with</p>
+          </div>
+          
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+            {techStack.map((tech, index) => (
+              <div 
+                key={index}
+                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 text-center group"
+              >
+                <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">{tech.icon}</div>
+                <div className="font-semibold text-gray-900 text-sm">{tech.name}</div>
+                <div className="text-gray-500 text-xs mt-1">{tech.description}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* === OUR STORY SECTION === */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -251,34 +387,35 @@ const About: React.FC = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4">
                 <p className="text-gray-600 leading-relaxed">
-                  Founded with a vision to make professional digital marketing accessible to every business, 
-                  we've grown to become a trusted partner for companies across India.
+                  Founded with a mission to make professional web development and digital marketing 
+                  accessible to every business, we've grown to become a trusted technology partner 
+                  for companies across India.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Our journey began by recognizing the gap between expensive agency services and the actual 
-                  needs of growing businesses. We built our agency around transparency, results, and 
-                  affordable pricing.
+                  Our journey began by recognizing that small businesses needed enterprise-level 
+                  technology solutions at affordable prices. We specialize in React, TypeScript, 
+                  Node.js, and MongoDB development.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Today, we're proud to have served 100+ businesses with 200+ successful campaigns, 
-                  helping them achieve remarkable growth through strategic digital marketing.
+                  Today, we're proud to have delivered 100+ websites and 200+ digital campaigns, 
+                  helping businesses establish a strong online presence with measurable results.
                 </p>
               </div>
               
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/portfolio"
-                  className="bg-pink-600 hover:bg-pink-700 text-white px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm"
                 >
-                  View Our Work
+                  View Our Portfolio
                 </Link>
                 <a
-                  href="https://wa.me/919521281509"
+                  href="https://wa.me/97797073824881"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm"
+                  className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm"
                 >
-                  Get Consultation
+                  Get Free Consultation
                 </a>
               </div>
             </div>
@@ -287,10 +424,10 @@ const About: React.FC = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-pink-50 to-purple-100 p-4 rounded-xl text-center transform transition-all duration-500 hover:scale-105 hover:shadow-lg group"
+                  className="bg-gradient-to-br from-purple-50 to-pink-100 p-4 rounded-xl text-center transform transition-all duration-500 hover:scale-105 hover:shadow-lg group"
                 >
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                  <div className="text-2xl font-bold text-pink-600 mb-1">{stat.number}</div>
+                  <div className="text-2xl font-bold text-purple-600 mb-1">{stat.number}</div>
                   <div className="text-gray-700 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -305,26 +442,26 @@ const About: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our Mission & Vision</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Driving business growth through innovative digital strategies and proven methodologies
+              Empowering businesses with technology-driven solutions for digital success
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fade-in-up">
-              <div className="text-4xl mb-4">🌍</div>
+              <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To empower businesses with affordable, results-driven digital marketing solutions that 
-                deliver measurable ROI and sustainable growth through professional services.
+                To provide affordable, high-quality web development and digital marketing services 
+                that help businesses establish a strong online presence and achieve sustainable growth.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fade-in-up delay-200">
-              <div className="text-4xl mb-4">🎯</div>
+              <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                To be India's most trusted digital marketing partner, recognized for delivering exceptional 
-                social media, advertising, and lead generation services that help businesses thrive online.
+                To become India's most trusted technology partner, known for delivering exceptional 
+                web solutions and digital strategies that drive business success in the digital age.
               </p>
             </div>
           </div>
@@ -355,12 +492,77 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* === OUR SERVICES - UPDATED === */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our Services & Pricing</h2>
+            <p className="text-gray-600">Professional digital solutions at unbeatable prices</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="bg-white border border-gray-200 p-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 group animate-fade-in-up"
+                style={{animationDelay: service.delay}}
+              >
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{service.icon}</div>
+                <h3 className="text-base font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 text-xs mb-3 leading-relaxed">{service.description}</p>
+                
+                <div className="space-y-1 mb-3">
+                  {service.features.slice(0, 4).map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-gray-700 text-xs">
+                      <span className="text-green-500 mr-1">✓</span>
+                      <span className="truncate">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="text-xs text-gray-500 mb-3 italic">{service.details}</div>
+                
+                <div className="border-t pt-3 space-y-2">
+                  <div className="text-center">
+                    <div className="text-purple-600 font-bold text-base">{service.price}</div>
+                    <div className="text-gray-500 text-xs line-through">{service.originalPrice}</div>
+                  </div>
+
+                  <button
+                    onClick={() => handleWhatsAppRedirect(service)}
+                    className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-1"
+                  >
+                    <span>💬</span>
+                    <span>Get Quote on WhatsApp</span>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <p className="text-gray-600 text-sm mb-4">
+              * All prices are starting prices. Final pricing depends on specific requirements.
+            </p>
+            <a
+              href="https://wa.me/97797073824881"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
+              <span className="mr-2">💬</span>
+              Get Custom Quote for Your Project
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* === WHY CHOOSE US === */}
-      <section className="py-16 bg-gradient-to-br from-pink-50 to-purple-50">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Why Choose Our Agency?</h2>
-            <p className="text-gray-600">What makes us different from other digital marketing agencies</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+            <p className="text-gray-600">What makes us the right choice for your digital needs</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -370,56 +572,12 @@ const About: React.FC = () => {
                 className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 group animate-fade-in-up"
                 style={{animationDelay: point.delay}}
               >
-                <div className="text-2xl mb-3 group-hover:scale-110 transition-transform">{point.icon}</div>
-                <h3 className="text-base font-bold text-gray-900 mb-2">{point.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{point.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === OUR SERVICES === */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-gray-600">Comprehensive digital marketing solutions for your business</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-white border border-gray-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 group animate-fade-in-up"
-                style={{animationDelay: service.delay}}
-              >
-                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{service.icon}</div>
-                <h3 className="text-base font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-xs mb-3 leading-relaxed">{service.description}</p>
-                
-                <div className="space-y-1 mb-3">
-                  {service.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-gray-700 text-xs">
-                      <span className="text-green-500 mr-1">✓</span>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="border-t pt-3 space-y-2">
-                  <div className="text-center">
-                    <div className="text-pink-600 font-bold text-base">{service.price}</div>
-                    <div className="text-gray-500 text-xs line-through">{service.originalPrice}</div>
+                <div className="flex items-start space-x-3">
+                  <div className="text-2xl group-hover:scale-110 transition-transform">{point.icon}</div>
+                  <div>
+                    <h3 className="text-base font-bold text-gray-900 mb-1">{point.title}</h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">{point.description}</p>
                   </div>
-
-                  <button
-                    onClick={() => handleWhatsAppRedirect(service)}
-                    className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-1"
-                  >
-                    <span>💚</span>
-                    <span>Get Quote</span>
-                  </button>
                 </div>
               </div>
             ))}
@@ -428,10 +586,10 @@ const About: React.FC = () => {
       </section>
 
       {/* === OUR PROCESS === */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our Process</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our 4-Step Process</h2>
             <p className="text-gray-600">Systematic approach ensuring success for every project</p>
           </div>
           
@@ -439,11 +597,11 @@ const About: React.FC = () => {
             {process.map((step, index) => (
               <div 
                 key={index}
-                className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 text-center group animate-fade-in-up"
+                className="bg-white p-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 text-center group animate-fade-in-up"
                 style={{animationDelay: step.delay}}
               >
                 <div className="text-2xl mb-3 group-hover:scale-110 transition-transform">{step.icon}</div>
-                <div className="text-lg font-bold text-pink-600 mb-1">{step.step}</div>
+                <div className="text-lg font-bold text-purple-600 mb-1">{step.step}</div>
                 <h3 className="text-base font-bold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{step.description}</p>
               </div>
@@ -453,11 +611,11 @@ const About: React.FC = () => {
       </section>
 
       {/* === ACHIEVEMENTS === */}
-      <section className="py-16 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Achievements</h2>
-            <p className="text-pink-100">Milestones showcasing our commitment to excellence</p>
+            <p className="text-purple-100">Milestones showcasing our commitment to excellence</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -469,7 +627,7 @@ const About: React.FC = () => {
               >
                 <div className="text-3xl mb-3">{achievement.icon}</div>
                 <div className="text-xl font-bold text-white mb-1">{achievement.number}</div>
-                <div className="text-pink-100 text-xs">{achievement.label}</div>
+                <div className="text-purple-100 text-xs">{achievement.label}</div>
               </div>
             ))}
           </div>
@@ -481,7 +639,7 @@ const About: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
-            <p className="text-gray-600">Success stories from businesses we've helped</p>
+            <p className="text-gray-600">Success stories from businesses we've helped grow</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -499,11 +657,46 @@ const About: React.FC = () => {
                 <p className="text-gray-700 mb-3 italic text-sm leading-relaxed">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold text-gray-900 text-sm">{testimonial.author}</p>
-                  <p className="text-pink-600 text-xs">{testimonial.company}</p>
+                  <p className="text-purple-600 text-xs">{testimonial.company}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* === CTA SECTION === */}
+      <section className="py-16 bg-gradient-to-r from-purple-900 to-pink-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Grow Your Business?</h2>
+          <p className="text-purple-100 mb-8 max-w-2xl mx-auto">
+            Get professional web development and digital marketing services at unbeatable prices. 
+            Start from just ₹2,499!
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/97797073824881"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+            >
+              <span>💬</span>
+              <span>Chat on WhatsApp</span>
+            </a>
+            
+            <a
+              href="tel:+919341436937"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+            >
+              <span>📞</span>
+              <span>Call: +91 93414 36937</span>
+            </a>
+          </div>
+          
+          <p className="mt-6 text-purple-200 text-sm">
+            🚀 Website in 7-10 days • SEO from ₹7,779 • Social Media from ₹4,449
+          </p>
         </div>
       </section>
 
