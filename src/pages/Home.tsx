@@ -4,208 +4,184 @@ import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  // Enhanced Hero Slides with Images
+  // Hero Slides
   const heroSlides = [
     {
-      title: "Digital Marketing Agency",
-      subtitle: "Driving Results and Growth",
-      description: "EZ Rankings, the best digital marketing agency in India committed to delivering measurable results for our clients.",
-      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80",
+      title: "Professional Web Development & Digital Marketing",
+      subtitle: "Starting from ₹9,999",
+      description: "Get custom websites with React, TypeScript, Node.js & MongoDB. Complete digital solutions for your business growth.",
       cta: "Start Your Project"
     },
     {
-      title: "AI-Driven Marketing",
-      subtitle: "Turn Traffic Into Revenue",
-      description: "Turn holiday traffic into revenue with AI-driven marketing strategies that deliver real results.",
-      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      cta: "Get Marketing Plan"
+      title: "SEO Services Starting ₹7,779/month",
+      subtitle: "Get 4 Reports + 4 Blogs Monthly",
+      description: "Improve your search rankings with our comprehensive SEO packages. 5-10 keywords optimization included.",
+      cta: "Get SEO Audit"
     },
     {
-      title: "Performance Marketing",
-      subtitle: "Proven Track Record",
-      description: "Discover how we helped businesses achieve their digital marketing goals through our case studies.",
-      bgImage: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
-      cta: "View Case Studies"
+      title: "Social Media Management from ₹4,449/month",
+      subtitle: "Complete Social Media Strategy",
+      description: "Boost engagement and grow your audience with professional social media management.",
+      cta: "View Social Plans"
     }
   ];
 
-  // Performance Metrics
-  const performanceMetrics = [
-    {
-      value: "2X to 6X",
-      label: "Bootstrap Revenue",
-      icon: "📈"
-    },
-    {
-      value: "4X to 8X",
-      label: "Social Media Engagement",
-      icon: "💬"
-    },
-    {
-      value: "100 to 1000%",
-      label: "Brand Exposure",
-      icon: "👁️"
-    },
-    {
-      value: "Ready",
-      label: "All Experience",
-      icon: "⚡"
-    }
-  ];
-
-  // Digital Marketing Services
+  // Services
   const services = [
     {
-      icon: "🔍",
-      title: "Search Engine Optimization",
-      description: "Improve Rankings & Traffic with proven SEO strategies",
-      features: ["Keyword Research", "On-Page SEO", "Technical SEO", "Content Optimization"]
+      icon: "💻",
+      title: "Website Development",
+      price: "₹9,999+",
+      description: "Professional websites with React, TypeScript, Node.js & MongoDB",
+      features: ["7-10 Days Delivery", "Mobile Responsive", "WhatsApp Integration", "Free 1 Month Support"]
     },
     {
-      icon: "🎯",
-      title: "Pay Per Click",
-      description: "Need Quick Sales with targeted PPC campaigns",
-      features: ["Google Ads", "Facebook Ads", "Instagram Ads", "Conversion Tracking"]
+      icon: "🔍",
+      title: "SEO Package",
+      price: "₹7,779/month",
+      description: "Complete SEO with monthly reports and content",
+      features: ["4 Monthly Reports", "4 Blogs Monthly", "5-10 Keywords", "Ranking Improvement"]
     },
     {
       icon: "📱",
-      title: "Social Media Marketing",
-      description: "Enhance Engagement across all platforms",
-      features: ["Content Strategy", "Community Management", "Paid Social", "Analytics"]
+      title: "Social Media Management",
+      price: "₹4,449/month",
+      description: "Complete social media strategy and management",
+      features: ["Content Calendar", "Daily Posts", "Engagement Management", "Analytics Reports"]
     },
     {
-      icon: "🛡️",
-      title: "Reputation Management",
-      description: "Build Reputation and brand trust",
-      features: ["Review Management", "Brand Monitoring", "Crisis Management", "PR Strategy"]
-    }
-  ];
-
-  // Case Studies
-  const caseStudies = [
-    {
-      industry: "Ecommerce",
-      services: ["Digital", "SEO", "SMO"],
-      metrics: [
-        { value: "+175%", label: "Sales Growth" },
-        { value: "+24.4%", label: "ROI" }
-      ]
+      icon: "🎯",
+      title: "Meta Ads Management",
+      price: "₹9,999/month",
+      description: "Professional Facebook & Instagram ads",
+      features: ["Campaign Strategy", "Ad Creative Design", "Audience Targeting", "ROI Tracking"]
     },
     {
-      industry: "Education",
-      services: ["PPC", "Website"],
-      metrics: [
-        { value: "+150%", label: "Lead Growth" },
-        { value: "+17.6%", label: "ROI Growth" }
-      ]
+      icon: "🏢",
+      title: "Google My Business",
+      price: "₹2,499",
+      description: "Complete GMB setup and optimization",
+      features: ["Profile Setup", "Review Management", "Local SEO", "Photo Optimization"]
     },
     {
-      industry: "Healthcare",
-      services: ["SEO", "Content Marketing"],
-      metrics: [
-        { value: "+200%", label: "Online Visibility" },
-        { value: "+35%", label: "Patient Acquisition" }
-      ]
-    }
-  ];
-
-  // Why Choose Digital Marketing
-  const benefits = [
-    {
-      point: "Wider reach and engagement",
-      checked: true
-    },
-    {
-      point: "Data-driven strategies",
-      checked: true
-    },
-    {
-      point: "Enhanced competitiveness",
-      checked: true
-    },
-    {
-      point: "Progress evaluation",
-      checked: true
-    },
-    {
-      point: "Improved customer interactions",
-      checked: true
-    }
-  ];
-
-  // What You're Missing Without Digital Marketing
-  const missingOpportunities = [
-    "Loss of potential customers",
-    "Limited reach and engagement",
-    "Competitors continued business progress",
-    "Lack of an actionable plan"
-  ];
-
-  // Work Process
-  const workProcess = [
-    {
-      step: "1",
-      title: "Understanding Project Requirements",
-      description: "We sit with our client and discuss project goals, market conditions, competitors, and current situation."
-    },
-    {
-      step: "2",
-      title: "Setting Up a Tailored Plan",
-      description: "After discussion, we prepare a customized plan suitable for client requirements."
-    },
-    {
-      step: "3",
-      title: "Starting the Process",
-      description: "We start optimizing and implementing strategies while keeping clients informed about progress."
-    },
-    {
-      step: "4",
-      title: "Delivering Results",
-      description: "We execute every measure required to help you reach your desired outcome."
-    }
-  ];
-
-  // Trusted Clients
-  const trustedClients = [
-    "Kajaria", "Baidyanath", "CASIO", "Yaha", "Pristyn Care",
-    "Coverfox.com", "Honeywell", "Aster", "Institutions"
-  ];
-
-  // Testimonials
-  const testimonials = [
-    {
-      name: "Rajesh Kumar",
-      company: "Ecommerce Business",
-      text: "EZ Rankings helped us achieve 175% sales growth through their digital marketing strategies. Highly recommended!",
-      rating: 5
-    },
-    {
-      name: "Priya Sharma",
-      company: "Education Institute",
-      text: "Their PPC campaigns brought us 150% more leads. The team is professional and results-driven.",
-      rating: 5
-    },
-    {
-      name: "Amit Patel",
-      company: "Healthcare Provider",
-      text: "Our online visibility increased by 200% after working with EZ Rankings. Great service!",
-      rating: 5
+      icon: "🚀",
+      title: "Lead Generation",
+      price: "₹6,000/month",
+      description: "Targeted campaigns for quality leads",
+      features: ["Lead Strategy", "Campaign Setup", "CRM Integration", "Conversion Tracking"]
     }
   ];
 
   // Stats
   const stats = [
-    { number: "12,000+", label: "Clients Served" },
-    { number: "71%", label: "Positive Experience Rate" },
-    { number: "61%", label: "SEO Success Rate" },
-    { number: "100%", label: "Client Satisfaction" }
+    { number: "100+", label: "Happy Clients" },
+    { number: "200+", label: "Projects Delivered" },
+    { number: "24/7", label: "Support Available" },
+    { number: "₹1Cr+", label: "Revenue Generated" }
   ];
 
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  // Why Choose Us
+  const benefits = [
+    {
+      icon: "⚡",
+      title: "Fast Delivery",
+      description: "Websites in 7-10 days. Quick turnaround without quality compromise."
+    },
+    {
+      icon: "💰",
+      title: "Affordable Pricing",
+      description: "Professional services starting from just ₹2,499. No hidden costs."
+    },
+    {
+      icon: "🎯",
+      title: "Expert Team",
+      description: "Certified developers & marketers with proven track records."
+    },
+    {
+      icon: "🔄",
+      title: "Flexible Packages",
+      description: "Customizable services that grow with your business needs."
+    }
+  ];
 
-  // Auto slide change for hero
+  // Process
+  const process = [
+    {
+      step: "1",
+      title: "Requirement Analysis",
+      description: "We understand your business needs and goals"
+    },
+    {
+      step: "2",
+      title: "Strategy & Planning",
+      description: "Create customized plan with timeline and pricing"
+    },
+    {
+      step: "3",
+      title: "Development & Implementation",
+      description: "Our expert team builds your solution"
+    },
+    {
+      step: "4",
+      title: "Results & Optimization",
+      description: "Continuous improvement for maximum ROI"
+    }
+  ];
+
+  // Testimonials
+  const testimonials = [
+    {
+      text: "Website delivered in 10 days! The quality exceeded our expectations. Highly recommended!",
+      author: "Rajesh Kumar",
+      company: "Travel Agency Owner",
+      rating: 5
+    },
+    {
+      text: "SEO package brought 300% more organic traffic in 4 months. Best investment!",
+      author: "Priya Sharma",
+      company: "E-commerce Store",
+      rating: 5
+    },
+    {
+      text: "Social media management increased our engagement by 250% in 3 months.",
+      author: "Amit Patel",
+      company: "Restaurant Owner",
+      rating: 5
+    }
+  ];
+
+  // Project Types
+  const projects = [
+    {
+      type: "Tour & Travel Website",
+      price: "₹14,999",
+      pages: ["Home Page", "Tour Packages", "Booking System", "About & Contact"]
+    },
+    {
+      type: "Guest House Website",
+      price: "₹12,999",
+      pages: ["Room Booking", "Payment Gateway", "Gallery", "Amenities"]
+    },
+    {
+      type: "Business Website",
+      price: "₹9,999",
+      pages: ["Home Page", "Services", "About", "Contact"]
+    },
+    {
+      type: "B2B Setup",
+      price: "₹24,999",
+      pages: ["Website + Social Media", "Market Guidance", "Lead Strategy", "Branding"]
+    }
+  ];
+
+  // Technology Stack
+  const technologies = [
+    "React.js", "TypeScript", "Node.js", "MongoDB", "Next.js", "Tailwind CSS"
+  ];
+
+  // Auto slide change
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -213,7 +189,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto slide change for testimonials
+  // Auto testimonial change
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -221,143 +197,116 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
     <div className="min-h-screen overflow-hidden">
       <Helmet>
-        <title>Best Digital Marketing Agency in India - EZ Rankings</title>
+        <title>Growth Service - Web Development & Digital Marketing Agency</title>
         <meta 
           name="description" 
-          content="EZ Rankings - Best digital marketing agency in India offering SEO, PPC, Social Media Marketing, and performance marketing services. Driving measurable results and growth."
+          content="Professional web development & digital marketing services. Websites from ₹9,999, SEO from ₹7,779, Social Media from ₹4,449. Get custom solutions for your business."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Helmet>
 
-      {/* === HERO SECTION WITH IMAGES === */}
-      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-all duration-1000 transform ${
-              index === currentSlide 
-                ? 'opacity-100 translate-x-0' 
-                : 'opacity-0 translate-x-full'
-            }`}
-            style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slide.bgImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          >
-            <div className="relative h-full flex items-center justify-center text-white">
-              <div className="max-w-6xl mx-auto px-6 text-center">
-                <h1 className={`text-5xl md:text-7xl font-bold mb-6 leading-tight transform transition-all duration-700 ${
-                  index === currentSlide ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                }`}>
-                  {slide.title}
-                  <span className="block text-pink-300 mt-4 text-3xl md:text-4xl">
-                    {slide.subtitle}
-                  </span>
-                </h1>
-                
-                <p className={`text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white/90 leading-relaxed transform transition-all duration-700 delay-300 ${
-                  index === currentSlide ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                }`}>
-                  {slide.description}
-                </p>
-                
-                <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transform transition-all duration-700 delay-500 ${
-                  index === currentSlide ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                }`}>
-                  <Link
-                    to="/contact"
-                    className="bg-pink-600 hover:bg-pink-700 text-white px-10 py-5 rounded-lg text-xl font-bold transition-all duration-300 hover:scale-105 shadow-2xl"
-                  >
-                    {slide.cta}
-                  </Link>
-                  <a
-                    href="tel:+18557630320"
-                    className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-10 py-5 rounded-lg text-xl font-bold transition-all flex items-center gap-2"
-                  >
-                    <span>📞 +1-855-763-0320</span>
-                  </a>
+      {/* === HERO SECTION (Mobile Optimized) === */}
+      <section className="relative bg-gradient-to-r from-purple-900 via-pink-800 to-blue-900 text-white py-12 md:py-20 overflow-hidden">
+        {/* Mobile-friendly slides */}
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl">
+            {heroSlides.map((slide, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-500 ease-in-out ${
+                  index === currentSlide 
+                    ? 'opacity-100 translate-x-0' 
+                    : 'absolute inset-0 opacity-0 translate-x-full'
+                }`}
+              >
+                <div className="p-6 md:p-12 lg:p-16">
+                  <div className="max-w-2xl">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                      {slide.title}
+                    </h1>
+                    <div className="text-lg sm:text-xl md:text-2xl text-pink-300 font-semibold mb-4">
+                      {slide.subtitle}
+                    </div>
+                    <p className="text-sm sm:text-base md:text-lg text-purple-100 mb-6 md:mb-8 leading-relaxed">
+                      {slide.description}
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Link
+                        to="/book-call"
+                        className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg text-center"
+                      >
+                        {slide.cta}
+                      </Link>
+                      <a
+                        href="https://wa.me/97797073824881"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border-2 border-white hover:bg-white hover:text-purple-900 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2"
+                      >
+                        <span className="text-lg">💬</span>
+                        <span>WhatsApp Now</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        ))}
-
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-white scale-125 shadow-lg' 
-                  : 'bg-white/50 hover:bg-white/80'
-              }`}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* === PERFORMANCE METRICS === */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {performanceMetrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{metric.icon}</div>
-                <div className="text-4xl font-bold mb-2">{metric.value}</div>
-                <div className="text-white/90 text-lg">{metric.label}</div>
               </div>
             ))}
           </div>
+
+          {/* Slide Indicators (Mobile-friendly) */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
+                  index === currentSlide 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation Arrows (Hidden on very small screens) */}
+          <button
+            onClick={prevSlide}
+            className="hidden sm:block absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm"
+            aria-label="Previous slide"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="hidden sm:block absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm"
+            aria-label="Next slide"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </section>
 
-      {/* === ABOUT AGENCY === */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Best Digital Marketing Agency in India</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              EZ Rankings, the best digital marketing agency in India committed to delivering measurable results for our clients. 
-              Our digital experts use the latest digital marketing tools & technologies ensuring that we deliver nothing short of excellence.
-            </p>
-          </div>
-
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-12">
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <span className="text-yellow-500 text-xl">⚠️</span>
-              </div>
-              <div className="ml-4">
-                <p className="text-yellow-800 font-semibold">
-                  Attention: EZ Rankings does not offer part-time job offers or channel subscription tasks via WhatsApp, 
-                  Telegram, or any other chat platforms. Beware of fraudulent solicitations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* === QUICK STATS === */}
+      <section className="py-8 md:py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
-                <div className="text-4xl font-bold text-pink-600 mb-2">{stat.number}</div>
-                <div className="text-gray-700 font-medium">{stat.label}</div>
+              <div key={index} className="text-center p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-600 mb-1">{stat.number}</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -365,151 +314,157 @@ const Home = () => {
       </section>
 
       {/* === SERVICES SECTION === */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Digital Marketing Services We Provide</h2>
-            <p className="text-xl text-gray-600">
-              Our digital marketing services increase brand visibility, drive more qualified leads, and deliver measurable results
+      <section className="py-12 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Our <span className="text-purple-600">Services</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional digital solutions tailored for your business growth
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8">
-                <div className="text-4xl mb-4 text-pink-600">{service.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 text-lg mb-6">{service.description}</p>
-                
-                <div className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-gray-700">
-                      <span className="text-green-500 mr-3">✓</span>
-                      {feature}
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 sm:p-6">
+                <div className="flex items-start space-x-4 mb-4">
+                  <div className="text-2xl sm:text-3xl">{service.icon}</div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{service.title}</h3>
+                    <div className="text-base sm:text-lg font-bold text-purple-600">{service.price}</div>
+                  </div>
+                </div>
+                <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
+                <div className="space-y-2 mb-4">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-xs sm:text-sm text-gray-700">
+                      <span className="text-green-500 mr-2">✓</span>
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
+                <Link
+                  to="/contact"
+                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all hover:scale-105"
+                >
+                  Get Quote
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* === CASE STUDIES === */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Proven Track Record</h2>
-            <p className="text-xl text-gray-600">
-              Discover how we helped businesses achieve their digital marketing goals
+      {/* === WHY CHOOSE US === */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Why Choose <span className="text-purple-600">Growth Service?</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              What makes us different from other digital agencies
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.industry}</h3>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {study.services.map((service, serviceIndex) => (
-                    <span key={serviceIndex} className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">
-                      {service}
-                    </span>
-                  ))}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-5 sm:p-6 text-center">
+                <div className="text-3xl sm:text-4xl mb-3">{benefit.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === PROJECT TYPES === */}
+      <section className="py-12 md:py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Popular <span className="text-purple-600">Projects</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Custom solutions for different business needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            {projects.map((project, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-5 sm:p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">{project.type}</h3>
+                  <div className="text-lg sm:text-xl font-bold text-purple-600">{project.price}</div>
                 </div>
-                
-                <div className="space-y-3">
-                  {study.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center">
-                      <span className="text-gray-600">{metric.label}</span>
-                      <span className="text-green-600 font-bold text-xl">{metric.value}</span>
-                    </div>
-                  ))}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Includes Pages:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.pages.map((page, idx) => (
+                      <span key={idx} className="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">
+                        {page}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+                <a
+                  href={`https://wa.me/97797073824881?text=Hello! I'm interested in ${project.type} (${project.price}). Please provide details.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all hover:scale-105"
+                >
+                  💬 Get Quote on WhatsApp
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* === WHY DIGITAL MARKETING === */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Benefits */}
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Why Do Your Businesses Need Digital Marketing Services?</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Businesses benefit from digital marketing services for wider reach, data-driven strategies, 
-                enhanced competitiveness, progress evaluation, and improved customer interactions.
-              </p>
-              
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center">
-                    <span className="text-green-500 text-xl mr-4">✓</span>
-                    <span className="text-gray-700 text-lg">{benefit.point}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Missing Opportunities */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-red-600">What You're Missing Without Digital Marketing</h3>
-              <p className="text-lg text-gray-600 mb-8">
-                If you haven't hired the best performance marketing agency, you might be missing out on significant growth opportunities.
-              </p>
-              
-              <div className="space-y-4">
-                {missingOpportunities.map((opportunity, index) => (
-                  <div key={index} className="flex items-center">
-                    <span className="text-red-500 text-xl mr-4">✗</span>
-                    <span className="text-gray-700 text-lg">{opportunity}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* === WORK PROCESS === */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Grow With Our Easy Work Process</h2>
-            <p className="text-xl text-gray-600">
-              As a leading digital marketing company in India, we prefer to keep things straightforward
+      {/* === TECHNOLOGY STACK === */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Our <span className="text-purple-600">Technology</span> Stack
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Modern technologies for better performance and scalability
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {workProcess.map((step, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg">
-                <div className="text-4xl font-bold text-pink-600 mb-4">{step.step}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold text-sm sm:text-base">
+                {tech}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* === TRUSTED CLIENTS === */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Corporate Partners</h2>
-            <p className="text-xl text-gray-600">
-              We take pride in having served 12,000+ clients across various industries
+      {/* === PROCESS === */}
+      <section className="py-12 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Our <span className="text-purple-600">Process</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Simple 4-step process for successful projects
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {trustedClients.map((client, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
-                <div className="font-semibold text-gray-800">{client}</div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {process.map((step, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-4">
+                  {step.step}
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -517,115 +472,159 @@ const Home = () => {
       </section>
 
       {/* === TESTIMONIALS === */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
-            <p className="text-xl text-gray-600">What our clients say about working with us</p>
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Client <span className="text-purple-600">Testimonials</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              What our clients say about working with us
+            </p>
           </div>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl shadow-xl p-8 md:p-12">
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-2xl">⭐</span>
-                  ))}
-                </div>
-                <p className="text-xl text-gray-700 mb-8 italic leading-relaxed">
-                  "{testimonials[currentTestimonial].text}"
-                </p>
-                <div>
-                  <p className="font-bold text-gray-900 text-2xl">{testimonials[currentTestimonial].name}</p>
-                  <p className="text-pink-600 font-medium text-lg">{testimonials[currentTestimonial].company}</p>
-                </div>
+
+          <div className="relative bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl shadow-lg p-6 sm:p-8">
+            <div className="text-center">
+              {/* Rating */}
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-lg sm:text-xl">⭐</span>
+                ))}
+              </div>
+              
+              {/* Testimonial Text */}
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 leading-relaxed italic">
+                "{testimonials[currentTestimonial].text}"
+              </p>
+              
+              {/* Author */}
+              <div>
+                <p className="font-bold text-gray-900 text-base sm:text-lg">{testimonials[currentTestimonial].author}</p>
+                <p className="text-purple-600 font-medium text-sm sm:text-base">{testimonials[currentTestimonial].company}</p>
               </div>
             </div>
-            
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
 
-      {/* === FREE PROPOSAL CTA === */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold mb-6">GET YOUR FREE PERFORMANCE MARKETING PLAN NOW!</h2>
-          <p className="text-xl mb-8 text-purple-100">
-            Fill In Your Details Below and Unlock Your Personalized Performance Marketing Strategy!
-          </p>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
-            <div className="space-y-4">
-              <input 
-                type="text" 
-                placeholder="Enter your Website" 
-                className="w-full px-6 py-4 border border-gray-300 rounded-lg text-gray-800 text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-              />
-              <button className="w-full bg-pink-600 hover:bg-pink-700 text-white py-4 px-6 rounded-lg font-bold text-xl transition-all duration-300">
-                SEND ME A PROPOSAL
+            {/* Navigation */}
+            <div className="flex justify-center mt-6 space-x-4">
+              <button
+                onClick={prevTestimonial}
+                className="bg-white hover:bg-gray-100 text-gray-700 p-2 rounded-full shadow-md"
+                aria-label="Previous testimonial"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <div className="flex space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-2 h-2 rounded-full ${
+                      index === currentTestimonial ? 'bg-purple-600' : 'bg-gray-300'
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={nextTestimonial}
+                className="bg-white hover:bg-gray-100 text-gray-700 p-2 rounded-full shadow-md"
+                aria-label="Next testimonial"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* === FINAL CTA === */}
+      <section className="py-12 md:py-20 bg-gradient-to-r from-purple-900 to-pink-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            Ready to Grow Your Business?
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
+            Get professional web development and digital marketing services at unbeatable prices
+          </p>
           
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
-              href="tel:+18557630320"
-              className="bg-white hover:bg-gray-100 text-pink-600 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:scale-105 flex items-center gap-2"
-            >
-              <span>📞 +1-855-763-0320</span>
-            </a>
-            <a
-              href="https://wa.me/919521281509"
+              href="https://wa.me/97797073824881"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 flex items-center gap-2"
+              className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
             >
-              <span>💬 WhatsApp Chat</span>
+              <span className="text-lg">💬</span>
+              <span>Chat on WhatsApp</span>
             </a>
+            
+            <a
+              href="tel:+919341436937"
+              className="bg-white hover:bg-gray-100 text-purple-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+            >
+              <span className="text-lg">📞</span>
+              <span>Call: +91 93414 36937</span>
+            </a>
+          </div>
+          
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm text-purple-200">
+            <div className="flex items-center justify-center gap-1">
+              <span>⚡</span>
+              <span>Fast Delivery</span>
+            </div>
+            <div className="flex items-center justify-center gap-1">
+              <span>💰</span>
+              <span>Affordable</span>
+            </div>
+            <div className="flex items-center justify-center gap-1">
+              <span>🎯</span>
+              <span>Expert Team</span>
+            </div>
+            <div className="flex items-center justify-center gap-1">
+              <span>🔄</span>
+              <span>Flexible</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Floating WhatsApp Button */}
+      {/* === FLOATING WHATSAPP BUTTON === */}
       <a
-        href="https://wa.me/919521281509"
+        href="https://wa.me/97797073824881"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 active:scale-95"
+        aria-label="Chat on WhatsApp"
       >
-        <span className="text-2xl">💬</span>
+        <span className="text-xl sm:text-2xl">💬</span>
       </a>
 
+      {/* Mobile touch-friendly styles */}
       <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
+        /* Improve touch targets */
+        button, a {
+          -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Prevent text size adjustment on orientation change */
+        html {
+          -webkit-text-size-adjust: 100%;
+        }
+        
+        /* Smooth scrolling for mobile */
+        @media (max-width: 640px) {
+          html {
+            scroll-behavior: smooth;
           }
         }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out both;
+        
+        /* Better touch feedback */
+        .hover\:scale-105:active {
+          transform: scale(0.98);
         }
       `}</style>
     </div>
