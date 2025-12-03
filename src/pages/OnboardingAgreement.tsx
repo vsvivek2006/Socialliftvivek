@@ -1,274 +1,469 @@
 import React from "react";
+import { 
+  FileText, CheckCircle, Clock, Shield, 
+  DollarSign, TrendingUp, MessageCircle, 
+  Users, Target, Zap, AlertCircle, Download,
+  Building, Globe, Smartphone, CreditCard,
+  Mail, Phone, ExternalLink
+} from "lucide-react";
 
 const OnboardingAgreement: React.FC = () => {
-  const lastUpdated = new Date().toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 
+  const handleDownloadPDF = () => {
+    // This would generate/download PDF in production
+    alert("PDF agreement would be downloaded. In production, this would generate a PDF.");
+  };
+
   return (
-    <div>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
-            Onboarding Agreement
-          </h1>
-          <p className="text-pink-100 text-lg md:text-xl">
-            A clear process to kickstart your Digital Marketing, Social Media Management & Web Development engagement.
-          </p>
-          <p className="text-sm text-pink-200 mt-4">Last updated: {lastUpdated}</p>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-12 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 space-y-6">
-          <p>
-            This Onboarding Agreement ("Agreement") outlines how our Digital Marketing Agency ("we", "us", "our") will
-            initiate and deliver services to the Client ("you", "your"). It defines scope, access,
-            approvals, timelines, deliverables, and responsibilities so your project can launch smoothly
-            and achieve measurable outcomes.
-          </p>
-
-          <div className="bg-pink-50 border border-pink-100 rounded-xl p-4">
-            <p className="text-sm text-pink-900">
-              <strong>Note:</strong> This Agreement is an operational guide for onboarding. It is used
-              together with any Proposal/Quotation/SOW and our Terms of Service. If there's a conflict,
-              the Proposal/SOW prevails for scope & pricing; Terms of Service prevail for legal terms.
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Hero Header */}
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <FileText className="h-12 w-12" />
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Service Onboarding Agreement
+            </h1>
+            <p className="text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
+              Clear guidelines for successful collaboration on your digital projects
             </p>
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                📅 Last Updated: {currentDate}
+              </span>
+              <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                🏢 Growth Service Agency
+              </span>
+              <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                📱 +91 93414 36937
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Scope */}
-      <section className="py-6 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 space-y-8">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">1) Scope of Services</h2>
-            <p className="mb-3">
-              Your Proposal/SOW specifies exactly what's included. Typical service categories:
-            </p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li><strong>Social Media Management:</strong> Content creation, posting, engagement, performance tracking</li>
-              <li><strong>Meta Ads Management:</strong> Facebook & Instagram advertising campaigns</li>
-              <li><strong>SEO Services:</strong> Search engine optimization, keyword research, ranking improvement</li>
-              <li><strong>Website Development:</strong> Professional website creation, responsive design</li>
-              <li><strong>Google Business Profile:</strong> Local business optimization and management</li>
-              <li><strong>Lead Generation:</strong> Targeted campaigns to generate quality business leads</li>
-              <li><strong>Video Production:</strong> Professional video shooting and editing services</li>
-            </ul>
-            <p className="mt-2 text-sm text-gray-600">
-              Exclusions: hosting fees, premium plugins/apps, paid stock assets, 3rd-party SaaS costs,
-              editorial/legal reviews—unless explicitly included.
-            </p>
-          </div>
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Quick Action Buttons */}
+        <div className="mb-8 flex flex-wrap gap-3">
+          <button
+            onClick={handleDownloadPDF}
+            className="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium flex items-center gap-2"
+          >
+            <Download className="h-4 w-4" />
+            Download PDF Version
+          </button>
+          <a
+            href="tel:+919341436937"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2"
+          >
+            <Phone className="h-4 w-4" />
+            Call for Questions
+          </a>
+          <a
+            href="mailto:info@growthservice.in"
+            className="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium flex items-center gap-2"
+          >
+            <Mail className="h-4 w-4" />
+            Email Queries
+          </a>
+        </div>
 
-          {/* Access & Assets */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">2) Access & Assets (Client To Provide)</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Brand assets: logo (vector), color palette, fonts, brand guidelines</li>
-              <li>Copy & content: product/service descriptions, policies, legal text (e.g., Privacy, Terms)</li>
-              <li>Accounts/permissions (as applicable): domain/hosting, CMS, Google Analytics/Tag Manager/Search Console, Google Ads, Meta Business Manager, email marketing, payment gateways, CRM</li>
-              <li>Point of contact for timely feedback & approvals</li>
-              <li>Business information for account setups and campaign targeting</li>
-            </ul>
+        {/* Introduction */}
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <div className="flex items-start gap-3 mb-4">
+            <Building className="h-6 w-6 text-blue-600 mt-1" />
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Welcome to Growth Service</h2>
+              <p className="text-gray-600">
+                This Onboarding Agreement outlines our working relationship, responsibilities, 
+                and processes to ensure successful project delivery and ongoing collaboration.
+              </p>
+            </div>
           </div>
-
-          {/* Deliverables & Timelines */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">3) Deliverables, Milestones & Timelines</h2>
-            <p className="mb-2">
-              We share a kickoff timeline with milestones (design, content creation, campaign setup, QA, launch). Timelines
-              are estimates and depend on asset delivery, approvals, and third-party policies.
-            </p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li><strong>Content Creation:</strong> Up to <strong>2 revision rounds</strong> per content piece</li>
-              <li><strong>Approvals:</strong> Please review and respond within 2–3 business days to maintain schedule</li>
-              <li><strong>Social Media:</strong> Content calendar shared in advance for approval</li>
-              <li><strong>Delays:</strong> Missing inputs or late approvals may shift target dates</li>
-            </ul>
+          
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+            <div className="flex items-start">
+              <AlertCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5" />
+              <p className="text-sm text-blue-800">
+                This agreement supplements your specific Service Proposal. In case of any discrepancy, 
+                the signed Proposal and Terms of Service take precedence.
+              </p>
+            </div>
           </div>
+        </div>
 
-          {/* Change Requests */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">4) Change Requests</h2>
-            <p>
-              Any request outside the approved scope will be quoted separately. We'll confirm effort,
-              cost, and new timelines before proceeding.
-            </p>
+        {/* Services Overview */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <Target className="h-6 w-6 mr-2 text-blue-600" />
+            Services Overview
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                title: "Website Development",
+                price: "₹9,999+",
+                features: ["7-10 days delivery", "React/TypeScript", "Mobile responsive", "SEO optimized"]
+              },
+              {
+                title: "SEO Services",
+                price: "₹7,779/month",
+                features: ["4 monthly reports", "4 blog articles", "Keyword optimization", "Performance tracking"]
+              },
+              {
+                title: "Social Media Management",
+                price: "₹4,449/month",
+                features: ["Content calendar", "Daily posts", "Engagement management", "Analytics reports"]
+              },
+              {
+                title: "Google Business Profile",
+                price: "₹2,499",
+                features: ["Profile setup", "Review management", "Local SEO", "Photo optimization"]
+              },
+              {
+                title: "Meta Ads Management",
+                price: "₹9,999/month",
+                features: ["Campaign strategy", "Ad creative", "Audience targeting", "ROI tracking"]
+              },
+              {
+                title: "Lead Generation",
+                price: "₹6,000/month",
+                features: ["Lead strategy", "Campaign setup", "CRM integration", "Conversion tracking"]
+              }
+            ].map((service, index) => (
+              <div key={index} className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
+                  <span className="bg-blue-100 text-blue-700 text-sm font-semibold px-2 py-1 rounded">
+                    {service.price}
+                  </span>
+                </div>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Payments */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">5) Payments & Ad Spend</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li><strong>Projects:</strong> Typically 50% advance to start, balance before handover/deployment</li>
-              <li><strong>Monthly Services:</strong> Pre-paid monthly and auto-renew unless cancelled (7-day prior notice)</li>
-              <li><strong>Ad Spend:</strong> Paid directly by client platform-side; our management fee is separate</li>
-              <li><strong>Payment Methods:</strong> Bank transfer, UPI, credit/debit cards accepted</li>
-            </ul>
-          </div>
-
-          {/* KPI & Reporting */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">6) KPIs, Tracking & Reporting</h2>
-            <p className="mb-2">
-              We align KPIs during kickoff (e.g., engagement rate, leads generated, ROAS, CTR, conversions). We'll set up tracking
-              (GA4/GTM, pixels, events) where access permits and provide periodic performance reports.
-            </p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Monthly performance reports for all active services</li>
-              <li>Real-time dashboard access for social media performance</li>
-              <li>Attribution depends on platform policies, user consent, and technical constraints</li>
-              <li>Data integrity relies on correct implementation and third-party systems</li>
-            </ul>
-          </div>
-
-          {/* Communication & SLA */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">7) Communication & SLA</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Primary channels: WhatsApp, email and project management tools</li>
-              <li>Response times: within 1–2 business days (Mon–Fri IST), urgent queries within hours</li>
-              <li>Weekly/bi-weekly syncs for active retainers or complex campaigns</li>
-              <li>24/7 support available for critical issues</li>
-            </ul>
-          </div>
-
-          {/* Compliance */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">8) Compliance & Platform Policies</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>All campaigns and content must comply with Google, Meta, and other platform policies</li>
-              <li>Client is responsible for legal and regulatory compliance of business claims and content</li>
-              <li>We do not control platform decisions such as disapprovals, bans, or outages</li>
-              <li>Content follows community guidelines and advertising policies</li>
-            </ul>
-          </div>
-
-          {/* IP & Content */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">9) Intellectual Property & Licensing</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Upon full payment, final deliverables (designs/content/code excluding paid components) are licensed or assigned to you as per Proposal/SOW</li>
-              <li>Our pre-existing frameworks, templates, and strategies remain our IP; you receive a license to use them within the deliverables</li>
-              <li>Paid fonts, stock media, and plugins follow their vendor licenses</li>
-              <li>Client retains ownership of their brand assets and business information</li>
-            </ul>
-          </div>
-
-          {/* Data Protection */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">10) Confidentiality & Data Protection</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>We treat your business data as confidential and use it only for agreed services</li>
-              <li>We follow reasonable security practices. Personal data handling will align with applicable laws (e.g., India DPDP)</li>
-              <li>Use a password manager or secure method for sharing credentials</li>
-              <li>Data is stored securely and accessed only by authorized team members</li>
-            </ul>
-          </div>
-
-          {/* Acceptance & Handover */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">11) Acceptance, Launch & Handover</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>We share content previews and campaign strategies for review before execution</li>
-              <li>After approval & final payment, we proceed to launch/activation</li>
-              <li>Handover items may include: social media credentials, analytics access, campaign documentation, performance reports</li>
-              <li>Post-launch support (minor adjustments) up to 14 calendar days unless otherwise stated</li>
-            </ul>
-          </div>
-
-          {/* Termination */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">12) Pause, Cancellation & Termination</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Monthly services can be cancelled for the next cycle with 7-day prior notice</li>
-              <li>Projects can be cancelled with written notice; completed milestones/work to-date remain billable</li>
-              <li>Non-payment or policy breach may lead to suspension/termination</li>
-              <li>Refunds processed as per our refund policy outlined in Terms of Service</li>
-            </ul>
-          </div>
-
-          {/* Force Majeure & Disputes */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">13) Force Majeure & Dispute Resolution</h2>
-            <p className="mb-2">
-              We are not liable for delays caused by events beyond reasonable control (e.g., platform outages,
-              regulatory actions, disasters, technical issues).
-            </p>
-            <p>
-              Disputes will be addressed in good faith discussions first. Failing settlement, competent
-              courts will have exclusive jurisdiction as per our Terms of Service.
-            </p>
-          </div>
-
-          {/* Service Specific Terms */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">14) Service Specific Terms</h2>
+        {/* Agreement Sections */}
+        <div className="space-y-8">
+          {/* Section 1: Client Responsibilities */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <Users className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">1. Client Responsibilities</h2>
+            </div>
+            
             <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Social Media Management</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
-                  <li>15 creative posts and 2 videos/reels included monthly</li>
-                  <li>Content calendar shared in advance for approval</li>
-                  <li>Performance reports delivered monthly</li>
-                  <li>Additional posts/videos available as add-ons</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Website Development</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
-                  <li>5-page responsive website standard package</li>
-                  <li>1 year hosting and SSL certificate included</li>
-                  <li>6 months technical support post-launch</li>
-                  <li>Additional pages available as add-ons</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">SEO Services</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
-                  <li>Minimum 3-month commitment recommended</li>
-                  <li>Monthly ranking reports and optimization</li>
-                  <li>Keyword research and on-page optimization included</li>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-gray-900 mb-2">Required Assets & Access</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                    Brand assets (logo, colors, fonts, guidelines)
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                    Business information and target audience details
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                    Access to necessary accounts (CMS, social media, analytics)
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                    Content and copy materials
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                    Timely feedback and approvals (within 2-3 business days)
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Kickoff Checklist */}
-          <div className="border-t pt-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Kickoff Checklist</h2>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Approved Proposal/SOW & initial invoice paid</li>
-              <li>Primary contact details & communication channel confirmed</li>
-              <li>Brand assets + business information provided</li>
-              <li>Access shared: Social media accounts, Analytics, CMS/Hosting as needed</li>
-              <li>KPIs & reporting cadence agreed</li>
-              <li>Content strategy and target audience defined</li>
-            </ul>
+          {/* Section 2: Project Timeline */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <Clock className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">2. Project Timeline & Milestones</h2>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                {[
+                  { phase: "Discovery & Planning", duration: "2-3 days", tasks: ["Requirements analysis", "Strategy development"] },
+                  { phase: "Design & Development", duration: "7-10 days", tasks: ["UI/UX design", "Development"] },
+                  { phase: "Review & Testing", duration: "3-4 days", tasks: ["Client review", "Testing & QA"] },
+                  { phase: "Launch & Support", duration: "1-2 days", tasks: ["Deployment", "Post-launch support"] }
+                ].map((phase, index) => (
+                  <div key={index} className="border border-gray-200 rounded-lg p-4">
+                    <div className="text-sm font-semibold text-blue-600 mb-1">Phase {index + 1}</div>
+                    <h3 className="font-semibold text-gray-900 mb-2">{phase.phase}</h3>
+                    <div className="text-xs text-gray-500 mb-3">{phase.duration}</div>
+                    <ul className="space-y-1">
+                      {phase.tasks.map((task, idx) => (
+                        <li key={idx} className="text-xs text-gray-600">• {task}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                <p className="text-sm text-yellow-800">
+                  <strong>Note:</strong> Timelines are estimates. Delays in asset delivery or approvals may extend project duration.
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Contact */}
-          <div className="border rounded-xl p-5 bg-gray-50">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Questions?</h3>
-            <p className="text-gray-700">
-              Email <a className="text-pink-700 underline" href="mailto:contact@digitalagency.com">contact@digitalagency.com</a> or call{" "}
-              <a className="text-pink-700 underline" href="tel:+919521281509">+91 9521281509</a>. We're happy to clarify any part of this Agreement.
-            </p>
-            <p className="text-sm text-gray-600 mt-2">
-              WhatsApp: <a className="text-pink-700 underline" href="https://wa.me/919521281509">+91 9521281509</a>
-            </p>
+          {/* Section 3: Payment Terms */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <CreditCard className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">3. Payment Terms</h2>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-2">Project-Based</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>50% advance to commence work</li>
+                    <li>50% upon completion before launch</li>
+                    <li>Additional milestones for larger projects</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-2">Monthly Retainers</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>Pre-paid monthly billing</li>
+                    <li>Auto-renew unless cancelled</li>
+                    <li>7-day notice for cancellation</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-2">Payment Methods</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>UPI payments</li>
+                    <li>Bank transfer</li>
+                    <li>Credit/Debit cards</li>
+                    <li>Online payment gateways</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <p className="text-xs text-gray-500">
-            Disclaimer: This template is for general guidance and not legal advice. Please review with your legal counsel if needed.
+          {/* Section 4: Communication & Support */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <MessageCircle className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">4. Communication & Support</h2>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Primary Channels</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-center">
+                      <MessageCircle className="h-4 w-4 text-green-500 mr-2" />
+                      WhatsApp: +977 97073824881
+                    </li>
+                    <li className="flex items-center">
+                      <Mail className="h-4 w-4 text-blue-500 mr-2" />
+                      Email: info@growthservice.in
+                    </li>
+                    <li className="flex items-center">
+                      <Phone className="h-4 w-4 text-purple-500 mr-2" />
+                      Phone: +91 93414 36937
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Response Times</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>Standard queries: 24-48 business hours</li>
+                    <li>Urgent issues: 4-6 hours response</li>
+                    <li>Critical emergencies: Immediate attention</li>
+                    <li>Regular sync calls: Weekly/Bi-weekly</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 5: Scope & Changes */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <Zap className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">5. Scope Management</h2>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-gray-900 mb-2">Change Request Process</h3>
+                <ol className="space-y-2 text-sm text-gray-600">
+                  <li>1. Submit change request in writing</li>
+                  <li>2. We assess impact on timeline & cost</li>
+                  <li>3. Provide revised quote & timeline</li>
+                  <li>4. Approval & implementation</li>
+                </ol>
+              </div>
+              
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                <p className="text-sm text-blue-800">
+                  Additional work outside original scope will be quoted separately. 
+                  All changes require written approval before implementation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 6: Deliverables & Approval */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <FileText className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">6. Deliverables & Approval Process</h2>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Review & Approval</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>Up to 2 revision rounds per deliverable</li>
+                    <li>48-hour review period for each submission</li>
+                    <li>Final approval required in writing</li>
+                    <li>Delayed approvals may impact timelines</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Post-Launch Support</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>14-day warranty period for fixes</li>
+                    <li>Documentation & training provided</li>
+                    <li>Handover of all assets & credentials</li>
+                    <li>Optional maintenance packages available</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 7: Confidentiality */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center mb-4">
+              <Shield className="h-6 w-6 text-blue-600 mr-3" />
+              <h2 className="text-xl font-bold text-gray-900">7. Confidentiality & Data Protection</h2>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start">
+                    <Shield className="h-4 w-4 text-blue-500 mr-2 mt-0.5" />
+                    All client information treated as confidential
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="h-4 w-4 text-blue-500 mr-2 mt-0.5" />
+                    Data used only for project purposes
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="h-4 w-4 text-blue-500 mr-2 mt-0.5" />
+                    Secure storage and access protocols
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="h-4 w-4 text-blue-500 mr-2 mt-0.5" />
+                    Compliance with applicable data protection laws
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Acceptance Section */}
+        <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-200">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Acceptance & Next Steps</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              By proceeding with our services, you acknowledge and agree to the terms outlined in this 
+              Onboarding Agreement along with our Terms of Service.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={handleDownloadPDF}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+              >
+                <Download className="h-5 w-5" />
+                Download & Sign Agreement
+              </button>
+              
+              <a
+                href="https://wa.me/97797073824881"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp for Questions
+              </a>
+            </div>
+            
+            <p className="text-sm text-gray-500 mt-6">
+              Need clarification? Contact us at <a href="tel:+919341436937" className="text-blue-600">+91 93414 36937</a> or <a href="mailto:info@growthservice.in" className="text-blue-600">info@growthservice.in</a>
+            </p>
+          </div>
+        </div>
+
+        {/* Footer Note */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500">
+            Growth Service | Vrindavan, Mathura | GSTIN: 09AA******1Z5 | MSME Registered
+          </p>
+          <p className="text-xs text-gray-400 mt-2">
+            This document is for informational purposes and does not constitute legal advice.
+            Please consult with legal counsel for specific legal guidance.
           </p>
         </div>
-      </section>
+      </div>
+
+      {/* Mobile Optimizations */}
+      <style jsx>{`
+        @media (max-width: 640px) {
+          button, a {
+            min-height: 44px;
+          }
+          
+          .grid-cols-4 {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      `}</style>
     </div>
   );
 };
