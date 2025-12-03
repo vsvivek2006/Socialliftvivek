@@ -57,10 +57,9 @@ const Header: React.FC = () => {
   }, []);
 
   const topNavItems = [
-    { name: "India +91-9560132713", href: "tel:+919560132713", icon: "📞" },
-    { name: "US +1-855-763-0320", href: "tel:+18557630320", icon: "📞" },
-    { name: "Email", href: "mailto:contactus@ezrankings.com", icon: "✉️" },
-    { name: "WhatsApp", href: "https://wa.me/919521281509", icon: "💬" }
+    { name: "India +91-93414-36937", href: "tel:+919341436937", icon: "📞" },
+    { name: "WhatsApp +977-97073824881", href: "https://wa.me/97797073824881", icon: "💬" },
+    { name: "Email", href: "mailto:info@growthservice.in", icon: "✉️" }
   ];
 
   const mainNavItems = [
@@ -82,49 +81,40 @@ const Header: React.FC = () => {
 
   // Digital Marketing Submenu
   const digitalMarketingSubmenu = [
-    { name: "Next-Gen SEO", href: "/seo" },
-    { name: "Organic Search", href: "/organic-search" },
-    { name: "SEO by Industries", href: "/seo-industries" },
-    { name: "Paid Marketing", href: "/paid-marketing" },
-    { name: "Social Media", href: "/social-media" },
-    { name: "ORM Services", href: "/orm" },
-    { name: "App Store SEO", href: "/app-store-seo" },
-    { name: "Content Marketing", href: "/content-marketing" }
+    { name: "SEO Services", href: "/seo" },
+    { name: "Social Media Management", href: "/social-media" },
+    { name: "Meta Ads Management", href: "/paid-marketing" },
+    { name: "Google Business Profile", href: "/local-seo" },
+    { name: "Content Marketing", href: "/content-marketing" },
+    { name: "Lead Generation", href: "/lead-generation" },
+    { name: "Brand Strategy", href: "/branding" }
   ];
 
   // Design & Development Submenu
   const designDevelopmentSubmenu = [
     { name: "Website Development", href: "/website-development" },
-    { name: "App Development", href: "/app-development" },
     { name: "UI/UX Design", href: "/ui-ux-design" },
     { name: "WordPress Development", href: "/wordpress-development" },
-    { name: "PHP Development", href: "/php-development" },
-    { name: "Magento Development", href: "/magento-development" },
-    { name: "Laravel Development", href: "/laravel-development" },
-    { name: "CMS Development", href: "/cms-development" },
-    { name: "Shopify Development", href: "/shopify-development" }
+    { name: "E-commerce Development", href: "/ecommerce-development" },
+    { name: "Mobile App Development", href: "/app-development" }
   ];
 
   // White Label Submenu
   const whiteLabelSubmenu = [
     { name: "White Label SEO", href: "/white-label-seo" },
-    { name: "SEO Reseller", href: "/seo-reseller" },
-    { name: "SEO Reseller Packages", href: "/seo-reseller-packages" },
-    { name: "Outsource SEO", href: "/outsource-seo" },
     { name: "White Label PPC", href: "/white-label-ppc" },
-    { name: "White Label SMO", href: "/white-label-smo" }
+    { name: "White Label Social Media", href: "/white-label-smo" },
+    { name: "White Label Web Development", href: "/white-label-web" }
   ];
 
   // Resources Submenu
   const resourcesSubmenu = [
     { name: "Case Studies", href: "/case-studies" },
     { name: "Our Portfolio", href: "/portfolio" },
-    { name: "SEO Results", href: "/seo-results" },
-    { name: "What Clients Say", href: "/testimonials" },
+    { name: "Client Testimonials", href: "/testimonials" },
+    { name: "Digital Marketing Guides", href: "/resources" },
     { name: "Help Center", href: "/help-center" }
   ];
-
-  const linkBase = "px-4 py-2 rounded-md text-sm font-medium transition-all duration-200";
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -170,7 +160,7 @@ const Header: React.FC = () => {
             {/* Right - Festive Banner */}
             <div className="hidden lg:flex items-center">
               <div className="bg-gradient-to-r from-red-500 to-orange-500 px-4 py-1 rounded-full text-xs font-bold animate-pulse">
-                🎉 FESTIVE RUSH IS HERE 🎉
+                🚀 DIGITAL GROWTH PARTNER 🚀
               </div>
             </div>
           </div>
@@ -180,7 +170,7 @@ const Header: React.FC = () => {
       {/* Main Navigation */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main">
         <div className="flex justify-between items-center h-20">
-          {/* Logo with Animation */}
+          {/* Logo with Circular Design */}
           <div className="flex items-center">
             <Link 
               to="/" 
@@ -189,25 +179,28 @@ const Header: React.FC = () => {
             >
               <div className="flex-shrink-0 relative">
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-0 group-hover:opacity-100 blur transition-opacity duration-300"></div>
-                <img 
-                  src="/logo.png" 
-                  alt="EZ Rankings Logo" 
-                  className="h-16 w-16 object-contain relative z-10 animate-float"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const fallback = document.createElement('div');
-                    fallback.className = 'h-16 w-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg relative z-10 animate-float';
-                    fallback.textContent = 'EZR';
-                    e.currentTarget.parentNode?.appendChild(fallback);
-                  }}
-                />
+                {/* Circular Logo Container */}
+                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center overflow-hidden shadow-lg relative z-10 animate-float">
+                  <img 
+                    src="/logo.png" 
+                    alt="Growth Service Logo" 
+                    className="h-14 w-14 object-contain p-2"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.className = 'h-full w-full flex items-center justify-center text-white font-bold text-xl';
+                      fallback.textContent = 'GS';
+                      e.currentTarget.parentNode?.appendChild(fallback);
+                    }}
+                  />
+                </div>
               </div>
               <div className="hidden lg:block">
                 <h1 className="text-2xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
-                  rankings<sup className="text-xs">™</sup>
+                  Growth Service
                 </h1>
                 <p className="text-sm text-gray-600 font-medium animate-fade-in">
-                  Your digital partner
+                  Your Digital Growth Partner
                 </p>
               </div>
             </Link>
@@ -420,10 +413,10 @@ const Header: React.FC = () => {
               ))}
             </div>
 
-            {/* Festive Banner Mobile */}
-            <div className="px-3 py-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg mt-4 text-center">
+            {/* Growth Banner Mobile */}
+            <div className="px-3 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mt-4 text-center">
               <p className="text-white font-bold text-sm animate-pulse">
-                🎉 FESTIVE RUSH IS HERE 🎉
+                🚀 YOUR DIGITAL GROWTH PARTNER 🚀
               </p>
             </div>
           </div>
