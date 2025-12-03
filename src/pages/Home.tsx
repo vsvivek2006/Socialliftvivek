@@ -9,176 +9,203 @@ const Home = () => {
   // Hero Slides
   const heroSlides = [
     {
-      title: "Professional Web Development & Digital Marketing",
-      subtitle: "Starting from ₹9,999",
-      description: "Get custom websites with React, TypeScript, Node.js & MongoDB. Complete digital solutions for your business growth.",
+      title: "Transform Your Digital Presence",
+      subtitle: "Professional Web & Marketing Solutions",
+      description: "Custom websites, SEO optimization, and social media strategies to grow your business online.",
       cta: "Start Your Project"
     },
     {
-      title: "SEO Services Starting ₹7,779/month",
-      subtitle: "Get 4 Reports + 4 Blogs Monthly",
-      description: "Improve your search rankings with our comprehensive SEO packages. 5-10 keywords optimization included.",
-      cta: "Get SEO Audit"
+      title: "Boost Your Online Visibility",
+      subtitle: "Results-Driven Digital Marketing",
+      description: "Comprehensive SEO and social media management to increase your reach and engagement.",
+      cta: "Get Free Audit"
     },
     {
-      title: "Social Media Management from ₹4,449/month",
-      subtitle: "Complete Social Media Strategy",
-      description: "Boost engagement and grow your audience with professional social media management.",
-      cta: "View Social Plans"
+      title: "Modern Web Solutions",
+      subtitle: "Built with Latest Technologies",
+      description: "Fast, responsive websites using React, Node.js, and cutting-edge development practices.",
+      cta: "View Services"
     }
   ];
 
-  // Services
-  const services = [
+  // Services Categories
+  const serviceCategories = [
     {
-      icon: "💻",
+      title: "Web Development",
+      icon: "🌐",
+      services: [
+        "Custom Website Design",
+        "E-commerce Solutions",
+        "Responsive Development",
+        "Website Maintenance"
+      ],
+      color: "from-blue-500 to-cyan-400"
+    },
+    {
+      title: "Digital Marketing",
+      icon: "📈",
+      services: [
+        "SEO Optimization",
+        "Social Media Marketing",
+        "Content Strategy",
+        "PPC Campaigns"
+      ],
+      color: "from-purple-500 to-pink-400"
+    },
+    {
+      title: "Branding",
+      icon: "🎨",
+      services: [
+        "Logo & Identity",
+        "Brand Strategy",
+        "Graphic Design",
+        "Marketing Materials"
+      ],
+      color: "from-orange-500 to-yellow-400"
+    },
+    {
+      title: "Business Solutions",
+      icon: "💼",
+      services: [
+        "Lead Generation",
+        "CRM Setup",
+        "Analytics & Reporting",
+        "Consultation"
+      ],
+      color: "from-green-500 to-emerald-400"
+    }
+  ];
+
+  // Our Services
+  const ourServices = [
+    {
       title: "Website Development",
-      price: "₹9,999+",
-      description: "Professional websites with React, TypeScript, Node.js & MongoDB",
-      features: ["7-10 Days Delivery", "Mobile Responsive", "WhatsApp Integration", "Free 1 Month Support"]
+      description: "Custom websites built with modern technologies for optimal performance and user experience.",
+      features: ["Mobile-First Design", "Fast Loading", "SEO Optimized", "Easy CMS"]
     },
     {
-      icon: "🔍",
-      title: "SEO Package",
-      price: "₹7,779/month",
-      description: "Complete SEO with monthly reports and content",
-      features: ["4 Monthly Reports", "4 Blogs Monthly", "5-10 Keywords", "Ranking Improvement"]
+      title: "SEO Services",
+      description: "Improve search rankings with comprehensive on-page and off-page optimization strategies.",
+      features: ["Keyword Research", "Technical SEO", "Content Creation", "Performance Tracking"]
     },
     {
-      icon: "📱",
       title: "Social Media Management",
-      price: "₹4,449/month",
-      description: "Complete social media strategy and management",
-      features: ["Content Calendar", "Daily Posts", "Engagement Management", "Analytics Reports"]
+      description: "Complete social media strategy and management to build your brand presence.",
+      features: ["Content Planning", "Community Management", "Campaign Analysis", "Growth Strategy"]
     },
     {
-      icon: "🎯",
-      title: "Meta Ads Management",
-      price: "₹9,999/month",
-      description: "Professional Facebook & Instagram ads",
-      features: ["Campaign Strategy", "Ad Creative Design", "Audience Targeting", "ROI Tracking"]
+      title: "E-commerce Solutions",
+      description: "Complete online store setup with payment integration and inventory management.",
+      features: ["Secure Payments", "Product Management", "Order Processing", "Analytics Dashboard"]
     },
     {
-      icon: "🏢",
-      title: "Google My Business",
-      price: "₹2,499",
-      description: "Complete GMB setup and optimization",
-      features: ["Profile Setup", "Review Management", "Local SEO", "Photo Optimization"]
+      title: "Content Marketing",
+      description: "Strategic content creation to engage your audience and drive conversions.",
+      features: ["Blog Writing", "Video Content", "Infographics", "Content Strategy"]
     },
     {
-      icon: "🚀",
-      title: "Lead Generation",
-      price: "₹6,000/month",
-      description: "Targeted campaigns for quality leads",
-      features: ["Lead Strategy", "Campaign Setup", "CRM Integration", "Conversion Tracking"]
+      title: "Email Marketing",
+      description: "Targeted email campaigns to nurture leads and retain customers.",
+      features: ["Automation", "Segmentation", "Analytics", "Template Design"]
     }
   ];
 
-  // Stats
-  const stats = [
-    { number: "100+", label: "Happy Clients" },
-    { number: "200+", label: "Projects Delivered" },
-    { number: "24/7", label: "Support Available" },
-    { number: "₹1Cr+", label: "Revenue Generated" }
-  ];
-
-  // Why Choose Us
-  const benefits = [
-    {
-      icon: "⚡",
-      title: "Fast Delivery",
-      description: "Websites in 7-10 days. Quick turnaround without quality compromise."
-    },
-    {
-      icon: "💰",
-      title: "Affordable Pricing",
-      description: "Professional services starting from just ₹2,499. No hidden costs."
-    },
-    {
-      icon: "🎯",
-      title: "Expert Team",
-      description: "Certified developers & marketers with proven track records."
-    },
-    {
-      icon: "🔄",
-      title: "Flexible Packages",
-      description: "Customizable services that grow with your business needs."
-    }
-  ];
-
-  // Process
+  // Our Process
   const process = [
     {
-      step: "1",
-      title: "Requirement Analysis",
-      description: "We understand your business needs and goals"
+      step: "01",
+      title: "Discovery",
+      description: "We understand your business goals and target audience.",
+      icon: "🔍"
     },
     {
-      step: "2",
-      title: "Strategy & Planning",
-      description: "Create customized plan with timeline and pricing"
+      step: "02",
+      title: "Strategy",
+      description: "Create a customized plan with clear objectives and timeline.",
+      icon: "📋"
     },
     {
-      step: "3",
-      title: "Development & Implementation",
-      description: "Our expert team builds your solution"
+      step: "03",
+      title: "Execution",
+      description: "Our expert team implements the approved strategy.",
+      icon: "🚀"
     },
     {
-      step: "4",
-      title: "Results & Optimization",
-      description: "Continuous improvement for maximum ROI"
+      step: "04",
+      title: "Optimization",
+      description: "Continuous monitoring and improvement for best results.",
+      icon: "📊"
     }
+  ];
+
+  // Our Clients
+  const clients = [
+    { name: "TechCorp Solutions", industry: "Technology", logo: "💻" },
+    { name: "HealthPlus Clinic", industry: "Healthcare", logo: "🏥" },
+    { name: "EduSmart Academy", industry: "Education", logo: "🎓" },
+    { name: "Foodie's Delight", industry: "Restaurant", logo: "🍽️" },
+    { name: "StyleHub Fashion", industry: "Retail", logo: "👗" },
+    { name: "AutoCare Services", industry: "Automotive", logo: "🚗" },
+    { name: "GreenLife Organic", industry: "Wellness", logo: "🌿" },
+    { name: "BuildRight Constructions", industry: "Construction", logo: "🏗️" }
+  ];
+
+  // Technology Stack
+  const technologies = [
+    { name: "React.js", type: "Frontend", icon: "⚛️" },
+    { name: "Node.js", type: "Backend", icon: "🟢" },
+    { name: "MongoDB", type: "Database", icon: "🍃" },
+    { name: "Next.js", type: "Framework", icon: "▲" },
+    { name: "Tailwind CSS", type: "Styling", icon: "🎨" },
+    { name: "TypeScript", type: "Language", icon: "📘" },
+    { name: "Express.js", type: "Backend", icon: "🚂" },
+    { name: "GraphQL", type: "API", icon: "📊" }
   ];
 
   // Testimonials
   const testimonials = [
     {
-      text: "Website delivered in 10 days! The quality exceeded our expectations. Highly recommended!",
+      text: "Their team delivered exactly what we needed on time. Professional and highly skilled!",
+      author: "Sarah Johnson",
+      role: "Marketing Director",
+      company: "TechCorp Solutions"
+    },
+    {
+      text: "Our website traffic increased by 300% in just 3 months. Excellent SEO work!",
       author: "Rajesh Kumar",
-      company: "Travel Agency Owner",
-      rating: 5
+      role: "Business Owner",
+      company: "HealthPlus Clinic"
     },
     {
-      text: "SEO package brought 300% more organic traffic in 4 months. Best investment!",
+      text: "The social media strategy they implemented helped us double our online engagement.",
       author: "Priya Sharma",
-      company: "E-commerce Store",
-      rating: 5
-    },
-    {
-      text: "Social media management increased our engagement by 250% in 3 months.",
-      author: "Amit Patel",
-      company: "Restaurant Owner",
-      rating: 5
+      role: "Brand Manager",
+      company: "StyleHub Fashion"
     }
   ];
 
-  // Project Types
-  const projects = [
+  // Benefits
+  const benefits = [
     {
-      type: "Tour & Travel Website",
-      price: "₹14,999",
-      pages: ["Home Page", "Tour Packages", "Booking System", "About & Contact"]
+      title: "Expert Team",
+      description: "Certified professionals with years of industry experience",
+      icon: "👨‍💻"
     },
     {
-      type: "Guest House Website",
-      price: "₹12,999",
-      pages: ["Room Booking", "Payment Gateway", "Gallery", "Amenities"]
+      title: "Fast Delivery",
+      description: "Quick turnaround without compromising on quality",
+      icon: "⚡"
     },
     {
-      type: "Business Website",
-      price: "₹9,999",
-      pages: ["Home Page", "Services", "About", "Contact"]
+      title: "Custom Solutions",
+      description: "Tailored strategies for your unique business needs",
+      icon: "🎯"
     },
     {
-      type: "B2B Setup",
-      price: "₹24,999",
-      pages: ["Website + Social Media", "Market Guidance", "Lead Strategy", "Branding"]
+      title: "Ongoing Support",
+      description: "Continuous support and maintenance services",
+      icon: "🛠️"
     }
-  ];
-
-  // Technology Stack
-  const technologies = [
-    "React.js", "TypeScript", "Node.js", "MongoDB", "Next.js", "Tailwind CSS"
   ];
 
   // Auto slide change
@@ -199,224 +226,136 @@ const Home = () => {
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
     <div className="min-h-screen overflow-hidden">
       <Helmet>
-        <title>Growth Service - Web Development & Digital Marketing Agency</title>
+        <title>Growth Service | Professional Digital Solutions Agency</title>
         <meta 
           name="description" 
-          content="Professional web development & digital marketing services. Websites from ₹9,999, SEO from ₹7,779, Social Media from ₹4,449. Get custom solutions for your business."
+          content="Professional web development and digital marketing agency. Custom websites, SEO, social media management, and complete digital solutions for business growth."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Helmet>
 
-      {/* === HERO SECTION (Mobile Optimized) === */}
-      <section className="relative bg-gradient-to-r from-purple-900 via-pink-800 to-blue-900 text-white py-12 md:py-20 overflow-hidden">
-        {/* Mobile-friendly slides */}
+      {/* === HERO SECTION === */}
+      <section className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white py-12 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl">
+          <div className="text-center">
             {heroSlides.map((slide, index) => (
               <div
                 key={index}
-                className={`transition-all duration-500 ease-in-out ${
+                className={`transition-all duration-700 ease-in-out ${
                   index === currentSlide 
-                    ? 'opacity-100 translate-x-0' 
-                    : 'absolute inset-0 opacity-0 translate-x-full'
+                    ? 'opacity-100 translate-y-0' 
+                    : 'absolute inset-0 opacity-0 translate-y-4'
                 }`}
               >
-                <div className="p-6 md:p-12 lg:p-16">
-                  <div className="max-w-2xl">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                      {slide.title}
-                    </h1>
-                    <div className="text-lg sm:text-xl md:text-2xl text-pink-300 font-semibold mb-4">
-                      {slide.subtitle}
-                    </div>
-                    <p className="text-sm sm:text-base md:text-lg text-purple-100 mb-6 md:mb-8 leading-relaxed">
-                      {slide.description}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
-                        to="/book-call"
-                        className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg text-center"
-                      >
-                        {slide.cta}
-                      </Link>
-                      <a
-                        href="https://wa.me/97797073824881"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="border-2 border-white hover:bg-white hover:text-purple-900 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2"
-                      >
-                        <span className="text-lg">💬</span>
-                        <span>WhatsApp Now</span>
-                      </a>
-                    </div>
-                  </div>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                  {slide.title}
+                </h1>
+                <div className="text-lg sm:text-xl md:text-2xl text-blue-300 font-medium mb-6">
+                  {slide.subtitle}
+                </div>
+                <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+                  {slide.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold text-base transition-all hover:scale-105 shadow-lg"
+                  >
+                    {slide.cta}
+                  </Link>
+                  <a
+                    href="https://wa.me/97797073824881"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-lg font-semibold text-base transition-all"
+                  >
+                    Schedule Free Consultation
+                  </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Slide Indicators (Mobile-friendly) */}
-          <div className="flex justify-center mt-6 space-x-2">
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
             {heroSlides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
+                className={`w-2 h-2 rounded-full transition-all ${
                   index === currentSlide 
-                    ? 'bg-white scale-125' 
+                    ? 'bg-white w-8' 
                     : 'bg-white/50'
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-
-          {/* Navigation Arrows (Hidden on very small screens) */}
-          <button
-            onClick={prevSlide}
-            className="hidden sm:block absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm"
-            aria-label="Previous slide"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="hidden sm:block absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm"
-            aria-label="Next slide"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
         </div>
       </section>
 
-      {/* === QUICK STATS === */}
-      <section className="py-8 md:py-12 bg-white">
+      {/* === SERVICE CATEGORIES === */}
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-600 mb-1">{stat.number}</div>
-                <div className="text-xs sm:text-sm text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === SERVICES SECTION === */}
-      <section className="py-12 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Our <span className="text-purple-600">Services</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional digital solutions tailored for your business growth
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive digital solutions tailored to your business needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 sm:p-6">
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className="text-2xl sm:text-3xl">{service.icon}</div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{service.title}</h3>
-                    <div className="text-base sm:text-lg font-bold text-purple-600">{service.price}</div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serviceCategories.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                <div className={`text-4xl mb-4 w-16 h-16 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center text-white`}>
+                  {category.icon}
                 </div>
-                <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
-                <div className="space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-xs sm:text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.title}</h3>
+                <ul className="space-y-3">
+                  {category.services.map((service, idx) => (
+                    <li key={idx} className="flex items-center text-gray-600">
                       <span className="text-green-500 mr-2">✓</span>
-                      <span>{feature}</span>
-                    </div>
+                      {service}
+                    </li>
                   ))}
-                </div>
-                <Link
-                  to="/contact"
-                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all hover:scale-105"
-                >
-                  Get Quote
-                </Link>
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* === WHY CHOOSE US === */}
-      <section className="py-12 md:py-20 bg-white">
+      {/* === OUR PROCESS === */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Why Choose <span className="text-purple-600">Growth Service?</span>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Our <span className="text-blue-600">Process</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              What makes us different from other digital agencies
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              A structured approach to ensure successful project delivery
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-5 sm:p-6 text-center">
-                <div className="text-3xl sm:text-4xl mb-3">{benefit.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === PROJECT TYPES === */}
-      <section className="py-12 md:py-20 bg-gradient-to-r from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Popular <span className="text-purple-600">Projects</span>
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Custom solutions for different business needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {projects.map((project, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-5 sm:p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">{project.type}</h3>
-                  <div className="text-lg sm:text-xl font-bold text-purple-600">{project.price}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {process.map((item, index) => (
+              <div key={index} className="relative">
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 text-center h-full">
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <div className="text-sm font-semibold text-blue-600 mb-2">{item.step}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
                 </div>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Includes Pages:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.pages.map((page, idx) => (
-                      <span key={idx} className="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">
-                        {page}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <a
-                  href={`https://wa.me/97797073824881?text=Hello! I'm interested in ${project.type} (${project.price}). Please provide details.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all hover:scale-105"
-                >
-                  💬 Get Quote on WhatsApp
-                </a>
+                {index < process.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 right-0 w-6 h-0.5 bg-blue-200 transform translate-x-3"></div>
+                )}
               </div>
             ))}
           </div>
@@ -424,47 +363,102 @@ const Home = () => {
       </section>
 
       {/* === TECHNOLOGY STACK === */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Our <span className="text-purple-600">Technology</span> Stack
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Our <span className="text-green-600">Technology</span> Stack
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Modern technologies for better performance and scalability
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Modern tools and technologies for cutting-edge solutions
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold text-sm sm:text-base">
-                {tech}
+              <div key={index} className="bg-white rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                <div className="text-2xl mb-2">{tech.icon}</div>
+                <div className="font-bold text-gray-900">{tech.name}</div>
+                <div className="text-sm text-gray-500">{tech.type}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* === PROCESS === */}
-      <section className="py-12 md:py-20 bg-gray-50">
+      {/* === OUR CLIENTS === */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Our <span className="text-purple-600">Process</span>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Our <span className="text-purple-600">Clients</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Simple 4-step process for successful projects
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Trusted by businesses across various industries
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {process.map((step, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-4">
-                  {step.step}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {clients.map((client, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-white hover:shadow-lg transition-all">
+                <div className="text-3xl mb-4">{client.logo}</div>
+                <h3 className="font-bold text-gray-900">{client.name}</h3>
+                <p className="text-sm text-gray-500">{client.industry}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === DETAILED SERVICES === */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              What We <span className="text-orange-600">Offer</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive digital services for your business growth
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ourServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <div className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-gray-700">
+                      <span className="text-green-500 mr-2">•</span>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === BENEFITS === */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              Why Choose <span className="text-blue-300">Us</span>
+            </h2>
+            <p className="text-lg text-blue-200 max-w-2xl mx-auto">
+              We combine expertise with dedication to deliver exceptional results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div className="text-3xl mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                <p className="text-blue-100">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -472,121 +466,90 @@ const Home = () => {
       </section>
 
       {/* === TESTIMONIALS === */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Client <span className="text-purple-600">Testimonials</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              What our clients say about working with us
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Hear what our clients say about working with us
             </p>
           </div>
 
-          <div className="relative bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl shadow-lg p-6 sm:p-8">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 shadow-lg">
             <div className="text-center">
-              {/* Rating */}
-              <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-lg sm:text-xl">⭐</span>
-                ))}
-              </div>
-              
-              {/* Testimonial Text */}
-              <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 leading-relaxed italic">
+              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
+              <p className="text-xl text-gray-700 mb-8 italic">
                 "{testimonials[currentTestimonial].text}"
               </p>
-              
-              {/* Author */}
               <div>
-                <p className="font-bold text-gray-900 text-base sm:text-lg">{testimonials[currentTestimonial].author}</p>
-                <p className="text-purple-600 font-medium text-sm sm:text-base">{testimonials[currentTestimonial].company}</p>
+                <p className="font-bold text-gray-900 text-lg">{testimonials[currentTestimonial].author}</p>
+                <p className="text-gray-600">{testimonials[currentTestimonial].role}</p>
+                <p className="text-purple-600 font-medium">{testimonials[currentTestimonial].company}</p>
               </div>
             </div>
 
-            {/* Navigation */}
-            <div className="flex justify-center mt-6 space-x-4">
-              <button
-                onClick={prevTestimonial}
-                className="bg-white hover:bg-gray-100 text-gray-700 p-2 rounded-full shadow-md"
-                aria-label="Previous testimonial"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <div className="flex space-x-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full ${
-                      index === currentTestimonial ? 'bg-purple-600' : 'bg-gray-300'
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
-              <button
-                onClick={nextTestimonial}
-                className="bg-white hover:bg-gray-100 text-gray-700 p-2 rounded-full shadow-md"
-                aria-label="Next testimonial"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+            <div className="flex justify-center mt-8 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full ${
+                    index === currentTestimonial ? 'bg-purple-600' : 'bg-gray-300'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* === FINAL CTA === */}
-      <section className="py-12 md:py-20 bg-gradient-to-r from-purple-900 to-pink-800 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            Ready to Grow Your Business?
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
-            Get professional web development and digital marketing services at unbeatable prices
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can help you achieve your digital goals
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/97797073824881"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              <span className="text-lg">💬</span>
+              <span>💬</span>
               <span>Chat on WhatsApp</span>
             </a>
             
             <a
               href="tel:+919341436937"
-              className="bg-white hover:bg-gray-100 text-purple-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+              className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-lg font-bold text-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              <span className="text-lg">📞</span>
-              <span>Call: +91 93414 36937</span>
+              <span>📞</span>
+              <span>Call Us Now</span>
             </a>
           </div>
           
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm text-purple-200">
-            <div className="flex items-center justify-center gap-1">
-              <span>⚡</span>
-              <span>Fast Delivery</span>
-            </div>
-            <div className="flex items-center justify-center gap-1">
-              <span>💰</span>
-              <span>Affordable</span>
-            </div>
-            <div className="flex items-center justify-center gap-1">
-              <span>🎯</span>
-              <span>Expert Team</span>
-            </div>
-            <div className="flex items-center justify-center gap-1">
-              <span>🔄</span>
-              <span>Flexible</span>
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <p className="text-blue-200 mb-6">We serve clients across India and globally</p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-300">
+              <div className="flex items-center gap-2">
+                <span>📍</span>
+                <span>Pan India Service</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>⏰</span>
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>💼</span>
+                <span>10+ Years Experience</span>
+              </div>
             </div>
           </div>
         </div>
@@ -597,34 +560,22 @@ const Home = () => {
         href="https://wa.me/97797073824881"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 active:scale-95"
-        aria-label="Chat on WhatsApp"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110"
       >
-        <span className="text-xl sm:text-2xl">💬</span>
+        <span className="text-2xl">💬</span>
       </a>
 
-      {/* Mobile touch-friendly styles */}
+      {/* Mobile Optimization */}
       <style jsx>{`
-        /* Improve touch targets */
-        button, a {
-          -webkit-tap-highlight-color: transparent;
-        }
-        
-        /* Prevent text size adjustment on orientation change */
-        html {
-          -webkit-text-size-adjust: 100%;
-        }
-        
-        /* Smooth scrolling for mobile */
         @media (max-width: 640px) {
-          html {
-            scroll-behavior: smooth;
+          * {
+            -webkit-tap-highlight-color: transparent;
           }
-        }
-        
-        /* Better touch feedback */
-        .hover\:scale-105:active {
-          transform: scale(0.98);
+          
+          button, a {
+            min-height: 44px;
+            min-width: 44px;
+          }
         }
       `}</style>
     </div>
