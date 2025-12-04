@@ -16,12 +16,7 @@ import Services from './pages/Services';
 import GrowthServices from './pages/GrowthServices';
 import OurImpact from './pages/OurImpact';
 
-// ========== DIGITAL MARKETING PAGES ==========
-// Main Services
-import DigitalMarketing from './pages/DigitalMarketing';
-import DesignDevelopment from './pages/DesignDevelopment';
-
-// Digital Marketing Sub-pages (जो बने हैं)
+// ========== DIGITAL MARKETING SUB-PAGES (जो बने हैं) ==========
 import SEOService from './pages/digital-marketing/SEOService';
 import SocialMediaManagement from './pages/digital-marketing/SocialMediaManagement';
 import MetaAdsManagement from './pages/digital-marketing/MetaAdsManagement';
@@ -95,10 +90,6 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/growth-services" element={<GrowthServices />} />
             <Route path="/impact" element={<OurImpact />} />
-            
-            {/* ========== DIGITAL MARKETING MAIN PAGES ========== */}
-            <Route path="/digital-marketing" element={<DigitalMarketing />} />
-            <Route path="/design-development" element={<DesignDevelopment />} />
             
             {/* ========== DIGITAL MARKETING SUB-PAGES (जो बने हैं) ========== */}
             <Route path="/seo-services" element={<SEOService />} />
