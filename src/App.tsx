@@ -22,6 +22,7 @@ import BookCall from './pages/BookCall';
 import OurImpact from './pages/OurImpact';
 import Packages from './pages/Packages';
 import Blog from './pages/Blog';
+<Route path="/seo-services" element={<SEOService />} />
 
 
 
@@ -65,6 +66,7 @@ function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/impact" element={<OurImpact />} />
             <Route path="/growth-services" element={<GrowthServices />} />
+            <Route path="/digital-marketing/seo" element={<SEOService />} />
 
             <Route path="/offer" element={<Offer />} />
 
