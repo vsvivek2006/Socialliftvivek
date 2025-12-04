@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 
-// Existing Pages
+// Main Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -15,7 +15,7 @@ import Contact from './pages/Contact';
 import Terms from './pages/Terms'; 
 import OnboardingAgreement from './pages/OnboardingAgreement'; 
 import Privacy from './pages/Privacy';
-import FAQ from './FAQ';
+import FAQ from './pages/FAQ'; // ✅ Fixed import
 import NotFound from './pages/NotFound';
 import FreeWebsiteAudit from './pages/FreeWebsiteAudit';  
 import Offer from './pages/Offer';
