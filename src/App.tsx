@@ -22,7 +22,7 @@ import BookCall from './pages/BookCall';
 import OurImpact from './pages/OurImpact';
 import Packages from './pages/Packages';
 import Blog from './pages/Blog';
-<Route path="/seo-services" element={<SEOService />} />
+import SEOService from './pages/digital-marketing/SEOService';
 
 
 
