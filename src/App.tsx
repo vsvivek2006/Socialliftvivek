@@ -5,63 +5,54 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 
-// ========== CORE PAGES ==========
+// Existing Pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
+import Terms from './pages/Terms'; 
+import OnboardingAgreement from './pages/OnboardingAgreement'; 
+import Privacy from './pages/Privacy';
+import FAQ from './FAQ';
+import NotFound from './pages/NotFound';
+import FreeWebsiteAudit from './pages/FreeWebsiteAudit';  
+import Offer from './pages/Offer';
+import GrowthServices from './pages/GrowthServices';
+import BookCall from './pages/BookCall';
+import OurImpact from './pages/OurImpact';
+import Packages from './pages/Packages';
 import Blog from './pages/Blog';
 
-// ========== GROWTH SERVICES ==========
-import Services from './pages/Services';
-import GrowthServices from './pages/GrowthServices';
-import OurImpact from './pages/OurImpact';
-
-// ========== DIGITAL MARKETING SUB-PAGES (जो बने हैं) ==========
+// Digital Marketing Services
 import SEOService from './pages/digital-marketing/SEOService';
 import SocialMediaManagement from './pages/digital-marketing/SocialMediaManagement';
 import MetaAdsManagement from './pages/digital-marketing/MetaAdsManagement';
 import GoogleBusinessProfile from './pages/digital-marketing/GoogleBusinessProfile';
 import ContentMarketing from './pages/digital-marketing/ContentMarketing';
+import LeadGeneration from './pages/digital-marketing/LeadGeneration';
 import BrandStrategy from './pages/digital-marketing/BrandStrategy';
 
-// ========== DESIGN & DEVELOPMENT PAGES (जो बने हैं) ==========
+// Design & Development Services
 import WebsiteDevelopment from './pages/design-development/WebsiteDevelopment';
 import UIUXDesign from './pages/design-development/UIUXDesign';
 import WordPressDevelopment from './pages/design-development/WordPressDevelopment';
 import EcommerceDevelopment from './pages/design-development/EcommerceDevelopment';
 import MobileAppDevelopment from './pages/design-development/MobileAppDevelopment';
 
-// ========== WHITE LABEL SERVICES (जो बने हैं) ==========
+// White Label Services
 import WhiteLabelSEO from './pages/white-label/WhiteLabelSEO';
 import WhiteLabelPPC from './pages/white-label/WhiteLabelPPC';
 import WhiteLabelSocialMedia from './pages/white-label/WhiteLabelSocialMedia';
 import WhiteLabelWebDevelopment from './pages/white-label/WhiteLabelWebDevelopment';
 
-// ========== DIGITAL SOLUTIONS ==========
-import Packages from './pages/Packages';
-import Pricing from './pages/Pricing';
-import Offer from './pages/Offer';
-import FreeWebsiteAudit from './pages/FreeWebsiteAudit';
-import BookCall from './pages/BookCall';
-
-// ========== SHOWCASE ==========
-import Portfolio from './pages/Portfolio';
-
-// ========== LEGAL & SUPPORT ==========
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import OnboardingAgreement from './pages/OnboardingAgreement';
-import FAQ from './FAQ';
-
-// ========== UTILITY ==========
-import NotFound from './pages/NotFound';
-
 function App() {
   return (
     <Router>
-      {/* ========== GLOBAL SEO & ANALYTICS ========== */}
+      {/* Global SEO + GA4 */}
       <Helmet>
-        {/* Google Analytics GA4 */}
+        {/* GA4 Tracking */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-M92TJDJ055"></script>
         <script>
           {`
@@ -72,7 +63,7 @@ function App() {
           `}
         </script>
         
-        {/* Razorpay Payment Integration */}
+        {/* ✅ Razorpay Script for Payment Functionality */}
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       </Helmet>
 
@@ -80,55 +71,48 @@ function App() {
         <Header />
         <main>
           <Routes>
-            {/* ========== CORE NAVIGATION ========== */}
+            {/* Main Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            
-            {/* ========== GROWTH SERVICES ========== */}
             <Route path="/services" element={<Services />} />
-            <Route path="/growth-services" element={<GrowthServices />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/book-call" element={<BookCall />} />
+            <Route path="/free-audit" element={<FreeWebsiteAudit />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/packages" element={<Packages />} />
             <Route path="/impact" element={<OurImpact />} />
-            
-            {/* ========== DIGITAL MARKETING SUB-PAGES (जो बने हैं) ========== */}
+            <Route path="/growth-services" element={<GrowthServices />} />
+            <Route path="/offer" element={<Offer />} />
+
+            {/* Digital Marketing Services */}
             <Route path="/seo-services" element={<SEOService />} />
             <Route path="/social-media-management" element={<SocialMediaManagement />} />
             <Route path="/meta-ads-management" element={<MetaAdsManagement />} />
             <Route path="/google-business-profile" element={<GoogleBusinessProfile />} />
             <Route path="/content-marketing" element={<ContentMarketing />} />
+            <Route path="/lead-generation" element={<LeadGeneration />} />
             <Route path="/brand-strategy" element={<BrandStrategy />} />
-            
-            {/* ========== DESIGN & DEVELOPMENT PAGES (जो बने हैं) ========== */}
+
+            {/* Design & Development Services */}
             <Route path="/website-development" element={<WebsiteDevelopment />} />
             <Route path="/ui-ux-design" element={<UIUXDesign />} />
             <Route path="/wordpress-development" element={<WordPressDevelopment />} />
             <Route path="/ecommerce-development" element={<EcommerceDevelopment />} />
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
-            
-            {/* ========== WHITE LABEL SERVICES (जो बने हैं) ========== */}
+
+            {/* White Label Services */}
             <Route path="/white-label-seo" element={<WhiteLabelSEO />} />
             <Route path="/white-label-ppc" element={<WhiteLabelPPC />} />
             <Route path="/white-label-social-media" element={<WhiteLabelSocialMedia />} />
             <Route path="/white-label-web-development" element={<WhiteLabelWebDevelopment />} />
-            
-            {/* ========== DIGITAL SOLUTIONS ========== */}
-            <Route path="/packages" element={<Packages />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/offer" element={<Offer />} />
-            <Route path="/free-audit" element={<FreeWebsiteAudit />} />
-            <Route path="/book-call" element={<BookCall />} />
-            
-            {/* ========== SHOWCASE & RESULTS ========== */}
-            <Route path="/portfolio" element={<Portfolio />} />
-            
-            {/* ========== LEGAL & SUPPORT ========== */}
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
-            <Route path="/faq" element={<FAQ />} />
-            
-            {/* ========== PAYMENT PAGES ========== */}
+
+            {/* ✅ PAYMENT SUCCESS PAGE */}
             <Route path="/payment/success" element={
               <div className="min-h-screen flex items-center justify-center bg-green-50 py-12">
                 <div className="bg-white p-8 rounded-2xl shadow-lg text-center max-w-md mx-4">
@@ -157,6 +141,7 @@ function App() {
               </div>
             } />
             
+            {/* ✅ PAYMENT FAILED PAGE */}
             <Route path="/payment/failed" element={
               <div className="min-h-screen flex items-center justify-center bg-red-50 py-12">
                 <div className="bg-white p-8 rounded-2xl shadow-lg text-center max-w-md mx-4">
@@ -191,7 +176,6 @@ function App() {
               </div>
             } />
             
-            {/* ========== 404 PAGE ========== */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
