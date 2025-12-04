@@ -21,23 +21,22 @@ import OurImpact from './pages/OurImpact';
 import DigitalMarketing from './pages/DigitalMarketing';
 import DesignDevelopment from './pages/DesignDevelopment';
 
-// Digital Marketing Sub-pages
+// Digital Marketing Sub-pages (जो बने हैं)
 import SEOService from './pages/digital-marketing/SEOService';
 import SocialMediaManagement from './pages/digital-marketing/SocialMediaManagement';
 import MetaAdsManagement from './pages/digital-marketing/MetaAdsManagement';
 import GoogleBusinessProfile from './pages/digital-marketing/GoogleBusinessProfile';
 import ContentMarketing from './pages/digital-marketing/ContentMarketing';
-import LeadGeneration from './pages/digital-marketing/LeadGeneration';
 import BrandStrategy from './pages/digital-marketing/BrandStrategy';
 
-// ========== DESIGN & DEVELOPMENT PAGES ==========
+// ========== DESIGN & DEVELOPMENT PAGES (जो बने हैं) ==========
 import WebsiteDevelopment from './pages/design-development/WebsiteDevelopment';
 import UIUXDesign from './pages/design-development/UIUXDesign';
 import WordPressDevelopment from './pages/design-development/WordPressDevelopment';
 import EcommerceDevelopment from './pages/design-development/EcommerceDevelopment';
 import MobileAppDevelopment from './pages/design-development/MobileAppDevelopment';
 
-// ========== WHITE LABEL SERVICES ==========
+// ========== WHITE LABEL SERVICES (जो बने हैं) ==========
 import WhiteLabelSEO from './pages/white-label/WhiteLabelSEO';
 import WhiteLabelPPC from './pages/white-label/WhiteLabelPPC';
 import WhiteLabelSocialMedia from './pages/white-label/WhiteLabelSocialMedia';
@@ -52,16 +51,12 @@ import BookCall from './pages/BookCall';
 
 // ========== SHOWCASE ==========
 import Portfolio from './pages/Portfolio';
-import CaseStudies from './pages/CaseStudies';
-import Testimonials from './pages/Testimonials';
 
 // ========== LEGAL & SUPPORT ==========
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import OnboardingAgreement from './pages/OnboardingAgreement';
 import FAQ from './FAQ';
-import Resources from './pages/Resources';
-import HelpCenter from './pages/HelpCenter';
 
 // ========== UTILITY ==========
 import NotFound from './pages/NotFound';
@@ -105,23 +100,22 @@ function App() {
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/design-development" element={<DesignDevelopment />} />
             
-            {/* ========== DIGITAL MARKETING SUB-PAGES ========== */}
+            {/* ========== DIGITAL MARKETING SUB-PAGES (जो बने हैं) ========== */}
             <Route path="/seo-services" element={<SEOService />} />
             <Route path="/social-media-management" element={<SocialMediaManagement />} />
             <Route path="/meta-ads-management" element={<MetaAdsManagement />} />
             <Route path="/google-business-profile" element={<GoogleBusinessProfile />} />
             <Route path="/content-marketing" element={<ContentMarketing />} />
-            <Route path="/lead-generation" element={<LeadGeneration />} />
             <Route path="/brand-strategy" element={<BrandStrategy />} />
             
-            {/* ========== DESIGN & DEVELOPMENT PAGES ========== */}
+            {/* ========== DESIGN & DEVELOPMENT PAGES (जो बने हैं) ========== */}
             <Route path="/website-development" element={<WebsiteDevelopment />} />
             <Route path="/ui-ux-design" element={<UIUXDesign />} />
             <Route path="/wordpress-development" element={<WordPressDevelopment />} />
             <Route path="/ecommerce-development" element={<EcommerceDevelopment />} />
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
             
-            {/* ========== WHITE LABEL SERVICES ========== */}
+            {/* ========== WHITE LABEL SERVICES (जो बने हैं) ========== */}
             <Route path="/white-label-seo" element={<WhiteLabelSEO />} />
             <Route path="/white-label-ppc" element={<WhiteLabelPPC />} />
             <Route path="/white-label-social-media" element={<WhiteLabelSocialMedia />} />
@@ -136,16 +130,12 @@ function App() {
             
             {/* ========== SHOWCASE & RESULTS ========== */}
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/testimonials" element={<Testimonials />} />
             
             {/* ========== LEGAL & SUPPORT ========== */}
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/help-center" element={<HelpCenter />} />
             
             {/* ========== PAYMENT PAGES ========== */}
             <Route path="/payment/success" element={
