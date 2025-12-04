@@ -4,33 +4,51 @@ import { Helmet } from 'react-helmet';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+
+// ========== CORE PAGES ==========
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
-import Portfolio from './pages/Portfolio';
-import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
-import Terms from './pages/Terms'; 
-import OnboardingAgreement from './pages/OnboardingAgreement'; 
-import Privacy from './pages/Privacy';
-import FAQ from './FAQ';
-import NotFound from './pages/NotFound';
-import FreeWebsiteAudit from './pages/FreeWebsiteAudit';  
-import Offer from './pages/Offer';
-import GrowthServices from './pages/GrowthServices';
-import BookCall from './pages/BookCall';
-import OurImpact from './pages/OurImpact';
-import Packages from './pages/Packages';
 import Blog from './pages/Blog';
 
+// ========== GROWTH SERVICES ==========
+import Services from './pages/Services';
+import DigitalMarketing from './pages/DigitalMarketing';
+import DesignDevelopment from './pages/DesignDevelopment';
+import GrowthServices from './pages/GrowthServices';
+import SEOResults from './pages/SEOResults';
+import Whitelabel from './pages/Whitelabel';
 
+// ========== DIGITAL SOLUTIONS ==========
+import Packages from './pages/Packages';
+import Pricing from './pages/Pricing';
+import Offer from './pages/Offer';
+import FreeWebsiteAudit from './pages/FreeWebsiteAudit';
+import BookCall from './pages/BookCall';
+
+// ========== SHOWCASE ==========
+import Portfolio from './pages/Portfolio';
+import CaseStudies from './pages/CaseStudies';
+import OurImpact from './pages/OurImpact';
+import Testimonials from './pages/Testimonials';
+
+// ========== LEGAL & SUPPORT ==========
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import OnboardingAgreement from './pages/OnboardingAgreement';
+import FAQ from './FAQ';
+import Resources from './pages/Resources';
+import HelpCenter from './pages/HelpCenter';
+
+// ========== UTILITY ==========
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <Router>
-      {/* Global SEO + GA4 */}
+      {/* ========== GLOBAL SEO & ANALYTICS ========== */}
       <Helmet>
-        {/* GA4 Tracking */}
+        {/* Google Analytics GA4 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-M92TJDJ055"></script>
         <script>
           {`
@@ -41,7 +59,7 @@ function App() {
           `}
         </script>
         
-        {/* ✅ Razorpay Script for Payment Functionality */}
+        {/* Razorpay Payment Integration */}
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       </Helmet>
 
@@ -49,26 +67,42 @@ function App() {
         <Header />
         <main>
           <Routes>
+            {/* ========== CORE NAVIGATION ========== */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
+            <Route path="/blog" element={<Blog />} />
+            
+            {/* ========== GROWTH SERVICES ========== */}
+            <Route path="/services" element={<Services />} />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/design-development" element={<DesignDevelopment />} />
+            <Route path="/growth-services" element={<GrowthServices />} />
+            <Route path="/seo-results" element={<SEOResults />} />
+            <Route path="/whitelabel" element={<Whitelabel />} />
+            
+            {/* ========== DIGITAL SOLUTIONS ========== */}
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/offer" element={<Offer />} />
+            <Route path="/free-audit" element={<FreeWebsiteAudit />} />
+            <Route path="/book-call" element={<BookCall />} />
+            
+            {/* ========== SHOWCASE & RESULTS ========== */}
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/impact" element={<OurImpact />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            
+            {/* ========== LEGAL & SUPPORT ========== */}
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/book-call" element={<BookCall />} />
-            <Route path="/free-audit" element={<FreeWebsiteAudit />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/packages" element={<Packages />} />
-            <Route path="/impact" element={<OurImpact />} />
-            <Route path="/growth-services" element={<GrowthServices />} />
-
-            <Route path="/offer" element={<Offer />} />
-
-            {/* ✅ PAYMENT SUCCESS PAGE */}
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/help-center" element={<HelpCenter />} />
+            
+            {/* ========== PAYMENT PAGES ========== */}
             <Route path="/payment/success" element={
               <div className="min-h-screen flex items-center justify-center bg-green-50 py-12">
                 <div className="bg-white p-8 rounded-2xl shadow-lg text-center max-w-md mx-4">
@@ -97,7 +131,6 @@ function App() {
               </div>
             } />
             
-            {/* ✅ PAYMENT FAILED PAGE */}
             <Route path="/payment/failed" element={
               <div className="min-h-screen flex items-center justify-center bg-red-50 py-12">
                 <div className="bg-white p-8 rounded-2xl shadow-lg text-center max-w-md mx-4">
@@ -132,6 +165,7 @@ function App() {
               </div>
             } />
             
+            {/* ========== 404 PAGE ========== */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
