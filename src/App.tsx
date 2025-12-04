@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import Terms from './pages/Terms'; 
 import OnboardingAgreement from './pages/OnboardingAgreement'; 
 import Privacy from './pages/Privacy';
+import FAQ from './pages/FAQ'; // ✅ Fixed import
 import NotFound from './pages/NotFound';
 import FreeWebsiteAudit from './pages/FreeWebsiteAudit';  
 import Offer from './pages/Offer';
@@ -46,7 +47,7 @@ import WhiteLabelPPC from './pages/white-label/WhiteLabelPPC';
 import WhiteLabelSocialMedia from './pages/white-label/WhiteLabelSocialMedia';
 import WhiteLabelWebDevelopment from './pages/white-label/WhiteLabelWebDevelopment';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       {/* Global SEO + GA4 */}
@@ -80,6 +81,7 @@ function App() {
             <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="/book-call" element={<BookCall />} />
             <Route path="/free-audit" element={<FreeWebsiteAudit />} />
             <Route path="/blog" element={<Blog />} />
@@ -182,6 +184,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
