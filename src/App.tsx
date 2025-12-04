@@ -66,7 +66,7 @@ function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/impact" element={<OurImpact />} />
             <Route path="/growth-services" element={<GrowthServices />} />
-            <Route path="/digital-marketing/seo" element={<SEOService />} />
+            <Route path="/services/seo" element={<SEOService />} />
 
             <Route path="/offer" element={<Offer />} />
 
