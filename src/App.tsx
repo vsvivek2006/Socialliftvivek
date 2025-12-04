@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
-
-// Main Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -15,7 +13,7 @@ import Contact from './pages/Contact';
 import Terms from './pages/Terms'; 
 import OnboardingAgreement from './pages/OnboardingAgreement'; 
 import Privacy from './pages/Privacy';
-import FAQ from './pages/FAQ'; // ✅ Fixed import
+import FAQ from './FAQ';
 import NotFound from './pages/NotFound';
 import FreeWebsiteAudit from './pages/FreeWebsiteAudit';  
 import Offer from './pages/Offer';
@@ -25,29 +23,9 @@ import OurImpact from './pages/OurImpact';
 import Packages from './pages/Packages';
 import Blog from './pages/Blog';
 
-// Digital Marketing Services
-import SEOService from './pages/digital-marketing/SEOService';
-import SocialMediaManagement from './pages/digital-marketing/SocialMediaManagement';
-import MetaAdsManagement from './pages/digital-marketing/MetaAdsManagement';
-import GoogleBusinessProfile from './pages/digital-marketing/GoogleBusinessProfile';
-import ContentMarketing from './pages/digital-marketing/ContentMarketing';
-import LeadGeneration from './pages/digital-marketing/LeadGeneration';
-import BrandStrategy from './pages/digital-marketing/BrandStrategy';
 
-// Design & Development Services
-import WebsiteDevelopment from './pages/design-development/WebsiteDevelopment';
-import UIUXDesign from './pages/design-development/UIUXDesign';
-import WordPressDevelopment from './pages/design-development/WordPressDevelopment';
-import EcommerceDevelopment from './pages/design-development/EcommerceDevelopment';
-import MobileAppDevelopment from './pages/design-development/MobileAppDevelopment';
 
-// White Label Services
-import WhiteLabelSEO from './pages/white-label/WhiteLabelSEO';
-import WhiteLabelPPC from './pages/white-label/WhiteLabelPPC';
-import WhiteLabelSocialMedia from './pages/white-label/WhiteLabelSocialMedia';
-import WhiteLabelWebDevelopment from './pages/white-label/WhiteLabelWebDevelopment';
-
-const App: React.FC = () => {
+function App() {
   return (
     <Router>
       {/* Global SEO + GA4 */}
@@ -71,7 +49,6 @@ const App: React.FC = () => {
         <Header />
         <main>
           <Routes>
-            {/* Main Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
@@ -88,29 +65,8 @@ const App: React.FC = () => {
             <Route path="/packages" element={<Packages />} />
             <Route path="/impact" element={<OurImpact />} />
             <Route path="/growth-services" element={<GrowthServices />} />
+
             <Route path="/offer" element={<Offer />} />
-
-            {/* Digital Marketing Services */}
-            <Route path="/seo-services" element={<SEOService />} />
-            <Route path="/social-media-management" element={<SocialMediaManagement />} />
-            <Route path="/meta-ads-management" element={<MetaAdsManagement />} />
-            <Route path="/google-business-profile" element={<GoogleBusinessProfile />} />
-            <Route path="/content-marketing" element={<ContentMarketing />} />
-            <Route path="/lead-generation" element={<LeadGeneration />} />
-            <Route path="/brand-strategy" element={<BrandStrategy />} />
-
-            {/* Design & Development Services */}
-            <Route path="/website-development" element={<WebsiteDevelopment />} />
-            <Route path="/ui-ux-design" element={<UIUXDesign />} />
-            <Route path="/wordpress-development" element={<WordPressDevelopment />} />
-            <Route path="/ecommerce-development" element={<EcommerceDevelopment />} />
-            <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
-
-            {/* White Label Services */}
-            <Route path="/white-label-seo" element={<WhiteLabelSEO />} />
-            <Route path="/white-label-ppc" element={<WhiteLabelPPC />} />
-            <Route path="/white-label-social-media" element={<WhiteLabelSocialMedia />} />
-            <Route path="/white-label-web-development" element={<WhiteLabelWebDevelopment />} />
 
             {/* ✅ PAYMENT SUCCESS PAGE */}
             <Route path="/payment/success" element={
@@ -184,6 +140,6 @@ const App: React.FC = () => {
       </div>
     </Router>
   );
-};
+}
 
 export default App;
